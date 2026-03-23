@@ -1,0 +1,72 @@
+import asyncio
+import logging
+from typing import List, Optional, Dict, Any
+from datetime import datetime
+from base_scraper import AsyncBaseScraper
+from models import SocialMediaRecord
+from filters import PartyClassifier, RegionClassifier
+
+logger = logging.getLogger(__name__)
+
+class TwitterScraper(AsyncBaseScraper):
+    """Scraper for Twitter/X using Scrapling."""
+
+    def __init__(self, headless: bool = True, session_dir: Optional[str] = None):
+        super().__init__(headless=headless, session_dir=session_dir)
+        self.party_classifier = PartyClassifier()
+        self.region_classifier = RegionClassifier()
+
+    async def run(self, keyword: str) -> List[SocialMediaRecord]:
+        """Search for a keyword on Twitter and collect tweets."""
+        logger.info(f"Searching Twitter for: {keyword}")
+        records = []
+        
+        try:
+            # Twitter search URL
+            search_url = f"https://twitter.com/search?q={keyword}&src=typed_query&f=live"
+            response = await self.fetch(search_url)
+            await self.human_delay(5, 7)
+            
+            # Check for login wall
+            if "login" in str(response.url).lower() and not self.session_dir:
+                logger.warning("Twitter redirected to login. Please use --login twitter first.")
+                return []
+            
+            # Scrapling uses CSS selectors similar to Scrapy
+            # Twitter uses [data-testid="tweet"] for tweet containers
+            tweet_elements = response.css('[data-testid="tweet"]')
+            logger.info(f"Found {len(tweet_elements)} tweets for keyword: {keyword}")
+            
+            for tweet in tweet_elements:
+                try:
+                    # Extract text
+                    text = tweet.css('[data-testid="tweetText"]::text').get()
+                    if not text:
+                        continue
+                        
+                    # Extract unique ID if possible
+                    # Links often contain the tweet ID: /status/12345
+                    tweet_url_suffix = tweet.css('time').parent().css('a::attr(href)').get()
+                    tweet_url = f"https://twitter.com{tweet_url_suffix}" if tweet_url_suffix else ""
+                    
+                    tweet_id = tweet_url.split('/')[-1] if tweet_url else f"tw_{hash(text)}"
+                    
+                    record = SocialMediaRecord(
+                        platform="twitter",
+                        type="post",
+                        id=tweet_id,
+                        url=tweet_url,
+                        text=text,
+                        timestamp=datetime.now(),
+                        source="scrapling_twitter",
+                        parties_mentioned=self.party_classifier.classify_parties(text),
+                        is_palladam_related=self.region_classifier.is_palladam_related(text=text)
+                    )
+                    records.append(record)
+                except Exception as e:
+                    logger.warning(f"Error parsing tweet: {e}")
+                    
+        except Exception as e:
+            logger.error(f"Twitter search failed for {keyword}: {e}")
+            
+        return records

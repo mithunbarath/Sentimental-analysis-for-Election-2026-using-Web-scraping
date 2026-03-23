@@ -1,0 +1,143 @@
+# Configuration file for Palladam Politics Scraper
+
+# Bright Data Scraper API settings
+scraper_api:
+  api_token: "f04e0356-eb43-4fa9-8ad1-5501c1f31e6a" # Set BRIGHT_DATA_API_TOKEN environment variable
+  use_scraper_api: true
+  instagram_collector: "c_instagram_posts"
+  facebook_collector: "c_facebook_posts"
+  youtube_collector: "c_youtube_videos"
+  twitter_collector: "c_twitter_posts"
+
+# Platform-specific settings
+
+
+instagram:
+  # Hashtag URLs to scrape
+  hashtag_urls:
+    - "https://www.instagram.com/explore/tags/palladam/"
+    - "https://www.instagram.com/explore/tags/dmk/"
+    - "https://www.instagram.com/explore/tags/admk/"
+    - "https://www.instagram.com/explore/tags/tvk/"
+    - "https://www.instagram.com/explore/tags/stalin/"
+    - "https://www.instagram.com/explore/tags/eps/"
+    - "https://www.instagram.com/explore/tags/vijay/"
+
+  # Profile URLs to scrape (public profiles only)
+  profile_urls: []
+
+  # Limits
+  max_posts_per_source: 50
+  max_comments_per_post: 20
+
+  # Rate limiting (seconds between requests)
+  min_delay: 1.0
+  max_delay: 3.0
+
+facebook:
+  # Public page URLs to scrape
+  page_urls: []
+
+  # Public group URLs to scrape
+  group_urls: []
+
+  # Limits
+  max_posts_per_source: 50
+  max_comments_per_post: 20
+
+  # Rate limiting
+  min_delay: 2.0
+  max_delay: 5.0
+
+youtube:
+  # YouTube Data API key (optional - leave empty to use HTML scraping)
+  api_key: ""
+
+  # Channel URLs to scrape
+  channel_urls: []
+
+  # Video URLs to scrape directly
+  video_urls:
+    - "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+
+  # Limits
+  max_videos_per_channel: 30
+  max_comments_per_video: 50
+
+  # Rate limiting
+  min_delay: 1.0
+  max_delay: 3.0
+
+twitter:
+  # API credentials
+  # Set TWITTER_BEARER_TOKEN environment variable
+  bearer_token: ""
+
+  # Search queries (supports Twitter search operators)
+  search_queries:
+    - "palladam"
+    - "dmk stalin"
+    - "admk eps"
+    - "tvk vijay"
+    - "palladam dmk OR palladam டிஎம்கே"
+    - "palladam admk OR palladam aiadmk OR palladam அதிமுக"
+    - "palladam tvk OR palladam டி.வி.கே"
+    - "tiruppur dmk OR tiruppur admk"
+    - "tamil nadu politics"
+
+  # Limits
+  max_tweets_per_query: 100
+  max_replies_per_tweet: 20
+
+# Keyword filters
+
+filters:
+  # DMK keywords (English + Tamil)
+  dmk_keywords:
+    - "dmk"
+    - "டிஎம்கே"
+
+  # ADMK/AIADMK keywords (English + Tamil)
+  admk_keywords:
+    - "admk"
+    - "aiadmk"
+    - "அதிமுக"
+
+  # TVK keywords (English + Tamil)
+  tvk_keywords:
+    - "tvk"
+    - "டி.வி.கே"
+
+  # Region keywords for Palladam (English + Tamil)
+  region_keywords:
+    - "palladam"
+    - "பல்லடம்"
+    - "tiruppur"
+    - "திருப்பூர்"
+
+# Export settings
+
+export:
+  output_dir: "output"
+  csv_filename: "palladam_politics_data.csv"
+  jsonl_filename: "palladam_politics_data.jsonl"
+
+# Deduplication settings
+
+deduplication:
+  enable: true
+  enable_cross_platform: true
+  enable_hash_dedup: false
+  storage_path: ".dedup_cache.json"
+  hash_threshold: 3
+  clear_cache_on_start: false
+
+# General settings
+
+general:
+  log_level: "INFO"
+  enable_which_platforms:
+    - "instagram"
+    - "facebook"
+    - "youtube"
+    - "twitter"
