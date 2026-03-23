@@ -47,7 +47,7 @@ def parse_arguments():
         description="Parallel Social Media Scrapper for TN Politics (Palladam Focused)"
     )
     parser.add_argument("--config", type=str, default="config.yaml")
-    parser.add_argument("--platforms", type=str, nargs="+", choices=["instagram", "facebook", "youtube", "twitter"])
+    parser.add_argument("--platforms", type=str, nargs="+", choices=["instagram", "facebook", "youtube", "twitter", "all"])
     parser.add_argument("--output-dir", type=str, default=None)
     parser.add_argument("--no-filter", action="store_true")
     parser.add_argument("--strict", action="store_true", help="Enable strict filtering (exclude non-explicit matches)")
@@ -112,7 +112,10 @@ async def main_async():
         config_path = Path(args.config)
         config = load_config(str(config_path)) if config_path.exists() else Config()
         if args.platforms:
-            config.enable_which_platforms = args.platforms
+            if "all" in args.platforms:
+                config.enable_which_platforms = ["instagram", "facebook", "youtube", "twitter"]
+            else:
+                config.enable_which_platforms = args.platforms
         if args.output_dir:
             config.export.output_dir = args.output_dir
     except Exception as e:
@@ -137,6 +140,33 @@ async def main_async():
     
     keywords = list(set(keywords))
     logger.info(f"Target keywords ({'Broad' if args.broad_search else 'Specific'}): {', '.join(keywords)}")
+
+    def refine_keywords_for_platform(platform: str, original_keywords: List[str]) -> List[str]:
+        """Split keywords with 'OR' for platforms that don't support boolean logic."""
+        if platform in ["youtube", "twitter"]:
+            return original_keywords
+            
+        refined = []
+        for k in original_keywords:
+            if " OR " in k:
+                # Split by ' OR ' and add individual terms
+                parts = [p.strip() for p in k.split(" OR ") if p.strip()]
+                refined.extend(parts)
+            else:
+                refined.append(k)
+        return list(set(refined))
+
+    # Check for sessions
+    enabled_platforms = config.enable_which_platforms
+    for platform in enabled_platforms:
+        session_path = os.path.join(args.sessions_dir, platform)
+        if not os.path.exists(session_path):
+            if platform in ["instagram", "facebook", "twitter"]:
+                logger.warning(f"No saved session found for {platform} at {session_path}. "
+                             f"Manual scraping may fail or be restricted. "
+                             f"Consider running: python main.py --login {platform}")
+        else:
+            logger.info(f"Using saved session for {platform} from {session_path}")
 
     platform_map = {
         "instagram": InstagramScraper,

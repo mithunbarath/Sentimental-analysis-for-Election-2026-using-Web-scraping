@@ -28,32 +28,41 @@ class FacebookScraper(AsyncBaseScraper):
             
             # Add scrolling to ensure dynamic content loads
             page = await self.get_page()
-            await self.scroll_to_bottom(page, max_scrolls=3, delay=1.5)
+            
+            # Check for login wall
+            if ("login" in str(page.url).lower() or "checkpoint" in str(page.url).lower()) and not self.session_dir:
+                logger.warning(f"Facebook redirected to login/checkpoint for '{keyword}'. Please use --login facebook first.")
+                await self.save_debug_screenshot(f"facebook_login_{keyword}")
+                return []
+
+            await self.scroll_to_bottom(page, max_scrolls=3, delay=2.0)
             
             # Refresh response from updated page content
             content = await page.content()
             from scrapling import Selector
             response = Selector(content, url=page.url)
             
-            # Check for login wall
-            if "login" in str(response.url).lower() and not self.session_dir:
-                logger.warning("Facebook redirected to login. Please use --login facebook first.")
-                return []
-            
             # Facebook selectors are dynamic, but we can look for specific patterns
-            # Often posts are inside [role="main"] or have specific testids
+            # Posts are often in [role="article"]
             post_elements = response.css('[role="article"]')
             logger.info(f"Found {len(post_elements)} potential post elements for keyword: {keyword}")
             
-            for post in post_elements:
+            if not post_elements:
+                await self.save_debug_screenshot(f"facebook_no_results_{keyword}")
+
+            for post in post_elements[:20]:
                 try:
-                    # Extract text content
+                    # Extract text content from common post body selectors
                     text_parts = post.css('[dir="auto"]::text').getall()
                     text = " ".join(text_parts).strip()
                     if not text:
+                        # Try fallback for text
+                        text = post.css('div[style*="webkit-line-clamp"]::text').get()
+                    
+                    if not text:
                         continue
                         
-                    # Extract link
+                    # Extract link - Facebook hides these in many ways
                     link = post.css('a[href*="/posts/"]::attr(href)').get()
                     if not link:
                         link = post.css('a[href*="/permalink/"]::attr(href)').get()
@@ -62,7 +71,8 @@ class FacebookScraper(AsyncBaseScraper):
                     
                     full_link = link if link and link.startswith('http') else f"https://www.facebook.com{link}" if link else ""
                     
-                    post_id = full_link.split('/')[-1] if full_link else f"fb_{hash(text)}"
+                    # Generate a unique ID
+                    post_id = full_link.split('/')[-1] if full_link and '/' in full_link else f"fb_{hash(text)}"
                     
                     record = SocialMediaRecord(
                         platform="facebook",
@@ -81,5 +91,6 @@ class FacebookScraper(AsyncBaseScraper):
                     
         except Exception as e:
             logger.error(f"Facebook search failed for {keyword}: {e}")
+            await self.save_debug_screenshot(f"facebook_error_{keyword}")
             
         return records

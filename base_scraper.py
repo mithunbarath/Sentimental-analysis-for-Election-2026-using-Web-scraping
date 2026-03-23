@@ -4,6 +4,7 @@ import random
 import os
 from typing import Optional, List, Dict, Any, Union
 from datetime import datetime
+from scrapling import Selector
 from scrapling.fetchers import AsyncStealthySession
 from scrapling.engines.toolbelt.custom import Response
 
@@ -23,23 +24,68 @@ class AsyncBaseScraper:
             
         self.session_dir = session_dir
         self.session: Optional[AsyncStealthySession] = None
+        self._start_lock = asyncio.Lock()
 
     async def start(self):
-        """Initialize the Scrapling session."""
-        if self.session_dir:
-            os.makedirs(self.session_dir, exist_ok=True)
+        """Initialize the Scrapling session with a lock for concurrency safety."""
+        async with self._start_lock:
+            if self.session:
+                return
+                
+            if self.session_dir:
+                os.makedirs(self.session_dir, exist_ok=True)
+                
+            # Enhanced stealth configuration
+            # If we have a session_dir, we already logged in manually, so we don't 
+            # want scrapling's aggressive cloudflare solver to potentially break the session.
+            self.session = AsyncStealthySession(
+                headless=self.headless,
+                user_data_dir=self.session_dir,
+                solve_cloudflare=not bool(self.session_dir), # Disable if session exists
+                network_idle=False, # Disable to speed up and avoid hangs
+                timeout=90000, 
+                extra_args=[
+                    "--disable-gpu", 
+                    "--disable-software-rasterizer", 
+                    "--disable-dev-shm-usage",
+                    "--no-sandbox",
+                    "--disable-setuid-sandbox",
+                    "--disable-blink-features=AutomationControlled"
+                ]
+            )
+            # Session is an async context manager, but we want to keep it open
+            # We must use start() manually since we don't use 'async with' here
+            await self.session.start()
+            logger.debug(f"Scrapling session started (headless={self.headless}, persistent={bool(self.session_dir)})")
+
+    async def save_debug_screenshot(self, name: str):
+        """Save a screenshot and page info for debugging purposes."""
+        if not self.session:
+            return
             
-        self.session = AsyncStealthySession(
-            headless=self.headless,
-            user_data_dir=self.session_dir,
-            solve_cloudflare=True,
-            network_idle=True,
-            timeout=60000,
-            extra_args=["--disable-gpu", "--disable-software-rasterizer", "--disable-dev-shm-usage"]
-        )
-        # Session is an async context manager, but we want to keep it open
-        await self.session.__aenter__()
-        logger.debug(f"Scrapling session started (headless={self.headless}, persistent={bool(self.session_dir)})")
+        try:
+            page = await self.get_page()
+            title = await page.title()
+            url = page.url
+            logger.info(f"Debug Info for {name}: URL={url}, Title='{title}'")
+            
+            content = await page.content()
+            content_lower = content.lower()
+            logger.info(f"Page content snippet (first 500 chars): {content[:500]}...")
+            
+            if "login" in content_lower or "signin" in content_lower:
+                logger.warning(f"Likely login wall detected on {url}")
+            elif "captcha" in content_lower or "robot" in content_lower:
+                logger.warning(f"Likely captcha/bot detection on {url}")
+            
+            # Save screenshot
+            debug_dir = os.path.join(os.getcwd(), "debug_screenshots")
+            os.makedirs(debug_dir, exist_ok=True)
+            path = os.path.join(debug_dir, f"{name}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png")
+            await page.screenshot(path=path)
+            logger.debug(f"Debug screenshot saved to {path}")
+        except Exception as e:
+            logger.warning(f"Failed to save debug info: {e}")
 
     async def stop(self):
         """Close the Scrapling session."""
@@ -47,17 +93,40 @@ class AsyncBaseScraper:
             await self.session.__aexit__(None, None, None)
         logger.debug("Scrapling session stopped")
 
-    async def fetch(self, url: str, wait_selector: Optional[str] = None) -> Response:
-        """Fetch a URL using the active session."""
+    async def fetch(self, url: str, wait_selector: Optional[str] = None) -> Selector:
+        """Fetch a URL using the browser page directly for better rendering."""
         if not self.session:
             await self.start()
             
-        kwargs = {}
-        if wait_selector:
-            kwargs["wait_selector"] = wait_selector
+        try:
+            page = await self.get_page()
+            logger.debug(f"Navigating browser to: {url}")
             
-        logger.debug(f"Fetching URL: {url}")
-        return await self.session.fetch(url, **kwargs)
+            # Using page.goto directly to ensure SPA rendering
+            await page.goto(url, wait_until="load", timeout=60000)
+            
+            if wait_selector:
+                try:
+                    await page.wait_for_selector(wait_selector, timeout=10000)
+                except Exception:
+                    logger.warning(f"Timeout waiting for selector: {wait_selector} on {url}")
+            
+            # Allow some extra time for dynamic content
+            await asyncio.sleep(2)
+            
+            content = await page.content()
+            return Selector(content)
+        except Exception as e:
+            logger.error(f"Browser navigation failed for {url}: {e}")
+            # Fallback to scrapling fetch if browser navigation fails
+            logger.info(f"Falling back to scrapling internal fetch for {url}...")
+            try:
+                response = await self.session.fetch(url, timeout=60000)
+                # Ensure the fallback also returns a Selector object
+                return Selector(response.content)
+            except Exception as fallback_e:
+                logger.error(f"Fallback scrapling fetch also failed for {url}: {fallback_e}")
+                raise fallback_e
 
     async def get_page(self):
         """Get the internal Playwright page object (for manual login)."""

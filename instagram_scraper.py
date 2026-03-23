@@ -33,37 +33,47 @@ class InstagramScraper(AsyncBaseScraper):
             
             # For Instagram, we almost always need to scroll to trigger the grid to load
             page = await self.get_page()
-            await self.scroll_to_bottom(page, max_scrolls=3, delay=1.5)
+            
+            # Check for redirect to login
+            if "login" in str(page.url).lower() and not self.session_dir:
+                logger.warning(f"Instagram redirected to login for '{keyword}'. Please use --login instagram first.")
+                await self.save_debug_screenshot(f"instagram_login_{keyword}")
+                return []
+
+            await self.scroll_to_bottom(page, max_scrolls=3, delay=2.0)
             
             # Refresh response from updated page content
             content = await page.content()
             from scrapling import Selector
             response = Selector(content, url=page.url)
             
-            # Check for redirect to login
-            if "login" in str(response.url).lower() and not self.session_dir:
-                logger.warning("Instagram redirected to login. Please use --login instagram first.")
-                return []
-
-            # Scrapling has built-in css selection
-            # We can find post links specifically
+            # Instagram selectors for posts in the grid
+            # Post links: /p/XXXXX/ or /reels/XXXXX/
+            # We look for <a> tags with these patterns
             post_links = response.css('a[href*="/p/"]::attr(href)').getall()
             post_links += response.css('a[href*="/reels/"]::attr(href)').getall()
             
-            post_links = list(set(post_links))[:20]
+            # Remove duplicates and clean
+            post_links = list(set([l for l in post_links if l.startswith(('/p/', '/reels/'))]))
+            
             logger.info(f"Found {len(post_links)} posts for keyword: {keyword}")
             
-            for link_suffix in post_links:
+            if not post_links:
+                await self.save_debug_screenshot(f"instagram_no_results_{keyword}")
+
+            for link_suffix in post_links[:20]: # Limit to top 20
                 try:
                     full_link = f"https://www.instagram.com{link_suffix}"
-                    post_id = link_suffix.split('/')[-2]
+                    # post_id is between slashes
+                    parts = [p for p in link_suffix.split('/') if p]
+                    post_id = parts[-1] if parts else f"inst_{hash(link_suffix)}"
                     
                     record = SocialMediaRecord(
                         platform="instagram",
                         type="post",
                         id=post_id,
                         url=full_link,
-                        text=f"Instagram post about {keyword}",
+                        text=f"Instagram post about {keyword}", # Content usually requires individual post fetching
                         timestamp=datetime.now(),
                         source="scrapling_instagram",
                         parties_mentioned=self.party_classifier.classify_parties(keyword),
@@ -75,5 +85,6 @@ class InstagramScraper(AsyncBaseScraper):
                     
         except Exception as e:
             logger.error(f"Instagram search failed for {keyword}: {e}")
+            await self.save_debug_screenshot(f"instagram_error_{keyword}")
             
         return records

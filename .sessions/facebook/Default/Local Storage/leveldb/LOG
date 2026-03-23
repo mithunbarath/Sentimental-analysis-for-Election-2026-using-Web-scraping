@@ -1,6 +1,5 @@
-2026/03/23-23:29:36.165 8d58 Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\Local Storage\leveldb/MANIFEST-000001
-2026/03/23-23:29:36.173 8d58 Recovering log #3
-2026/03/23-23:29:36.177 8d58 Reusing old log C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\Local Storage\leveldb/000003.log 
-2026/03/23-23:30:36.186 46b8 Level-0 table #5: started
-2026/03/23-23:30:36.198 46b8 Level-0 table #5: 17964 bytes OK
-2026/03/23-23:30:36.202 46b8 Delete type=0 #3
+2026/03/24-02:39:40.533 84e4 Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\Local Storage\leveldb/MANIFEST-000001
+2026/03/24-02:39:40.539 84e4 Recovering log #4
+2026/03/24-02:39:40.543 84e4 Reusing old log C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\Local Storage\leveldb/000004.log 
+2026/03/24-02:40:08.688 7510 Level-0 table #8: started
+2026/03/24-02:40:08.712 7510 Level-0 table #8: 10866 bytes OK

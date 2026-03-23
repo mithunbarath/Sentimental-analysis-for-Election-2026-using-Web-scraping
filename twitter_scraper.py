@@ -29,6 +29,13 @@ class TwitterScraper(AsyncBaseScraper):
             # Scrapling response object allows us to run JS if needed, but we used base_scraper's fetch
             # which just returns the StaticResponse. To scroll, we need the page.
             page = await self.get_page()
+            
+            # Check for login wall or rate limiting
+            if "login" in str(page.url).lower() and not self.session_dir:
+                logger.warning(f"Twitter redirected to login for '{keyword}'. Please use --login twitter first.")
+                await self.save_debug_screenshot(f"twitter_login_{keyword}")
+                return []
+
             await self.scroll_to_bottom(page, max_scrolls=2, delay=2.0)
             
             # Refresh response from updated page content to catch newly loaded tweets
@@ -36,28 +43,30 @@ class TwitterScraper(AsyncBaseScraper):
             from scrapling import Selector
             response = Selector(content, url=page.url)
             
-            # Check for login wall
-            if "login" in str(response.url).lower() and not self.session_dir:
-                logger.warning("Twitter redirected to login. Please use --login twitter first.")
-                return []
-            
             # Twitter uses [data-testid="tweet"] for tweet containers
             tweet_elements = response.css('[data-testid="tweet"]')
             logger.info(f"Found {len(tweet_elements)} tweets for keyword: {keyword}")
             
-            for tweet in tweet_elements:
+            if not tweet_elements:
+                await self.save_debug_screenshot(f"twitter_no_results_{keyword}")
+
+            for tweet in tweet_elements[:30]:
                 try:
                     # Extract text
-                    text = tweet.css('[data-testid="tweetText"]::text').get()
+                    text = tweet.css('[data-testid="tweetText"]').xpath('string()').get()
+                    if not text:
+                        # Fallback for text
+                        text = tweet.css('[data-testid="tweetText"]::text').get()
+                    
                     if not text:
                         continue
                         
                     # Extract unique ID if possible
                     # Links often contain the tweet ID: /status/12345
-                    tweet_url_suffix = tweet.css('time').parent().css('a::attr(href)').get()
-                    tweet_url = f"https://twitter.com{tweet_url_suffix}" if tweet_url_suffix else ""
+                    time_link = tweet.css('time').parent().css('a::attr(href)').get()
+                    tweet_url = f"https://twitter.com{time_link}" if time_link else ""
                     
-                    tweet_id = tweet_url.split('/')[-1] if tweet_url else f"tw_{hash(text)}"
+                    tweet_id = tweet_url.split('/')[-1] if tweet_url and '/' in tweet_url else f"tw_{hash(text)}"
                     
                     record = SocialMediaRecord(
                         platform="twitter",
@@ -76,5 +85,6 @@ class TwitterScraper(AsyncBaseScraper):
                     
         except Exception as e:
             logger.error(f"Twitter search failed for {keyword}: {e}")
+            await self.save_debug_screenshot(f"twitter_error_{keyword}")
             
         return records
