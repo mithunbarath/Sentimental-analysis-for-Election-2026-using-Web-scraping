@@ -1,7 +1,12 @@
-2026/03/23-21:58:30.572 4dc Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\youtube\Default\IndexedDB\https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
-2026/03/23-21:58:30.595 4dc Recovering log #25
-2026/03/23-21:58:30.605 4dc Reusing old log C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\youtube\Default\IndexedDB\https_www.youtube.com_0.indexeddb.leveldb/000025.log 
-2026/03/23-21:58:30.614 4dc Delete type=2 #24
-2026/03/23-22:01:25.308 7810 Level-0 table #30: started
-2026/03/23-22:01:25.340 7810 Level-0 table #30: 2283309 bytes OK
-2026/03/23-22:01:25.342 7810 Delete type=0 #25
+2026/03/23-23:29:46.741 3e8c Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\youtube\Default\IndexedDB\https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/03/23-23:29:46.745 3e8c Recovering log #29
+2026/03/23-23:29:46.749 3e8c Reusing old log C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\youtube\Default\IndexedDB\https_www.youtube.com_0.indexeddb.leveldb/000029.log 
+2026/03/23-23:32:01.497 65c8 Level-0 table #35: started
+2026/03/23-23:32:01.533 65c8 Level-0 table #35: 2242961 bytes OK
+2026/03/23-23:32:01.536 65c8 Delete type=0 #29
+2026/03/23-23:32:09.872 763c Compacting 1@1 + 1@2 files
+2026/03/23-23:32:09.891 763c Generated table #36@1: 390 keys, 30110 bytes
+2026/03/23-23:32:09.892 763c Compacted 1@1 + 1@2 files => 30110 bytes
+2026/03/23-23:32:09.895 763c compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/03/23-23:32:09.897 763c Delete type=2 #32
+2026/03/23-23:32:09.897 763c Delete type=2 #35

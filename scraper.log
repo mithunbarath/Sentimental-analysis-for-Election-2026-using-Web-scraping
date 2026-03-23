@@ -3767,3 +3767,238 @@ Call log:
 2026-03-23 22:08:25,453 - __main__ - INFO -   Total: 203
 2026-03-23 22:08:25,454 - __main__ - INFO -   Palladam-related: 0
 2026-03-23 22:08:25,454 - __main__ - INFO - Scraping process finished.
+2026-03-23 23:25:50,676 - __main__ - INFO - Starting login mode for instagram...
+2026-03-23 23:26:08,986 - __main__ - INFO - ======================================================================
+2026-03-23 23:26:08,986 - __main__ - INFO - PLEASE LOG IN TO INSTAGRAM IN THE BROWSER WINDOW.
+2026-03-23 23:26:08,987 - __main__ - INFO - After you have successfully logged in, come back here and press ENTER.
+2026-03-23 23:26:08,987 - __main__ - INFO - ======================================================================
+2026-03-23 23:27:33,678 - __main__ - INFO - Login session saved for instagram at C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram
+2026-03-23 23:28:08,011 - __main__ - INFO - Starting login mode for facebook...
+2026-03-23 23:28:14,419 - __main__ - INFO - ======================================================================
+2026-03-23 23:28:14,419 - __main__ - INFO - PLEASE LOG IN TO FACEBOOK IN THE BROWSER WINDOW.
+2026-03-23 23:28:14,420 - __main__ - INFO - After you have successfully logged in, come back here and press ENTER.
+2026-03-23 23:28:14,420 - __main__ - INFO - ======================================================================
+2026-03-23 23:28:19,557 - __main__ - INFO - Login session saved for facebook at C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook
+2026-03-23 23:28:26,805 - __main__ - INFO - Starting login mode for youtube...
+2026-03-23 23:28:31,071 - __main__ - INFO - ======================================================================
+2026-03-23 23:28:31,072 - __main__ - INFO - PLEASE LOG IN TO YOUTUBE IN THE BROWSER WINDOW.
+2026-03-23 23:28:31,073 - __main__ - INFO - After you have successfully logged in, come back here and press ENTER.
+2026-03-23 23:28:31,073 - __main__ - INFO - ======================================================================
+2026-03-23 23:28:33,265 - __main__ - INFO - Login session saved for youtube at C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\youtube
+2026-03-23 23:28:40,208 - __main__ - INFO - Starting login mode for twitter...
+2026-03-23 23:28:46,095 - __main__ - INFO - ======================================================================
+2026-03-23 23:28:46,095 - __main__ - INFO - PLEASE LOG IN TO TWITTER IN THE BROWSER WINDOW.
+2026-03-23 23:28:46,096 - __main__ - INFO - After you have successfully logged in, come back here and press ENTER.
+2026-03-23 23:28:46,096 - __main__ - INFO - ======================================================================
+2026-03-23 23:29:24,145 - __main__ - INFO - Login session saved for twitter at C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter
+2026-03-23 23:29:33,219 - __main__ - INFO - ======================================================================
+2026-03-23 23:29:33,220 - __main__ - INFO - Tamil Nadu & Palladam Politics Scraper - Starting
+2026-03-23 23:29:33,220 - __main__ - INFO - ======================================================================
+2026-03-23 23:29:33,227 - __main__ - INFO - Target keywords (Broad): palladam, dmk, palladam admk OR palladam aiadmk OR palladam அதிமுக, eps, dmk stalin, tvk vijay, vijay, palladam dmk OR palladam டிஎம்கே, palladam tvk OR palladam டி.வி.கே, admk, tamil nadu politics, tvk, admk eps, tiruppur dmk OR tiruppur admk, stalin
+2026-03-23 23:29:33,227 - __main__ - INFO - Starting parallel crawl with 4 platforms.
+2026-03-23 23:29:34,327 - base_scraper - DEBUG - Scrapling session started (headless=False, persistent=True)
+2026-03-23 23:29:36,419 - base_scraper - DEBUG - Scrapling session started (headless=False, persistent=True)
+2026-03-23 23:29:38,768 - base_scraper - DEBUG - Scrapling session started (headless=False, persistent=True)
+2026-03-23 23:29:41,129 - base_scraper - DEBUG - Scrapling session started (headless=False, persistent=True)
+2026-03-23 23:29:42,151 - parallel_crawler - INFO - Starting InstagramScraper for keyword: palladam
+2026-03-23 23:29:42,151 - instagram_scraper - INFO - Searching Instagram for: palladam
+2026-03-23 23:29:42,151 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/tags/palladam/
+2026-03-23 23:29:42,158 - parallel_crawler - INFO - Starting FacebookScraper for keyword: palladam
+2026-03-23 23:29:42,158 - facebook_scraper - INFO - Searching Facebook for: palladam
+2026-03-23 23:29:42,159 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=palladam
+2026-03-23 23:29:42,163 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: palladam
+2026-03-23 23:29:42,163 - youtube_scraper - INFO - Searching YouTube for: palladam
+2026-03-23 23:29:42,163 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=palladam&sp=CAISAggB
+2026-03-23 23:29:42,168 - parallel_crawler - INFO - Starting TwitterScraper for keyword: palladam
+2026-03-23 23:29:42,168 - twitter_scraper - INFO - Searching Twitter for: palladam
+2026-03-23 23:29:42,170 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=palladam&src=typed_query&f=live
+2026-03-23 23:29:51,131 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:29:51,504 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=palladam&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 23:29:55,712 - youtube_scraper - INFO - Found 0 videos for keyword: palladam
+2026-03-23 23:29:57,734 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: dmk
+2026-03-23 23:29:57,736 - youtube_scraper - INFO - Searching YouTube for: dmk
+2026-03-23 23:29:57,738 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=dmk&sp=CAISAggB
+2026-03-23 23:30:13,716 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:30:14,162 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=dmk&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 23:30:17,707 - youtube_scraper - INFO - Found 20 videos for keyword: dmk
+2026-03-23 23:30:17,720 - parallel_crawler - INFO - YouTubeScraper found 20 records for keyword: dmk
+2026-03-23 23:30:19,722 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 23:30:19,724 - youtube_scraper - INFO - Searching YouTube for: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 23:30:19,724 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=palladam admk OR palladam aiadmk OR palladam அதிமுக&sp=CAISAggB
+2026-03-23 23:30:23,717 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:30:23,818 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=palladam+admk+OR+palladam+aiadmk+OR+palladam+%E0%AE%85%E0%AE%A4%E0%AE%BF%E0%AE%AE%E0%AF%81%E0%AE%95&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 23:30:27,703 - youtube_scraper - INFO - Found 0 videos for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 23:30:29,709 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: eps
+2026-03-23 23:30:29,710 - youtube_scraper - INFO - Searching YouTube for: eps
+2026-03-23 23:30:29,710 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=eps&sp=CAISAggB
+2026-03-23 23:30:33,139 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:30:33,377 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=eps&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 23:30:36,645 - youtube_scraper - INFO - Found 20 videos for keyword: eps
+2026-03-23 23:30:36,654 - parallel_crawler - INFO - YouTubeScraper found 20 records for keyword: eps
+2026-03-23 23:30:38,654 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: dmk stalin
+2026-03-23 23:30:38,654 - youtube_scraper - INFO - Searching YouTube for: dmk stalin
+2026-03-23 23:30:38,655 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=dmk stalin&sp=CAISAggB
+2026-03-23 23:30:42,457 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:30:42,608 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=dmk+stalin&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 23:30:46,833 - youtube_scraper - INFO - Found 18 videos for keyword: dmk stalin
+2026-03-23 23:30:46,840 - parallel_crawler - INFO - YouTubeScraper found 18 records for keyword: dmk stalin
+2026-03-23 23:30:48,849 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: tvk vijay
+2026-03-23 23:30:48,849 - youtube_scraper - INFO - Searching YouTube for: tvk vijay
+2026-03-23 23:30:48,850 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=tvk vijay&sp=CAISAggB
+2026-03-23 23:30:49,047 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:30:52,796 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:30:52,941 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=tvk+vijay&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 23:30:56,934 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:30:57,526 - youtube_scraper - INFO - Found 20 videos for keyword: tvk vijay
+2026-03-23 23:30:57,534 - parallel_crawler - INFO - YouTubeScraper found 20 records for keyword: tvk vijay
+2026-03-23 23:30:59,533 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: vijay
+2026-03-23 23:30:59,533 - youtube_scraper - INFO - Searching YouTube for: vijay
+2026-03-23 23:30:59,534 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=vijay&sp=CAISAggB
+2026-03-23 23:31:02,749 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:31:02,930 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=vijay&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 23:31:05,876 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:31:06,728 - youtube_scraper - INFO - Found 20 videos for keyword: vijay
+2026-03-23 23:31:06,736 - parallel_crawler - INFO - YouTubeScraper found 20 records for keyword: vijay
+2026-03-23 23:31:08,731 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: palladam dmk OR palladam டிஎம்கே
+2026-03-23 23:31:08,732 - youtube_scraper - INFO - Searching YouTube for: palladam dmk OR palladam டிஎம்கே
+2026-03-23 23:31:08,732 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=palladam dmk OR palladam டிஎம்கே&sp=CAISAggB
+2026-03-23 23:31:11,736 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:31:11,840 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=palladam+dmk+OR+palladam+%E0%AE%9F%E0%AE%BF%E0%AE%8E%E0%AE%AE%E0%AF%8D%E0%AE%95%E0%AF%87&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 23:31:16,319 - youtube_scraper - INFO - Found 0 videos for keyword: palladam dmk OR palladam டிஎம்கே
+2026-03-23 23:31:18,310 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: palladam tvk OR palladam டி.வி.கே
+2026-03-23 23:31:18,311 - youtube_scraper - INFO - Searching YouTube for: palladam tvk OR palladam டி.வி.கே
+2026-03-23 23:31:18,311 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=palladam tvk OR palladam டி.வி.கே&sp=CAISAggB
+2026-03-23 23:31:20,980 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:31:21,084 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=palladam+tvk+OR+palladam+%E0%AE%9F%E0%AE%BF.%E0%AE%B5%E0%AE%BF.%E0%AE%95%E0%AF%87&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 23:31:25,036 - youtube_scraper - INFO - Found 0 videos for keyword: palladam tvk OR palladam டி.வி.கே
+2026-03-23 23:31:27,033 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: admk
+2026-03-23 23:31:27,036 - youtube_scraper - INFO - Searching YouTube for: admk
+2026-03-23 23:31:27,037 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=admk&sp=CAISAggB
+2026-03-23 23:31:32,816 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:31:33,017 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=admk&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 23:31:36,637 - youtube_scraper - INFO - Found 20 videos for keyword: admk
+2026-03-23 23:31:36,650 - parallel_crawler - INFO - YouTubeScraper found 20 records for keyword: admk
+2026-03-23 23:31:38,653 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: tamil nadu politics
+2026-03-23 23:31:38,653 - youtube_scraper - INFO - Searching YouTube for: tamil nadu politics
+2026-03-23 23:31:38,654 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=tamil nadu politics&sp=CAISAggB
+2026-03-23 23:31:42,404 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:31:42,551 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=tamil+nadu+politics&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 23:31:45,961 - youtube_scraper - INFO - Found 20 videos for keyword: tamil nadu politics
+2026-03-23 23:31:45,968 - parallel_crawler - INFO - YouTubeScraper found 20 records for keyword: tamil nadu politics
+2026-03-23 23:31:47,979 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: tvk
+2026-03-23 23:31:47,979 - youtube_scraper - INFO - Searching YouTube for: tvk
+2026-03-23 23:31:47,979 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=tvk&sp=CAISAggB
+2026-03-23 23:31:49,070 - scrapling - INFO - Fetched (301) <GET https://www.instagram.com/explore/tags/palladam/> (referer: https://www.google.com/)
+2026-03-23 23:31:49,196 - scrapling - INFO - Fetched (200) <GET https://www.instagram.com/popular/palladam/?utm_source=explore_tag> (referer: https://www.google.com/)
+2026-03-23 23:31:49,303 - instagram_scraper - INFO - Found 0 posts for keyword: palladam
+2026-03-23 23:31:51,070 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:31:51,226 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=tvk&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 23:31:51,315 - parallel_crawler - INFO - Starting InstagramScraper for keyword: dmk
+2026-03-23 23:31:51,316 - instagram_scraper - INFO - Searching Instagram for: dmk
+2026-03-23 23:31:51,316 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/tags/dmk/
+2026-03-23 23:31:55,605 - youtube_scraper - INFO - Found 20 videos for keyword: tvk
+2026-03-23 23:31:55,615 - parallel_crawler - INFO - YouTubeScraper found 20 records for keyword: tvk
+2026-03-23 23:31:57,053 - scrapling - INFO - Fetched (200) <GET https://x.com/search?q=palladam&src=typed_query&f=live> (referer: https://www.google.com/)
+2026-03-23 23:31:57,125 - twitter_scraper - INFO - Found 0 tweets for keyword: palladam
+2026-03-23 23:31:57,609 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: admk eps
+2026-03-23 23:31:57,610 - youtube_scraper - INFO - Searching YouTube for: admk eps
+2026-03-23 23:31:57,610 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=admk eps&sp=CAISAggB
+2026-03-23 23:31:59,128 - parallel_crawler - INFO - Starting TwitterScraper for keyword: dmk
+2026-03-23 23:31:59,128 - twitter_scraper - INFO - Searching Twitter for: dmk
+2026-03-23 23:31:59,130 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=dmk&src=typed_query&f=live
+2026-03-23 23:32:02,416 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:32:02,669 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=admk+eps&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 23:32:06,418 - youtube_scraper - INFO - Found 20 videos for keyword: admk eps
+2026-03-23 23:32:06,431 - parallel_crawler - INFO - YouTubeScraper found 20 records for keyword: admk eps
+2026-03-23 23:32:07,211 - scrapling - INFO - Fetched (200) <GET https://www.facebook.com/search/posts/?q=palladam> (referer: https://www.google.com/)
+2026-03-23 23:32:07,328 - facebook_scraper - INFO - Found 0 potential post elements for keyword: palladam
+2026-03-23 23:32:08,442 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: tiruppur dmk OR tiruppur admk
+2026-03-23 23:32:08,444 - youtube_scraper - INFO - Searching YouTube for: tiruppur dmk OR tiruppur admk
+2026-03-23 23:32:08,444 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=tiruppur dmk OR tiruppur admk&sp=CAISAggB
+2026-03-23 23:32:09,315 - parallel_crawler - INFO - Starting FacebookScraper for keyword: dmk
+2026-03-23 23:32:09,316 - facebook_scraper - INFO - Searching Facebook for: dmk
+2026-03-23 23:32:09,316 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=dmk
+2026-03-23 23:32:13,715 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:32:13,855 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=tiruppur+dmk+OR+tiruppur+admk&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 23:32:18,477 - youtube_scraper - INFO - Found 0 videos for keyword: tiruppur dmk OR tiruppur admk
+2026-03-23 23:32:20,490 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: stalin
+2026-03-23 23:32:20,491 - youtube_scraper - INFO - Searching YouTube for: stalin
+2026-03-23 23:32:20,491 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=stalin&sp=CAISAggB
+2026-03-23 23:32:23,814 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:32:23,959 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=stalin&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 23:32:27,121 - youtube_scraper - INFO - Found 20 videos for keyword: stalin
+2026-03-23 23:32:27,131 - parallel_crawler - INFO - YouTubeScraper found 20 records for keyword: stalin
+2026-03-23 23:32:57,773 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:33:09,116 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:33:18,270 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:33:57,818 - scrapling - INFO - Fetched (301) <GET https://www.instagram.com/explore/tags/dmk/> (referer: https://www.google.com/)
+2026-03-23 23:33:57,920 - scrapling - INFO - Fetched (200) <GET https://www.instagram.com/popular/dmk/?utm_source=explore_tag> (referer: https://www.google.com/)
+2026-03-23 23:33:57,991 - instagram_scraper - INFO - Found 0 posts for keyword: dmk
+2026-03-23 23:34:00,006 - parallel_crawler - INFO - Starting InstagramScraper for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 23:34:00,006 - instagram_scraper - INFO - Searching Instagram for: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 23:34:00,006 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/search/keyword/?q=palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 23:34:09,222 - scrapling - INFO - Fetched (200) <GET https://x.com/search?q=dmk&src=typed_query&f=live> (referer: https://www.google.com/)
+2026-03-23 23:34:09,290 - twitter_scraper - INFO - Found 0 tweets for keyword: dmk
+2026-03-23 23:34:11,306 - parallel_crawler - INFO - Starting TwitterScraper for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 23:34:11,307 - twitter_scraper - INFO - Searching Twitter for: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 23:34:11,307 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=palladam admk OR palladam aiadmk OR palladam அதிமுக&src=typed_query&f=live
+2026-03-23 23:34:18,578 - scrapling - INFO - Fetched (200) <GET https://www.facebook.com/search/posts/?q=dmk> (referer: https://www.google.com/)
+2026-03-23 23:34:18,666 - facebook_scraper - INFO - Found 0 potential post elements for keyword: dmk
+2026-03-23 23:34:20,682 - parallel_crawler - INFO - Starting FacebookScraper for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 23:34:20,682 - facebook_scraper - INFO - Searching Facebook for: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 23:34:20,683 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 23:35:07,198 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:35:17,973 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:35:31,046 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:36:07,319 - scrapling - INFO - Fetched (200) <GET https://www.instagram.com/explore/search/keyword/?q=palladam%20admk%20OR%20palladam%20aiadmk%20OR%20palladam%20%E0%AE%85%E0%AE%A4%E0%AE%BF%E0%AE%AE%E0%AF%81%E0%AE%95> (referer: https://www.google.com/)
+2026-03-23 23:36:07,415 - instagram_scraper - INFO - Found 0 posts for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 23:36:09,422 - parallel_crawler - INFO - Starting InstagramScraper for keyword: eps
+2026-03-23 23:36:09,423 - instagram_scraper - INFO - Searching Instagram for: eps
+2026-03-23 23:36:09,423 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/tags/eps/
+2026-03-23 23:36:18,072 - scrapling - INFO - Fetched (200) <GET https://x.com/search?q=palladam%20admk%20OR%20palladam%20aiadmk%20OR%20palladam%20%E0%AE%85%E0%AE%A4%E0%AE%BF%E0%AE%AE%E0%AF%81%E0%AE%95&src=typed_query&f=live> (referer: https://www.google.com/)
+2026-03-23 23:36:18,155 - twitter_scraper - INFO - Found 0 tweets for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 23:36:20,167 - parallel_crawler - INFO - Starting TwitterScraper for keyword: eps
+2026-03-23 23:36:20,168 - twitter_scraper - INFO - Searching Twitter for: eps
+2026-03-23 23:36:20,168 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=eps&src=typed_query&f=live
+2026-03-23 23:36:31,552 - scrapling - INFO - Fetched (200) <GET https://www.facebook.com/search/posts/?q=palladam%20admk%20OR%20palladam%20aiadmk%20OR%20palladam%20%E0%AE%85%E0%AE%A4%E0%AE%BF%E0%AE%AE%E0%AF%81%E0%AE%95> (referer: https://www.google.com/)
+2026-03-23 23:36:31,668 - facebook_scraper - INFO - Found 0 potential post elements for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 23:36:33,678 - parallel_crawler - INFO - Starting FacebookScraper for keyword: eps
+2026-03-23 23:36:33,678 - facebook_scraper - INFO - Searching Facebook for: eps
+2026-03-23 23:36:33,678 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=eps
+2026-03-23 23:37:15,563 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:37:28,637 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:37:43,769 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:38:15,598 - scrapling - INFO - Fetched (301) <GET https://www.instagram.com/explore/tags/eps/> (referer: https://www.google.com/)
+2026-03-23 23:38:15,712 - scrapling - INFO - Fetched (200) <GET https://www.instagram.com/popular/eps/?utm_source=explore_tag> (referer: https://www.google.com/)
+2026-03-23 23:38:15,796 - instagram_scraper - INFO - Found 0 posts for keyword: eps
+2026-03-23 23:38:17,797 - parallel_crawler - INFO - Starting InstagramScraper for keyword: dmk stalin
+2026-03-23 23:38:17,798 - instagram_scraper - INFO - Searching Instagram for: dmk stalin
+2026-03-23 23:38:17,798 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/search/keyword/?q=dmk stalin
+2026-03-23 23:38:28,750 - scrapling - INFO - Fetched (200) <GET https://x.com/search?q=eps&src=typed_query&f=live> (referer: https://www.google.com/)
+2026-03-23 23:38:28,809 - twitter_scraper - INFO - Found 0 tweets for keyword: eps
+2026-03-23 23:38:30,825 - parallel_crawler - INFO - Starting TwitterScraper for keyword: dmk stalin
+2026-03-23 23:38:30,825 - twitter_scraper - INFO - Searching Twitter for: dmk stalin
+2026-03-23 23:38:30,826 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=dmk stalin&src=typed_query&f=live
+2026-03-23 23:38:44,516 - scrapling - INFO - Fetched (200) <GET https://www.facebook.com/search/posts/?q=eps> (referer: https://www.google.com/)
+2026-03-23 23:38:44,629 - facebook_scraper - INFO - Found 0 potential post elements for keyword: eps
+2026-03-23 23:38:46,641 - parallel_crawler - INFO - Starting FacebookScraper for keyword: dmk stalin
+2026-03-23 23:38:46,642 - facebook_scraper - INFO - Searching Facebook for: dmk stalin
+2026-03-23 23:38:46,642 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=dmk stalin
+2026-03-23 23:39:24,170 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:39:39,140 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 23:39:42,295 - parallel_crawler - WARNING - Crawling timed out after 600 seconds
+2026-03-23 23:39:43,186 - base_scraper - DEBUG - Scrapling session stopped
+2026-03-23 23:39:43,384 - base_scraper - DEBUG - Scrapling session stopped
+2026-03-23 23:39:43,460 - base_scraper - DEBUG - Scrapling session stopped
+2026-03-23 23:39:43,501 - base_scraper - DEBUG - Scrapling session stopped
+2026-03-23 23:39:43,501 - parallel_crawler - INFO - Crawling completed. Total records collected: 198
+2026-03-23 23:39:43,502 - __main__ - INFO - Applying keyword and region filters...
+2026-03-23 23:39:43,502 - filters - INFO - Filtered 198 records down to 198 (party: True, palladam: True, strict: False)
+2026-03-23 23:39:43,502 - __main__ - INFO - Records after filtering: 198
+2026-03-23 23:39:43,509 - exporter - INFO - Exported 198 records to CSV: output\palladam_politics_data.csv
+2026-03-23 23:39:43,518 - exporter - INFO - Exported 198 records to JSONL: output\palladam_politics_data.jsonl
+2026-03-23 23:39:43,519 - __main__ - INFO - Data exported to output\palladam_politics_data.csv
+2026-03-23 23:39:43,520 - __main__ - INFO - Summary Statistics:
+2026-03-23 23:39:43,520 - __main__ - INFO -   Total: 198
+2026-03-23 23:39:43,520 - __main__ - INFO -   Palladam-related: 0
+2026-03-23 23:39:43,520 - __main__ - INFO - Scraping process finished.
