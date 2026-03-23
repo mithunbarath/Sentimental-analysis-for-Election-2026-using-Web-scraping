@@ -30,10 +30,17 @@ class InstagramScraper(AsyncBaseScraper):
                 
             # Scrapling fetch
             response = await self.fetch(search_url)
-            await self.human_delay(3, 5)
+            
+            # For Instagram, we almost always need to scroll to trigger the grid to load
+            page = await self.get_page()
+            await self.scroll_to_bottom(page, max_scrolls=3, delay=1.5)
+            
+            # Refresh response from updated page content
+            content = await page.content()
+            from scrapling import Selector
+            response = Selector(content, url=page.url)
             
             # Check for redirect to login
-            # Note: Scrapling response.url is available
             if "login" in str(response.url).lower() and not self.session_dir:
                 logger.warning("Instagram redirected to login. Please use --login instagram first.")
                 return []

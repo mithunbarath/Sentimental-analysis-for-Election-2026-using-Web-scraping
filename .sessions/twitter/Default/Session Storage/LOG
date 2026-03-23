@@ -1,3 +1,6 @@
-2026/03/23-18:18:57.356 1678 Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\Session Storage/MANIFEST-000001
-2026/03/23-18:18:57.438 1678 Recovering log #3
-2026/03/23-18:18:57.446 1678 Reusing old log C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\Session Storage/000003.log 
+2026/03/23-20:25:58.445 7854 Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\Session Storage/MANIFEST-000001
+2026/03/23-20:25:58.458 7854 Recovering log #3
+2026/03/23-20:25:58.483 7854 Reusing old log C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\Session Storage/000003.log 
+2026/03/23-20:26:00.581 7f58 Level-0 table #5: started
+2026/03/23-20:26:00.621 7f58 Level-0 table #5: 11286 bytes OK
+2026/03/23-20:26:00.630 7f58 Delete type=0 #3

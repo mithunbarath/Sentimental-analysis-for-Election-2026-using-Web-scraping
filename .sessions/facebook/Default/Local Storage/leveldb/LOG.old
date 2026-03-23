@@ -1,2 +1,3 @@
-2026/03/23-17:29:49.613 8030 Creating DB C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\Local Storage\leveldb since it was missing.
-2026/03/23-17:29:49.721 8030 Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\Local Storage\leveldb/MANIFEST-000001
+2026/03/23-20:23:14.437 8f5c Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\Local Storage\leveldb/MANIFEST-000001
+2026/03/23-20:23:14.457 8f5c Recovering log #3
+2026/03/23-20:23:14.466 8f5c Reusing old log C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\Local Storage\leveldb/000003.log 

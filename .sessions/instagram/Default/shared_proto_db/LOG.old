@@ -1,2 +1,3 @@
-2026/03/23-17:29:49.287 7148 Creating DB C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db since it was missing.
-2026/03/23-17:29:49.311 7148 Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db/MANIFEST-000001
+2026/03/23-20:23:11.669 4bfc Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db/MANIFEST-000001
+2026/03/23-20:23:11.671 4bfc Recovering log #3
+2026/03/23-20:23:11.674 4bfc Reusing old log C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db/000003.log 

@@ -1,2 +1,3 @@
-2026/03/23-17:29:47.473 4d54 Creating DB C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\Site Characteristics Database since it was missing.
-2026/03/23-17:29:47.508 4d54 Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\Site Characteristics Database/MANIFEST-000001
+2026/03/23-20:23:14.310 82d8 Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\Site Characteristics Database/MANIFEST-000001
+2026/03/23-20:23:14.311 82d8 Recovering log #3
+2026/03/23-20:23:14.312 82d8 Reusing old log C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\Site Characteristics Database/000003.log 

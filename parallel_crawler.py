@@ -36,8 +36,10 @@ class ParallelCrawler:
             
             scrapers.append(cls(headless=headless, session_dir=session_dir))
         
-        # Start all browsers
-        await asyncio.gather(*(s.start() for s in scrapers))
+        # Start browsers sequentially to avoid Windows persistent context crashes
+        for s in scrapers:
+            await s.start()
+            await asyncio.sleep(1)
         
         try:
             # For each platform, run keywords sequentially to avoid session conflicts

@@ -23,16 +23,24 @@ class TwitterScraper(AsyncBaseScraper):
         
         try:
             # Twitter search URL
-            search_url = f"https://twitter.com/search?q={keyword}&src=typed_query&f=live"
+            search_url = f"https://x.com/search?q={keyword}&src=typed_query&f=live"
             response = await self.fetch(search_url)
-            await self.human_delay(5, 7)
+            
+            # Scrapling response object allows us to run JS if needed, but we used base_scraper's fetch
+            # which just returns the StaticResponse. To scroll, we need the page.
+            page = await self.get_page()
+            await self.scroll_to_bottom(page, max_scrolls=2, delay=2.0)
+            
+            # Refresh response from updated page content to catch newly loaded tweets
+            content = await page.content()
+            from scrapling import Selector
+            response = Selector(content, url=page.url)
             
             # Check for login wall
             if "login" in str(response.url).lower() and not self.session_dir:
                 logger.warning("Twitter redirected to login. Please use --login twitter first.")
                 return []
             
-            # Scrapling uses CSS selectors similar to Scrapy
             # Twitter uses [data-testid="tweet"] for tweet containers
             tweet_elements = response.css('[data-testid="tweet"]')
             logger.info(f"Found {len(tweet_elements)} tweets for keyword: {keyword}")

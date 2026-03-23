@@ -2463,3 +2463,1054 @@ Exception: Connection closed while reading from the driver
 2026-03-23 18:22:47,124 - __main__ - INFO -   Total: 201
 2026-03-23 18:22:47,124 - __main__ - INFO -   Palladam-related: 0
 2026-03-23 18:22:47,124 - __main__ - INFO - Scraping process finished.
+2026-03-23 18:30:28,668 - __main__ - INFO - Starting login mode for instagram...
+2026-03-23 18:30:35,777 - __main__ - INFO - Starting login mode for instagram...
+2026-03-23 18:32:29,407 - __main__ - INFO - Starting login mode for instagram...
+2026-03-23 18:32:36,077 - __main__ - INFO - Starting login mode for instagram...
+2026-03-23 18:35:21,338 - __main__ - INFO - Starting login mode for instagram...
+2026-03-23 19:54:50,562 - __main__ - INFO - Starting login mode for instagram...
+2026-03-23 19:55:04,666 - __main__ - INFO - ======================================================================
+2026-03-23 19:55:04,666 - __main__ - INFO - PLEASE LOG IN TO INSTAGRAM IN THE BROWSER WINDOW.
+2026-03-23 19:55:04,667 - __main__ - INFO - After you have successfully logged in, come back here and press ENTER.
+2026-03-23 19:55:04,669 - __main__ - INFO - ======================================================================
+2026-03-23 20:00:53,124 - __main__ - INFO - Login session saved for instagram at C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram
+2026-03-23 20:01:11,520 - __main__ - INFO - ======================================================================
+2026-03-23 20:01:11,520 - __main__ - INFO - Tamil Nadu & Palladam Politics Scraper - Starting
+2026-03-23 20:01:11,520 - __main__ - INFO - ======================================================================
+2026-03-23 20:01:11,537 - __main__ - INFO - Target keywords (Specific): palladam dmk OR palladam டிஎம்கே, palladam, palladam admk OR palladam aiadmk OR palladam அதிமுக, palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:01:11,538 - __main__ - INFO - Starting parallel crawl with 4 platforms.
+2026-03-23 20:01:13,968 - base_scraper - DEBUG - Scrapling session started (headless=True, persistent=True)
+2026-03-23 20:01:13,971 - base_scraper - DEBUG - Scrapling session started (headless=True, persistent=True)
+2026-03-23 20:01:13,996 - base_scraper - DEBUG - Scrapling session started (headless=True, persistent=True)
+2026-03-23 20:01:14,144 - base_scraper - DEBUG - Scrapling session started (headless=True, persistent=True)
+2026-03-23 20:01:14,144 - parallel_crawler - INFO - Starting InstagramScraper for keyword: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:01:14,144 - instagram_scraper - INFO - Searching Instagram for: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:01:14,144 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/search/keyword/?q=palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:01:14,149 - parallel_crawler - INFO - Starting FacebookScraper for keyword: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:01:14,149 - facebook_scraper - INFO - Searching Facebook for: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:01:14,150 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/top/?q=palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:01:14,152 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:01:14,153 - youtube_scraper - INFO - Searching YouTube for: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:01:14,155 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=palladam dmk OR palladam டிஎம்கே&sp=CAISAggB
+2026-03-23 20:01:14,160 - parallel_crawler - INFO - Starting TwitterScraper for keyword: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:01:14,160 - twitter_scraper - INFO - Searching Twitter for: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:01:14,160 - base_scraper - DEBUG - Fetching URL: https://twitter.com/search?q=palladam dmk OR palladam டிஎம்கே&src=typed_query&f=live
+2026-03-23 20:01:15,596 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:01:15,659 - scrapling - INFO - Fetched (404) <GET https://www.facebook.com/search/top/?q=palladam%20dmk%20OR%20palladam%20%E0%AE%9F%E0%AE%BF%E0%AE%8E%E0%AE%AE%E0%AF%8D%E0%AE%95%E0%AF%87> (referer: https://www.google.com/)
+2026-03-23 20:01:19,225 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:01:19,436 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=palladam+dmk+OR+palladam+%E0%AE%9F%E0%AE%BF%E0%AE%8E%E0%AE%AE%E0%AF%8D%E0%AE%95%E0%AF%87&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 20:01:22,049 - facebook_scraper - INFO - Found 0 potential post elements for keyword: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:01:23,953 - youtube_scraper - INFO - Found 0 videos for keyword: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:01:24,045 - parallel_crawler - INFO - Starting FacebookScraper for keyword: palladam
+2026-03-23 20:01:24,045 - facebook_scraper - INFO - Searching Facebook for: palladam
+2026-03-23 20:01:24,046 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/top/?q=palladam
+2026-03-23 20:01:24,143 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:01:24,164 - scrapling - INFO - Fetched (301) <GET https://twitter.com/search?q=palladam%20dmk%20OR%20palladam%20%E0%AE%9F%E0%AE%BF%E0%AE%8E%E0%AE%AE%E0%AF%8D%E0%AE%95%E0%AF%87&src=typed_query&f=live> (referer: https://www.google.com/)
+2026-03-23 20:01:24,197 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dpalladam%2520dmk%2520OR%2520palladam%2520%25E0%25AE%259F%25E0%25AE%25BF%25E0%25AE%258E%25E0%25AE%25AE%25E0%25AF%258D%25E0%25AE%2595%25E0%25AF%2587%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:01:25,109 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:01:25,136 - scrapling - INFO - Fetched (404) <GET https://www.facebook.com/search/top/?q=palladam> (referer: https://www.google.com/)
+2026-03-23 20:01:25,956 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: palladam
+2026-03-23 20:01:25,957 - youtube_scraper - INFO - Searching YouTube for: palladam
+2026-03-23 20:01:25,957 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=palladam&sp=CAISAggB
+2026-03-23 20:01:28,395 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:01:28,463 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=palladam&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 20:01:30,823 - twitter_scraper - INFO - Found 0 tweets for keyword: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:01:31,211 - facebook_scraper - INFO - Found 0 potential post elements for keyword: palladam
+2026-03-23 20:01:32,301 - youtube_scraper - INFO - Found 1 videos for keyword: palladam
+2026-03-23 20:01:32,304 - parallel_crawler - INFO - YouTubeScraper found 1 records for keyword: palladam
+2026-03-23 20:01:32,832 - parallel_crawler - INFO - Starting TwitterScraper for keyword: palladam
+2026-03-23 20:01:32,833 - twitter_scraper - INFO - Searching Twitter for: palladam
+2026-03-23 20:01:32,833 - base_scraper - DEBUG - Fetching URL: https://twitter.com/search?q=palladam&src=typed_query&f=live
+2026-03-23 20:01:33,236 - parallel_crawler - INFO - Starting FacebookScraper for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:01:33,236 - facebook_scraper - INFO - Searching Facebook for: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:01:33,236 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/top/?q=palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:01:34,102 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:01:34,133 - scrapling - INFO - Fetched (404) <GET https://www.facebook.com/search/top/?q=palladam%20admk%20OR%20palladam%20aiadmk%20OR%20palladam%20%E0%AE%85%E0%AE%A4%E0%AE%BF%E0%AE%AE%E0%AF%81%E0%AE%95> (referer: https://www.google.com/)
+2026-03-23 20:01:34,322 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:01:34,323 - youtube_scraper - INFO - Searching YouTube for: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:01:34,323 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=palladam admk OR palladam aiadmk OR palladam அதிமுக&sp=CAISAggB
+2026-03-23 20:01:36,749 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:01:36,837 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=palladam+admk+OR+palladam+aiadmk+OR+palladam+%E0%AE%85%E0%AE%A4%E0%AE%BF%E0%AE%AE%E0%AF%81%E0%AE%95&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 20:01:37,910 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:01:37,943 - scrapling - INFO - Fetched (301) <GET https://twitter.com/search?q=palladam&src=typed_query&f=live> (referer: https://www.google.com/)
+2026-03-23 20:01:37,971 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dpalladam%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:01:40,143 - facebook_scraper - INFO - Found 0 potential post elements for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:01:40,227 - __main__ - INFO - Starting login mode for facebook...
+2026-03-23 20:01:41,203 - youtube_scraper - INFO - Found 0 videos for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:01:42,144 - parallel_crawler - INFO - Starting FacebookScraper for keyword: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:01:42,144 - facebook_scraper - INFO - Searching Facebook for: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:01:42,145 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/top/?q=palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:01:43,199 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:01:43,199 - youtube_scraper - INFO - Searching YouTube for: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:01:43,200 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=palladam tvk OR palladam டி.வி.கே&sp=CAISAggB
+2026-03-23 20:01:43,400 - twitter_scraper - INFO - Found 0 tweets for keyword: palladam
+2026-03-23 20:01:43,820 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:01:43,844 - scrapling - INFO - Fetched (404) <GET https://www.facebook.com/search/top/?q=palladam%20tvk%20OR%20palladam%20%E0%AE%9F%E0%AE%BF.%E0%AE%B5%E0%AE%BF.%E0%AE%95%E0%AF%87> (referer: https://www.google.com/)
+2026-03-23 20:01:45,395 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:01:45,402 - parallel_crawler - INFO - Starting TwitterScraper for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:01:45,403 - twitter_scraper - INFO - Searching Twitter for: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:01:45,403 - base_scraper - DEBUG - Fetching URL: https://twitter.com/search?q=palladam admk OR palladam aiadmk OR palladam அதிமுக&src=typed_query&f=live
+2026-03-23 20:01:45,486 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=palladam+tvk+OR+palladam+%E0%AE%9F%E0%AE%BF.%E0%AE%B5%E0%AE%BF.%E0%AE%95%E0%AF%87&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 20:01:48,962 - facebook_scraper - INFO - Found 0 potential post elements for keyword: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:01:50,213 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:01:50,242 - scrapling - INFO - Fetched (301) <GET https://twitter.com/search?q=palladam%20admk%20OR%20palladam%20aiadmk%20OR%20palladam%20%E0%AE%85%E0%AE%A4%E0%AE%BF%E0%AE%AE%E0%AF%81%E0%AE%95&src=typed_query&f=live> (referer: https://www.google.com/)
+2026-03-23 20:01:50,277 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dpalladam%2520admk%2520OR%2520palladam%2520aiadmk%2520OR%2520palladam%2520%25E0%25AE%2585%25E0%25AE%25A4%25E0%25AE%25BF%25E0%25AE%25AE%25E0%25AF%2581%25E0%25AE%2595%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:01:50,391 - youtube_scraper - INFO - Found 0 videos for keyword: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:01:55,337 - twitter_scraper - INFO - Found 0 tweets for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:01:57,344 - parallel_crawler - INFO - Starting TwitterScraper for keyword: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:01:57,344 - twitter_scraper - INFO - Searching Twitter for: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:01:57,345 - base_scraper - DEBUG - Fetching URL: https://twitter.com/search?q=palladam tvk OR palladam டி.வி.கே&src=typed_query&f=live
+2026-03-23 20:02:01,582 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:02:01,645 - scrapling - INFO - Fetched (301) <GET https://twitter.com/search?q=palladam%20tvk%20OR%20palladam%20%E0%AE%9F%E0%AE%BF.%E0%AE%B5%E0%AE%BF.%E0%AE%95%E0%AF%87&src=typed_query&f=live> (referer: https://www.google.com/)
+2026-03-23 20:02:01,671 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dpalladam%2520tvk%2520OR%2520palladam%2520%25E0%25AE%259F%25E0%25AE%25BF.%25E0%25AE%25B5%25E0%25AE%25BF.%25E0%25AE%2595%25E0%25AF%2587%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:02:07,535 - twitter_scraper - INFO - Found 0 tweets for keyword: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:02:21,776 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:02:28,385 - __main__ - INFO - Starting login mode for facebook...
+2026-03-23 20:03:21,884 - scrapling - INFO - Fetched (200) <GET https://www.instagram.com/explore/search/keyword/?q=palladam%20dmk%20OR%20palladam%20%E0%AE%9F%E0%AE%BF%E0%AE%8E%E0%AE%AE%E0%AF%8D%E0%AE%95%E0%AF%87> (referer: https://www.google.com/)
+2026-03-23 20:03:25,662 - instagram_scraper - INFO - Found 1 posts for keyword: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:03:25,662 - parallel_crawler - INFO - InstagramScraper found 1 records for keyword: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:03:27,669 - parallel_crawler - INFO - Starting InstagramScraper for keyword: palladam
+2026-03-23 20:03:27,669 - instagram_scraper - INFO - Searching Instagram for: palladam
+2026-03-23 20:03:27,669 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/tags/palladam/
+2026-03-23 20:04:31,013 - scrapling - WARNING - Attempt 1 failed: Page.content: Target page, context or browser has been closed. Retrying in 1s...
+2026-03-23 20:04:32,029 - instagram_scraper - ERROR - Instagram search failed for palladam: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:04:34,043 - parallel_crawler - INFO - Starting InstagramScraper for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:04:34,044 - instagram_scraper - INFO - Searching Instagram for: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:04:34,044 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/search/keyword/?q=palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:04:34,046 - instagram_scraper - ERROR - Instagram search failed for palladam admk OR palladam aiadmk OR palladam அதிமுக: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:04:36,051 - parallel_crawler - INFO - Starting InstagramScraper for keyword: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:04:36,051 - instagram_scraper - INFO - Searching Instagram for: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:04:36,052 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/search/keyword/?q=palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:04:36,053 - instagram_scraper - ERROR - Instagram search failed for palladam tvk OR palladam டி.வி.கே: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:04:38,082 - base_scraper - DEBUG - Scrapling session stopped
+2026-03-23 20:04:38,084 - base_scraper - DEBUG - Scrapling session stopped
+2026-03-23 20:04:38,085 - base_scraper - DEBUG - Scrapling session stopped
+2026-03-23 20:04:38,089 - base_scraper - DEBUG - Scrapling session stopped
+2026-03-23 20:04:38,089 - parallel_crawler - INFO - Crawling completed. Total records collected: 2
+2026-03-23 20:04:38,090 - __main__ - INFO - Applying keyword and region filters...
+2026-03-23 20:04:38,090 - filters - INFO - Filtered 2 records down to 2 (party: True, palladam: True, strict: False)
+2026-03-23 20:04:38,090 - __main__ - INFO - Records after filtering: 2
+2026-03-23 20:04:38,093 - exporter - INFO - Exported 2 records to CSV: output\palladam_politics_data.csv
+2026-03-23 20:04:38,096 - exporter - INFO - Exported 2 records to JSONL: output\palladam_politics_data.jsonl
+2026-03-23 20:04:38,096 - __main__ - INFO - Data exported to output\palladam_politics_data.csv
+2026-03-23 20:04:38,096 - __main__ - INFO - Summary Statistics:
+2026-03-23 20:04:38,097 - __main__ - INFO -   Total: 2
+2026-03-23 20:04:38,097 - __main__ - INFO -   Palladam-related: 1
+2026-03-23 20:04:38,097 - __main__ - INFO - Scraping process finished.
+2026-03-23 20:11:13,802 - __main__ - INFO - ======================================================================
+2026-03-23 20:11:13,803 - __main__ - INFO - Tamil Nadu & Palladam Politics Scraper - Starting
+2026-03-23 20:11:13,803 - __main__ - INFO - ======================================================================
+2026-03-23 20:11:13,811 - __main__ - INFO - Target keywords (Broad): dmk, admk, tamil nadu politics, vijay, palladam dmk OR palladam டிஎம்கே, tvk, palladam admk OR palladam aiadmk OR palladam அதிமுக, dmk stalin, tvk vijay, eps, admk eps, palladam, tiruppur dmk OR tiruppur admk, palladam tvk OR palladam டி.வி.கே, stalin
+2026-03-23 20:11:13,811 - __main__ - INFO - Starting parallel crawl with 4 platforms.
+2026-03-23 20:11:18,699 - base_scraper - DEBUG - Scrapling session started (headless=True, persistent=True)
+2026-03-23 20:11:18,880 - base_scraper - DEBUG - Scrapling session started (headless=True, persistent=True)
+2026-03-23 20:11:18,886 - base_scraper - DEBUG - Scrapling session started (headless=True, persistent=True)
+2026-03-23 20:11:18,916 - base_scraper - DEBUG - Scrapling session started (headless=True, persistent=True)
+2026-03-23 20:11:18,918 - parallel_crawler - INFO - Starting InstagramScraper for keyword: dmk
+2026-03-23 20:11:18,918 - instagram_scraper - INFO - Searching Instagram for: dmk
+2026-03-23 20:11:18,919 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/tags/dmk/
+2026-03-23 20:11:18,931 - parallel_crawler - INFO - Starting FacebookScraper for keyword: dmk
+2026-03-23 20:11:18,932 - facebook_scraper - INFO - Searching Facebook for: dmk
+2026-03-23 20:11:18,932 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/top/?q=dmk
+2026-03-23 20:11:18,944 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: dmk
+2026-03-23 20:11:18,945 - youtube_scraper - INFO - Searching YouTube for: dmk
+2026-03-23 20:11:18,945 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=dmk&sp=CAISAggB
+2026-03-23 20:11:18,951 - parallel_crawler - INFO - Starting TwitterScraper for keyword: dmk
+2026-03-23 20:11:18,952 - twitter_scraper - INFO - Searching Twitter for: dmk
+2026-03-23 20:11:18,952 - base_scraper - DEBUG - Fetching URL: https://twitter.com/search?q=dmk&src=typed_query&f=live
+2026-03-23 20:11:21,085 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:11:21,329 - scrapling - INFO - Fetched (404) <GET https://www.facebook.com/search/top/?q=dmk> (referer: https://www.google.com/)
+2026-03-23 20:11:27,333 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:11:28,173 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=dmk&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 20:11:28,181 - facebook_scraper - INFO - Found 0 potential post elements for keyword: dmk
+2026-03-23 20:11:30,192 - parallel_crawler - INFO - Starting FacebookScraper for keyword: admk
+2026-03-23 20:11:30,193 - facebook_scraper - INFO - Searching Facebook for: admk
+2026-03-23 20:11:30,193 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/top/?q=admk
+2026-03-23 20:11:31,564 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:11:31,630 - scrapling - INFO - Fetched (404) <GET https://www.facebook.com/search/top/?q=admk> (referer: https://www.google.com/)
+2026-03-23 20:11:32,558 - youtube_scraper - INFO - Found 20 videos for keyword: dmk
+2026-03-23 20:11:32,596 - parallel_crawler - INFO - YouTubeScraper found 20 records for keyword: dmk
+2026-03-23 20:11:34,392 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:11:34,459 - scrapling - INFO - Fetched (301) <GET https://twitter.com/search?q=dmk&src=typed_query&f=live> (referer: https://www.google.com/)
+2026-03-23 20:11:34,608 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: admk
+2026-03-23 20:11:34,609 - youtube_scraper - INFO - Searching YouTube for: admk
+2026-03-23 20:11:34,609 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=admk&sp=CAISAggB
+2026-03-23 20:11:35,697 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Ddmk%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:11:37,565 - facebook_scraper - INFO - Found 0 potential post elements for keyword: admk
+2026-03-23 20:11:39,560 - parallel_crawler - INFO - Starting FacebookScraper for keyword: tamil nadu politics
+2026-03-23 20:11:39,560 - facebook_scraper - INFO - Searching Facebook for: tamil nadu politics
+2026-03-23 20:11:39,561 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/top/?q=tamil nadu politics
+2026-03-23 20:11:40,814 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:11:40,948 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:11:41,057 - scrapling - INFO - Fetched (404) <GET https://www.facebook.com/search/top/?q=tamil%20nadu%20politics> (referer: https://www.google.com/)
+2026-03-23 20:11:41,534 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=admk&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 20:11:41,610 - twitter_scraper - INFO - Found 0 tweets for keyword: dmk
+2026-03-23 20:11:43,622 - parallel_crawler - INFO - Starting TwitterScraper for keyword: admk
+2026-03-23 20:11:43,622 - twitter_scraper - INFO - Searching Twitter for: admk
+2026-03-23 20:11:43,622 - base_scraper - DEBUG - Fetching URL: https://twitter.com/search?q=admk&src=typed_query&f=live
+2026-03-23 20:11:45,814 - youtube_scraper - INFO - Found 20 videos for keyword: admk
+2026-03-23 20:11:45,839 - parallel_crawler - INFO - YouTubeScraper found 20 records for keyword: admk
+2026-03-23 20:11:47,525 - facebook_scraper - INFO - Found 0 potential post elements for keyword: tamil nadu politics
+2026-03-23 20:11:47,850 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: tamil nadu politics
+2026-03-23 20:11:47,851 - youtube_scraper - INFO - Searching YouTube for: tamil nadu politics
+2026-03-23 20:11:47,851 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=tamil nadu politics&sp=CAISAggB
+2026-03-23 20:11:49,532 - parallel_crawler - INFO - Starting FacebookScraper for keyword: vijay
+2026-03-23 20:11:49,532 - facebook_scraper - INFO - Searching Facebook for: vijay
+2026-03-23 20:11:49,532 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/top/?q=vijay
+2026-03-23 20:11:50,589 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:11:50,632 - scrapling - INFO - Fetched (404) <GET https://www.facebook.com/search/top/?q=vijay> (referer: https://www.google.com/)
+2026-03-23 20:11:51,381 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:11:51,467 - scrapling - INFO - Fetched (301) <GET https://twitter.com/search?q=admk&src=typed_query&f=live> (referer: https://www.google.com/)
+2026-03-23 20:11:51,701 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dadmk%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:11:56,328 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:11:56,900 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=tamil+nadu+politics&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 20:11:56,907 - facebook_scraper - INFO - Found 0 potential post elements for keyword: vijay
+2026-03-23 20:11:58,157 - twitter_scraper - INFO - Found 0 tweets for keyword: admk
+2026-03-23 20:11:58,919 - parallel_crawler - INFO - Starting FacebookScraper for keyword: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:11:58,919 - facebook_scraper - INFO - Searching Facebook for: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:11:58,920 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/top/?q=palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:12:00,046 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:12:00,099 - scrapling - INFO - Fetched (404) <GET https://www.facebook.com/search/top/?q=palladam%20dmk%20OR%20palladam%20%E0%AE%9F%E0%AE%BF%E0%AE%8E%E0%AE%AE%E0%AF%8D%E0%AE%95%E0%AF%87> (referer: https://www.google.com/)
+2026-03-23 20:12:00,168 - parallel_crawler - INFO - Starting TwitterScraper for keyword: tamil nadu politics
+2026-03-23 20:12:00,169 - twitter_scraper - INFO - Searching Twitter for: tamil nadu politics
+2026-03-23 20:12:00,169 - base_scraper - DEBUG - Fetching URL: https://twitter.com/search?q=tamil nadu politics&src=typed_query&f=live
+2026-03-23 20:12:01,237 - youtube_scraper - INFO - Found 20 videos for keyword: tamil nadu politics
+2026-03-23 20:12:01,265 - parallel_crawler - INFO - YouTubeScraper found 20 records for keyword: tamil nadu politics
+2026-03-23 20:12:03,276 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: vijay
+2026-03-23 20:12:03,276 - youtube_scraper - INFO - Searching YouTube for: vijay
+2026-03-23 20:12:03,276 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=vijay&sp=CAISAggB
+2026-03-23 20:12:06,892 - facebook_scraper - INFO - Found 0 potential post elements for keyword: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:12:08,883 - parallel_crawler - INFO - Starting FacebookScraper for keyword: tvk
+2026-03-23 20:12:08,884 - facebook_scraper - INFO - Searching Facebook for: tvk
+2026-03-23 20:12:08,884 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/top/?q=tvk
+2026-03-23 20:12:09,855 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:12:09,969 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:12:10,015 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:12:10,076 - scrapling - INFO - Fetched (301) <GET https://twitter.com/search?q=tamil%20nadu%20politics&src=typed_query&f=live> (referer: https://www.google.com/)
+2026-03-23 20:12:10,079 - scrapling - INFO - Fetched (404) <GET https://www.facebook.com/search/top/?q=tvk> (referer: https://www.google.com/)
+2026-03-23 20:12:10,255 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=vijay&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 20:12:10,266 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dtamil%2520nadu%2520politics%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:12:13,390 - youtube_scraper - INFO - Found 20 videos for keyword: vijay
+2026-03-23 20:12:13,399 - parallel_crawler - INFO - YouTubeScraper found 20 records for keyword: vijay
+2026-03-23 20:12:15,404 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:12:15,404 - youtube_scraper - INFO - Searching YouTube for: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:12:15,405 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=palladam dmk OR palladam டிஎம்கே&sp=CAISAggB
+2026-03-23 20:12:16,880 - facebook_scraper - INFO - Found 0 potential post elements for keyword: tvk
+2026-03-23 20:12:17,313 - twitter_scraper - INFO - Found 0 tweets for keyword: tamil nadu politics
+2026-03-23 20:12:18,040 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:12:18,152 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=palladam+dmk+OR+palladam+%E0%AE%9F%E0%AE%BF%E0%AE%8E%E0%AE%AE%E0%AF%8D%E0%AE%95%E0%AF%87&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 20:12:18,887 - parallel_crawler - INFO - Starting FacebookScraper for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:12:18,888 - facebook_scraper - INFO - Searching Facebook for: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:12:18,889 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/top/?q=palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:12:19,322 - parallel_crawler - INFO - Starting TwitterScraper for keyword: vijay
+2026-03-23 20:12:19,322 - twitter_scraper - INFO - Searching Twitter for: vijay
+2026-03-23 20:12:19,322 - base_scraper - DEBUG - Fetching URL: https://twitter.com/search?q=vijay&src=typed_query&f=live
+2026-03-23 20:12:19,952 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:12:19,982 - scrapling - INFO - Fetched (404) <GET https://www.facebook.com/search/top/?q=palladam%20admk%20OR%20palladam%20aiadmk%20OR%20palladam%20%E0%AE%85%E0%AE%A4%E0%AE%BF%E0%AE%AE%E0%AF%81%E0%AE%95> (referer: https://www.google.com/)
+2026-03-23 20:12:21,488 - youtube_scraper - INFO - Found 0 videos for keyword: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:12:23,498 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: tvk
+2026-03-23 20:12:23,498 - youtube_scraper - INFO - Searching YouTube for: tvk
+2026-03-23 20:12:23,498 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=tvk&sp=CAISAggB
+2026-03-23 20:12:24,578 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:12:24,725 - scrapling - INFO - Fetched (301) <GET https://twitter.com/search?q=vijay&src=typed_query&f=live> (referer: https://www.google.com/)
+2026-03-23 20:12:24,846 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dvijay%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:12:26,347 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:12:26,844 - facebook_scraper - INFO - Found 0 potential post elements for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:12:27,433 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:12:27,758 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=tvk&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 20:12:28,852 - parallel_crawler - INFO - Starting FacebookScraper for keyword: dmk stalin
+2026-03-23 20:12:28,852 - facebook_scraper - INFO - Searching Facebook for: dmk stalin
+2026-03-23 20:12:28,852 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/top/?q=dmk stalin
+2026-03-23 20:12:29,984 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:12:30,011 - scrapling - INFO - Fetched (404) <GET https://www.facebook.com/search/top/?q=dmk%20stalin> (referer: https://www.google.com/)
+2026-03-23 20:12:31,043 - twitter_scraper - INFO - Found 0 tweets for keyword: vijay
+2026-03-23 20:12:31,044 - youtube_scraper - INFO - Found 19 videos for keyword: tvk
+2026-03-23 20:12:31,049 - parallel_crawler - INFO - YouTubeScraper found 19 records for keyword: tvk
+2026-03-23 20:12:33,044 - parallel_crawler - INFO - Starting TwitterScraper for keyword: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:12:33,045 - twitter_scraper - INFO - Searching Twitter for: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:12:33,046 - base_scraper - DEBUG - Fetching URL: https://twitter.com/search?q=palladam dmk OR palladam டிஎம்கே&src=typed_query&f=live
+2026-03-23 20:12:33,047 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:12:33,047 - youtube_scraper - INFO - Searching YouTube for: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:12:33,047 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=palladam admk OR palladam aiadmk OR palladam அதிமுக&sp=CAISAggB
+2026-03-23 20:12:35,466 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:12:35,753 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=palladam+admk+OR+palladam+aiadmk+OR+palladam+%E0%AE%85%E0%AE%A4%E0%AE%BF%E0%AE%AE%E0%AF%81%E0%AE%95&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 20:12:36,535 - facebook_scraper - INFO - Found 0 potential post elements for keyword: dmk stalin
+2026-03-23 20:12:38,534 - parallel_crawler - INFO - Starting FacebookScraper for keyword: tvk vijay
+2026-03-23 20:12:38,535 - facebook_scraper - INFO - Searching Facebook for: tvk vijay
+2026-03-23 20:12:38,535 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/top/?q=tvk vijay
+2026-03-23 20:12:38,759 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:12:38,791 - scrapling - INFO - Fetched (301) <GET https://twitter.com/search?q=palladam%20dmk%20OR%20palladam%20%E0%AE%9F%E0%AE%BF%E0%AE%8E%E0%AE%AE%E0%AF%8D%E0%AE%95%E0%AF%87&src=typed_query&f=live> (referer: https://www.google.com/)
+2026-03-23 20:12:38,819 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dpalladam%2520dmk%2520OR%2520palladam%2520%25E0%25AE%259F%25E0%25AE%25BF%25E0%25AE%258E%25E0%25AE%25AE%25E0%25AF%258D%25E0%25AE%2595%25E0%25AF%2587%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:12:39,142 - youtube_scraper - INFO - Found 0 videos for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:12:39,502 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:12:39,529 - scrapling - INFO - Fetched (404) <GET https://www.facebook.com/search/top/?q=tvk%20vijay> (referer: https://www.google.com/)
+2026-03-23 20:12:41,150 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: dmk stalin
+2026-03-23 20:12:41,150 - youtube_scraper - INFO - Searching YouTube for: dmk stalin
+2026-03-23 20:12:41,150 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=dmk stalin&sp=CAISAggB
+2026-03-23 20:12:44,818 - facebook_scraper - INFO - Found 0 potential post elements for keyword: tvk vijay
+2026-03-23 20:12:44,849 - twitter_scraper - INFO - Found 0 tweets for keyword: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:12:46,825 - parallel_crawler - INFO - Starting FacebookScraper for keyword: eps
+2026-03-23 20:12:46,825 - facebook_scraper - INFO - Searching Facebook for: eps
+2026-03-23 20:12:46,825 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/top/?q=eps
+2026-03-23 20:12:46,856 - parallel_crawler - INFO - Starting TwitterScraper for keyword: tvk
+2026-03-23 20:12:46,856 - twitter_scraper - INFO - Searching Twitter for: tvk
+2026-03-23 20:12:46,856 - base_scraper - DEBUG - Fetching URL: https://twitter.com/search?q=tvk&src=typed_query&f=live
+2026-03-23 20:12:47,233 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:12:47,477 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=dmk+stalin&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 20:12:47,844 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:12:47,897 - scrapling - INFO - Fetched (404) <GET https://www.facebook.com/search/top/?q=eps> (referer: https://www.google.com/)
+2026-03-23 20:12:50,695 - youtube_scraper - INFO - Found 20 videos for keyword: dmk stalin
+2026-03-23 20:12:50,732 - parallel_crawler - INFO - YouTubeScraper found 20 records for keyword: dmk stalin
+2026-03-23 20:12:52,748 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: tvk vijay
+2026-03-23 20:12:52,748 - youtube_scraper - INFO - Searching YouTube for: tvk vijay
+2026-03-23 20:12:52,748 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=tvk vijay&sp=CAISAggB
+2026-03-23 20:12:53,740 - facebook_scraper - INFO - Found 0 potential post elements for keyword: eps
+2026-03-23 20:12:55,451 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:12:55,653 - scrapling - INFO - Fetched (301) <GET https://twitter.com/search?q=tvk&src=typed_query&f=live> (referer: https://www.google.com/)
+2026-03-23 20:12:55,744 - parallel_crawler - INFO - Starting FacebookScraper for keyword: admk eps
+2026-03-23 20:12:55,744 - facebook_scraper - INFO - Searching Facebook for: admk eps
+2026-03-23 20:12:55,746 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/top/?q=admk eps
+2026-03-23 20:12:55,935 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dtvk%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:12:57,328 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:12:57,574 - scrapling - INFO - Fetched (404) <GET https://www.facebook.com/search/top/?q=admk%20eps> (referer: https://www.google.com/)
+2026-03-23 20:12:58,832 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:12:59,467 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=tvk+vijay&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 20:13:01,606 - twitter_scraper - INFO - Found 0 tweets for keyword: tvk
+2026-03-23 20:13:03,612 - parallel_crawler - INFO - Starting TwitterScraper for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:13:03,612 - twitter_scraper - INFO - Searching Twitter for: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:13:03,613 - base_scraper - DEBUG - Fetching URL: https://twitter.com/search?q=palladam admk OR palladam aiadmk OR palladam அதிமுக&src=typed_query&f=live
+2026-03-23 20:13:03,813 - facebook_scraper - INFO - Found 0 potential post elements for keyword: admk eps
+2026-03-23 20:13:04,158 - youtube_scraper - INFO - Found 19 videos for keyword: tvk vijay
+2026-03-23 20:13:04,182 - parallel_crawler - INFO - YouTubeScraper found 19 records for keyword: tvk vijay
+2026-03-23 20:13:05,822 - parallel_crawler - INFO - Starting FacebookScraper for keyword: palladam
+2026-03-23 20:13:05,822 - facebook_scraper - INFO - Searching Facebook for: palladam
+2026-03-23 20:13:05,823 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/top/?q=palladam
+2026-03-23 20:13:06,194 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: eps
+2026-03-23 20:13:06,194 - youtube_scraper - INFO - Searching YouTube for: eps
+2026-03-23 20:13:06,195 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=eps&sp=CAISAggB
+2026-03-23 20:13:06,890 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:13:07,003 - scrapling - INFO - Fetched (404) <GET https://www.facebook.com/search/top/?q=palladam> (referer: https://www.google.com/)
+2026-03-23 20:13:12,299 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:13:12,403 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:13:12,443 - scrapling - INFO - Fetched (301) <GET https://twitter.com/search?q=palladam%20admk%20OR%20palladam%20aiadmk%20OR%20palladam%20%E0%AE%85%E0%AE%A4%E0%AE%BF%E0%AE%AE%E0%AF%81%E0%AE%95&src=typed_query&f=live> (referer: https://www.google.com/)
+2026-03-23 20:13:12,551 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=eps&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 20:13:12,564 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dpalladam%2520admk%2520OR%2520palladam%2520aiadmk%2520OR%2520palladam%2520%25E0%25AE%2585%25E0%25AE%25A4%25E0%25AE%25BF%25E0%25AE%25AE%25E0%25AF%2581%25E0%25AE%2595%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:13:12,915 - facebook_scraper - INFO - Found 0 potential post elements for keyword: palladam
+2026-03-23 20:13:14,921 - parallel_crawler - INFO - Starting FacebookScraper for keyword: tiruppur dmk OR tiruppur admk
+2026-03-23 20:13:14,923 - facebook_scraper - INFO - Searching Facebook for: tiruppur dmk OR tiruppur admk
+2026-03-23 20:13:14,923 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/top/?q=tiruppur dmk OR tiruppur admk
+2026-03-23 20:13:15,863 - youtube_scraper - INFO - Found 20 videos for keyword: eps
+2026-03-23 20:13:15,873 - parallel_crawler - INFO - YouTubeScraper found 20 records for keyword: eps
+2026-03-23 20:13:15,892 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:13:15,919 - scrapling - INFO - Fetched (404) <GET https://www.facebook.com/search/top/?q=tiruppur%20dmk%20OR%20tiruppur%20admk> (referer: https://www.google.com/)
+2026-03-23 20:13:17,885 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: admk eps
+2026-03-23 20:13:17,885 - youtube_scraper - INFO - Searching YouTube for: admk eps
+2026-03-23 20:13:17,885 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=admk eps&sp=CAISAggB
+2026-03-23 20:13:18,617 - twitter_scraper - INFO - Found 0 tweets for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:13:20,635 - parallel_crawler - INFO - Starting TwitterScraper for keyword: dmk stalin
+2026-03-23 20:13:20,635 - twitter_scraper - INFO - Searching Twitter for: dmk stalin
+2026-03-23 20:13:20,636 - base_scraper - DEBUG - Fetching URL: https://twitter.com/search?q=dmk stalin&src=typed_query&f=live
+2026-03-23 20:13:22,870 - facebook_scraper - INFO - Found 0 potential post elements for keyword: tiruppur dmk OR tiruppur admk
+2026-03-23 20:13:23,615 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:13:23,951 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=admk+eps&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 20:13:24,889 - parallel_crawler - INFO - Starting FacebookScraper for keyword: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:13:24,889 - facebook_scraper - INFO - Searching Facebook for: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:13:24,890 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/top/?q=palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:13:25,968 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:13:26,013 - scrapling - INFO - Fetched (404) <GET https://www.facebook.com/search/top/?q=palladam%20tvk%20OR%20palladam%20%E0%AE%9F%E0%AE%BF.%E0%AE%B5%E0%AE%BF.%E0%AE%95%E0%AF%87> (referer: https://www.google.com/)
+2026-03-23 20:13:26,406 - scrapling - INFO - Fetched (301) <GET https://www.instagram.com/explore/tags/dmk/> (referer: https://www.google.com/)
+2026-03-23 20:13:26,554 - scrapling - INFO - Fetched (200) <GET https://www.instagram.com/popular/dmk/?utm_source=explore_tag> (referer: https://www.google.com/)
+2026-03-23 20:13:28,194 - youtube_scraper - INFO - Found 20 videos for keyword: admk eps
+2026-03-23 20:13:28,205 - parallel_crawler - INFO - YouTubeScraper found 20 records for keyword: admk eps
+2026-03-23 20:13:28,347 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:13:28,371 - scrapling - INFO - Fetched (301) <GET https://twitter.com/search?q=dmk%20stalin&src=typed_query&f=live> (referer: https://www.google.com/)
+2026-03-23 20:13:28,402 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Ddmk%2520stalin%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:13:30,199 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: palladam
+2026-03-23 20:13:30,200 - youtube_scraper - INFO - Searching YouTube for: palladam
+2026-03-23 20:13:30,200 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=palladam&sp=CAISAggB
+2026-03-23 20:13:31,068 - instagram_scraper - INFO - Found 1 posts for keyword: dmk
+2026-03-23 20:13:31,068 - parallel_crawler - INFO - InstagramScraper found 1 records for keyword: dmk
+2026-03-23 20:13:32,744 - facebook_scraper - INFO - Found 0 potential post elements for keyword: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:13:32,955 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:13:33,056 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=palladam&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 20:13:33,058 - parallel_crawler - INFO - Starting InstagramScraper for keyword: admk
+2026-03-23 20:13:33,058 - instagram_scraper - INFO - Searching Instagram for: admk
+2026-03-23 20:13:33,058 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/tags/admk/
+2026-03-23 20:13:34,729 - parallel_crawler - INFO - Starting FacebookScraper for keyword: stalin
+2026-03-23 20:13:34,730 - facebook_scraper - INFO - Searching Facebook for: stalin
+2026-03-23 20:13:34,730 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/top/?q=stalin
+2026-03-23 20:13:34,896 - twitter_scraper - INFO - Found 0 tweets for keyword: dmk stalin
+2026-03-23 20:13:35,742 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:13:35,794 - scrapling - INFO - Fetched (404) <GET https://www.facebook.com/search/top/?q=stalin> (referer: https://www.google.com/)
+2026-03-23 20:13:36,899 - parallel_crawler - INFO - Starting TwitterScraper for keyword: tvk vijay
+2026-03-23 20:13:36,899 - twitter_scraper - INFO - Searching Twitter for: tvk vijay
+2026-03-23 20:13:36,899 - base_scraper - DEBUG - Fetching URL: https://twitter.com/search?q=tvk vijay&src=typed_query&f=live
+2026-03-23 20:13:37,798 - youtube_scraper - INFO - Found 1 videos for keyword: palladam
+2026-03-23 20:13:37,802 - parallel_crawler - INFO - YouTubeScraper found 1 records for keyword: palladam
+2026-03-23 20:13:39,789 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: tiruppur dmk OR tiruppur admk
+2026-03-23 20:13:39,791 - youtube_scraper - INFO - Searching YouTube for: tiruppur dmk OR tiruppur admk
+2026-03-23 20:13:39,792 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=tiruppur dmk OR tiruppur admk&sp=CAISAggB
+2026-03-23 20:13:41,451 - facebook_scraper - INFO - Found 0 potential post elements for keyword: stalin
+2026-03-23 20:13:42,733 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:13:42,877 - scrapling - INFO - Fetched (301) <GET https://twitter.com/search?q=tvk%20vijay&src=typed_query&f=live> (referer: https://www.google.com/)
+2026-03-23 20:13:42,941 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dtvk%2520vijay%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:13:43,382 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:13:43,542 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=tiruppur+dmk+OR+tiruppur+admk&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 20:13:48,248 - youtube_scraper - INFO - Found 0 videos for keyword: tiruppur dmk OR tiruppur admk
+2026-03-23 20:13:49,252 - twitter_scraper - INFO - Found 0 tweets for keyword: tvk vijay
+2026-03-23 20:13:50,260 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:13:50,260 - youtube_scraper - INFO - Searching YouTube for: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:13:50,260 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=palladam tvk OR palladam டி.வி.கே&sp=CAISAggB
+2026-03-23 20:13:51,257 - parallel_crawler - INFO - Starting TwitterScraper for keyword: eps
+2026-03-23 20:13:51,258 - twitter_scraper - INFO - Searching Twitter for: eps
+2026-03-23 20:13:51,258 - base_scraper - DEBUG - Fetching URL: https://twitter.com/search?q=eps&src=typed_query&f=live
+2026-03-23 20:13:53,922 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:13:54,105 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=palladam+tvk+OR+palladam+%E0%AE%9F%E0%AE%BF.%E0%AE%B5%E0%AE%BF.%E0%AE%95%E0%AF%87&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 20:13:57,231 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:13:57,257 - scrapling - INFO - Fetched (301) <GET https://twitter.com/search?q=eps&src=typed_query&f=live> (referer: https://www.google.com/)
+2026-03-23 20:13:57,281 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Deps%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:13:58,436 - youtube_scraper - INFO - Found 0 videos for keyword: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:14:00,440 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: stalin
+2026-03-23 20:14:00,442 - youtube_scraper - INFO - Searching YouTube for: stalin
+2026-03-23 20:14:00,442 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=stalin&sp=CAISAggB
+2026-03-23 20:14:04,251 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:14:04,273 - twitter_scraper - INFO - Found 0 tweets for keyword: eps
+2026-03-23 20:14:04,433 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=stalin&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 20:14:06,277 - parallel_crawler - INFO - Starting TwitterScraper for keyword: admk eps
+2026-03-23 20:14:06,277 - twitter_scraper - INFO - Searching Twitter for: admk eps
+2026-03-23 20:14:06,277 - base_scraper - DEBUG - Fetching URL: https://twitter.com/search?q=admk eps&src=typed_query&f=live
+2026-03-23 20:14:08,253 - youtube_scraper - INFO - Found 20 videos for keyword: stalin
+2026-03-23 20:14:08,297 - parallel_crawler - INFO - YouTubeScraper found 20 records for keyword: stalin
+2026-03-23 20:14:15,313 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:14:15,360 - scrapling - INFO - Fetched (301) <GET https://twitter.com/search?q=admk%20eps&src=typed_query&f=live> (referer: https://www.google.com/)
+2026-03-23 20:14:15,439 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dadmk%2520eps%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:14:20,976 - twitter_scraper - INFO - Found 0 tweets for keyword: admk eps
+2026-03-23 20:14:22,994 - parallel_crawler - INFO - Starting TwitterScraper for keyword: palladam
+2026-03-23 20:14:22,994 - twitter_scraper - INFO - Searching Twitter for: palladam
+2026-03-23 20:14:22,994 - base_scraper - DEBUG - Fetching URL: https://twitter.com/search?q=palladam&src=typed_query&f=live
+2026-03-23 20:14:28,380 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:14:28,415 - scrapling - INFO - Fetched (301) <GET https://twitter.com/search?q=palladam&src=typed_query&f=live> (referer: https://www.google.com/)
+2026-03-23 20:14:28,465 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dpalladam%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:14:35,220 - twitter_scraper - INFO - Found 0 tweets for keyword: palladam
+2026-03-23 20:14:37,216 - parallel_crawler - INFO - Starting TwitterScraper for keyword: tiruppur dmk OR tiruppur admk
+2026-03-23 20:14:37,217 - twitter_scraper - INFO - Searching Twitter for: tiruppur dmk OR tiruppur admk
+2026-03-23 20:14:37,217 - base_scraper - DEBUG - Fetching URL: https://twitter.com/search?q=tiruppur dmk OR tiruppur admk&src=typed_query&f=live
+2026-03-23 20:14:39,924 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:14:42,844 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:14:42,879 - scrapling - INFO - Fetched (301) <GET https://twitter.com/search?q=tiruppur%20dmk%20OR%20tiruppur%20admk&src=typed_query&f=live> (referer: https://www.google.com/)
+2026-03-23 20:14:42,925 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dtiruppur%2520dmk%2520OR%2520tiruppur%2520admk%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:14:48,523 - twitter_scraper - INFO - Found 0 tweets for keyword: tiruppur dmk OR tiruppur admk
+2026-03-23 20:14:50,531 - parallel_crawler - INFO - Starting TwitterScraper for keyword: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:14:50,531 - twitter_scraper - INFO - Searching Twitter for: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:14:50,532 - base_scraper - DEBUG - Fetching URL: https://twitter.com/search?q=palladam tvk OR palladam டி.வி.கே&src=typed_query&f=live
+2026-03-23 20:14:58,679 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:14:58,745 - scrapling - INFO - Fetched (301) <GET https://twitter.com/search?q=palladam%20tvk%20OR%20palladam%20%E0%AE%9F%E0%AE%BF.%E0%AE%B5%E0%AE%BF.%E0%AE%95%E0%AF%87&src=typed_query&f=live> (referer: https://www.google.com/)
+2026-03-23 20:14:58,816 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dpalladam%2520tvk%2520OR%2520palladam%2520%25E0%25AE%259F%25E0%25AE%25BF.%25E0%25AE%25B5%25E0%25AE%25BF.%25E0%25AE%2595%25E0%25AF%2587%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:15:04,881 - twitter_scraper - INFO - Found 0 tweets for keyword: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:15:06,887 - parallel_crawler - INFO - Starting TwitterScraper for keyword: stalin
+2026-03-23 20:15:06,887 - twitter_scraper - INFO - Searching Twitter for: stalin
+2026-03-23 20:15:06,887 - base_scraper - DEBUG - Fetching URL: https://twitter.com/search?q=stalin&src=typed_query&f=live
+2026-03-23 20:15:12,222 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:15:12,267 - scrapling - INFO - Fetched (301) <GET https://twitter.com/search?q=stalin&src=typed_query&f=live> (referer: https://www.google.com/)
+2026-03-23 20:15:12,318 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dstalin%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:15:17,617 - twitter_scraper - INFO - Found 0 tweets for keyword: stalin
+2026-03-23 20:15:39,997 - scrapling - INFO - Fetched (301) <GET https://www.instagram.com/explore/tags/admk/> (referer: https://www.google.com/)
+2026-03-23 20:15:40,132 - scrapling - INFO - Fetched (200) <GET https://www.instagram.com/popular/admk/?utm_source=explore_tag> (referer: https://www.google.com/)
+2026-03-23 20:15:43,862 - instagram_scraper - INFO - Found 1 posts for keyword: admk
+2026-03-23 20:15:43,863 - parallel_crawler - INFO - InstagramScraper found 1 records for keyword: admk
+2026-03-23 20:15:45,871 - parallel_crawler - INFO - Starting InstagramScraper for keyword: tamil nadu politics
+2026-03-23 20:15:45,871 - instagram_scraper - INFO - Searching Instagram for: tamil nadu politics
+2026-03-23 20:15:45,872 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/search/keyword/?q=tamil nadu politics
+2026-03-23 20:16:53,563 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:17:01,314 - __main__ - INFO - ======================================================================
+2026-03-23 20:17:01,315 - __main__ - INFO - Tamil Nadu & Palladam Politics Scraper - Starting
+2026-03-23 20:17:01,315 - __main__ - INFO - ======================================================================
+2026-03-23 20:17:01,335 - __main__ - INFO - Target keywords (Broad): palladam tvk OR palladam டி.வி.கே, tamil nadu politics, tiruppur dmk OR tiruppur admk, admk, palladam, admk eps, tvk vijay, stalin, dmk stalin, dmk, palladam dmk OR palladam டிஎம்கே, eps, palladam admk OR palladam aiadmk OR palladam அதிமுக, tvk, vijay
+2026-03-23 20:17:01,335 - __main__ - INFO - Starting parallel crawl with 4 platforms.
+2026-03-23 20:17:37,597 - __main__ - INFO - ======================================================================
+2026-03-23 20:17:37,598 - __main__ - INFO - Tamil Nadu & Palladam Politics Scraper - Starting
+2026-03-23 20:17:37,598 - __main__ - INFO - ======================================================================
+2026-03-23 20:17:37,605 - __main__ - INFO - Target keywords (Broad): palladam dmk OR palladam டிஎம்கே, palladam admk OR palladam aiadmk OR palladam அதிமுக, tvk vijay, dmk stalin, vijay, admk eps, dmk, palladam tvk OR palladam டி.வி.கே, palladam, tvk, tiruppur dmk OR tiruppur admk, tamil nadu politics, admk, stalin, eps
+2026-03-23 20:17:37,605 - __main__ - INFO - Starting parallel crawl with 4 platforms.
+2026-03-23 20:17:53,863 - scrapling - INFO - Fetched (200) <GET https://www.instagram.com/explore/search/keyword/?q=tamil%20nadu%20politics> (referer: https://www.google.com/)
+2026-03-23 20:17:58,550 - instagram_scraper - INFO - Found 19 posts for keyword: tamil nadu politics
+2026-03-23 20:17:58,550 - parallel_crawler - INFO - InstagramScraper found 19 records for keyword: tamil nadu politics
+2026-03-23 20:18:00,556 - parallel_crawler - INFO - Starting InstagramScraper for keyword: vijay
+2026-03-23 20:18:00,556 - instagram_scraper - INFO - Searching Instagram for: vijay
+2026-03-23 20:18:00,556 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/tags/vijay/
+2026-03-23 20:19:06,627 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:19:07,895 - __main__ - INFO - ======================================================================
+2026-03-23 20:19:07,895 - __main__ - INFO - Tamil Nadu & Palladam Politics Scraper - Starting
+2026-03-23 20:19:07,895 - __main__ - INFO - ======================================================================
+2026-03-23 20:19:07,899 - __main__ - INFO - Target keywords (Broad): palladam dmk OR palladam டிஎம்கே, eps, stalin, dmk stalin, palladam, palladam tvk OR palladam டி.வி.கே, tiruppur dmk OR tiruppur admk, tvk, tvk vijay, palladam admk OR palladam aiadmk OR palladam அதிமுக, admk eps, admk, vijay, tamil nadu politics, dmk
+2026-03-23 20:19:07,899 - __main__ - INFO - Starting parallel crawl with 4 platforms.
+2026-03-23 20:20:06,663 - scrapling - INFO - Fetched (301) <GET https://www.instagram.com/explore/tags/vijay/> (referer: https://www.google.com/)
+2026-03-23 20:20:06,739 - scrapling - INFO - Fetched (200) <GET https://www.instagram.com/popular/vijay/?utm_source=explore_tag> (referer: https://www.google.com/)
+2026-03-23 20:20:10,265 - instagram_scraper - INFO - Found 19 posts for keyword: vijay
+2026-03-23 20:20:10,267 - parallel_crawler - INFO - InstagramScraper found 19 records for keyword: vijay
+2026-03-23 20:20:12,273 - parallel_crawler - INFO - Starting InstagramScraper for keyword: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:20:12,273 - instagram_scraper - INFO - Searching Instagram for: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:20:12,273 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/search/keyword/?q=palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:21:18,739 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:21:19,023 - parallel_crawler - WARNING - Crawling timed out after 600 seconds
+2026-03-23 20:21:20,473 - base_scraper - DEBUG - Scrapling session stopped
+2026-03-23 20:21:20,653 - base_scraper - DEBUG - Scrapling session stopped
+2026-03-23 20:21:21,254 - base_scraper - DEBUG - Scrapling session stopped
+2026-03-23 20:21:21,417 - base_scraper - DEBUG - Scrapling session stopped
+2026-03-23 20:21:21,418 - parallel_crawler - INFO - Crawling completed. Total records collected: 239
+2026-03-23 20:21:21,418 - __main__ - INFO - Applying keyword and region filters...
+2026-03-23 20:21:21,418 - filters - INFO - Filtered 239 records down to 239 (party: True, palladam: True, strict: False)
+2026-03-23 20:21:21,418 - __main__ - INFO - Records after filtering: 239
+2026-03-23 20:21:21,446 - exporter - INFO - Exported 239 records to CSV: output\palladam_politics_data.csv
+2026-03-23 20:21:21,513 - exporter - INFO - Exported 239 records to JSONL: output\palladam_politics_data.jsonl
+2026-03-23 20:21:21,513 - __main__ - INFO - Data exported to output\palladam_politics_data.csv
+2026-03-23 20:21:21,514 - __main__ - INFO - Summary Statistics:
+2026-03-23 20:21:21,514 - __main__ - INFO -   Total: 239
+2026-03-23 20:21:21,515 - __main__ - INFO -   Palladam-related: 0
+2026-03-23 20:21:21,515 - __main__ - INFO - Scraping process finished.
+2026-03-23 20:23:09,766 - __main__ - INFO - ======================================================================
+2026-03-23 20:23:09,767 - __main__ - INFO - Tamil Nadu & Palladam Politics Scraper - Starting
+2026-03-23 20:23:09,767 - __main__ - INFO - ======================================================================
+2026-03-23 20:23:09,774 - __main__ - INFO - Target keywords (Broad): palladam tvk OR palladam டி.வி.கே, palladam, eps, vijay, palladam admk OR palladam aiadmk OR palladam அதிமுக, admk, tvk, dmk stalin, tvk vijay, stalin, palladam dmk OR palladam டிஎம்கே, admk eps, tiruppur dmk OR tiruppur admk, dmk, tamil nadu politics
+2026-03-23 20:23:09,774 - __main__ - INFO - Starting parallel crawl with 4 platforms.
+2026-03-23 20:23:11,983 - base_scraper - DEBUG - Scrapling session started (headless=False, persistent=True)
+2026-03-23 20:23:14,971 - base_scraper - DEBUG - Scrapling session started (headless=False, persistent=True)
+2026-03-23 20:23:19,933 - base_scraper - DEBUG - Scrapling session started (headless=False, persistent=True)
+2026-03-23 20:23:26,013 - base_scraper - DEBUG - Scrapling session started (headless=False, persistent=True)
+2026-03-23 20:23:27,032 - parallel_crawler - INFO - Starting InstagramScraper for keyword: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:23:27,032 - instagram_scraper - INFO - Searching Instagram for: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:23:27,032 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/search/keyword/?q=palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:23:27,041 - parallel_crawler - INFO - Starting FacebookScraper for keyword: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:23:27,041 - facebook_scraper - INFO - Searching Facebook for: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:23:27,041 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:23:27,048 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:23:27,048 - youtube_scraper - INFO - Searching YouTube for: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:23:27,048 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=palladam tvk OR palladam டி.வி.கே&sp=CAISAggB
+2026-03-23 20:23:27,053 - parallel_crawler - INFO - Starting TwitterScraper for keyword: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:23:27,053 - twitter_scraper - INFO - Searching Twitter for: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:23:27,054 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=palladam tvk OR palladam டி.வி.கே&src=typed_query&f=live
+2026-03-23 20:23:27,064 - instagram_scraper - ERROR - Instagram search failed for palladam tvk OR palladam டி.வி.கே: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:27,064 - facebook_scraper - ERROR - Facebook search failed for palladam tvk OR palladam டி.வி.கே: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:27,065 - youtube_scraper - ERROR - YouTube search failed for palladam tvk OR palladam டி.வி.கே: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:29,078 - parallel_crawler - INFO - Starting InstagramScraper for keyword: palladam
+2026-03-23 20:23:29,079 - instagram_scraper - INFO - Searching Instagram for: palladam
+2026-03-23 20:23:29,079 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/tags/palladam/
+2026-03-23 20:23:29,084 - parallel_crawler - INFO - Starting FacebookScraper for keyword: palladam
+2026-03-23 20:23:29,085 - facebook_scraper - INFO - Searching Facebook for: palladam
+2026-03-23 20:23:29,086 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=palladam
+2026-03-23 20:23:29,090 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: palladam
+2026-03-23 20:23:29,092 - youtube_scraper - INFO - Searching YouTube for: palladam
+2026-03-23 20:23:29,092 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=palladam&sp=CAISAggB
+2026-03-23 20:23:29,097 - instagram_scraper - ERROR - Instagram search failed for palladam: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:29,097 - facebook_scraper - ERROR - Facebook search failed for palladam: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:29,098 - youtube_scraper - ERROR - YouTube search failed for palladam: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:31,098 - parallel_crawler - INFO - Starting InstagramScraper for keyword: eps
+2026-03-23 20:23:31,099 - instagram_scraper - INFO - Searching Instagram for: eps
+2026-03-23 20:23:31,099 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/tags/eps/
+2026-03-23 20:23:31,104 - parallel_crawler - INFO - Starting FacebookScraper for keyword: eps
+2026-03-23 20:23:31,104 - facebook_scraper - INFO - Searching Facebook for: eps
+2026-03-23 20:23:31,104 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=eps
+2026-03-23 20:23:31,108 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: eps
+2026-03-23 20:23:31,108 - youtube_scraper - INFO - Searching YouTube for: eps
+2026-03-23 20:23:31,109 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=eps&sp=CAISAggB
+2026-03-23 20:23:31,114 - instagram_scraper - ERROR - Instagram search failed for eps: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:31,114 - facebook_scraper - ERROR - Facebook search failed for eps: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:31,115 - youtube_scraper - ERROR - YouTube search failed for eps: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:33,108 - parallel_crawler - INFO - Starting InstagramScraper for keyword: vijay
+2026-03-23 20:23:33,108 - instagram_scraper - INFO - Searching Instagram for: vijay
+2026-03-23 20:23:33,108 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/tags/vijay/
+2026-03-23 20:23:33,112 - parallel_crawler - INFO - Starting FacebookScraper for keyword: vijay
+2026-03-23 20:23:33,113 - facebook_scraper - INFO - Searching Facebook for: vijay
+2026-03-23 20:23:33,113 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=vijay
+2026-03-23 20:23:33,117 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: vijay
+2026-03-23 20:23:33,118 - youtube_scraper - INFO - Searching YouTube for: vijay
+2026-03-23 20:23:33,119 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=vijay&sp=CAISAggB
+2026-03-23 20:23:33,125 - instagram_scraper - ERROR - Instagram search failed for vijay: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:33,126 - facebook_scraper - ERROR - Facebook search failed for vijay: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:33,126 - youtube_scraper - ERROR - YouTube search failed for vijay: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:35,128 - parallel_crawler - INFO - Starting InstagramScraper for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:23:35,128 - instagram_scraper - INFO - Searching Instagram for: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:23:35,128 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/search/keyword/?q=palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:23:35,132 - parallel_crawler - INFO - Starting FacebookScraper for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:23:35,132 - facebook_scraper - INFO - Searching Facebook for: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:23:35,132 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:23:35,134 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:23:35,134 - youtube_scraper - INFO - Searching YouTube for: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:23:35,134 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=palladam admk OR palladam aiadmk OR palladam அதிமுக&sp=CAISAggB
+2026-03-23 20:23:35,138 - instagram_scraper - ERROR - Instagram search failed for palladam admk OR palladam aiadmk OR palladam அதிமுக: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:35,138 - facebook_scraper - ERROR - Facebook search failed for palladam admk OR palladam aiadmk OR palladam அதிமுக: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:35,139 - youtube_scraper - ERROR - YouTube search failed for palladam admk OR palladam aiadmk OR palladam அதிமுக: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:36,919 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:23:37,100 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dpalladam%2520tvk%2520OR%2520palladam%2520%25E0%25AE%259F%25E0%25AE%25BF.%25E0%25AE%25B5%25E0%25AE%25BF.%25E0%25AE%2595%25E0%25AF%2587%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:23:37,148 - parallel_crawler - INFO - Starting InstagramScraper for keyword: admk
+2026-03-23 20:23:37,148 - instagram_scraper - INFO - Searching Instagram for: admk
+2026-03-23 20:23:37,149 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/tags/admk/
+2026-03-23 20:23:37,159 - parallel_crawler - INFO - Starting FacebookScraper for keyword: admk
+2026-03-23 20:23:37,159 - facebook_scraper - INFO - Searching Facebook for: admk
+2026-03-23 20:23:37,159 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=admk
+2026-03-23 20:23:37,165 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: admk
+2026-03-23 20:23:37,165 - youtube_scraper - INFO - Searching YouTube for: admk
+2026-03-23 20:23:37,165 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=admk&sp=CAISAggB
+2026-03-23 20:23:37,173 - instagram_scraper - ERROR - Instagram search failed for admk: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:37,174 - facebook_scraper - ERROR - Facebook search failed for admk: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:37,179 - youtube_scraper - ERROR - YouTube search failed for admk: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:37,201 - twitter_scraper - ERROR - Twitter search failed for palladam tvk OR palladam டி.வி.கே: cannot import name 'Adaptor' from 'scrapling' (C:\Users\navee\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\scrapling\__init__.py)
+2026-03-23 20:23:39,189 - parallel_crawler - INFO - Starting InstagramScraper for keyword: tvk
+2026-03-23 20:23:39,189 - instagram_scraper - INFO - Searching Instagram for: tvk
+2026-03-23 20:23:39,189 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/tags/tvk/
+2026-03-23 20:23:39,193 - parallel_crawler - INFO - Starting FacebookScraper for keyword: tvk
+2026-03-23 20:23:39,193 - facebook_scraper - INFO - Searching Facebook for: tvk
+2026-03-23 20:23:39,193 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=tvk
+2026-03-23 20:23:39,197 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: tvk
+2026-03-23 20:23:39,197 - youtube_scraper - INFO - Searching YouTube for: tvk
+2026-03-23 20:23:39,197 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=tvk&sp=CAISAggB
+2026-03-23 20:23:39,200 - parallel_crawler - INFO - Starting TwitterScraper for keyword: palladam
+2026-03-23 20:23:39,201 - twitter_scraper - INFO - Searching Twitter for: palladam
+2026-03-23 20:23:39,201 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=palladam&src=typed_query&f=live
+2026-03-23 20:23:39,206 - instagram_scraper - ERROR - Instagram search failed for tvk: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:39,207 - facebook_scraper - ERROR - Facebook search failed for tvk: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:39,207 - youtube_scraper - ERROR - YouTube search failed for tvk: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:41,197 - parallel_crawler - INFO - Starting InstagramScraper for keyword: dmk stalin
+2026-03-23 20:23:41,197 - instagram_scraper - INFO - Searching Instagram for: dmk stalin
+2026-03-23 20:23:41,197 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/search/keyword/?q=dmk stalin
+2026-03-23 20:23:41,200 - parallel_crawler - INFO - Starting FacebookScraper for keyword: dmk stalin
+2026-03-23 20:23:41,200 - facebook_scraper - INFO - Searching Facebook for: dmk stalin
+2026-03-23 20:23:41,200 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=dmk stalin
+2026-03-23 20:23:41,204 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: dmk stalin
+2026-03-23 20:23:41,204 - youtube_scraper - INFO - Searching YouTube for: dmk stalin
+2026-03-23 20:23:41,204 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=dmk stalin&sp=CAISAggB
+2026-03-23 20:23:41,208 - instagram_scraper - ERROR - Instagram search failed for dmk stalin: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:41,208 - facebook_scraper - ERROR - Facebook search failed for dmk stalin: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:41,209 - youtube_scraper - ERROR - YouTube search failed for dmk stalin: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:43,216 - parallel_crawler - INFO - Starting InstagramScraper for keyword: tvk vijay
+2026-03-23 20:23:43,216 - instagram_scraper - INFO - Searching Instagram for: tvk vijay
+2026-03-23 20:23:43,217 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/search/keyword/?q=tvk vijay
+2026-03-23 20:23:43,220 - parallel_crawler - INFO - Starting FacebookScraper for keyword: tvk vijay
+2026-03-23 20:23:43,220 - facebook_scraper - INFO - Searching Facebook for: tvk vijay
+2026-03-23 20:23:43,220 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=tvk vijay
+2026-03-23 20:23:43,223 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: tvk vijay
+2026-03-23 20:23:43,223 - youtube_scraper - INFO - Searching YouTube for: tvk vijay
+2026-03-23 20:23:43,223 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=tvk vijay&sp=CAISAggB
+2026-03-23 20:23:43,226 - instagram_scraper - ERROR - Instagram search failed for tvk vijay: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:43,226 - facebook_scraper - ERROR - Facebook search failed for tvk vijay: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:43,226 - youtube_scraper - ERROR - YouTube search failed for tvk vijay: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:45,252 - parallel_crawler - INFO - Starting InstagramScraper for keyword: stalin
+2026-03-23 20:23:45,253 - instagram_scraper - INFO - Searching Instagram for: stalin
+2026-03-23 20:23:45,253 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/tags/stalin/
+2026-03-23 20:23:45,258 - parallel_crawler - INFO - Starting FacebookScraper for keyword: stalin
+2026-03-23 20:23:45,258 - facebook_scraper - INFO - Searching Facebook for: stalin
+2026-03-23 20:23:45,259 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=stalin
+2026-03-23 20:23:45,261 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: stalin
+2026-03-23 20:23:45,261 - youtube_scraper - INFO - Searching YouTube for: stalin
+2026-03-23 20:23:45,261 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=stalin&sp=CAISAggB
+2026-03-23 20:23:45,264 - instagram_scraper - ERROR - Instagram search failed for stalin: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:45,265 - facebook_scraper - ERROR - Facebook search failed for stalin: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:45,265 - youtube_scraper - ERROR - YouTube search failed for stalin: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:46,173 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:23:46,290 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dpalladam%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:23:46,372 - twitter_scraper - ERROR - Twitter search failed for palladam: cannot import name 'Adaptor' from 'scrapling' (C:\Users\navee\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\scrapling\__init__.py)
+2026-03-23 20:23:47,271 - parallel_crawler - INFO - Starting InstagramScraper for keyword: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:23:47,272 - instagram_scraper - INFO - Searching Instagram for: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:23:47,272 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/search/keyword/?q=palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:23:47,275 - parallel_crawler - INFO - Starting FacebookScraper for keyword: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:23:47,276 - facebook_scraper - INFO - Searching Facebook for: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:23:47,276 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:23:47,279 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:23:47,279 - youtube_scraper - INFO - Searching YouTube for: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:23:47,279 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=palladam dmk OR palladam டிஎம்கே&sp=CAISAggB
+2026-03-23 20:23:47,285 - instagram_scraper - ERROR - Instagram search failed for palladam dmk OR palladam டிஎம்கே: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:47,285 - facebook_scraper - ERROR - Facebook search failed for palladam dmk OR palladam டிஎம்கே: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:47,289 - youtube_scraper - ERROR - YouTube search failed for palladam dmk OR palladam டிஎம்கே: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:48,375 - parallel_crawler - INFO - Starting TwitterScraper for keyword: eps
+2026-03-23 20:23:48,376 - twitter_scraper - INFO - Searching Twitter for: eps
+2026-03-23 20:23:48,376 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=eps&src=typed_query&f=live
+2026-03-23 20:23:49,276 - parallel_crawler - INFO - Starting InstagramScraper for keyword: admk eps
+2026-03-23 20:23:49,276 - instagram_scraper - INFO - Searching Instagram for: admk eps
+2026-03-23 20:23:49,277 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/search/keyword/?q=admk eps
+2026-03-23 20:23:49,280 - parallel_crawler - INFO - Starting FacebookScraper for keyword: admk eps
+2026-03-23 20:23:49,280 - facebook_scraper - INFO - Searching Facebook for: admk eps
+2026-03-23 20:23:49,281 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=admk eps
+2026-03-23 20:23:49,286 - instagram_scraper - ERROR - Instagram search failed for admk eps: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:49,289 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: admk eps
+2026-03-23 20:23:49,289 - youtube_scraper - INFO - Searching YouTube for: admk eps
+2026-03-23 20:23:49,289 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=admk eps&sp=CAISAggB
+2026-03-23 20:23:49,296 - facebook_scraper - ERROR - Facebook search failed for admk eps: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:49,297 - youtube_scraper - ERROR - YouTube search failed for admk eps: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:51,292 - parallel_crawler - INFO - Starting InstagramScraper for keyword: tiruppur dmk OR tiruppur admk
+2026-03-23 20:23:51,293 - instagram_scraper - INFO - Searching Instagram for: tiruppur dmk OR tiruppur admk
+2026-03-23 20:23:51,293 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/search/keyword/?q=tiruppur dmk OR tiruppur admk
+2026-03-23 20:23:51,296 - parallel_crawler - INFO - Starting FacebookScraper for keyword: tiruppur dmk OR tiruppur admk
+2026-03-23 20:23:51,297 - facebook_scraper - INFO - Searching Facebook for: tiruppur dmk OR tiruppur admk
+2026-03-23 20:23:51,297 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=tiruppur dmk OR tiruppur admk
+2026-03-23 20:23:51,300 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: tiruppur dmk OR tiruppur admk
+2026-03-23 20:23:51,301 - youtube_scraper - INFO - Searching YouTube for: tiruppur dmk OR tiruppur admk
+2026-03-23 20:23:51,301 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=tiruppur dmk OR tiruppur admk&sp=CAISAggB
+2026-03-23 20:23:51,312 - instagram_scraper - ERROR - Instagram search failed for tiruppur dmk OR tiruppur admk: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:51,314 - facebook_scraper - ERROR - Facebook search failed for tiruppur dmk OR tiruppur admk: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:51,316 - youtube_scraper - ERROR - YouTube search failed for tiruppur dmk OR tiruppur admk: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:53,325 - parallel_crawler - INFO - Starting InstagramScraper for keyword: dmk
+2026-03-23 20:23:53,326 - instagram_scraper - INFO - Searching Instagram for: dmk
+2026-03-23 20:23:53,326 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/tags/dmk/
+2026-03-23 20:23:53,330 - parallel_crawler - INFO - Starting FacebookScraper for keyword: dmk
+2026-03-23 20:23:53,330 - facebook_scraper - INFO - Searching Facebook for: dmk
+2026-03-23 20:23:53,331 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=dmk
+2026-03-23 20:23:53,338 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: dmk
+2026-03-23 20:23:53,338 - youtube_scraper - INFO - Searching YouTube for: dmk
+2026-03-23 20:23:53,338 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=dmk&sp=CAISAggB
+2026-03-23 20:23:53,346 - instagram_scraper - ERROR - Instagram search failed for dmk: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:53,346 - facebook_scraper - ERROR - Facebook search failed for dmk: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:53,347 - youtube_scraper - ERROR - YouTube search failed for dmk: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:55,360 - parallel_crawler - INFO - Starting InstagramScraper for keyword: tamil nadu politics
+2026-03-23 20:23:55,360 - instagram_scraper - INFO - Searching Instagram for: tamil nadu politics
+2026-03-23 20:23:55,360 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/search/keyword/?q=tamil nadu politics
+2026-03-23 20:23:55,365 - parallel_crawler - INFO - Starting FacebookScraper for keyword: tamil nadu politics
+2026-03-23 20:23:55,365 - facebook_scraper - INFO - Searching Facebook for: tamil nadu politics
+2026-03-23 20:23:55,365 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=tamil nadu politics
+2026-03-23 20:23:55,367 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: tamil nadu politics
+2026-03-23 20:23:55,368 - youtube_scraper - INFO - Searching YouTube for: tamil nadu politics
+2026-03-23 20:23:55,368 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=tamil nadu politics&sp=CAISAggB
+2026-03-23 20:23:55,375 - facebook_scraper - ERROR - Facebook search failed for tamil nadu politics: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:55,375 - instagram_scraper - ERROR - Instagram search failed for tamil nadu politics: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:55,376 - youtube_scraper - ERROR - YouTube search failed for tamil nadu politics: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:23:56,124 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:23:56,252 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Deps%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:23:56,334 - twitter_scraper - ERROR - Twitter search failed for eps: cannot import name 'Adaptor' from 'scrapling' (C:\Users\navee\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\scrapling\__init__.py)
+2026-03-23 20:23:58,350 - parallel_crawler - INFO - Starting TwitterScraper for keyword: vijay
+2026-03-23 20:23:58,350 - twitter_scraper - INFO - Searching Twitter for: vijay
+2026-03-23 20:23:58,351 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=vijay&src=typed_query&f=live
+2026-03-23 20:24:05,833 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:24:05,931 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dvijay%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:24:06,001 - twitter_scraper - ERROR - Twitter search failed for vijay: cannot import name 'Adaptor' from 'scrapling' (C:\Users\navee\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\scrapling\__init__.py)
+2026-03-23 20:24:08,003 - parallel_crawler - INFO - Starting TwitterScraper for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:24:08,004 - twitter_scraper - INFO - Searching Twitter for: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:24:08,004 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=palladam admk OR palladam aiadmk OR palladam அதிமுக&src=typed_query&f=live
+2026-03-23 20:24:14,972 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:24:15,083 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dpalladam%2520admk%2520OR%2520palladam%2520aiadmk%2520OR%2520palladam%2520%25E0%25AE%2585%25E0%25AE%25A4%25E0%25AE%25BF%25E0%25AE%25AE%25E0%25AF%2581%25E0%25AE%2595%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:24:15,162 - twitter_scraper - ERROR - Twitter search failed for palladam admk OR palladam aiadmk OR palladam அதிமுக: cannot import name 'Adaptor' from 'scrapling' (C:\Users\navee\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\scrapling\__init__.py)
+2026-03-23 20:24:17,171 - parallel_crawler - INFO - Starting TwitterScraper for keyword: admk
+2026-03-23 20:24:17,171 - twitter_scraper - INFO - Searching Twitter for: admk
+2026-03-23 20:24:17,172 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=admk&src=typed_query&f=live
+2026-03-23 20:24:26,987 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:24:27,091 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dadmk%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:24:27,197 - twitter_scraper - ERROR - Twitter search failed for admk: cannot import name 'Adaptor' from 'scrapling' (C:\Users\navee\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\scrapling\__init__.py)
+2026-03-23 20:24:29,203 - parallel_crawler - INFO - Starting TwitterScraper for keyword: tvk
+2026-03-23 20:24:29,203 - twitter_scraper - INFO - Searching Twitter for: tvk
+2026-03-23 20:24:29,203 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=tvk&src=typed_query&f=live
+2026-03-23 20:24:37,113 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:24:37,245 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dtvk%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:24:37,383 - twitter_scraper - ERROR - Twitter search failed for tvk: cannot import name 'Adaptor' from 'scrapling' (C:\Users\navee\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\scrapling\__init__.py)
+2026-03-23 20:24:39,390 - parallel_crawler - INFO - Starting TwitterScraper for keyword: dmk stalin
+2026-03-23 20:24:39,391 - twitter_scraper - INFO - Searching Twitter for: dmk stalin
+2026-03-23 20:24:39,391 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=dmk stalin&src=typed_query&f=live
+2026-03-23 20:24:45,455 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:24:45,553 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Ddmk%2520stalin%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:24:45,658 - twitter_scraper - ERROR - Twitter search failed for dmk stalin: cannot import name 'Adaptor' from 'scrapling' (C:\Users\navee\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\scrapling\__init__.py)
+2026-03-23 20:24:47,672 - parallel_crawler - INFO - Starting TwitterScraper for keyword: tvk vijay
+2026-03-23 20:24:47,672 - twitter_scraper - INFO - Searching Twitter for: tvk vijay
+2026-03-23 20:24:47,672 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=tvk vijay&src=typed_query&f=live
+2026-03-23 20:24:52,986 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:24:53,060 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dtvk%2520vijay%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:24:53,163 - twitter_scraper - ERROR - Twitter search failed for tvk vijay: cannot import name 'Adaptor' from 'scrapling' (C:\Users\navee\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\scrapling\__init__.py)
+2026-03-23 20:24:55,175 - parallel_crawler - INFO - Starting TwitterScraper for keyword: stalin
+2026-03-23 20:24:55,175 - twitter_scraper - INFO - Searching Twitter for: stalin
+2026-03-23 20:24:55,175 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=stalin&src=typed_query&f=live
+2026-03-23 20:25:00,448 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:25:00,533 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dstalin%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:25:00,604 - twitter_scraper - ERROR - Twitter search failed for stalin: cannot import name 'Adaptor' from 'scrapling' (C:\Users\navee\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\scrapling\__init__.py)
+2026-03-23 20:25:02,610 - parallel_crawler - INFO - Starting TwitterScraper for keyword: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:25:02,610 - twitter_scraper - INFO - Searching Twitter for: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:25:02,610 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=palladam dmk OR palladam டிஎம்கே&src=typed_query&f=live
+2026-03-23 20:25:07,997 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:25:08,079 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dpalladam%2520dmk%2520OR%2520palladam%2520%25E0%25AE%259F%25E0%25AE%25BF%25E0%25AE%258E%25E0%25AE%25AE%25E0%25AF%258D%25E0%25AE%2595%25E0%25AF%2587%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:25:08,208 - twitter_scraper - ERROR - Twitter search failed for palladam dmk OR palladam டிஎம்கே: cannot import name 'Adaptor' from 'scrapling' (C:\Users\navee\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\scrapling\__init__.py)
+2026-03-23 20:25:10,214 - parallel_crawler - INFO - Starting TwitterScraper for keyword: admk eps
+2026-03-23 20:25:10,214 - twitter_scraper - INFO - Searching Twitter for: admk eps
+2026-03-23 20:25:10,215 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=admk eps&src=typed_query&f=live
+2026-03-23 20:25:16,463 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:25:16,549 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dadmk%2520eps%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:25:16,652 - twitter_scraper - ERROR - Twitter search failed for admk eps: cannot import name 'Adaptor' from 'scrapling' (C:\Users\navee\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\scrapling\__init__.py)
+2026-03-23 20:25:18,665 - parallel_crawler - INFO - Starting TwitterScraper for keyword: tiruppur dmk OR tiruppur admk
+2026-03-23 20:25:18,665 - twitter_scraper - INFO - Searching Twitter for: tiruppur dmk OR tiruppur admk
+2026-03-23 20:25:18,665 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=tiruppur dmk OR tiruppur admk&src=typed_query&f=live
+2026-03-23 20:25:24,048 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:25:24,108 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dtiruppur%2520dmk%2520OR%2520tiruppur%2520admk%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:25:24,202 - twitter_scraper - ERROR - Twitter search failed for tiruppur dmk OR tiruppur admk: cannot import name 'Adaptor' from 'scrapling' (C:\Users\navee\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\scrapling\__init__.py)
+2026-03-23 20:25:26,215 - parallel_crawler - INFO - Starting TwitterScraper for keyword: dmk
+2026-03-23 20:25:26,215 - twitter_scraper - INFO - Searching Twitter for: dmk
+2026-03-23 20:25:26,215 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=dmk&src=typed_query&f=live
+2026-03-23 20:25:34,221 - __main__ - INFO - ======================================================================
+2026-03-23 20:25:34,222 - __main__ - INFO - Tamil Nadu & Palladam Politics Scraper - Starting
+2026-03-23 20:25:34,222 - __main__ - INFO - ======================================================================
+2026-03-23 20:25:34,234 - __main__ - INFO - Target keywords (Broad): tiruppur dmk OR tiruppur admk, palladam, dmk, dmk stalin, tvk, admk eps, vijay, palladam dmk OR palladam டிஎம்கே, eps, admk, tvk vijay, palladam tvk OR palladam டி.வி.கே, stalin, tamil nadu politics, palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:25:34,235 - __main__ - INFO - Starting parallel crawl with 4 platforms.
+2026-03-23 20:25:34,595 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:25:34,714 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Ddmk%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:25:34,964 - twitter_scraper - ERROR - Twitter search failed for dmk: cannot import name 'Adaptor' from 'scrapling' (C:\Users\navee\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\scrapling\__init__.py)
+2026-03-23 20:25:36,973 - parallel_crawler - INFO - Starting TwitterScraper for keyword: tamil nadu politics
+2026-03-23 20:25:36,974 - twitter_scraper - INFO - Searching Twitter for: tamil nadu politics
+2026-03-23 20:25:36,974 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=tamil nadu politics&src=typed_query&f=live
+2026-03-23 20:25:39,967 - base_scraper - DEBUG - Scrapling session started (headless=False, persistent=True)
+2026-03-23 20:25:45,783 - base_scraper - DEBUG - Scrapling session started (headless=False, persistent=True)
+2026-03-23 20:25:47,140 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:25:47,336 - scrapling - INFO - Fetched (200) <GET https://x.com/i/flow/login?redirect_after_login=%2Fsearch%3Fq%3Dtamil%2520nadu%2520politics%26src%3Dtyped_query%26f%3Dlive> (referer: https://www.google.com/)
+2026-03-23 20:25:47,625 - twitter_scraper - ERROR - Twitter search failed for tamil nadu politics: cannot import name 'Adaptor' from 'scrapling' (C:\Users\navee\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\scrapling\__init__.py)
+2026-03-23 20:25:49,708 - base_scraper - DEBUG - Scrapling session stopped
+2026-03-23 20:25:49,710 - base_scraper - DEBUG - Scrapling session stopped
+2026-03-23 20:25:49,710 - base_scraper - DEBUG - Scrapling session stopped
+2026-03-23 20:25:53,599 - base_scraper - DEBUG - Scrapling session stopped
+2026-03-23 20:25:53,602 - parallel_crawler - INFO - Crawling completed. Total records collected: 0
+2026-03-23 20:25:53,603 - __main__ - INFO - Scraping process finished.
+2026-03-23 20:25:54,065 - base_scraper - DEBUG - Scrapling session started (headless=False, persistent=True)
+2026-03-23 20:25:58,714 - base_scraper - DEBUG - Scrapling session started (headless=False, persistent=True)
+2026-03-23 20:25:59,724 - parallel_crawler - INFO - Starting InstagramScraper for keyword: tiruppur dmk OR tiruppur admk
+2026-03-23 20:25:59,725 - instagram_scraper - INFO - Searching Instagram for: tiruppur dmk OR tiruppur admk
+2026-03-23 20:25:59,725 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/search/keyword/?q=tiruppur dmk OR tiruppur admk
+2026-03-23 20:25:59,737 - parallel_crawler - INFO - Starting FacebookScraper for keyword: tiruppur dmk OR tiruppur admk
+2026-03-23 20:25:59,738 - facebook_scraper - INFO - Searching Facebook for: tiruppur dmk OR tiruppur admk
+2026-03-23 20:25:59,740 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=tiruppur dmk OR tiruppur admk
+2026-03-23 20:25:59,747 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: tiruppur dmk OR tiruppur admk
+2026-03-23 20:25:59,747 - youtube_scraper - INFO - Searching YouTube for: tiruppur dmk OR tiruppur admk
+2026-03-23 20:25:59,748 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=tiruppur dmk OR tiruppur admk&sp=CAISAggB
+2026-03-23 20:25:59,755 - parallel_crawler - INFO - Starting TwitterScraper for keyword: tiruppur dmk OR tiruppur admk
+2026-03-23 20:25:59,757 - twitter_scraper - INFO - Searching Twitter for: tiruppur dmk OR tiruppur admk
+2026-03-23 20:25:59,758 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=tiruppur dmk OR tiruppur admk&src=typed_query&f=live
+2026-03-23 20:25:59,771 - instagram_scraper - ERROR - Instagram search failed for tiruppur dmk OR tiruppur admk: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:25:59,772 - facebook_scraper - ERROR - Facebook search failed for tiruppur dmk OR tiruppur admk: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:01,772 - parallel_crawler - INFO - Starting InstagramScraper for keyword: palladam
+2026-03-23 20:26:01,773 - instagram_scraper - INFO - Searching Instagram for: palladam
+2026-03-23 20:26:01,774 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/tags/palladam/
+2026-03-23 20:26:01,783 - parallel_crawler - INFO - Starting FacebookScraper for keyword: palladam
+2026-03-23 20:26:01,790 - facebook_scraper - INFO - Searching Facebook for: palladam
+2026-03-23 20:26:01,796 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=palladam
+2026-03-23 20:26:01,809 - instagram_scraper - ERROR - Instagram search failed for palladam: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:01,829 - facebook_scraper - ERROR - Facebook search failed for palladam: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:03,823 - parallel_crawler - INFO - Starting InstagramScraper for keyword: dmk
+2026-03-23 20:26:03,824 - instagram_scraper - INFO - Searching Instagram for: dmk
+2026-03-23 20:26:03,824 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/tags/dmk/
+2026-03-23 20:26:03,831 - parallel_crawler - INFO - Starting FacebookScraper for keyword: dmk
+2026-03-23 20:26:03,832 - facebook_scraper - INFO - Searching Facebook for: dmk
+2026-03-23 20:26:03,832 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=dmk
+2026-03-23 20:26:03,841 - instagram_scraper - ERROR - Instagram search failed for dmk: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:03,842 - facebook_scraper - ERROR - Facebook search failed for dmk: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:05,855 - parallel_crawler - INFO - Starting InstagramScraper for keyword: dmk stalin
+2026-03-23 20:26:05,856 - instagram_scraper - INFO - Searching Instagram for: dmk stalin
+2026-03-23 20:26:05,856 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/search/keyword/?q=dmk stalin
+2026-03-23 20:26:05,862 - parallel_crawler - INFO - Starting FacebookScraper for keyword: dmk stalin
+2026-03-23 20:26:05,863 - facebook_scraper - INFO - Searching Facebook for: dmk stalin
+2026-03-23 20:26:05,864 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=dmk stalin
+2026-03-23 20:26:05,873 - instagram_scraper - ERROR - Instagram search failed for dmk stalin: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:05,876 - facebook_scraper - ERROR - Facebook search failed for dmk stalin: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:06,263 - scrapling - WARNING - Attempt 1 failed: Page.goto: Target page, context or browser has been closed
+Call log:
+  - navigating to "https://x.com/search?q=tiruppur%20dmk%20OR%20tiruppur%20admk&src=typed_query&f=live", waiting until "load"
+. Retrying in 1s...
+2026-03-23 20:26:07,321 - twitter_scraper - ERROR - Twitter search failed for tiruppur dmk OR tiruppur admk: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:07,896 - parallel_crawler - INFO - Starting FacebookScraper for keyword: tvk
+2026-03-23 20:26:07,896 - facebook_scraper - INFO - Searching Facebook for: tvk
+2026-03-23 20:26:07,896 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=tvk
+2026-03-23 20:26:08,057 - parallel_crawler - INFO - Starting InstagramScraper for keyword: tvk
+2026-03-23 20:26:08,058 - instagram_scraper - INFO - Searching Instagram for: tvk
+2026-03-23 20:26:08,060 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/tags/tvk/
+2026-03-23 20:26:08,156 - facebook_scraper - ERROR - Facebook search failed for tvk: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:08,159 - instagram_scraper - ERROR - Instagram search failed for tvk: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:08,611 - scrapling - ERROR - No Cloudflare challenge found.
+2026-03-23 20:26:09,326 - scrapling - INFO - Fetched (200) <GET https://www.youtube.com/results?search_query=tiruppur+dmk+OR+tiruppur+admk&sp=CAISAggB> (referer: https://www.google.com/)
+2026-03-23 20:26:09,333 - parallel_crawler - INFO - Starting TwitterScraper for keyword: palladam
+2026-03-23 20:26:09,333 - twitter_scraper - INFO - Searching Twitter for: palladam
+2026-03-23 20:26:09,333 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=palladam&src=typed_query&f=live
+2026-03-23 20:26:09,364 - twitter_scraper - ERROR - Twitter search failed for palladam: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:10,163 - parallel_crawler - INFO - Starting FacebookScraper for keyword: admk eps
+2026-03-23 20:26:10,164 - facebook_scraper - INFO - Searching Facebook for: admk eps
+2026-03-23 20:26:10,164 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=admk eps
+2026-03-23 20:26:10,172 - parallel_crawler - INFO - Starting InstagramScraper for keyword: admk eps
+2026-03-23 20:26:10,172 - instagram_scraper - INFO - Searching Instagram for: admk eps
+2026-03-23 20:26:10,173 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/search/keyword/?q=admk eps
+2026-03-23 20:26:10,179 - facebook_scraper - ERROR - Facebook search failed for admk eps: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:10,186 - instagram_scraper - ERROR - Instagram search failed for admk eps: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:11,377 - parallel_crawler - INFO - Starting TwitterScraper for keyword: dmk
+2026-03-23 20:26:11,377 - twitter_scraper - INFO - Searching Twitter for: dmk
+2026-03-23 20:26:11,378 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=dmk&src=typed_query&f=live
+2026-03-23 20:26:11,389 - twitter_scraper - ERROR - Twitter search failed for dmk: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:12,176 - parallel_crawler - INFO - Starting FacebookScraper for keyword: vijay
+2026-03-23 20:26:12,176 - facebook_scraper - INFO - Searching Facebook for: vijay
+2026-03-23 20:26:12,176 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=vijay
+2026-03-23 20:26:12,180 - parallel_crawler - INFO - Starting InstagramScraper for keyword: vijay
+2026-03-23 20:26:12,181 - instagram_scraper - INFO - Searching Instagram for: vijay
+2026-03-23 20:26:12,181 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/tags/vijay/
+2026-03-23 20:26:12,183 - facebook_scraper - ERROR - Facebook search failed for vijay: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:12,186 - instagram_scraper - ERROR - Instagram search failed for vijay: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:13,172 - youtube_scraper - INFO - Found 0 videos for keyword: tiruppur dmk OR tiruppur admk
+2026-03-23 20:26:13,411 - parallel_crawler - INFO - Starting TwitterScraper for keyword: dmk stalin
+2026-03-23 20:26:13,411 - twitter_scraper - INFO - Searching Twitter for: dmk stalin
+2026-03-23 20:26:13,411 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=dmk stalin&src=typed_query&f=live
+2026-03-23 20:26:13,437 - twitter_scraper - ERROR - Twitter search failed for dmk stalin: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:14,187 - parallel_crawler - INFO - Starting InstagramScraper for keyword: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:26:14,187 - instagram_scraper - INFO - Searching Instagram for: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:26:14,187 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/search/keyword/?q=palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:26:14,192 - parallel_crawler - INFO - Starting FacebookScraper for keyword: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:26:14,192 - facebook_scraper - INFO - Searching Facebook for: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:26:14,193 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:26:14,199 - instagram_scraper - ERROR - Instagram search failed for palladam dmk OR palladam டிஎம்கே: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:14,200 - facebook_scraper - ERROR - Facebook search failed for palladam dmk OR palladam டிஎம்கே: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:15,188 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: palladam
+2026-03-23 20:26:15,190 - youtube_scraper - INFO - Searching YouTube for: palladam
+2026-03-23 20:26:15,190 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=palladam&sp=CAISAggB
+2026-03-23 20:26:15,202 - youtube_scraper - ERROR - YouTube search failed for palladam: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:15,450 - parallel_crawler - INFO - Starting TwitterScraper for keyword: tvk
+2026-03-23 20:26:15,450 - twitter_scraper - INFO - Searching Twitter for: tvk
+2026-03-23 20:26:15,451 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=tvk&src=typed_query&f=live
+2026-03-23 20:26:15,468 - twitter_scraper - ERROR - Twitter search failed for tvk: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:16,223 - parallel_crawler - INFO - Starting FacebookScraper for keyword: eps
+2026-03-23 20:26:16,225 - facebook_scraper - INFO - Searching Facebook for: eps
+2026-03-23 20:26:16,225 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=eps
+2026-03-23 20:26:16,260 - parallel_crawler - INFO - Starting InstagramScraper for keyword: eps
+2026-03-23 20:26:16,260 - instagram_scraper - INFO - Searching Instagram for: eps
+2026-03-23 20:26:16,260 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/tags/eps/
+2026-03-23 20:26:16,286 - instagram_scraper - ERROR - Instagram search failed for eps: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:16,312 - facebook_scraper - ERROR - Facebook search failed for eps: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:17,208 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: dmk
+2026-03-23 20:26:17,208 - youtube_scraper - INFO - Searching YouTube for: dmk
+2026-03-23 20:26:17,209 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=dmk&sp=CAISAggB
+2026-03-23 20:26:17,217 - youtube_scraper - ERROR - YouTube search failed for dmk: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:17,471 - parallel_crawler - INFO - Starting TwitterScraper for keyword: admk eps
+2026-03-23 20:26:17,472 - twitter_scraper - INFO - Searching Twitter for: admk eps
+2026-03-23 20:26:17,472 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=admk eps&src=typed_query&f=live
+2026-03-23 20:26:17,525 - twitter_scraper - ERROR - Twitter search failed for admk eps: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:18,279 - parallel_crawler - INFO - Starting InstagramScraper for keyword: admk
+2026-03-23 20:26:18,280 - instagram_scraper - INFO - Searching Instagram for: admk
+2026-03-23 20:26:18,280 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/tags/admk/
+2026-03-23 20:26:18,289 - instagram_scraper - ERROR - Instagram search failed for admk: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:18,310 - parallel_crawler - INFO - Starting FacebookScraper for keyword: admk
+2026-03-23 20:26:18,310 - facebook_scraper - INFO - Searching Facebook for: admk
+2026-03-23 20:26:18,310 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=admk
+2026-03-23 20:26:18,319 - facebook_scraper - ERROR - Facebook search failed for admk: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:19,230 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: dmk stalin
+2026-03-23 20:26:19,230 - youtube_scraper - INFO - Searching YouTube for: dmk stalin
+2026-03-23 20:26:19,230 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=dmk stalin&sp=CAISAggB
+2026-03-23 20:26:19,240 - youtube_scraper - ERROR - YouTube search failed for dmk stalin: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:19,545 - parallel_crawler - INFO - Starting TwitterScraper for keyword: vijay
+2026-03-23 20:26:19,546 - twitter_scraper - INFO - Searching Twitter for: vijay
+2026-03-23 20:26:19,546 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=vijay&src=typed_query&f=live
+2026-03-23 20:26:19,570 - twitter_scraper - ERROR - Twitter search failed for vijay: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:20,297 - parallel_crawler - INFO - Starting InstagramScraper for keyword: tvk vijay
+2026-03-23 20:26:20,297 - instagram_scraper - INFO - Searching Instagram for: tvk vijay
+2026-03-23 20:26:20,297 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/search/keyword/?q=tvk vijay
+2026-03-23 20:26:20,306 - parallel_crawler - INFO - Starting FacebookScraper for keyword: tvk vijay
+2026-03-23 20:26:20,306 - facebook_scraper - INFO - Searching Facebook for: tvk vijay
+2026-03-23 20:26:20,306 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=tvk vijay
+2026-03-23 20:26:20,311 - instagram_scraper - ERROR - Instagram search failed for tvk vijay: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:20,312 - facebook_scraper - ERROR - Facebook search failed for tvk vijay: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:21,238 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: tvk
+2026-03-23 20:26:21,238 - youtube_scraper - INFO - Searching YouTube for: tvk
+2026-03-23 20:26:21,239 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=tvk&sp=CAISAggB
+2026-03-23 20:26:21,244 - youtube_scraper - ERROR - YouTube search failed for tvk: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:21,578 - parallel_crawler - INFO - Starting TwitterScraper for keyword: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:26:21,578 - twitter_scraper - INFO - Searching Twitter for: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:26:21,578 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=palladam dmk OR palladam டிஎம்கே&src=typed_query&f=live
+2026-03-23 20:26:21,585 - twitter_scraper - ERROR - Twitter search failed for palladam dmk OR palladam டிஎம்கே: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:22,312 - parallel_crawler - INFO - Starting FacebookScraper for keyword: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:26:22,312 - facebook_scraper - INFO - Searching Facebook for: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:26:22,312 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:26:22,372 - parallel_crawler - INFO - Starting InstagramScraper for keyword: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:26:22,373 - instagram_scraper - INFO - Searching Instagram for: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:26:22,373 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/search/keyword/?q=palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:26:22,379 - facebook_scraper - ERROR - Facebook search failed for palladam tvk OR palladam டி.வி.கே: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:22,381 - instagram_scraper - ERROR - Instagram search failed for palladam tvk OR palladam டி.வி.கே: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:23,248 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: admk eps
+2026-03-23 20:26:23,249 - youtube_scraper - INFO - Searching YouTube for: admk eps
+2026-03-23 20:26:23,249 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=admk eps&sp=CAISAggB
+2026-03-23 20:26:23,255 - youtube_scraper - ERROR - YouTube search failed for admk eps: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:23,606 - parallel_crawler - INFO - Starting TwitterScraper for keyword: eps
+2026-03-23 20:26:23,606 - twitter_scraper - INFO - Searching Twitter for: eps
+2026-03-23 20:26:23,607 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=eps&src=typed_query&f=live
+2026-03-23 20:26:23,613 - twitter_scraper - ERROR - Twitter search failed for eps: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:24,386 - parallel_crawler - INFO - Starting FacebookScraper for keyword: stalin
+2026-03-23 20:26:24,387 - facebook_scraper - INFO - Searching Facebook for: stalin
+2026-03-23 20:26:24,387 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=stalin
+2026-03-23 20:26:24,393 - parallel_crawler - INFO - Starting InstagramScraper for keyword: stalin
+2026-03-23 20:26:24,393 - instagram_scraper - INFO - Searching Instagram for: stalin
+2026-03-23 20:26:24,393 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/tags/stalin/
+2026-03-23 20:26:24,399 - facebook_scraper - ERROR - Facebook search failed for stalin: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:24,405 - instagram_scraper - ERROR - Instagram search failed for stalin: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:25,264 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: vijay
+2026-03-23 20:26:25,265 - youtube_scraper - INFO - Searching YouTube for: vijay
+2026-03-23 20:26:25,265 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=vijay&sp=CAISAggB
+2026-03-23 20:26:25,316 - youtube_scraper - ERROR - YouTube search failed for vijay: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:25,624 - parallel_crawler - INFO - Starting TwitterScraper for keyword: admk
+2026-03-23 20:26:25,624 - twitter_scraper - INFO - Searching Twitter for: admk
+2026-03-23 20:26:25,624 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=admk&src=typed_query&f=live
+2026-03-23 20:26:25,639 - twitter_scraper - ERROR - Twitter search failed for admk: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:26,415 - parallel_crawler - INFO - Starting InstagramScraper for keyword: tamil nadu politics
+2026-03-23 20:26:26,416 - instagram_scraper - INFO - Searching Instagram for: tamil nadu politics
+2026-03-23 20:26:26,416 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/search/keyword/?q=tamil nadu politics
+2026-03-23 20:26:26,459 - parallel_crawler - INFO - Starting FacebookScraper for keyword: tamil nadu politics
+2026-03-23 20:26:26,462 - facebook_scraper - INFO - Searching Facebook for: tamil nadu politics
+2026-03-23 20:26:26,463 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=tamil nadu politics
+2026-03-23 20:26:26,471 - instagram_scraper - ERROR - Instagram search failed for tamil nadu politics: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:26,476 - facebook_scraper - ERROR - Facebook search failed for tamil nadu politics: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:27,322 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:26:27,324 - youtube_scraper - INFO - Searching YouTube for: palladam dmk OR palladam டிஎம்கே
+2026-03-23 20:26:27,329 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=palladam dmk OR palladam டிஎம்கே&sp=CAISAggB
+2026-03-23 20:26:27,346 - youtube_scraper - ERROR - YouTube search failed for palladam dmk OR palladam டிஎம்கே: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:27,647 - parallel_crawler - INFO - Starting TwitterScraper for keyword: tvk vijay
+2026-03-23 20:26:27,647 - twitter_scraper - INFO - Searching Twitter for: tvk vijay
+2026-03-23 20:26:27,648 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=tvk vijay&src=typed_query&f=live
+2026-03-23 20:26:27,674 - twitter_scraper - ERROR - Twitter search failed for tvk vijay: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:28,489 - parallel_crawler - INFO - Starting InstagramScraper for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:26:28,490 - instagram_scraper - INFO - Searching Instagram for: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:26:28,490 - base_scraper - DEBUG - Fetching URL: https://www.instagram.com/explore/search/keyword/?q=palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:26:28,500 - parallel_crawler - INFO - Starting FacebookScraper for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:26:28,501 - facebook_scraper - INFO - Searching Facebook for: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:26:28,502 - base_scraper - DEBUG - Fetching URL: https://www.facebook.com/search/posts/?q=palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:26:28,512 - instagram_scraper - ERROR - Instagram search failed for palladam admk OR palladam aiadmk OR palladam அதிமுக: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:28,520 - facebook_scraper - ERROR - Facebook search failed for palladam admk OR palladam aiadmk OR palladam அதிமுக: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:29,356 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: eps
+2026-03-23 20:26:29,357 - youtube_scraper - INFO - Searching YouTube for: eps
+2026-03-23 20:26:29,359 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=eps&sp=CAISAggB
+2026-03-23 20:26:29,392 - youtube_scraper - ERROR - YouTube search failed for eps: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:29,723 - parallel_crawler - INFO - Starting TwitterScraper for keyword: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:26:29,724 - twitter_scraper - INFO - Searching Twitter for: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:26:29,724 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=palladam tvk OR palladam டி.வி.கே&src=typed_query&f=live
+2026-03-23 20:26:29,784 - twitter_scraper - ERROR - Twitter search failed for palladam tvk OR palladam டி.வி.கே: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:31,398 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: admk
+2026-03-23 20:26:31,399 - youtube_scraper - INFO - Searching YouTube for: admk
+2026-03-23 20:26:31,400 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=admk&sp=CAISAggB
+2026-03-23 20:26:31,443 - youtube_scraper - ERROR - YouTube search failed for admk: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:31,788 - parallel_crawler - INFO - Starting TwitterScraper for keyword: stalin
+2026-03-23 20:26:31,790 - twitter_scraper - INFO - Searching Twitter for: stalin
+2026-03-23 20:26:31,791 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=stalin&src=typed_query&f=live
+2026-03-23 20:26:31,800 - twitter_scraper - ERROR - Twitter search failed for stalin: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:33,471 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: tvk vijay
+2026-03-23 20:26:33,472 - youtube_scraper - INFO - Searching YouTube for: tvk vijay
+2026-03-23 20:26:33,474 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=tvk vijay&sp=CAISAggB
+2026-03-23 20:26:33,481 - youtube_scraper - ERROR - YouTube search failed for tvk vijay: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:33,800 - parallel_crawler - INFO - Starting TwitterScraper for keyword: tamil nadu politics
+2026-03-23 20:26:33,800 - twitter_scraper - INFO - Searching Twitter for: tamil nadu politics
+2026-03-23 20:26:33,801 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=tamil nadu politics&src=typed_query&f=live
+2026-03-23 20:26:33,811 - twitter_scraper - ERROR - Twitter search failed for tamil nadu politics: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:35,495 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:26:35,495 - youtube_scraper - INFO - Searching YouTube for: palladam tvk OR palladam டி.வி.கே
+2026-03-23 20:26:35,496 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=palladam tvk OR palladam டி.வி.கே&sp=CAISAggB
+2026-03-23 20:26:35,503 - youtube_scraper - ERROR - YouTube search failed for palladam tvk OR palladam டி.வி.கே: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:35,826 - parallel_crawler - INFO - Starting TwitterScraper for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:26:35,827 - twitter_scraper - INFO - Searching Twitter for: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:26:35,827 - base_scraper - DEBUG - Fetching URL: https://x.com/search?q=palladam admk OR palladam aiadmk OR palladam அதிமுக&src=typed_query&f=live
+2026-03-23 20:26:35,841 - twitter_scraper - ERROR - Twitter search failed for palladam admk OR palladam aiadmk OR palladam அதிமுக: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:37,508 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: stalin
+2026-03-23 20:26:37,509 - youtube_scraper - INFO - Searching YouTube for: stalin
+2026-03-23 20:26:37,509 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=stalin&sp=CAISAggB
+2026-03-23 20:26:37,519 - youtube_scraper - ERROR - YouTube search failed for stalin: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:39,524 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: tamil nadu politics
+2026-03-23 20:26:39,525 - youtube_scraper - INFO - Searching YouTube for: tamil nadu politics
+2026-03-23 20:26:39,525 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=tamil nadu politics&sp=CAISAggB
+2026-03-23 20:26:39,537 - youtube_scraper - ERROR - YouTube search failed for tamil nadu politics: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:41,547 - parallel_crawler - INFO - Starting YouTubeScraper for keyword: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:26:41,547 - youtube_scraper - INFO - Searching YouTube for: palladam admk OR palladam aiadmk OR palladam அதிமுக
+2026-03-23 20:26:41,547 - base_scraper - DEBUG - Fetching URL: https://www.youtube.com/results?search_query=palladam admk OR palladam aiadmk OR palladam அதிமுக&sp=CAISAggB
+2026-03-23 20:26:41,553 - youtube_scraper - ERROR - YouTube search failed for palladam admk OR palladam aiadmk OR palladam அதிமுக: BrowserContext.new_page: Target page, context or browser has been closed
+2026-03-23 20:26:43,634 - base_scraper - DEBUG - Scrapling session stopped
+2026-03-23 20:26:43,639 - base_scraper - DEBUG - Scrapling session stopped
+2026-03-23 20:26:43,641 - base_scraper - DEBUG - Scrapling session stopped
+2026-03-23 20:26:43,658 - base_scraper - DEBUG - Scrapling session stopped
+2026-03-23 20:26:43,659 - parallel_crawler - INFO - Crawling completed. Total records collected: 0
+2026-03-23 20:26:43,659 - __main__ - INFO - Scraping process finished.

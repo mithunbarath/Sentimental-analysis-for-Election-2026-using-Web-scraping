@@ -1,2 +1,8 @@
-2026/03/23-17:29:50.321 8944 Creating DB C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\youtube\Default\Session Storage since it was missing.
-2026/03/23-17:29:50.665 8944 Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\youtube\Default\Session Storage/MANIFEST-000001
+2026/03/23-20:23:22.492 8c14 Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\youtube\Default\Session Storage/MANIFEST-000001
+2026/03/23-20:23:22.497 8c14 Recovering log #3
+2026/03/23-20:23:22.500 8c14 Level-0 table #3: started
+2026/03/23-20:23:22.525 8c14 Level-0 table #3: 11887 bytes OK
+2026/03/23-20:23:22.527 8c14 Recovering log #4
+2026/03/23-20:23:22.541 8c14 Reusing old log C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\youtube\Default\Session Storage/000004.log 
+2026/03/23-20:23:22.548 8c14 Delete type=0 #3
+2026/03/23-20:23:22.549 8c14 Delete type=2 #5

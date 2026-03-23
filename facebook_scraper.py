@@ -22,10 +22,18 @@ class FacebookScraper(AsyncBaseScraper):
         records = []
         
         try:
-            # Facebook search URL (top results)
-            search_url = f"https://www.facebook.com/search/top/?q={keyword}"
+            # Facebook search URL (posts results are better for authenticated)
+            search_url = f"https://www.facebook.com/search/posts/?q={keyword}"
             response = await self.fetch(search_url)
-            await self.human_delay(5, 7)
+            
+            # Add scrolling to ensure dynamic content loads
+            page = await self.get_page()
+            await self.scroll_to_bottom(page, max_scrolls=3, delay=1.5)
+            
+            # Refresh response from updated page content
+            content = await page.content()
+            from scrapling import Selector
+            response = Selector(content, url=page.url)
             
             # Check for login wall
             if "login" in str(response.url).lower() and not self.session_dir:

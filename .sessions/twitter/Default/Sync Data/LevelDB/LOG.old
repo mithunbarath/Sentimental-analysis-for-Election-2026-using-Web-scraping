@@ -1,2 +1,3 @@
-2026/03/23-17:29:47.540 6030 Creating DB C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\Sync Data\LevelDB since it was missing.
-2026/03/23-17:29:47.621 6030 Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\Sync Data\LevelDB/MANIFEST-000001
+2026/03/23-20:23:24.924 1240 Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\Sync Data\LevelDB/MANIFEST-000001
+2026/03/23-20:23:24.926 1240 Recovering log #3
+2026/03/23-20:23:24.928 1240 Reusing old log C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\Sync Data\LevelDB/000003.log 

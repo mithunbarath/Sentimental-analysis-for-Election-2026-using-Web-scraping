@@ -1,7 +1,13 @@
+import sys
 import asyncio
+
+# Windows-specific event loop policy for Playwright/Scrapling
+# This MUST be set before any other imports that might use asyncio
+if sys.platform == "win32":
+    asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
+
 import argparse
 import logging
-import sys
 import os
 from pathlib import Path
 from typing import List, Optional, Type, Dict
@@ -59,7 +65,7 @@ async def run_login_mode(platform: str, sessions_dir: str):
     
     platform_map = {
         "instagram": (InstagramScraper, "https://www.instagram.com/accounts/login/"),
-        "twitter": (TwitterScraper, "https://twitter.com/i/flow/login"),
+        "twitter": (TwitterScraper, "https://x.com/i/flow/login"),
         "facebook": (FacebookScraper, "https://www.facebook.com/login"),
         "youtube": (YouTubeScraper, "https://accounts.google.com/ServiceLogin?service=youtube")
     }
@@ -185,7 +191,19 @@ async def main_async():
     logger.info("Scraping process finished.")
 
 if __name__ == "__main__":
+    # Explicit loop management for Windows stability
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
     try:
-        asyncio.run(main_async())
+        loop.run_until_complete(main_async())
     except KeyboardInterrupt:
         logger.info("Interrupted by user. Exiting...")
+    finally:
+        try:
+            # Cleanup pending tasks
+            pending = asyncio.all_tasks(loop)
+            if pending:
+                loop.run_until_complete(asyncio.gather(*pending, return_exceptions=True))
+        except Exception:
+            pass
+        loop.close()

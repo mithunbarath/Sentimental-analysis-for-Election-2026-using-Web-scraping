@@ -1,2 +1,3 @@
-2026/03/23-17:32:49.097 853c Creating DB C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\youtube\Default\GCM Store since it was missing.
-2026/03/23-17:32:49.106 853c Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\youtube\Default\GCM Store/MANIFEST-000001
+2026/03/23-20:23:21.720 7820 Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\youtube\Default\GCM Store/MANIFEST-000001
+2026/03/23-20:23:21.723 7820 Recovering log #3
+2026/03/23-20:23:21.725 7820 Reusing old log C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\youtube\Default\GCM Store/000003.log 

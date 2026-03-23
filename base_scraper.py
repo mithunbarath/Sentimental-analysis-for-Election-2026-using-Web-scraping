@@ -13,7 +13,14 @@ class AsyncBaseScraper:
     """Base class for asynchronous scrapers using Scrapling."""
 
     def __init__(self, headless: bool = True, session_dir: Optional[str] = None):
-        self.headless = headless
+        import platform
+        # On Windows, persistent contexts often crash in headless mode (exitCode 21)
+        # We force headless=False if a session_dir is provided on Windows.
+        if platform.system() == "Windows" and session_dir:
+            self.headless = False
+        else:
+            self.headless = headless
+            
         self.session_dir = session_dir
         self.session: Optional[AsyncStealthySession] = None
 
@@ -27,7 +34,8 @@ class AsyncBaseScraper:
             user_data_dir=self.session_dir,
             solve_cloudflare=True,
             network_idle=True,
-            timeout=60000
+            timeout=60000,
+            extra_args=["--disable-gpu", "--disable-software-rasterizer", "--disable-dev-shm-usage"]
         )
         # Session is an async context manager, but we want to keep it open
         await self.session.__aenter__()
@@ -55,8 +63,13 @@ class AsyncBaseScraper:
         """Get the internal Playwright page object (for manual login)."""
         if not self.session:
             await self.start()
-        # In Scrapling 0.4.x, AsyncStealthySession has an 'engine' which has a 'page'
-        return self.session.engine.page
+            
+        # Scrapling's AsyncStealthySession has a 'context' attribute which is a Playwright BrowserContext
+        # Persistent contexts usually have one default page open.
+        pages = self.session.context.pages
+        if pages:
+            return pages[0]
+        return await self.session.context.new_page()
 
     async def scroll_to_bottom(self, page_action_context, max_scrolls: int = 10, delay: float = 1.5):
         """
