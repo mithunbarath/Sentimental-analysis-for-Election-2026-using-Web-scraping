@@ -191,6 +191,50 @@ class GoogleSheetsConfig:
 
 
 @dataclass
+class ApifyConfig:
+    """Apify API configuration."""
+    enabled: bool = False
+    api_token: str = field(default_factory=lambda: os.getenv("APIFY_API_TOKEN", ""))
+    instagram_actor: str = "apify/instagram-scraper"
+    facebook_actor: str = "apify/facebook-pages-scraper"
+    twitter_actor: str = "apify/twitter-scraper"
+    youtube_actor: str = "apify/youtube-scraper"
+    max_items_per_run: int = 50
+    comments_per_post: int = 20
+
+
+@dataclass
+class FirecrawlConfig:
+    """Firecrawl API configuration."""
+    enabled: bool = False
+    api_key: str = field(default_factory=lambda: os.getenv("FIRECRAWL_API_KEY", ""))
+    urls_to_scrape: List[str] = field(default_factory=list)
+
+
+@dataclass
+class AccountCredential:
+    """Single account credential."""
+    username: str = ""
+    password: str = ""
+
+
+@dataclass
+class AccountsConfig:
+    """Multi-account credentials for Playwright fallback."""
+    instagram: List[AccountCredential] = field(default_factory=list)
+    facebook: List[AccountCredential] = field(default_factory=list)
+    twitter: List[AccountCredential] = field(default_factory=list)
+    youtube: List[AccountCredential] = field(default_factory=list)
+
+
+@dataclass
+class InfiniteConfig:
+    """Infinite / continuous scraping mode settings."""
+    delay_minutes: int = 30
+    max_runs: int = 0   # 0 = run forever
+
+
+@dataclass
 class Config:
     """Main configuration class containing all settings."""
 
@@ -204,6 +248,10 @@ class Config:
     bright_data: BrightDataConfig = field(default_factory=BrightDataConfig)
     deduplication: DeduplicationConfig = field(default_factory=DeduplicationConfig)
     google_sheets: GoogleSheetsConfig = field(default_factory=GoogleSheetsConfig)
+    apify: ApifyConfig = field(default_factory=ApifyConfig)
+    firecrawl: FirecrawlConfig = field(default_factory=FirecrawlConfig)
+    accounts: AccountsConfig = field(default_factory=AccountsConfig)
+    infinite_mode: InfiniteConfig = field(default_factory=InfiniteConfig)
 
     log_level: str = "INFO"
     enable_which_platforms: List[str] = field(default_factory=lambda: [
@@ -238,6 +286,25 @@ class Config:
             config.deduplication = DeduplicationConfig(**data["deduplication"])
         if "google_sheets" in data:
             config.google_sheets = GoogleSheetsConfig(**data["google_sheets"])
+        if "apify" in data:
+            config.apify = ApifyConfig(**data["apify"])
+        if "firecrawl" in data:
+            fc = data["firecrawl"]
+            config.firecrawl = FirecrawlConfig(
+                enabled=fc.get("enabled", False),
+                api_key=fc.get("api_key", ""),
+                urls_to_scrape=fc.get("urls_to_scrape", []),
+            )
+        if "accounts" in data:
+            accs = data["accounts"]
+            config.accounts = AccountsConfig(
+                instagram=[AccountCredential(**a) for a in accs.get("instagram", [])],
+                facebook=[AccountCredential(**a) for a in accs.get("facebook", [])],
+                twitter=[AccountCredential(**a) for a in accs.get("twitter", [])],
+                youtube=[AccountCredential(**a) for a in accs.get("youtube", [])],
+            )
+        if "infinite_mode" in data:
+            config.infinite_mode = InfiniteConfig(**data["infinite_mode"])
         if "general" in data:
             config.log_level = data["general"].get("log_level", "INFO")
             config.enable_which_platforms = data["general"].get("enable_which_platforms", config.enable_which_platforms)

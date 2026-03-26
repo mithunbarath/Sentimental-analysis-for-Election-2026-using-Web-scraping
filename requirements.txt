@@ -21,6 +21,10 @@ scrapling>=0.2.9
 curl_cffi>=0.7.0
 w3lib>=2.1.0
 
+# API-based scrapers
+apify-client>=1.7.0
+firecrawl-py>=1.0.0
+
 # Google Sheets API
 gspread>=6.0.0
 google-auth>=2.29.0

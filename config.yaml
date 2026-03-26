@@ -147,9 +147,57 @@ general:
 # Also set GOOGLE_APPLICATION_CREDENTIALS in your .env file (or environment).
 
 google_sheets:
-  enabled: false
+  enabled: true
   spreadsheet_id: ""            # e.g. "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms"
   sheet_name: "RawData"         # worksheet tab name for raw records
   summary_tab_name: "Summary"   # worksheet tab name for stats
   credentials_path: ""          # leave empty to use GOOGLE_APPLICATION_CREDENTIALS env var
-  append_mode: false            # true = append rows each run; false = overwrite each run
+  append_mode: true             # true = append rows each run; false = overwrite each run
+
+# ── Apify Scraper API ──────────────────────────────────────────────────────────
+# Sign up at https://console.apify.com → Settings → API Token
+# Or set APIFY_API_TOKEN env var.
+
+apify:
+  enabled: false
+  api_token: ""                           # or use APIFY_API_TOKEN env var
+  instagram_actor: "apify/instagram-scraper"
+  facebook_actor: "apify/facebook-pages-scraper"
+  twitter_actor: "apify/twitter-scraper"
+  youtube_actor: "apify/youtube-scraper"
+  max_items_per_run: 50                   # max posts per keyword per run
+  comments_per_post: 20                   # comments to fetch per post
+
+# ── Firecrawl Scraper API ──────────────────────────────────────────────────────
+# Sign up at https://www.firecrawl.dev → Dashboard → API Keys
+# Or set FIRECRAWL_API_KEY env var.
+
+firecrawl:
+  enabled: false
+  api_key: ""                             # or use FIRECRAWL_API_KEY env var
+  urls_to_scrape:
+    - "https://www.dmk.in"
+    - "https://www.aiadmk.com"
+    - "https://www.tvkparty.in"
+
+# ── Multi-Account Credentials ──────────────────────────────────────────────────
+# Used as LAST RESORT by Playwright fallback when no sessions are saved.
+# Accounts are rotated round-robin; rate-limited accounts are backed off 1 hour.
+
+accounts:
+  instagram:
+    - username: ""                        # e.g. your_ig_username
+      password: ""
+  facebook:
+    - username: ""
+      password: ""
+  twitter:
+    - username: ""
+      password: ""
+
+# ── Infinite / Continuous Scraping Mode ───────────────────────────────────────
+# Activated by --infinite flag in main.py.
+
+infinite_mode:
+  delay_minutes: 30             # wait between runs (0 = run as fast as possible)
+  max_runs: 0                   # 0 = run forever; N = stop after N runs

@@ -57,6 +57,13 @@ def parse_arguments():
     parser.add_argument("--keywords", type=str, nargs="+", help="Override keywords from config")
     parser.add_argument("--login", type=str, choices=["instagram", "facebook", "youtube", "twitter"], help="Login to a specific platform manually")
     parser.add_argument("--sessions-dir", type=str, default=".sessions", help="Directory to store session data")
+    # ── Infinite / continuous mode ──
+    parser.add_argument("--infinite", action="store_true", help="Run scraper in infinite loop")
+    parser.add_argument("--delay", type=int, default=None, help="Minutes between runs in infinite mode (overrides config)")
+    # ── API integrations ──
+    parser.add_argument("--apify", action="store_true", help="Enable Apify API scraping")
+    parser.add_argument("--firecrawl", action="store_true", help="Enable Firecrawl URL scraping")
+    parser.add_argument("--cascade", action="store_true", help="Use cascading fallback scraper (Apify→Firecrawl→BrightData→Playwright)")
     return parser.parse_args()
 
 async def run_login_mode(platform: str, sessions_dir: str):
@@ -232,18 +239,193 @@ async def main_async():
             logger.error(f"Google Sheets export error: {e}")
 
     logger.info("Scraping process finished.")
+    return all_records
+
+
+async def run_one_cycle(args, config) -> List[SocialMediaRecord]:
+    """
+    Run a single full scrape cycle:
+     1. Playwright / existing scrapers (parallel crawler)
+     2. Cascade (Apify → Firecrawl → BrightData → Playwright) if --cascade
+     3. Firecrawl supplemental URLs if --firecrawl
+    Exports results to CSV/JSONL and Google Sheets.
+    Returns the list of all records collected this cycle.
+    """
+    import time
+    from scraper_cascade import CascadeScraper
+    from account_manager import AccountManager
+
+    # ---- resolve config ----
+    cfg = config
+    keywords = args.keywords or None
+
+    # Enable Apify / Firecrawl via CLI override
+    if args.apify and hasattr(cfg, "apify"):
+        cfg.apify.enabled = True
+    if args.firecrawl and hasattr(cfg, "firecrawl"):
+        cfg.firecrawl.enabled = True
+
+    account_mgr = AccountManager(getattr(cfg, "accounts", None))
+
+    all_records: List[SocialMediaRecord] = []
+
+    # ---- Step 1: existing parallel crawler ----
+    platforms = cfg.enable_which_platforms
+    scraper_map = {
+        "instagram": InstagramScraper,
+        "facebook": FacebookScraper,
+        "youtube": YouTubeScraper,
+        "twitter": TwitterScraper,
+    }
+    scrapers = [
+        (scraper_map[p], p) for p in platforms if p in scraper_map
+    ]
+    if scrapers:
+        sessions_base = os.path.join(os.getcwd(), args.sessions_dir)
+        crawler = ParallelCrawler(
+            scrapers=scrapers,
+            sessions_base_dir=sessions_base,
+            keywords=keywords,
+            timeout_minutes=args.timeout,
+            broad_search=args.broad_search,
+            config=cfg,
+        )
+        await crawler.run_scrapers()
+        all_records.extend(crawler.get_results())
+
+    # ---- Step 2: cascade per platform ----
+    if args.cascade or (args.apify and hasattr(cfg, "apify") and cfg.apify.enabled):
+        cascade = CascadeScraper(cfg, account_mgr)
+        kws = keywords or (["palladam", "dmk", "admk", "tvk"] if not args.broad_search else
+                           ["palladam", "dmk", "admk", "tvk", "eps", "vijay", "stalin"])
+        for platform in platforms:
+            try:
+                batch = await cascade.scrape(platform, kws, args.sessions_dir)
+                all_records.extend(batch)
+                logger.info(f"Cascade [{platform}]: {len(batch)} records")
+            except Exception as e:
+                logger.error(f"Cascade error [{platform}]: {e}")
+
+    # ---- Step 3: Firecrawl supplemental ----
+    if args.firecrawl and hasattr(cfg, "firecrawl") and cfg.firecrawl.enabled:
+        try:
+            from firecrawl_scraper import scrape_urls_with_firecrawl
+            fc_records = scrape_urls_with_firecrawl(cfg.firecrawl)
+            all_records.extend(fc_records)
+            logger.info(f"Firecrawl supplemental: {len(fc_records)} records")
+        except Exception as e:
+            logger.error(f"Firecrawl error: {e}")
+
+    if not all_records:
+        logger.info("No records collected this cycle.")
+        return []
+
+    # ---- Filter ----
+    if not args.no_filter:
+        logger.info("Applying filters...")
+        all_records = apply_filters(
+            all_records,
+            require_party_mention=True,
+            require_palladam_related=True,
+            strict_mode=args.strict
+        )
+        logger.info(f"Records after filtering: {len(all_records)}")
+
+    all_records.sort(key=lambda x: (x.platform, x.timestamp or ""), reverse=True)
+
+    # ---- Export CSV/JSONL ----
+    try:
+        export_all(all_records, str(cfg.export.csv_path), str(cfg.export.jsonl_path))
+        logger.info(f"Exported {len(all_records)} records to {cfg.export.csv_path}")
+    except Exception as e:
+        logger.error(f"CSV/JSONL export error: {e}")
+
+    # ---- Stats ----
+    try:
+        stats = generate_summary_stats(all_records)
+        logger.info(f"Summary — Total: {stats['total_records']}  Palladam-related: {stats['palladam_related_count']}")
+    except Exception as e:
+        logger.error(f"Stats error: {e}")
+
+    # ---- Google Sheets ----
+    try:
+        sheets_result = export_to_sheets_if_configured(all_records, cfg.google_sheets)
+        if sheets_result is not None:
+            logger.info(f"Google Sheets: {sheets_result} rows written.")
+    except Exception as e:
+        logger.error(f"Google Sheets error: {e}")
+
+    return all_records
 
 if __name__ == "__main__":
-    # Explicit loop management for Windows stability
+    import time
+
+    async def run():
+        args = parse_arguments()
+        if args.verbose:
+            logging.getLogger().setLevel(logging.DEBUG)
+        if args.login:
+            await run_login_mode(args.login, args.sessions_dir)
+            return
+
+        logger.info("=" * 70)
+        logger.info("Tamil Nadu & Palladam Politics Scraper - Starting")
+        logger.info("=" * 70)
+
+        try:
+            config_path = Path(args.config)
+            config = load_config(str(config_path)) if config_path.exists() else Config()
+        except Exception as e:
+            logger.critical(f"Failed to load config: {e}")
+            return
+
+        if args.platforms:
+            config.enable_which_platforms = (
+                ["instagram", "facebook", "youtube", "twitter"]
+                if "all" in args.platforms else args.platforms
+            )
+        if args.output_dir:
+            config.export.output_dir = args.output_dir
+
+        # Determine delay for infinite mode
+        inf_cfg = getattr(config, "infinite_mode", None)
+        delay_minutes = args.delay if args.delay is not None else (
+            getattr(inf_cfg, "delay_minutes", 30) if inf_cfg else 30
+        )
+        max_runs = getattr(inf_cfg, "max_runs", 0) if inf_cfg else 0
+
+        run_count = 0
+        while True:
+            run_count += 1
+            cycle_label = f"Run #{run_count}" if args.infinite else "Single run"
+            logger.info(f"\n{'='*70}\n{cycle_label} starting at {time.strftime('%Y-%m-%d %H:%M:%S')}\n{'='*70}")
+
+            try:
+                await run_one_cycle(args, config)
+            except KeyboardInterrupt:
+                raise
+            except Exception as e:
+                logger.error(f"{cycle_label} error: {e}")
+
+            if not args.infinite:
+                break
+            if max_runs and run_count >= max_runs:
+                logger.info(f"Reached max_runs={max_runs}. Stopping.")
+                break
+
+            logger.info(f"Next run in {delay_minutes} minutes. Press Ctrl+C to stop.")
+            await asyncio.sleep(delay_minutes * 60)
+
+        logger.info("All scraping runs completed.")
+
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
     try:
-        loop.run_until_complete(main_async())
+        loop.run_until_complete(run())
     except KeyboardInterrupt:
-        logger.info("Interrupted by user. Exiting...")
+        logger.info("Interrupted by user. Exiting cleanly.")
     finally:
         try:
-            # Cleanup pending tasks
             pending = asyncio.all_tasks(loop)
             if pending:
                 loop.run_until_complete(asyncio.gather(*pending, return_exceptions=True))
