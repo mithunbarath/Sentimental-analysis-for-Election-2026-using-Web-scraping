@@ -159,7 +159,7 @@ google_sheets:
 # Or set APIFY_API_TOKEN env var.
 
 apify:
-  enabled: false
+  enabled: true
   api_token: ""                           # or use APIFY_API_TOKEN env var
   instagram_actor: "apify/instagram-scraper"
   facebook_actor: "apify/facebook-pages-scraper"
@@ -173,7 +173,7 @@ apify:
 # Or set FIRECRAWL_API_KEY env var.
 
 firecrawl:
-  enabled: false
+  enabled: true
   api_key: ""                             # or use FIRECRAWL_API_KEY env var
   urls_to_scrape:
     - "https://www.dmk.in"
@@ -186,14 +186,14 @@ firecrawl:
 
 accounts:
   instagram:
-    - username: ""                        # e.g. your_ig_username
-      password: ""
+    - username: "barath_magal312"                        # e.g. your_ig_username
+      password: "67677903Mn&"
   facebook:
-    - username: ""
-      password: ""
+    - username: "Kalai Barath"
+      password: "67677903Mn&"
   twitter:
-    - username: ""
-      password: ""
+    - username: "@kalaimithu23291"
+      password: "67677903Mn&"
 
 # ── Infinite / Continuous Scraping Mode ───────────────────────────────────────
 # Activated by --infinite flag in main.py.
