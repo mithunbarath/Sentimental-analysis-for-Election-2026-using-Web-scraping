@@ -141,3 +141,15 @@ general:
     - "facebook"
     - "youtube"
     - "twitter"
+
+# Google Sheets export settings
+# Set enabled: true and fill in spreadsheet_id to push results to a Google Sheet.
+# Also set GOOGLE_APPLICATION_CREDENTIALS in your .env file (or environment).
+
+google_sheets:
+  enabled: false
+  spreadsheet_id: ""            # e.g. "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgVE2upms"
+  sheet_name: "RawData"         # worksheet tab name for raw records
+  summary_tab_name: "Summary"   # worksheet tab name for stats
+  credentials_path: ""          # leave empty to use GOOGLE_APPLICATION_CREDENTIALS env var
+  append_mode: false            # true = append rows each run; false = overwrite each run

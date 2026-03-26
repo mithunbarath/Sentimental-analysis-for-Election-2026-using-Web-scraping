@@ -17,3 +17,10 @@ playwright>=1.42.0
 playwright-stealth>=1.0.6
 crawl4ai>=0.2.0
 aiohttp>=3.9.0
+scrapling>=0.2.9
+curl_cffi>=0.7.0
+w3lib>=2.1.0
+
+# Google Sheets API
+gspread>=6.0.0
+google-auth>=2.29.0

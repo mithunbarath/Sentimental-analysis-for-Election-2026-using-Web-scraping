@@ -170,6 +170,27 @@ class DeduplicationConfig:
 
 
 @dataclass
+class GoogleSheetsConfig:
+    """Google Sheets export configuration."""
+
+    enabled: bool = False
+    spreadsheet_id: str = field(
+        default_factory=lambda: os.getenv("GOOGLE_SHEETS_SPREADSHEET_ID", "")
+    )
+    sheet_name: str = "RawData"
+    summary_tab_name: str = "Summary"
+    credentials_path: str = field(
+        default_factory=lambda: os.getenv("GOOGLE_APPLICATION_CREDENTIALS", "")
+    )
+    append_mode: bool = False
+
+    @property
+    def is_configured(self) -> bool:
+        """True when the config has enough info to attempt a Sheets export."""
+        return bool(self.enabled and self.spreadsheet_id)
+
+
+@dataclass
 class Config:
     """Main configuration class containing all settings."""
 
@@ -182,6 +203,7 @@ class Config:
     export: ExportConfig = field(default_factory=ExportConfig)
     bright_data: BrightDataConfig = field(default_factory=BrightDataConfig)
     deduplication: DeduplicationConfig = field(default_factory=DeduplicationConfig)
+    google_sheets: GoogleSheetsConfig = field(default_factory=GoogleSheetsConfig)
 
     log_level: str = "INFO"
     enable_which_platforms: List[str] = field(default_factory=lambda: [
@@ -214,6 +236,8 @@ class Config:
             config.export = ExportConfig(**data["export"])
         if "deduplication" in data:
             config.deduplication = DeduplicationConfig(**data["deduplication"])
+        if "google_sheets" in data:
+            config.google_sheets = GoogleSheetsConfig(**data["google_sheets"])
         if "general" in data:
             config.log_level = data["general"].get("log_level", "INFO")
             config.enable_which_platforms = data["general"].get("enable_which_platforms", config.enable_which_platforms)

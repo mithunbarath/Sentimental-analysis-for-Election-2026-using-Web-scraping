@@ -20,7 +20,7 @@ from facebook_scraper import FacebookScraper
 from youtube_scraper import YouTubeScraper
 from twitter_scraper import TwitterScraper
 from parallel_crawler import ParallelCrawler
-from exporter import export_all, generate_summary_stats
+from exporter import export_all, generate_summary_stats, export_to_sheets_if_configured
 
 # Fix Windows console encoding for Tamil characters
 if sys.platform == "win32":
@@ -217,6 +217,19 @@ async def main_async():
             logger.info(f"  Palladam-related: {stats['palladam_related_count']}")
         except Exception as e:
             logger.error(f"Error generating statistics: {e}")
+
+        # ── Google Sheets export (optional) ────────────────────────────────
+        try:
+            sheets_result = export_to_sheets_if_configured(all_records, config.google_sheets)
+            if sheets_result is not None:
+                logger.info(f"Google Sheets export: {sheets_result} rows written.")
+            else:
+                logger.info(
+                    "Google Sheets export skipped. "
+                    "Set google_sheets.enabled: true in config.yaml to enable."
+                )
+        except Exception as e:
+            logger.error(f"Google Sheets export error: {e}")
 
     logger.info("Scraping process finished.")
 

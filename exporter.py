@@ -201,3 +201,53 @@ def generate_summary_stats(records: List[SocialMediaRecord]) -> Dict[str, Any]:
             stats["records_with_timestamp"] += 1
 
     return stats
+
+
+def export_to_sheets_if_configured(
+    records: List[SocialMediaRecord],
+    sheets_config,
+) -> Optional[int]:
+    """
+    Push records to Google Sheets if sheets_config.is_configured is True.
+
+    Args:
+        records:       List of SocialMediaRecord objects.
+        sheets_config: GoogleSheetsConfig instance from Config.
+
+    Returns:
+        Number of rows written, or None if Sheets export was skipped.
+    """
+    if not sheets_config.is_configured:
+        return None
+
+    try:
+        from sheets_exporter import export_to_sheets, append_to_sheets
+    except ImportError:
+        logger.error(
+            "sheets_exporter unavailable. Install: pip install gspread google-auth"
+        )
+        return None
+
+    fn = append_to_sheets if sheets_config.append_mode else export_to_sheets
+
+    kwargs: Dict[str, Any] = {
+        "records": records,
+        "spreadsheet_id": sheets_config.spreadsheet_id,
+        "sheet_name": sheets_config.sheet_name,
+        "credentials_path": sheets_config.credentials_path or None,
+    }
+    if not sheets_config.append_mode:
+        kwargs["write_summary"] = True
+        kwargs["summary_tab_name"] = sheets_config.summary_tab_name
+
+    try:
+        count = fn(**kwargs)
+        logger.info(
+            f"Google Sheets export complete: {count} rows → "
+            f"spreadsheet '{sheets_config.spreadsheet_id}' / "
+            f"sheet '{sheets_config.sheet_name}'."
+        )
+        return count
+    except Exception as e:
+        logger.error(f"Google Sheets export failed: {e}")
+        return None

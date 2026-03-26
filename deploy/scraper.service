@@ -1,0 +1,17 @@
+[Unit]
+Description=Palladam Politics Scraper
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=scraper
+WorkingDirectory=/opt/scraper
+EnvironmentFile=-/opt/scraper/.env
+ExecStart=/opt/scraper/deploy/run_scraper.sh
+StandardOutput=journal
+StandardError=journal
+TimeoutStartSec=1800
+
+[Install]
+WantedBy=multi-user.target
