@@ -64,6 +64,9 @@ def parse_arguments():
     parser.add_argument("--apify", action="store_true", help="Enable Apify API scraping")
     parser.add_argument("--firecrawl", action="store_true", help="Enable Firecrawl URL scraping")
     parser.add_argument("--cascade", action="store_true", help="Use cascading fallback scraper (Apify→Firecrawl→BrightData→Playwright)")
+    parser.add_argument("--scrapy", action="store_true", help="Enable Scrapy spider layer (supplemental deep crawl)")
+    parser.add_argument("--tn-wide", action="store_true", help="Enable TN-wide scraping (disable Palladam-only filter)")
+    parser.add_argument("--store-all", action="store_true", help="Store all records, ignoring region filters")
     return parser.parse_args()
 
 async def run_login_mode(platform: str, sessions_dir: str):
@@ -277,21 +280,39 @@ async def run_one_cycle(args, config) -> List[SocialMediaRecord]:
         "youtube": YouTubeScraper,
         "twitter": TwitterScraper,
     }
-    scrapers = [
-        (scraper_map[p], p) for p in platforms if p in scraper_map
-    ]
-    if scrapers:
-        sessions_base = os.path.join(os.getcwd(), args.sessions_dir)
+    scraper_classes = [scraper_map[p] for p in platforms if p in scraper_map]
+
+    # Build keywords the same way main_async does
+    if not keywords:
+        kw_list = []
+        if "instagram" in platforms:
+            kw_list.extend([
+                url.split('/')[-2].replace('tags/', '')
+                for url in cfg.instagram.hashtag_urls if '/explore/' in url
+            ])
+        if "twitter" in platforms:
+            kw_list.extend(cfg.twitter.search_queries)
+        if not args.broad_search:
+            kw_list = [k for k in kw_list if "palladam" in k.lower()]
+        if not kw_list:
+            kw_list = (
+                ["palladam", "dmk", "admk", "tvk", "eps", "vijay", "stalin"]
+                if args.broad_search else ["palladam"]
+            )
+        keywords = list(set(kw_list))
+
+    sessions_base = os.path.join(os.getcwd(), args.sessions_dir)
+
+    if scraper_classes:
         crawler = ParallelCrawler(
-            scrapers=scrapers,
-            sessions_base_dir=sessions_base,
+            scraper_classes=scraper_classes,
             keywords=keywords,
             timeout_minutes=args.timeout,
-            broad_search=args.broad_search,
-            config=cfg,
+            sessions_base_dir=sessions_base,
         )
         await crawler.run_scrapers()
         all_records.extend(crawler.get_results())
+
 
     # ---- Step 2: cascade per platform ----
     if args.cascade or (args.apify and hasattr(cfg, "apify") and cfg.apify.enabled):
@@ -316,9 +337,40 @@ async def run_one_cycle(args, config) -> List[SocialMediaRecord]:
         except Exception as e:
             logger.error(f"Firecrawl error: {e}")
 
+    # ---- Step 4: Scrapy spider layer (supplemental deep crawl) ----
+    if getattr(args, "scrapy", False):
+        try:
+            from scrapy_runner import run_scrapy_spiders
+            scrapy_timeout = max(args.timeout - 2, 3)
+            scrapy_records = await run_scrapy_spiders(
+                platforms=platforms,
+                keywords=keywords,
+                config=cfg,
+                timeout_minutes=scrapy_timeout,
+            )
+            all_records.extend(scrapy_records)
+            logger.info(f"Scrapy layer: {len(scrapy_records)} records")
+        except Exception as e:
+            logger.error(f"Scrapy runner error: {e}")
+
     if not all_records:
         logger.info("No records collected this cycle.")
         return []
+
+    # ---- NLP Enrichment ----
+    try:
+        from nlp_pipeline import enrich_if_configured
+        all_records = enrich_if_configured(all_records, cfg.nlp, rolling_window=None)
+    except Exception as e:
+        logger.error(f"NLP enrichment error: {e}")
+
+    # ---- Region Tagging ----
+    try:
+        from filters import tag_regions
+        logger.info("Tagging regions...")
+        all_records = tag_regions(all_records)
+    except Exception as e:
+        logger.error(f"Region tagging error: {e}")
 
     # ---- Filter ----
     if not args.no_filter:
@@ -326,7 +378,9 @@ async def run_one_cycle(args, config) -> List[SocialMediaRecord]:
         all_records = apply_filters(
             all_records,
             require_party_mention=True,
-            require_palladam_related=True,
+            require_palladam_related=not args.tn_wide,
+            tn_wide_mode=args.tn_wide,
+            store_all=args.store_all,
             strict_mode=args.strict
         )
         logger.info(f"Records after filtering: {len(all_records)}")
@@ -337,6 +391,10 @@ async def run_one_cycle(args, config) -> List[SocialMediaRecord]:
     try:
         export_all(all_records, str(cfg.export.csv_path), str(cfg.export.jsonl_path))
         logger.info(f"Exported {len(all_records)} records to {cfg.export.csv_path}")
+        
+        if getattr(cfg.export, "per_region_csv", False):
+            from exporter import export_by_region
+            export_by_region(all_records, getattr(cfg.export, "output_dir", "output"))
     except Exception as e:
         logger.error(f"CSV/JSONL export error: {e}")
 
@@ -354,6 +412,20 @@ async def run_one_cycle(args, config) -> List[SocialMediaRecord]:
             logger.info(f"Google Sheets: {sheets_result} rows written.")
     except Exception as e:
         logger.error(f"Google Sheets error: {e}")
+
+    # ---- MongoDB Upsert ----
+    try:
+        from mongo_exporter import export_to_mongo_if_configured
+        mongo_result = await export_to_mongo_if_configured(all_records, cfg.mongodb)
+        if mongo_result is not None:
+            logger.info(f"MongoDB: {mongo_result} new records upserted.")
+        else:
+            logger.info(
+                "MongoDB export skipped. "
+                "Set mongodb.enabled: true and MONGODB_URI in .env to enable."
+            )
+    except Exception as e:
+        logger.error(f"MongoDB export error: {e}")
 
     return all_records
 

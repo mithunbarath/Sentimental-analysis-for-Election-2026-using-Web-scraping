@@ -145,6 +145,7 @@ class ExportConfig:
     output_dir: str = "output"
     csv_filename: str = "palladam_politics_data.csv"
     jsonl_filename: str = "palladam_politics_data.jsonl"
+    per_region_csv: bool = True
 
     @property
     def csv_path(self) -> Path:
@@ -183,6 +184,7 @@ class GoogleSheetsConfig:
         default_factory=lambda: os.getenv("GOOGLE_APPLICATION_CREDENTIALS", "")
     )
     append_mode: bool = False
+    split_by_region: bool = True
 
     @property
     def is_configured(self) -> bool:
@@ -235,6 +237,29 @@ class InfiniteConfig:
 
 
 @dataclass
+class MongoDBConfig:
+    """MongoDB storage configuration."""
+    enabled: bool = False
+    uri: str = field(default_factory=lambda: os.getenv("MONGODB_URI", "mongodb://localhost:27017"))
+    db_name: str = "palladam_scraper"
+    collection: str = "social_records"
+
+    @property
+    def is_configured(self) -> bool:
+        return bool(self.enabled and self.uri)
+
+
+@dataclass
+class NLPConfig:
+    """NLP sentiment + trend pipeline configuration."""
+    enabled: bool = False
+    # Use multilingual model by default (works for Tamil); override to 'ai4bharat/indic-bert'
+    model_name: str = "nlptown/bert-base-multilingual-uncased-sentiment"
+    batch_size: int = 16
+    trend_window_size: int = 100  # Records used for rolling frequency trend
+
+
+@dataclass
 class Config:
     """Main configuration class containing all settings."""
 
@@ -252,6 +277,8 @@ class Config:
     firecrawl: FirecrawlConfig = field(default_factory=FirecrawlConfig)
     accounts: AccountsConfig = field(default_factory=AccountsConfig)
     infinite_mode: InfiniteConfig = field(default_factory=InfiniteConfig)
+    mongodb: MongoDBConfig = field(default_factory=MongoDBConfig)
+    nlp: NLPConfig = field(default_factory=NLPConfig)
 
     log_level: str = "INFO"
     enable_which_platforms: List[str] = field(default_factory=lambda: [
@@ -305,6 +332,10 @@ class Config:
             )
         if "infinite_mode" in data:
             config.infinite_mode = InfiniteConfig(**data["infinite_mode"])
+        if "mongodb" in data:
+            config.mongodb = MongoDBConfig(**data["mongodb"])
+        if "nlp" in data:
+            config.nlp = NLPConfig(**data["nlp"])
         if "general" in data:
             config.log_level = data["general"].get("log_level", "INFO")
             config.enable_which_platforms = data["general"].get("enable_which_platforms", config.enable_which_platforms)

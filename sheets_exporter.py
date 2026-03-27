@@ -130,7 +130,42 @@ def _build_summary_rows(records: List[SocialMediaRecord]) -> List[List[str]]:
     for ctype, count in sorted(stats["by_type"].items()):
         rows.append([ctype, str(count)])
 
+    if "by_region" in stats:
+        rows += [["", ""], ["── By Region ──", ""]]
+        for region, count in sorted(stats["by_region"].items()):
+            rows.append([region, str(count)])
+
     return rows
+
+
+def write_region_tabs(
+    records: List[SocialMediaRecord],
+    spreadsheet,
+    clear_existing: bool = True
+) -> None:
+    """Write one worksheet tab per region."""
+    from collections import defaultdict
+    by_region = defaultdict(list)
+    for r in records:
+        region = r.region or "unknown"
+        by_region[region].append(r)
+        
+    for region, reg_records in by_region.items():
+        tab_name = region.replace("_", " ").title()
+        if len(tab_name) > 100:
+            tab_name = tab_name[:100]
+            
+        try:
+            ws = _get_or_create_worksheet(spreadsheet, tab_name)
+            if clear_existing:
+                ws.clear()
+                
+            all_rows = _records_to_rows(reg_records)
+            ws.update("A1", all_rows)
+            ws.freeze(rows=1)
+            logger.info(f"Wrote {len(all_rows)-1} records to region tab '{tab_name}'.")
+        except Exception as e:
+            logger.warning(f"Could not write region tab '{tab_name}': {e}")
 
 
 def write_summary_tab(
@@ -154,6 +189,7 @@ def export_to_sheets(
     write_summary: bool = True,
     summary_tab_name: str = "Summary",
     clear_existing: bool = True,
+    split_by_region: bool = False,
 ) -> int:
     """
     Export scraped records to a Google Sheet.
@@ -167,6 +203,7 @@ def export_to_sheets(
         write_summary:     Whether to also write a Summary tab.
         summary_tab_name:  Name of the summary worksheet tab.
         clear_existing:    If True, clears the sheet before writing.
+        split_by_region:   If True, automatically writes to tabs named by region.
 
     Returns:
         Number of data rows written (excluding header).
@@ -210,6 +247,10 @@ def export_to_sheets(
         except Exception as e:
             logger.warning(f"Could not write summary tab: {e}")
 
+    # ── Region tabs ───────────────────────────────────────────────────────────
+    if split_by_region:
+        write_region_tabs(records, spreadsheet, clear_existing=clear_existing)
+
     return data_row_count
 
 
@@ -218,6 +259,7 @@ def append_to_sheets(
     spreadsheet_id: str,
     sheet_name: str = "RawData",
     credentials_path: Optional[str] = None,
+    split_by_region: bool = False,
 ) -> int:
     """
     Append records to an existing sheet without clearing it.
@@ -251,4 +293,8 @@ def append_to_sheets(
     logger.info(
         f"Appended {len(rows_to_add)} records to '{sheet_name}'."
     )
+    
+    if split_by_region:
+        write_region_tabs(records, spreadsheet, clear_existing=False)
+        
     return len(rows_to_add)

@@ -1,3 +1,6 @@
-2026/03/24-02:35:32.662 9598 Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\youtube\Default\IndexedDB\https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
-2026/03/24-02:35:32.663 9598 Recovering log #42
-2026/03/24-02:35:32.673 9598 Reusing old log C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\youtube\Default\IndexedDB\https_www.youtube.com_0.indexeddb.leveldb/000042.log 
+2026/03/28-03:18:27.132 62f4 Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\youtube\Default\IndexedDB\https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/03/28-03:18:27.153 62f4 Recovering log #42
+2026/03/28-03:18:27.215 62f4 Reusing old log C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\youtube\Default\IndexedDB\https_www.youtube.com_0.indexeddb.leveldb/000042.log 
+2026/03/28-03:20:01.238 6550 Level-0 table #47: started
+2026/03/28-03:20:01.265 6550 Level-0 table #47: 2283034 bytes OK
+2026/03/28-03:20:01.268 6550 Delete type=0 #42

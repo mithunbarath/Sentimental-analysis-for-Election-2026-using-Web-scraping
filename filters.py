@@ -128,13 +128,35 @@ class RegionClassifier:
         return score
 
 
+def tag_regions(records: List[SocialMediaRecord]) -> List[SocialMediaRecord]:
+    """Tag each record with its Tamil Nadu district/zone using TamilNaduRegionClassifier."""
+    try:
+        from region_classifier import TamilNaduRegionClassifier
+        classifier = TamilNaduRegionClassifier()
+        for r in records:
+            text_to_check = " ".join(filter(None, [r.title, r.text, r.author, r.source]))
+            r.region = classifier.classify_region(text_to_check)
+            if r.region in ["tiruppur", "coimbatore"]:
+                r.is_palladam_related = True
+        logger.info(f"Tagged regions for {len(records)} records.")
+    except Exception as e:
+        logger.error(f"Region tagging failed: {e}")
+    return records
+
+
 def apply_filters(
     records: List[SocialMediaRecord],
     require_party_mention: bool = True,
     require_palladam_related: bool = True,
+    tn_wide_mode: bool = False,
+    store_all: bool = False,
     strict_mode: bool = False
 ) -> List[SocialMediaRecord]:
     """Apply keyword and region filters with optional strict mode."""
+    if store_all:
+        logger.info(f"store_all=True: Keeping all {len(records)} records without filtering.")
+        return records
+
     filtered = []
     
     # If not in strict mode, we are more inclusive
@@ -146,17 +168,23 @@ def apply_filters(
             # If search was keyword-based, it's likely relevant even if the snippet is short
             
         # Region check
-        if require_palladam_related and not record.is_palladam_related:
+        if require_palladam_related and not tn_wide_mode and not record.is_palladam_related:
             if strict_mode:
                 continue
             # If not strict, we might still keep it if it's high engagement or from a tracked user
             # But for now, let's at least allow Tiruppur matches
 
+        # TN-wide region check (if in TN mode, drop non-TN records if strict)
+        if tn_wide_mode and record.region == "unknown":
+            if strict_mode:
+                continue
+
         filtered.append(record)
 
     logger.info(
         f"Filtered {len(records)} records down to {len(filtered)} "
-        f"(party: {require_party_mention}, palladam: {require_palladam_related}, strict: {strict_mode})"
+        f"(party: {require_party_mention}, palladam: {require_palladam_related}, "
+        f"tn_wide: {tn_wide_mode}, strict: {strict_mode})"
     )
 
     return filtered

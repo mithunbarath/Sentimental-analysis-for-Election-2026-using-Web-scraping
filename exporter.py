@@ -111,6 +111,41 @@ def export_all(
     return results
 
 
+def export_by_region(records: List[SocialMediaRecord], output_dir: str) -> Dict[str, int]:
+    """Export records split by region into separate CSV files."""
+    from collections import defaultdict
+    
+    by_region = defaultdict(list)
+    for r in records:
+        region = r.region or "unknown"
+        by_region[region].append(r)
+        
+    results = {}
+    base_dir = Path(output_dir) / "regions"
+    
+    try:
+        from region_classifier import TamilNaduRegionClassifier
+        classifier = TamilNaduRegionClassifier()
+    except ImportError:
+        classifier = None
+        
+    for region, reg_records in by_region.items():
+        if classifier:
+            zone = classifier.get_zone(region)
+            region_dir = base_dir / zone
+        else:
+            region_dir = base_dir
+            
+        region_dir.mkdir(parents=True, exist_ok=True)
+        csv_path = region_dir / f"{region}.csv"
+        
+        count = export_to_csv(reg_records, str(csv_path))
+        results[region] = count
+        
+    logger.info(f"Exported by region: {sum(results.values())} records across {len(results)} regions.")
+    return results
+
+
 def load_from_csv(csv_path: str) -> List[SocialMediaRecord]:
     """Load records from a CSV file."""
     records = []
@@ -179,6 +214,7 @@ def generate_summary_stats(records: List[SocialMediaRecord]) -> Dict[str, Any]:
         "by_platform": {},
         "by_type": {},
         "by_party": {},
+        "by_region": {},
         "palladam_related_count": 0,
         "records_with_text": 0,
         "records_with_timestamp": 0
@@ -190,6 +226,9 @@ def generate_summary_stats(records: List[SocialMediaRecord]) -> Dict[str, Any]:
 
         for party in record.parties_mentioned:
             stats["by_party"][party] = stats["by_party"].get(party, 0) + 1
+
+        region = record.region or "unknown"
+        stats["by_region"][region] = stats["by_region"].get(region, 0) + 1
 
         if record.is_palladam_related:
             stats["palladam_related_count"] += 1
@@ -235,6 +274,7 @@ def export_to_sheets_if_configured(
         "spreadsheet_id": sheets_config.spreadsheet_id,
         "sheet_name": sheets_config.sheet_name,
         "credentials_path": sheets_config.credentials_path or None,
+        "split_by_region": getattr(sheets_config, "split_by_region", False),
     }
     if not sheets_config.append_mode:
         kwargs["write_summary"] = True

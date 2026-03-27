@@ -45,6 +45,11 @@ class SocialMediaRecord:
     parties_mentioned: List[str] = field(default_factory=list)
     is_palladam_related: bool = False
     raw_data: Optional[Dict[str, Any]] = field(default=None)
+    # NLP enrichment fields (populated by nlp_pipeline.py)
+    nlp_sentiment: Optional[str] = None        # e.g. "positive", "neutral", "negative"
+    nlp_sentiment_score: Optional[float] = None # 0.0–1.0 confidence
+    nlp_trend_score: Optional[float] = None    # relative frequency vs rolling window
+    region: Optional[str] = None  # Added for TN regional classification
 
     def to_dict(self) -> Dict[str, Any]:
         """Convert the record to a dictionary."""
@@ -79,8 +84,12 @@ class SocialMediaRecord:
             "comment_count": str(self.comment_count) if self.comment_count is not None else "",
             "source": self.source or "",
             "timestamp": self.timestamp.isoformat() if self.timestamp else "",
-            "parties_mentioned": ",".join(self.parties_mentioned),
-            "is_palladam_related": str(self.is_palladam_related)
+            "parties_mentioned": ",".join(self.parties_mentioned) if self.parties_mentioned else "",
+            "is_palladam_related": str(self.is_palladam_related),
+            "nlp_sentiment": self.nlp_sentiment or "",
+            "nlp_sentiment_score": str(self.nlp_sentiment_score) if self.nlp_sentiment_score is not None else "",
+            "nlp_trend_score": str(self.nlp_trend_score) if self.nlp_trend_score is not None else "",
+            "region": self.region or ""
         }
 
     @classmethod
@@ -90,7 +99,9 @@ class SocialMediaRecord:
             "platform", "type", "id", "parent_id", "url", "author", "title", "text",
             "like_count", "reaction_count", "view_count", "retweet_count",
             "reply_count", "comment_count", "source", "timestamp",
-            "parties_mentioned", "is_palladam_related"
+            "parties_mentioned", "is_palladam_related",
+            "nlp_sentiment", "nlp_sentiment_score", "nlp_trend_score",
+            "region"
         ]
 
 

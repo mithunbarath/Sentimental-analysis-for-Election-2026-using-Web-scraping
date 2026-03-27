@@ -28,3 +28,20 @@ firecrawl-py>=1.0.0
 # Google Sheets API
 gspread>=6.0.0
 google-auth>=2.29.0
+
+# --- NEW: Hybrid Workflow ---
+
+# Scrapy spider framework
+Scrapy>=2.11.0
+scrapy-playwright>=0.0.34
+
+# MongoDB async driver
+motor>=3.4.0
+pymongo>=4.7.0
+
+# NLP / Sentiment (Tamil-aware)
+transformers>=4.40.0
+sentencepiece>=0.2.0
+torch>=2.2.0
+# CPU-only torch is sufficient; GPU optional
+# If you have CUDA: pip install torch --index-url https://download.pytorch.org/whl/cu121
