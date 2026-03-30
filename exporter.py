@@ -23,13 +23,13 @@ def export_to_csv(
 
     output_file.parent.mkdir(parents=True, exist_ok=True)
 
-    try:
-        with open(output_file, "w", newline="", encoding="utf-8") as f:
-            if include_headers:
-                writer = csv.DictWriter(f, fieldnames=SocialMediaRecord.get_csv_headers())
-                writer.writeheader()
+    file_exists = output_file.exists() and output_file.stat().st_size > 0
 
+    try:
+        with open(output_file, "a", newline="", encoding="utf-8") as f:
             writer = csv.DictWriter(f, fieldnames=SocialMediaRecord.get_csv_headers())
+            if include_headers and not file_exists:
+                writer.writeheader()
 
             for record in records:
                 writer.writerow(record.to_csv_row())
@@ -52,7 +52,7 @@ def export_to_jsonl(
     output_file.parent.mkdir(parents=True, exist_ok=True)
 
     try:
-        with open(output_file, "w", encoding="utf-8") as f:
+        with open(output_file, "a", encoding="utf-8") as f:
             for record in records:
                 json.dump(record.to_dict(), f, ensure_ascii=False)
                 f.write("\n")

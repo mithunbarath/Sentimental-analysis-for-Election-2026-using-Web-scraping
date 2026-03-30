@@ -50,6 +50,19 @@ PLAYWRIGHT_LAUNCH_OPTIONS = {
 }
 PLAYWRIGHT_DEFAULT_NAVIGATION_TIMEOUT = 60_000
 
+# ── Persistent Contexts (Login By-pass) ───────────────────────────────────────
+PLAYWRIGHT_CONTEXTS = {
+    "default": {},
+    "facebook": {
+        "user_data_dir": os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), ".sessions", "facebook")),
+    },
+    "instagram": {
+        "user_data_dir": os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), ".sessions", "instagram")),
+    },
+    "twitter": {
+        "user_data_dir": os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(__file__)), ".sessions", "twitter")),
+    }
+}
 # ── Middlewares ───────────────────────────────────────────────────────────────
 DOWNLOADER_MIDDLEWARES = {
     # BrightData residential proxy (optional — only if BRIGHT_DATA_* env vars set)

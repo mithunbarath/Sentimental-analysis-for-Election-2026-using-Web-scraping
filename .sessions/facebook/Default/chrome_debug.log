@@ -1,0 +1,146 @@
+[0331/010433.151:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010433.153:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010433.153:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010433.190:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010433.191:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010433.191:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010433.360:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010433.362:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010433.362:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010433.838:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010433.838:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010433.842:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010433.842:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010433.850:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010433.850:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010433.882:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010433.890:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010433.890:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010433.903:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010433.905:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010433.905:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010433.916:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010433.918:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010433.918:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010433.950:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010433.951:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010433.951:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010434.146:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
+[0331/010434.146:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
+[0331/010434.146:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
+[0331/010434.158:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
+[0331/010434.597:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010434.614:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010434.614:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010434.623:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
+[0331/010434.630:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010434.634:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010434.653:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010434.653:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010434.738:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010434.738:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010434.800:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
+[0331/010434.805:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
+[0331/010434.862:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
+[0331/010435.121:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010435.126:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010435.127:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010435.128:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010435.394:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010435.394:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010435.437:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010435.447:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010435.448:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010435.466:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010435.466:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010435.487:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010435.487:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010435.589:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010435.609:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010435.610:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010435.673:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010435.768:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010435.769:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010435.769:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010435.800:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010435.805:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010435.806:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010435.806:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010435.951:ERROR:components\services\storage\service_worker\service_worker_storage.cc:1808] Failed to delete the database: Database IO error
+[0331/010435.999:ERROR:components\services\storage\service_worker\service_worker_storage.cc:1808] Failed to delete the database: Database IO error
+[0331/010436.014:ERROR:components\services\storage\service_worker\service_worker_storage.cc:1808] Failed to delete the database: Database IO error
+[0331/010436.061:ERROR:components\services\storage\service_worker\service_worker_storage.cc:1808] Failed to delete the database: Database IO error
+[0331/010436.480:ERROR:components\services\storage\service_worker\service_worker_storage.cc:1808] Failed to delete the database: Database IO error
+[0331/010436.481:ERROR:components\services\storage\service_worker\service_worker_storage.cc:1808] Failed to delete the database: Database IO error
+[0331/010436.619:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010436.682:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010437.460:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010437.692:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010437.785:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010437.799:ERROR:components\services\storage\service_worker\service_worker_storage.cc:1808] Failed to delete the database: Database IO error
+[0331/010437.817:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010438.172:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010438.640:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010438.699:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010439.478:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010439.713:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010439.859:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010439.920:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010440.209:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010440.682:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010440.730:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010441.518:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010441.776:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010441.889:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010441.944:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010442.221:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010442.689:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010442.767:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010443.456:INFO:CONSOLE:336] "Permissions policy violation: unload is not allowed in this document.", source: https://static.xx.fbcdn.net/rsrc.php/v4/yZ/r/_sB90eatmf4.js (336)
+[0331/010443.914:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010444.237:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\facebook\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010444.336:INFO:CONSOLE:336] "Permissions policy violation: unload is not allowed in this document.", source: https://static.xx.fbcdn.net/rsrc.php/v4/yh/r/5_MqSn0U0Ow.js (336)
+[0331/010446.005:INFO:CONSOLE:256] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010446.005:INFO:CONSOLE:256] "
+%cThis is a browser feature intended for developers. If someone told you to copy and paste something here to enable a Facebook feature or "hack" someone's account, it's a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010446.006:INFO:CONSOLE:256] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010446.006:INFO:CONSOLE:256] "
+%c ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010446.477:INFO:CONSOLE:256] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010446.477:INFO:CONSOLE:256] "
+%cThis is a browser feature intended for developers. If someone told you to copy and paste something here to enable a Facebook feature or "hack" someone's account, it's a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010446.477:INFO:CONSOLE:256] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010446.477:INFO:CONSOLE:256] "
+%c ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010448.150:INFO:CONSOLE:870] "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently", source: https://static.xx.fbcdn.net/rsrc.php/v4ijY94/yQ/l/en_GB-j/2banf3l-wnmgyZQDPde8rhGz_gaMicsPSJE6BBD2gi4Uw-GNYBj5CbfgvtNkAEJhzO0NRGOF27zDpUu51aOhEmREkMQVEmdBrOXQ3unmks6ZEQMF6CZdh7QqvKBxXCGJF6Hl1Nk94rRikTQjkOb_VIGt6pe6KEQenUDuWYSiCzARXQ0JDoY4SHhaHEVfx6TgrmfLtBfgngRZgrMIhTCJZdPj1RRSCbnjsO3fE1bAQgvC4U9SKbh1GDBe11OgB_p_nyLOtU6LKtJbmEBJHC-8GmGoRV5nGvLeaTbVSSlf3yy9miwcun6JGMcZeIeMT4Y.js (870)
+[0331/010448.808:INFO:CONSOLE:477] "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently", source: https://static.xx.fbcdn.net/rsrc.php/v4irVC4/yt/l/en_GB-j/w-GNYBj5CbfgvtNkAEJhzO0NRGOF27zDpUu51aOhEmREkMQVEmdBrOXQ3unmks6ZEQMF6CZdh7QqvKBxXCGJF6Hl1Nk94rRikTQjkOb_VIGt6pe6KEQenUDuWYSiCzARXQ0JDoY4SHhaHEVfx6TgrmfLtBfgngRZgrMIhHQv-hmt1Me8U5aF2729_TbHEbKnGJfW1dTCJZdPj1RRSCbnjsO3fE1bAQgvC4U9SKbh1GDBe11OgB_p_nyLOtU6LKtJbmEBJHC-8GmGoRV5nGvLeaTbVSSlf3CxM0no2U07Lyy9miwcun6JGMcZeIeMT4YnxjobC262p3.js (477)
+[0331/010449.791:INFO:CONSOLE:870] "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently", source: https://static.xx.fbcdn.net/rsrc.php/v4ijY94/yQ/l/en_GB-j/2banf3l-wnmgyZQDPde8rhGz_gaMicsPSJE6BBD2gi4Uw-GNYBj5CbfgvtNkAEJhzO0NRGOF27zDpUu51aOhEmREkMQVEmdBrOXQ3unmks6ZEQMF6CZdh7QqvKBxXCGJF6Hl1Nk94rRikTQjkOb_VIGt6pe6KEQenUDuWYSiCzARXQ0JDoY4SHhaHEVfx6TgrmfLtBfgngRZgrMIhTCJZdPj1RRSCbnjsO3fE1bAQgvC4U9SKbh1GDBe11OgB_p_nyLOtU6LKtJbmEBJHC-8GmGoRV5nGvLeaTbVSSlf3yy9miwcun6JGMcZeIeMT4Y.js (870)
+[0331/010450.219:INFO:CONSOLE:477] "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently", source: https://static.xx.fbcdn.net/rsrc.php/v4irVC4/yt/l/en_GB-j/w-GNYBj5CbfgvtNkAEJhzO0NRGOF27zDpUu51aOhEmREkMQVEmdBrOXQ3unmks6ZEQMF6CZdh7QqvKBxXCGJF6Hl1Nk94rRikTQjkOb_VIGt6pe6KEQenUDuWYSiCzARXQ0JDoY4SHhaHEVfx6TgrmfLtBfgngRZgrMIhHQv-hmt1Me8U5aF2729_TbHEbKnGJfW1dTCJZdPj1RRSCbnjsO3fE1bAQgvC4U9SKbh1GDBe11OgB_p_nyLOtU6LKtJbmEBJHC-8GmGoRV5nGvLeaTbVSSlf3CxM0no2U07Lyy9miwcun6JGMcZeIeMT4YnxjobC262p3.js (477)
+[0331/010451.657:INFO:CONSOLE:477] "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently", source: https://static.xx.fbcdn.net/rsrc.php/v4irVC4/yt/l/en_GB-j/w-GNYBj5CbfgvtNkAEJhzO0NRGOF27zDpUu51aOhEmREkMQVEmdBrOXQ3unmks6ZEQMF6CZdh7QqvKBxXCGJF6Hl1Nk94rRikTQjkOb_VIGt6pe6KEQenUDuWYSiCzARXQ0JDoY4SHhaHEVfx6TgrmfLtBfgngRZgrMIhHQv-hmt1Me8U5aF2729_TbHEbKnGJfW1dTCJZdPj1RRSCbnjsO3fE1bAQgvC4U9SKbh1GDBe11OgB_p_nyLOtU6LKtJbmEBJHC-8GmGoRV5nGvLeaTbVSSlf3CxM0no2U07Lyy9miwcun6JGMcZeIeMT4YnxjobC262p3.js (477)
+[0331/010451.679:INFO:CONSOLE:477] "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently", source: https://static.xx.fbcdn.net/rsrc.php/v4irVC4/yt/l/en_GB-j/w-GNYBj5CbfgvtNkAEJhzO0NRGOF27zDpUu51aOhEmREkMQVEmdBrOXQ3unmks6ZEQMF6CZdh7QqvKBxXCGJF6Hl1Nk94rRikTQjkOb_VIGt6pe6KEQenUDuWYSiCzARXQ0JDoY4SHhaHEVfx6TgrmfLtBfgngRZgrMIhHQv-hmt1Me8U5aF2729_TbHEbKnGJfW1dTCJZdPj1RRSCbnjsO3fE1bAQgvC4U9SKbh1GDBe11OgB_p_nyLOtU6LKtJbmEBJHC-8GmGoRV5nGvLeaTbVSSlf3CxM0no2U07Lyy9miwcun6JGMcZeIeMT4YnxjobC262p3.js (477)
+[0331/010452.271:INFO:CONSOLE:870] "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently", source: https://static.xx.fbcdn.net/rsrc.php/v4ijY94/yQ/l/en_GB-j/2banf3l-wnmgyZQDPde8rhGz_gaMicsPSJE6BBD2gi4Uw-GNYBj5CbfgvtNkAEJhzO0NRGOF27zDpUu51aOhEmREkMQVEmdBrOXQ3unmks6ZEQMF6CZdh7QqvKBxXCGJF6Hl1Nk94rRikTQjkOb_VIGt6pe6KEQenUDuWYSiCzARXQ0JDoY4SHhaHEVfx6TgrmfLtBfgngRZgrMIhTCJZdPj1RRSCbnjsO3fE1bAQgvC4U9SKbh1GDBe11OgB_p_nyLOtU6LKtJbmEBJHC-8GmGoRV5nGvLeaTbVSSlf3yy9miwcun6JGMcZeIeMT4Y.js (870)
+[0331/010452.295:INFO:CONSOLE:870] "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently", source: https://static.xx.fbcdn.net/rsrc.php/v4ijY94/yQ/l/en_GB-j/2banf3l-wnmgyZQDPde8rhGz_gaMicsPSJE6BBD2gi4Uw-GNYBj5CbfgvtNkAEJhzO0NRGOF27zDpUu51aOhEmREkMQVEmdBrOXQ3unmks6ZEQMF6CZdh7QqvKBxXCGJF6Hl1Nk94rRikTQjkOb_VIGt6pe6KEQenUDuWYSiCzARXQ0JDoY4SHhaHEVfx6TgrmfLtBfgngRZgrMIhTCJZdPj1RRSCbnjsO3fE1bAQgvC4U9SKbh1GDBe11OgB_p_nyLOtU6LKtJbmEBJHC-8GmGoRV5nGvLeaTbVSSlf3yy9miwcun6JGMcZeIeMT4Y.js (870)
+[0331/010458.269:INFO:CONSOLE:477] "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently", source: https://static.xx.fbcdn.net/rsrc.php/v4irVC4/yt/l/en_GB-j/w-GNYBj5CbfgvtNkAEJhzO0NRGOF27zDpUu51aOhEmREkMQVEmdBrOXQ3unmks6ZEQMF6CZdh7QqvKBxXCGJF6Hl1Nk94rRikTQjkOb_VIGt6pe6KEQenUDuWYSiCzARXQ0JDoY4SHhaHEVfx6TgrmfLtBfgngRZgrMIhHQv-hmt1Me8U5aF2729_TbHEbKnGJfW1dTCJZdPj1RRSCbnjsO3fE1bAQgvC4U9SKbh1GDBe11OgB_p_nyLOtU6LKtJbmEBJHC-8GmGoRV5nGvLeaTbVSSlf3CxM0no2U07Lyy9miwcun6JGMcZeIeMT4YnxjobC262p3.js (477)
+[0331/010458.311:INFO:CONSOLE:477] "Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multipage/canvas.html#concept-canvas-will-read-frequently", source: https://static.xx.fbcdn.net/rsrc.php/v4irVC4/yt/l/en_GB-j/w-GNYBj5CbfgvtNkAEJhzO0NRGOF27zDpUu51aOhEmREkMQVEmdBrOXQ3unmks6ZEQMF6CZdh7QqvKBxXCGJF6Hl1Nk94rRikTQjkOb_VIGt6pe6KEQenUDuWYSiCzARXQ0JDoY4SHhaHEVfx6TgrmfLtBfgngRZgrMIhHQv-hmt1Me8U5aF2729_TbHEbKnGJfW1dTCJZdPj1RRSCbnjsO3fE1bAQgvC4U9SKbh1GDBe11OgB_p_nyLOtU6LKtJbmEBJHC-8GmGoRV5nGvLeaTbVSSlf3CxM0no2U07Lyy9miwcun6JGMcZeIeMT4YnxjobC262p3.js (477)
+[0331/010506.563:INFO:CONSOLE:336] "Permissions policy violation: unload is not allowed in this document.", source: https://static.xx.fbcdn.net/rsrc.php/v4/ye/r/1fEz7KnxrNh.js (336)
+[0331/010506.675:INFO:CONSOLE:256] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v4/yh/r/laVzVtodOKI.js (256)
+[0331/010506.675:INFO:CONSOLE:256] "
+%cThis is a browser feature intended for developers. If someone told you to copy and paste something here to enable a Facebook feature or "hack" someone's account, it's a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yh/r/laVzVtodOKI.js (256)
+[0331/010506.675:INFO:CONSOLE:256] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yh/r/laVzVtodOKI.js (256)
+[0331/010506.675:INFO:CONSOLE:256] "
+%c ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yh/r/laVzVtodOKI.js (256)
+[0331/010524.800:INFO:CONSOLE:256] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.xx.fbcdn.net/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010524.800:INFO:CONSOLE:256] "
+%cThis is a browser feature intended for developers. If someone told you to copy and paste something here to enable a Facebook feature or "hack" someone's account, it's a scam and will give them access to your Facebook account. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010524.802:INFO:CONSOLE:256] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010524.802:INFO:CONSOLE:256] "
+%c ", source: https://static.xx.fbcdn.net/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010530.988:INFO:CONSOLE:336] "Permissions policy violation: unload is not allowed in this document.", source: https://static.xx.fbcdn.net/rsrc.php/v4/yZ/r/_sB90eatmf4.js (336)

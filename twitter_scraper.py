@@ -52,10 +52,10 @@ class TwitterScraper(AsyncBaseScraper):
 
             for tweet in tweet_elements[:30]:
                 try:
-                    # Extract text
-                    text = tweet.css('[data-testid="tweetText"]').xpath('string()').get()
+                    # Extract text safely
+                    text_nodes = tweet.css('[data-testid="tweetText"]')
+                    text = text_nodes[0].text if text_nodes else None
                     if not text:
-                        # Fallback for text
                         text = tweet.css('[data-testid="tweetText"]::text').get()
                     
                     if not text:

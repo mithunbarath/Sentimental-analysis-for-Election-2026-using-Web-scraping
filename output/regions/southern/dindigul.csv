@@ -1,0 +1,2 @@
+platform,type,id,parent_id,url,author,title,text,like_count,reaction_count,view_count,retweet_count,reply_count,comment_count,source,timestamp,parties_mentioned,is_palladam_related,nlp_sentiment,nlp_sentiment_score,nlp_trend_score,region
+youtube,post,Ckqj3CCdSRo,,https://www.youtube.com/watch?v=Ckqj3CCdSRo,Thanthi TV,"""எடப்பாடி பழனிசாமி தான் முதல்வர் வேட்பாளர்"" - பல்லடம் எம்.எல்.ஏ கரைப்புதூர் நடராஜன்",,,,11245,,,,scrapy_youtube,2026-03-30T19:34:37.093412,"dmk,admk",True,,,,dindigul

@@ -1,0 +1,285 @@
+[0331/010433.858:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010433.873:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010433.873:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010433.883:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010433.888:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010433.889:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010433.945:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010433.945:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010433.946:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010433.987:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010433.988:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010433.988:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010433.991:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010433.991:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010433.992:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010433.992:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010433.992:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010433.992:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010434.007:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010434.008:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010434.008:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010434.008:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010434.010:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010434.010:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010434.044:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010434.044:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010434.044:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010434.069:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010434.073:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010434.073:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010434.078:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010434.079:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010434.079:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010434.123:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010434.123:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010434.129:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010434.129:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010434.129:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010434.129:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010434.141:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010434.141:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010434.147:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
+[0331/010434.158:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
+[0331/010434.159:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
+[0331/010434.159:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
+[0331/010434.192:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010434.192:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010434.193:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010434.193:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010434.591:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
+[0331/010434.595:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
+[0331/010434.634:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
+[0331/010434.894:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010434.938:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010434.946:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010434.947:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010434.958:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010434.958:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010435.672:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010435.674:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010435.674:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010435.700:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010435.781:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010435.782:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010435.782:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010435.788:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010435.792:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010435.792:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010435.794:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010435.795:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010435.796:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010435.818:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010435.819:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010435.825:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/010435.830:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010435.830:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010435.830:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010435.830:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010435.834:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010435.845:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/010435.845:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/010435.999:ERROR:components\services\storage\service_worker\service_worker_storage.cc:1808] Failed to delete the database: Database IO error
+[0331/010436.030:ERROR:components\services\storage\service_worker\service_worker_storage.cc:1808] Failed to delete the database: Database IO error
+[0331/010436.464:ERROR:components\services\storage\service_worker\service_worker_storage.cc:1808] Failed to delete the database: Database IO error
+[0331/010436.509:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010436.664:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010436.683:ERROR:components\services\storage\service_worker\service_worker_storage.cc:1808] Failed to delete the database: Database IO error
+[0331/010437.166:ERROR:components\services\storage\service_worker\service_worker_storage.cc:1808] Failed to delete the database: Database IO error
+[0331/010437.175:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010437.724:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010437.814:ERROR:components\services\storage\service_worker\service_worker_storage.cc:1808] Failed to delete the database: Database IO error
+[0331/010437.814:ERROR:components\services\storage\service_worker\service_worker_storage.cc:1808] Failed to delete the database: Database IO error
+[0331/010437.819:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010437.846:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010437.861:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010438.529:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010438.685:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010439.199:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010439.803:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010439.856:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010439.865:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010439.884:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010440.568:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010440.707:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010441.244:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010441.837:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010441.870:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010441.878:INFO:CONSOLE:256] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010441.879:INFO:CONSOLE:256] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable an Instagram feature or "hack" someone's account, it is a scam and will give them access to your Instagram account. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010441.879:INFO:CONSOLE:256] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010441.879:INFO:CONSOLE:256] "
+%c ", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010441.886:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010441.897:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010442.031:INFO:CONSOLE:256] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010442.031:INFO:CONSOLE:256] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable an Instagram feature or "hack" someone's account, it is a scam and will give them access to your Instagram account. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010442.031:INFO:CONSOLE:256] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010442.031:INFO:CONSOLE:256] "
+%c ", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010442.610:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010442.719:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010443.267:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010443.884:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010443.914:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/010453.120:INFO:CONSOLE:256] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.cdninstagram.com/rsrc.php/v4/yh/r/laVzVtodOKI.js (256)
+[0331/010453.121:INFO:CONSOLE:256] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable an Instagram feature or "hack" someone's account, it is a scam and will give them access to your Instagram account. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yh/r/laVzVtodOKI.js (256)
+[0331/010453.121:INFO:CONSOLE:256] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yh/r/laVzVtodOKI.js (256)
+[0331/010453.121:INFO:CONSOLE:256] "
+%c ", source: https://static.cdninstagram.com/rsrc.php/v4/yh/r/laVzVtodOKI.js (256)
+[0331/010455.954:INFO:CONSOLE:256] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010455.954:INFO:CONSOLE:256] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable an Instagram feature or "hack" someone's account, it is a scam and will give them access to your Instagram account. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010455.954:INFO:CONSOLE:256] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010455.955:INFO:CONSOLE:256] "
+%c ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010501.584:INFO:CONSOLE:252] "Permissions policy violation: unload is not allowed in this document.", source: https://static.xx.fbcdn.net/rsrc.php/v4/yv/r/ey7teakyWuA.js (252)
+[0331/010502.355:INFO:CONSOLE:256] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010502.356:INFO:CONSOLE:256] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable an Instagram feature or "hack" someone's account, it is a scam and will give them access to your Instagram account. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010502.356:INFO:CONSOLE:256] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010502.356:INFO:CONSOLE:256] "
+%c ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010508.377:INFO:CONSOLE:256] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010508.377:INFO:CONSOLE:256] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable an Instagram feature or "hack" someone's account, it is a scam and will give them access to your Instagram account. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010508.377:INFO:CONSOLE:256] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010508.377:INFO:CONSOLE:256] "
+%c ", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010511.591:INFO:CONSOLE:256] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010511.591:INFO:CONSOLE:256] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable an Instagram feature or "hack" someone's account, it is a scam and will give them access to your Instagram account. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010511.592:INFO:CONSOLE:256] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010511.592:INFO:CONSOLE:256] "
+%c ", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010515.078:INFO:CONSOLE:256] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010515.078:INFO:CONSOLE:256] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable an Instagram feature or "hack" someone's account, it is a scam and will give them access to your Instagram account. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010515.079:INFO:CONSOLE:256] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010515.079:INFO:CONSOLE:256] "
+%c ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010530.940:INFO:CONSOLE:256] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.cdninstagram.com/rsrc.php/v4/yh/r/laVzVtodOKI.js (256)
+[0331/010530.940:INFO:CONSOLE:256] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable an Instagram feature or "hack" someone's account, it is a scam and will give them access to your Instagram account. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yh/r/laVzVtodOKI.js (256)
+[0331/010530.953:INFO:CONSOLE:256] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yh/r/laVzVtodOKI.js (256)
+[0331/010530.955:INFO:CONSOLE:256] "
+%c ", source: https://static.cdninstagram.com/rsrc.php/v4/yh/r/laVzVtodOKI.js (256)
+[0331/010539.495:INFO:CONSOLE:0] "The resource https://static.cdninstagram.com/rsrc.php/y5/r/_a_FWcDLOaW.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.", source: https://www.instagram.com/p/C4spAkuvd4q/ (0)
+[0331/010539.495:INFO:CONSOLE:0] "The resource https://static.cdninstagram.com/rsrc.php/yP/r/ei8K5QReonM.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.", source: https://www.instagram.com/p/C4spAkuvd4q/ (0)
+[0331/010539.542:INFO:CONSOLE:256] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.cdninstagram.com/rsrc.php/v4/yh/r/laVzVtodOKI.js (256)
+[0331/010539.543:INFO:CONSOLE:256] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable an Instagram feature or "hack" someone's account, it is a scam and will give them access to your Instagram account. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yh/r/laVzVtodOKI.js (256)
+[0331/010539.560:INFO:CONSOLE:256] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yh/r/laVzVtodOKI.js (256)
+[0331/010539.560:INFO:CONSOLE:256] "
+%c ", source: https://static.cdninstagram.com/rsrc.php/v4/yh/r/laVzVtodOKI.js (256)
+[0331/010547.462:INFO:CONSOLE:256] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010547.462:INFO:CONSOLE:256] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable an Instagram feature or "hack" someone's account, it is a scam and will give them access to your Instagram account. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010547.462:INFO:CONSOLE:256] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010547.462:INFO:CONSOLE:256] "
+%c ", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010554.615:INFO:CONSOLE:256] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010554.615:INFO:CONSOLE:256] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable an Instagram feature or "hack" someone's account, it is a scam and will give them access to your Instagram account. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010554.615:INFO:CONSOLE:256] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010554.616:INFO:CONSOLE:256] "
+%c ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010600.075:INFO:CONSOLE:256] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010600.075:INFO:CONSOLE:256] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable an Instagram feature or "hack" someone's account, it is a scam and will give them access to your Instagram account. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010600.076:INFO:CONSOLE:256] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010600.076:INFO:CONSOLE:256] "
+%c ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010605.028:INFO:CONSOLE:256] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010605.028:INFO:CONSOLE:256] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable an Instagram feature or "hack" someone's account, it is a scam and will give them access to your Instagram account. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010605.029:INFO:CONSOLE:256] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010605.029:INFO:CONSOLE:256] "
+%c ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010609.797:INFO:CONSOLE:256] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010609.797:INFO:CONSOLE:256] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable an Instagram feature or "hack" someone's account, it is a scam and will give them access to your Instagram account. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010609.797:INFO:CONSOLE:256] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010609.797:INFO:CONSOLE:256] "
+%c ", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010613.330:INFO:CONSOLE:256] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010613.330:INFO:CONSOLE:256] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable an Instagram feature or "hack" someone's account, it is a scam and will give them access to your Instagram account. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010613.330:INFO:CONSOLE:256] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010613.331:INFO:CONSOLE:256] "
+%c ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010620.318:INFO:CONSOLE:256] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010620.325:INFO:CONSOLE:256] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable an Instagram feature or "hack" someone's account, it is a scam and will give them access to your Instagram account. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010620.326:INFO:CONSOLE:256] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010620.326:INFO:CONSOLE:256] "
+%c ", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010624.906:INFO:CONSOLE:256] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010624.922:INFO:CONSOLE:256] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable an Instagram feature or "hack" someone's account, it is a scam and will give them access to your Instagram account. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010624.922:INFO:CONSOLE:256] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010624.922:INFO:CONSOLE:256] "
+%c ", source: https://static.cdninstagram.com/rsrc.php/v4/yK/r/y3UASupc0mW.js (256)
+[0331/010627.365:INFO:CONSOLE:256] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010627.366:INFO:CONSOLE:256] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable an Instagram feature or "hack" someone's account, it is a scam and will give them access to your Instagram account. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010627.366:INFO:CONSOLE:256] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010627.366:INFO:CONSOLE:256] "
+%c ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010632.424:INFO:CONSOLE:256] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010632.424:INFO:CONSOLE:256] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable an Instagram feature or "hack" someone's account, it is a scam and will give them access to your Instagram account. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010632.426:INFO:CONSOLE:256] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010632.426:INFO:CONSOLE:256] "
+%c ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010636.500:INFO:CONSOLE:256] "
+%cStop! font-family:helvetica; font-size:20px; font-size:50px; font-weight:bold; color:red; -webkit-text-stroke:1px black;", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010636.500:INFO:CONSOLE:256] "
+%cThis is a browser feature intended for developers. If someone told you to copy-paste something here to enable an Instagram feature or "hack" someone's account, it is a scam and will give them access to your Instagram account. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010636.500:INFO:CONSOLE:256] "
+%cSee https://www.facebook.com/selfxss for more information. font-family:helvetica; font-size:20px; ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)
+[0331/010636.500:INFO:CONSOLE:256] "
+%c ", source: https://static.cdninstagram.com/rsrc.php/v4/yv/r/ey7teakyWuA.js (256)

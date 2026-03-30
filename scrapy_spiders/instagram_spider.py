@@ -54,6 +54,7 @@ class InstagramSpider(scrapy.Spider):
                 callback=self.parse_hashtag,
                 meta={
                     "playwright": True,
+                    "playwright_context": "instagram",
                     "playwright_include_page": True,
                     "playwright_page_methods": [
                         PageMethod("wait_for_timeout", 3000),
@@ -90,6 +91,7 @@ class InstagramSpider(scrapy.Spider):
                     callback=self.parse_post,
                     meta={
                         "playwright": True,
+                        "playwright_context": "instagram",
                         "playwright_page_methods": [
                             PageMethod("wait_for_timeout", 2000),
                         ],

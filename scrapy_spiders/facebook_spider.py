@@ -54,6 +54,7 @@ class FacebookSpider(scrapy.Spider):
                 callback=self.parse_search,
                 meta={
                     "playwright": True,
+                    "playwright_context": "facebook",
                     "playwright_include_page": True,
                     "playwright_page_methods": [
                         PageMethod("wait_for_timeout", 4000),
@@ -72,6 +73,7 @@ class FacebookSpider(scrapy.Spider):
                 callback=self.parse_page,
                 meta={
                     "playwright": True,
+                    "playwright_context": "facebook",
                     "playwright_page_methods": [
                         PageMethod("wait_for_timeout", 3000),
                         PageMethod("evaluate", "window.scrollBy(0, 3000)"),
@@ -87,14 +89,16 @@ class FacebookSpider(scrapy.Spider):
 
         try:
             # Extract post text blocks
-            post_texts = response.css('div[data-ad-comet-preview="message"] span::text').getall()
-            if not post_texts:
-                post_texts = response.css('div[role="feed"] div[dir="auto"] span::text').getall()
+            # Facebook wraps the actual post text natively in div[dir="auto"] or ad-preview components 
+            post_containers = response.css('div[dir="auto"], div[data-ad-comet-preview="message"], div[data-ad-preview="message"]')
 
             count = 0
-            for text in post_texts:
+            for container in post_containers:
                 if count >= self.max_posts:
                     break
+                    
+                text_fragments = container.css('::text').getall()
+                text = " ".join(text_fragments).strip()
                 text = text.strip()
                 if len(text) < 20:
                     continue

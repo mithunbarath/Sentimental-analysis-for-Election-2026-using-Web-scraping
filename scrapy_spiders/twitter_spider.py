@@ -1,8 +1,6 @@
 """
-Scrapy spider for Twitter/X search via Nitter (public mirror) and
-the official search page (Playwright).
-
-Prefers Nitter instances (no login needed) with Twitter direct as fallback.
+Scrapy spider for Twitter/X search using native Playwright session injection.
+This completely bypasses rate-limits and blocks by using the authenticated browser context.
 """
 
 import hashlib
@@ -17,13 +15,6 @@ from scrapy_playwright.page import PageMethod
 from scrapy_spiders.items import SocialPostItem
 
 logger = logging.getLogger(__name__)
-
-# Public Nitter instances (no login required)
-_NITTER_INSTANCES = [
-    "https://nitter.poast.org",
-    "https://nitter.privacydev.net",
-    "https://nitter.1d4.us",
-]
 
 _PARTY_KEYWORDS = {
     "dmk": ["dmk", "டிஎம்கே", "stalin"],
@@ -40,25 +31,10 @@ def _classify(text: str):
     return parties, is_palladam
 
 
-def _extract_count(text: str) -> int | None:
-    """Parse '1,234' or '5.6K' into int."""
-    if not text:
-        return None
-    text = text.strip().upper().replace(",", "")
-    try:
-        if "K" in text:
-            return int(float(text.replace("K", "")) * 1000)
-        if "M" in text:
-            return int(float(text.replace("M", "")) * 1_000_000)
-        return int(text)
-    except (ValueError, TypeError):
-        return None
-
-
 class TwitterSpider(scrapy.Spider):
     name = "twitter"
     custom_settings = {
-        "PLAYWRIGHT_DEFAULT_NAVIGATION_TIMEOUT": 60_000,
+        "PLAYWRIGHT_DEFAULT_NAVIGATION_TIMEOUT": 90_000,
     }
 
     def __init__(self, keywords: List[str] = None, max_tweets: int = 100, **kwargs):
@@ -66,85 +42,73 @@ class TwitterSpider(scrapy.Spider):
         self.keywords = keywords or ["palladam"]
         self.max_tweets = max_tweets
         self.results = []
-        self._nitter_idx = 0
-
-    def _next_nitter(self) -> str:
-        base = _NITTER_INSTANCES[self._nitter_idx % len(_NITTER_INSTANCES)]
-        self._nitter_idx += 1
-        return base
 
     def start_requests(self):
         for kw in self.keywords:
-            nitter = self._next_nitter()
-            url = f"{nitter}/search?q={quote_plus(kw)}&f=tweets"
+            url = f"https://twitter.com/search?q={quote_plus(kw)}&src=typed_query&f=live"
             yield scrapy.Request(
                 url,
-                callback=self.parse_nitter,
-                meta={"keyword": kw, "nitter_base": nitter},
+                callback=self.parse_twitter,
+                meta={
+                    "playwright": True,
+                    "playwright_context": "twitter",
+                    "playwright_include_page": True,
+                    "playwright_page_methods": [
+                        PageMethod("wait_for_timeout", 5000),
+                        PageMethod("evaluate", "window.scrollBy(0, 3000)"),
+                        PageMethod("wait_for_timeout", 3000),
+                    ],
+                    "keyword": kw,
+                },
                 errback=self.handle_error,
             )
 
-    def parse_nitter(self, response):
+    async def parse_twitter(self, response):
+        page = response.meta.get("playwright_page")
         keyword = response.meta.get("keyword", "")
 
-        tweets = response.css("div.timeline-item")
-        count = 0
-        for tweet in tweets:
-            if count >= self.max_tweets:
-                break
+        try:
+            tweets = response.css('article[data-testid="tweet"]')
+            count = 0
+            
+            for tweet in tweets:
+                if count >= self.max_tweets:
+                    break
+                    
+                text_fragments = tweet.css('div[data-testid="tweetText"] ::text').getall()
+                text = " ".join(text_fragments).strip()
+                if not text:
+                    continue
+                    
+                author_fragments = tweet.css('div[data-testid="User-Name"] ::text').getall()
+                author = " ".join(author_fragments).replace("@", "").strip()
+                
+                links = tweet.css('a[href*="/status/"]::attr(href)').getall()
+                tweet_link = links[0] if links else ""
+                
+                tweet_id = tweet_link.rstrip("/").split("/")[-1] if tweet_link else hashlib.md5(text.encode()).hexdigest()[:16]
+                tweet_url = f"https://twitter.com{tweet_link}" if tweet_link.startswith("/") else tweet_link
+                
+                parties, is_palladam = _classify(text + " " + keyword)
 
-            text = " ".join(tweet.css("div.tweet-content::text").getall()).strip()
-            if not text:
-                continue
-
-            author = tweet.css("a.username::text").get("").lstrip("@").strip()
-            tweet_link = tweet.css("a.tweet-link::attr(href)").get("")
-            tweet_id = tweet_link.rstrip("/").split("/")[-1] if tweet_link else hashlib.md5(text.encode()).hexdigest()[:16]
-
-            like_text = tweet.css("div.icon-heart + span::text, span.icon-heart::text").get("")
-            retweet_text = tweet.css("div.icon-retweet + span::text, span.icon-retweet::text").get("")
-            reply_text = tweet.css("div.icon-comment + span::text, span.icon-comment::text").get("")
-
-            parties, is_palladam = _classify(text + " " + keyword)
-
-            nitter_base = response.meta.get("nitter_base", _NITTER_INSTANCES[0])
-            tweet_url = (
-                f"https://twitter.com{tweet_link}"
-                if tweet_link.startswith("/")
-                else tweet_link
-            )
-
-            yield SocialPostItem(
-                platform="twitter",
-                type="post",
-                id=tweet_id,
-                url=tweet_url,
-                author=author or None,
-                text=text,
-                like_count=_extract_count(like_text),
-                retweet_count=_extract_count(retweet_text),
-                reply_count=_extract_count(reply_text),
-                source="scrapy_nitter",
-                timestamp=datetime.utcnow(),
-                parties_mentioned=parties,
-                is_palladam_related=is_palladam,
-            )
-            count += 1
-
-        logger.info(f"Twitter/Nitter [{keyword}]: extracted {count} tweets")
-
-        # Follow "next page" cursor if under limit
-        if count < self.max_tweets:
-            next_url = response.css("div.show-more a::attr(href)").get()
-            if next_url:
-                nitter_base = response.meta.get("nitter_base", _NITTER_INSTANCES[0])
-                full_next = nitter_base + next_url if next_url.startswith("/") else next_url
-                yield scrapy.Request(
-                    full_next,
-                    callback=self.parse_nitter,
-                    meta=response.meta,
-                    errback=self.handle_error,
+                yield SocialPostItem(
+                    platform="twitter",
+                    type="post",
+                    id=tweet_id,
+                    url=tweet_url,
+                    author=author or None,
+                    text=text,
+                    source="scrapy_twitter_auth",
+                    timestamp=datetime.utcnow(),
+                    parties_mentioned=parties,
+                    is_palladam_related=is_palladam,
                 )
+                count += 1
+                
+            logger.info(f"Twitter [{keyword}]: extracted {count} tweets via authenticated session")
+        finally:
+            if page:
+                await page.close()
 
     def handle_error(self, failure):
         logger.error(f"Twitter spider error: {failure.value}")
