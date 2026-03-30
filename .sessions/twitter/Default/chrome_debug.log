@@ -1,126 +1,129 @@
-[0331/010432.767:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
-[0331/010433.071:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
-[0331/010433.072:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
-[0331/010433.079:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
-[0331/010433.085:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
-[0331/010433.085:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
-[0331/010433.279:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
-[0331/010433.280:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
-[0331/010433.280:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
-[0331/010433.391:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
-[0331/010433.393:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
-[0331/010433.393:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
-[0331/010433.398:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
-[0331/010433.413:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
-[0331/010433.413:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
-[0331/010433.858:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
-[0331/010433.873:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
-[0331/010433.873:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
-[0331/010433.932:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
-[0331/010433.934:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
-[0331/010433.934:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
-[0331/010434.008:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
-[0331/010434.010:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
-[0331/010434.011:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
-[0331/010434.016:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
-[0331/010434.019:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
-[0331/010434.020:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
-[0331/010434.036:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
-[0331/010434.037:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
-[0331/010434.037:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
-[0331/010434.068:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
-[0331/010434.073:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
-[0331/010434.073:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
-[0331/010434.123:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
-[0331/010434.124:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
-[0331/010434.129:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
-[0331/010434.129:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
-[0331/010434.129:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
-[0331/010434.129:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
-[0331/010434.160:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
-[0331/010434.163:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
-[0331/010434.591:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
-[0331/010434.591:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
-[0331/010434.597:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
-[0331/010434.601:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
-[0331/010434.606:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
-[0331/010434.608:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
-[0331/010434.623:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
-[0331/010434.627:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
-[0331/010434.654:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
-[0331/010434.740:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
-[0331/010434.740:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
-[0331/010434.627:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
-[0331/010434.630:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
-[0331/010434.634:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
-[0331/010435.438:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
-[0331/010435.458:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
-[0331/010435.674:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
-[0331/010435.674:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
-[0331/010435.674:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
-[0331/010435.807:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
-[0331/010435.807:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
-[0331/010435.807:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
-[0331/010435.819:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
-[0331/010435.830:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
-[0331/010435.830:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
-[0331/010435.828:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
-[0331/010435.952:ERROR:components\services\storage\service_worker\service_worker_storage.cc:1808] Failed to delete the database: Database IO error
-[0331/010435.966:ERROR:components\services\storage\service_worker\service_worker_storage.cc:1808] Failed to delete the database: Database IO error
-[0331/010435.967:ERROR:components\services\storage\service_worker\service_worker_storage.cc:1808] Failed to delete the database: Database IO error
-[0331/010436.045:ERROR:components\services\storage\service_worker\service_worker_storage.cc:1808] Failed to delete the database: Database IO error
-[0331/010436.239:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
-[0331/010436.239:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
-[0331/010436.239:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
-[0331/010436.448:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
-[0331/010436.618:ERROR:components\services\storage\service_worker\service_worker_storage.cc:1808] Failed to delete the database: Database IO error
-[0331/010436.698:ERROR:components\services\storage\service_worker\service_worker_storage.cc:1808] Failed to delete the database: Database IO error
-[0331/010436.713:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
-[0331/010436.838:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
-[0331/010437.460:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
-[0331/010437.473:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
-[0331/010437.674:ERROR:components\services\storage\service_worker\service_worker_storage.cc:1808] Failed to delete the database: Database IO error
-[0331/010437.845:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
-[0331/010438.178:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
-[0331/010438.465:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
-[0331/010438.732:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
-[0331/010438.856:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
-[0331/010439.477:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
-[0331/010439.494:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
-[0331/010439.869:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
-[0331/010440.198:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
-[0331/010440.486:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
-[0331/010440.508:INFO:CONSOLE:1] "Error", source: https://abs.twimg.com/responsive-web/client-web/vendor.f1dc7e4a.js (1)
-[0331/010440.693:ERROR:content\public\browser\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.
-[0331/010440.693:ERROR:content\public\browser\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.
-[0331/010440.767:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
-[0331/010440.905:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
-[0331/010441.087:INFO:CONSOLE:342] "[.WebGL-0xfc00132900]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://x.com/search?q=palladam+admk+OR+palladam+aiadmk+OR+palladam+%E0%AE%85%E0%AE%A4%E0%AE%BF%E0%AE%AE%E0%AF%81%E0%AE%95&src=typed_query&f=live (342)
-[0331/010441.101:INFO:CONSOLE:342] "No available adapters.", source: https://x.com/search?q=palladam+admk+OR+palladam+aiadmk+OR+palladam+%E0%AE%85%E0%AE%A4%E0%AE%BF%E0%AE%AE%E0%AF%81%E0%AE%95&src=typed_query&f=live (342)
-[0331/010441.441:INFO:CONSOLE:1] "Error", source: https://abs.twimg.com/responsive-web/client-web/vendor.f1dc7e4a.js (1)
-[0331/010441.493:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
-[0331/010441.517:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
-[0331/010441.887:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
-[0331/010441.907:INFO:CONSOLE:1] "Error", source: https://abs.twimg.com/responsive-web/client-web/vendor.f1dc7e4a.js (1)
-[0331/010442.023:ERROR:content\public\browser\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.
-[0331/010442.023:ERROR:content\public\browser\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.
-[0331/010442.206:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
-[0331/010442.412:INFO:CONSOLE:342] "[.WebGL-0x304007a9500]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://x.com/search?q=palladam&src=typed_query&f=live (342)
-[0331/010442.428:INFO:CONSOLE:342] "No available adapters.", source: https://x.com/search?q=palladam&src=typed_query&f=live (342)
-[0331/010442.500:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
-[0331/010442.699:INFO:CONSOLE:1] "Error", source: https://abs.twimg.com/responsive-web/client-web/vendor.f1dc7e4a.js (1)
-[0331/010442.781:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
-[0331/010442.921:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
-[0331/010444.222:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
-[0331/010455.541:INFO:CONSOLE:1] "Error", source: https://abs.twimg.com/responsive-web/client-web/vendor.f1dc7e4a.js (1)
-[0331/010455.653:ERROR:content\public\browser\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.
-[0331/010455.653:ERROR:content\public\browser\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.
-[0331/010456.005:INFO:CONSOLE:342] "[.WebGL-0x57fc007b3800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://x.com/search?q=palladam+dmk+OR+palladam+%E0%AE%9F%E0%AE%BF%E0%AE%8E%E0%AE%AE%E0%AF%8D%E0%AE%95%E0%AF%87&src=typed_query&f=live (342)
-[0331/010456.043:INFO:CONSOLE:342] "No available adapters.", source: https://x.com/search?q=palladam+dmk+OR+palladam+%E0%AE%9F%E0%AE%BF%E0%AE%8E%E0%AE%AE%E0%AF%8D%E0%AE%95%E0%AF%87&src=typed_query&f=live (342)
-[0331/010456.408:INFO:CONSOLE:1] "Error", source: https://abs.twimg.com/responsive-web/client-web/vendor.f1dc7e4a.js (1)
-[0331/010509.736:INFO:CONSOLE:1] "Error", source: https://abs.twimg.com/responsive-web/client-web/vendor.f1dc7e4a.js (1)
-[0331/010509.825:ERROR:content\public\browser\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.
-[0331/010509.825:ERROR:content\public\browser\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.
-[0331/010510.101:INFO:CONSOLE:342] "[.WebGL-0x543c007ac600]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)", source: https://x.com/search?q=palladam+tvk+OR+palladam+%E0%AE%9F%E0%AE%BF.%E0%AE%B5%E0%AE%BF.%E0%AE%95%E0%AF%87&src=typed_query&f=live (342)
-[0331/010510.117:INFO:CONSOLE:342] "No available adapters.", source: https://x.com/search?q=palladam+tvk+OR+palladam+%E0%AE%9F%E0%AE%BF.%E0%AE%B5%E0%AE%BF.%E0%AE%95%E0%AF%87&src=typed_query&f=live (342)
-[0331/010510.372:INFO:CONSOLE:1] "Error", source: https://abs.twimg.com/responsive-web/client-web/vendor.f1dc7e4a.js (1)
+[0331/015018.191:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
+[0331/015020.204:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/015020.487:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/015020.528:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/015020.528:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/015020.606:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/015020.629:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/015020.692:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/015020.692:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/015020.692:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/015020.692:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/015021.258:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
+[0331/015021.361:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/015021.378:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/015021.379:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/015021.391:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/015021.419:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/015021.419:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/015021.721:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/015021.759:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/015021.760:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/015022.009:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/015022.010:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/015022.010:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/015022.083:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/015022.091:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/015022.091:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/015022.150:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/015022.151:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/015022.151:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/015022.163:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/015022.170:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/015022.170:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/015022.206:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/015022.207:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/015022.207:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/015022.322:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/015022.334:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/015022.334:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/015022.370:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
+[0331/015022.371:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
+[0331/015022.370:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
+[0331/015022.379:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
+[0331/015022.529:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/015022.776:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/015022.835:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/015022.838:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/015022.856:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/015022.971:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/015022.976:ERROR:components\services\storage\service_worker\service_worker_storage.cc:1808] Failed to delete the database: Database IO error
+[0331/015023.080:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/015023.080:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/015023.125:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/015023.125:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/015023.146:ERROR:components\services\storage\service_worker\service_worker_storage.cc:1808] Failed to delete the database: Database IO error
+[0331/015023.192:WARNING:content\browser\btm\btm_database.cc:128] Failed to initialize the DIPS SQLite database.
+[0331/015023.652:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/015023.659:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/015023.659:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/015023.685:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/015023.702:ERROR:components\services\storage\service_worker\service_worker_storage.cc:1808] Failed to delete the database: Database IO error
+[0331/015023.708:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/015023.857:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/015023.934:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/015023.936:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/015023.936:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/015023.938:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/015024.007:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/015024.007:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/015024.162:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/015024.163:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/015024.321:ERROR:components\services\storage\service_worker\service_worker_storage.cc:1808] Failed to delete the database: Database IO error
+[0331/015024.498:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/015024.529:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/015024.530:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/015024.743:ERROR:components\services\storage\service_worker\service_worker_storage.cc:1808] Failed to delete the database: Database IO error
+[0331/015024.786:ERROR:net\disk_cache\cache_util_win.cc:25] Unable to move the cache: Access is denied. (0x5)
+[0331/015024.816:ERROR:net\disk_cache\disk_cache.cc:272] Unable to create cache
+[0331/015024.819:ERROR:gpu\ipc\host\gpu_disk_cache.cc:725] Gpu Cache Creation failed: -2
+[0331/015024.948:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/015025.309:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/015025.704:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/015025.807:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/015025.807:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/015025.810:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/015026.004:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/015026.111:ERROR:components\services\storage\service_worker\service_worker_storage.cc:1808] Failed to delete the database: Database IO error
+[0331/015026.223:ERROR:components\services\storage\service_worker\service_worker_storage.cc:1808] Failed to delete the database: Database IO error
+[0331/015027.009:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/015027.346:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/015027.763:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/015027.838:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/015027.857:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/015027.860:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/015028.038:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/015029.435:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/015029.862:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/015029.866:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/015029.962:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/015030.042:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/015030.051:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/015031.477:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/015032.062:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/015032.083:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/015032.176:WARNING:components\leveldb_proto\internal\leveldb_database.cc:124] Unable to open C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata: IO error: C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\twitter\Default\shared_proto_db\metadata/LOCK: Access denied. (ChromeMethodBFE: 15::LockFile::5)
+[0331/015033.573:INFO:CONSOLE:1] "Error", source: https://abs.twimg.com/responsive-web/client-web/vendor.f1dc7e4a.js (1)
+[0331/015033.901:ERROR:content\public\browser\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.
+[0331/015033.901:ERROR:content\public\browser\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.
+[0331/015034.445:INFO:CONSOLE:1] "Error", source: https://abs.twimg.com/responsive-web/client-web/vendor.f1dc7e4a.js (1)
+[0331/015034.724:ERROR:content\public\browser\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.
+[0331/015034.724:ERROR:content\public\browser\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.
+[0331/015034.902:INFO:CONSOLE:342] "[.WebGL-0x520c0078d400]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://x.com/search?q=palladam+admk+OR+palladam+aiadmk+OR+palladam+%E0%AE%85%E0%AE%A4%E0%AE%BF%E0%AE%AE%E0%AF%81%E0%AE%95&src=typed_query&f=live (342)
+[0331/015034.943:INFO:CONSOLE:342] "No available adapters.", source: https://x.com/search?q=palladam+admk+OR+palladam+aiadmk+OR+palladam+%E0%AE%85%E0%AE%A4%E0%AE%BF%E0%AE%AE%E0%AF%81%E0%AE%95&src=typed_query&f=live (342)
+[0331/015035.637:INFO:CONSOLE:342] "[.WebGL-0x37400797800]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://x.com/search?q=palladam+tvk+OR+palladam+%E0%AE%9F%E0%AE%BF.%E0%AE%B5%E0%AE%BF.%E0%AE%95%E0%AF%87&src=typed_query&f=live (342)
+[0331/015035.674:INFO:CONSOLE:342] "No available adapters.", source: https://x.com/search?q=palladam+tvk+OR+palladam+%E0%AE%9F%E0%AE%BF.%E0%AE%B5%E0%AE%BF.%E0%AE%95%E0%AF%87&src=typed_query&f=live (342)
+[0331/015035.744:INFO:CONSOLE:1] "Error", source: https://abs.twimg.com/responsive-web/client-web/vendor.f1dc7e4a.js (1)
+[0331/015047.510:INFO:CONSOLE:1] "Uncaught (in promise) Error: ApiError: https://api.x.com/1.1/account/settings.json HTTP-0 codes:[1004]", source: https://abs.twimg.com/responsive-web/client-web/main.98dba9da.js (1)
+[0331/015047.520:INFO:CONSOLE:1] "Uncaught (in promise) Error: ApiError: https://x.com/i/api/1.1/strato/column/None/2037975276139769856,Windows%2FSafari,pushNotifications/clients/permissionsState HTTP-0 codes:[1004]", source: https://abs.twimg.com/responsive-web/client-web/main.98dba9da.js (1)
+[0331/015059.744:INFO:CONSOLE:1] "Error", source: https://abs.twimg.com/responsive-web/client-web/vendor.f1dc7e4a.js (1)
+[0331/015059.935:ERROR:content\public\browser\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.
+[0331/015059.935:ERROR:content\public\browser\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.
+[0331/015100.519:INFO:CONSOLE:342] "[.WebGL-0x6c7c00130d00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels", source: https://x.com/search?q=palladam+dmk+OR+palladam+%E0%AE%9F%E0%AE%BF%E0%AE%8E%E0%AE%AE%E0%AF%8D%E0%AE%95%E0%AF%87&src=typed_query&f=live (342)
+[0331/015100.549:INFO:CONSOLE:342] "No available adapters.", source: https://x.com/search?q=palladam+dmk+OR+palladam+%E0%AE%9F%E0%AE%BF%E0%AE%8E%E0%AE%AE%E0%AF%8D%E0%AE%95%E0%AF%87&src=typed_query&f=live (342)
+[0331/015101.130:INFO:CONSOLE:1] "Error", source: https://abs.twimg.com/responsive-web/client-web/vendor.f1dc7e4a.js (1)
+[0331/015123.325:INFO:CONSOLE:1] "Error", source: https://abs.twimg.com/responsive-web/client-web/vendor.f1dc7e4a.js (1)
+[0331/015123.491:ERROR:content\public\browser\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.
+[0331/015123.491:ERROR:content\public\browser\web_contents_delegate.cc:302] WebContentsDelegate::CheckMediaAccessPermission: Not supported.
+[0331/015124.149:INFO:CONSOLE:342] "[.WebGL-0x2884007cf100]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)", source: https://x.com/search?q=palladam&src=typed_query&f=live (342)
+[0331/015124.173:INFO:CONSOLE:342] "No available adapters.", source: https://x.com/search?q=palladam&src=typed_query&f=live (342)

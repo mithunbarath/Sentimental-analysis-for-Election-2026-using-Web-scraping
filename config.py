@@ -250,6 +250,19 @@ class MongoDBConfig:
 
 
 @dataclass
+class FirebaseConfig:
+    """Firebase Firestore configuration."""
+    enabled: bool = True
+    credentials_path: str = field(default_factory=lambda: os.getenv("FIREBASE_CREDENTIALS", "firebase_credentials.json"))
+    collection_name: str = "social_records"
+    
+    @property
+    def is_configured(self) -> bool:
+        return bool(self.enabled and self.credentials_path)
+
+
+
+@dataclass
 class NLPConfig:
     """NLP sentiment + trend pipeline configuration."""
     enabled: bool = False
@@ -278,6 +291,7 @@ class Config:
     accounts: AccountsConfig = field(default_factory=AccountsConfig)
     infinite_mode: InfiniteConfig = field(default_factory=InfiniteConfig)
     mongodb: MongoDBConfig = field(default_factory=MongoDBConfig)
+    firebase: FirebaseConfig = field(default_factory=FirebaseConfig)
     nlp: NLPConfig = field(default_factory=NLPConfig)
 
     log_level: str = "INFO"
@@ -334,6 +348,8 @@ class Config:
             config.infinite_mode = InfiniteConfig(**data["infinite_mode"])
         if "mongodb" in data:
             config.mongodb = MongoDBConfig(**data["mongodb"])
+        if "firebase" in data:
+            config.firebase = FirebaseConfig(**data["firebase"])
         if "nlp" in data:
             config.nlp = NLPConfig(**data["nlp"])
         if "general" in data:

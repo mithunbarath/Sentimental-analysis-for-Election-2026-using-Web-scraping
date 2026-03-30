@@ -427,6 +427,16 @@ async def run_one_cycle(args, config) -> List[SocialMediaRecord]:
     except Exception as e:
         logger.error(f"MongoDB export error: {e}")
 
+    # ---- Firebase Export ----
+    try:
+        if hasattr(cfg, "firebase"):
+            from exporter import export_to_firestore_if_configured
+            firebase_result = export_to_firestore_if_configured(all_records, cfg.firebase)
+            if firebase_result is not None:
+                logger.info(f"Firebase: {firebase_result} new records exported.")
+    except Exception as e:
+        logger.error(f"Firebase export error: {e}")
+
     return all_records
 
 if __name__ == "__main__":

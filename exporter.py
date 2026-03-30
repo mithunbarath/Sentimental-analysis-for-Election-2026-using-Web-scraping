@@ -291,3 +291,20 @@ def export_to_sheets_if_configured(
     except Exception as e:
         logger.error(f"Google Sheets export failed: {e}")
         return None
+
+def export_to_firestore_if_configured(
+    records: List[SocialMediaRecord],
+    firebase_config,
+) -> Optional[int]:
+    """
+    Push records to Firebase Firestore if configured.
+    """
+    if not firebase_config.enabled:
+        return None
+
+    try:
+        from firebase_exporter import export_to_firestore
+        return export_to_firestore(records, firebase_config)
+    except Exception as e:
+        logger.error(f"Firestore export initialization failed: {e}")
+        return None
