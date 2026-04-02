@@ -44,7 +44,7 @@ logger = logging.getLogger(__name__)
 def parse_arguments():
     """Parse command line arguments."""
     parser = argparse.ArgumentParser(
-        description="Parallel Social Media Scrapper for TN Politics (Palladam Focused)"
+        description="Parallel Social Media Scrapper for TN Politics (Kongu Focused)"
     )
     parser.add_argument("--config", type=str, default="config.yaml")
     parser.add_argument("--platforms", type=str, nargs="+", choices=["instagram", "facebook", "youtube", "twitter", "all"])
@@ -65,7 +65,7 @@ def parse_arguments():
     parser.add_argument("--firecrawl", action="store_true", help="Enable Firecrawl URL scraping")
     parser.add_argument("--cascade", action="store_true", help="Use cascading fallback scraper (Apify→Firecrawl→BrightData→Playwright)")
     parser.add_argument("--scrapy", action="store_true", help="Enable Scrapy spider layer (supplemental deep crawl)")
-    parser.add_argument("--tn-wide", action="store_true", help="Enable TN-wide scraping (disable Palladam-only filter)")
+    parser.add_argument("--tn-wide", action="store_true", help="Enable TN-wide scraping (disable Kongu-only filter)")
     parser.add_argument("--store-all", action="store_true", help="Store all records, ignoring region filters")
     return parser.parse_args()
 
@@ -115,7 +115,7 @@ async def main_async():
         return
 
     logger.info("=" * 70)
-    logger.info("Tamil Nadu & Palladam Politics Scraper - Starting")
+    logger.info("Kongu Region Politics Scraper - Starting")
     logger.info("=" * 70)
 
     try:
@@ -142,11 +142,10 @@ async def main_async():
             keywords.extend(config.twitter.search_queries)
             
         if not args.broad_search:
-            # Filter down to Palladam specific if not in broad search mode
-            keywords = [k for k in keywords if "palladam" in k.lower() or "பல்லடம்" in k]
+            # Filter down to Kongu specific if not in broad search mode
+            keywords = [k for k in keywords if "kongu" in k.lower() or "கொங்கு" in k or "coimbatore" in k.lower() or "tirup" in k.lower() or "salem" in k.lower() or "erode" in k.lower()]
             
-        if not keywords:
-            keywords = ["palladam", "dmk", "admk", "tvk"] if args.broad_search else ["palladam"]
+            keywords = ["kongu", "dmk", "admk", "tvk", "coimbatore", "tiruppur"] if args.broad_search else ["kongu", "coimbatore", "tiruppur", "erode", "salem"]
     
     keywords = list(set(keywords))
     logger.info(f"Target keywords ({'Broad' if args.broad_search else 'Specific'}): {', '.join(keywords)}")
@@ -204,7 +203,7 @@ async def main_async():
             all_records = apply_filters(
                 all_records, 
                 require_party_mention=True, 
-                require_palladam_related=True,
+                require_kongu_related=True,
                 strict_mode=args.strict
             )
             logger.info(f"Records after filtering: {len(all_records)}")
@@ -224,7 +223,7 @@ async def main_async():
             stats = generate_summary_stats(all_records)
             logger.info("Summary Statistics:")
             logger.info(f"  Total: {stats['total_records']}")
-            logger.info(f"  Palladam-related: {stats['palladam_related_count']}")
+            logger.info(f"  Kongu-related: {stats['kongu_related_count']}")
         except Exception as e:
             logger.error(f"Error generating statistics: {e}")
 
@@ -293,11 +292,11 @@ async def run_one_cycle(args, config) -> List[SocialMediaRecord]:
         if "twitter" in platforms:
             kw_list.extend(cfg.twitter.search_queries)
         if not args.broad_search:
-            kw_list = [k for k in kw_list if "palladam" in k.lower()]
+            kw_list = [k for k in kw_list if "kongu" in k.lower() or "coimbatore" in k.lower() or "tirup" in k.lower() or "erode" in k.lower()]
         if not kw_list:
             kw_list = (
-                ["palladam", "dmk", "admk", "tvk", "eps", "vijay", "stalin"]
-                if args.broad_search else ["palladam"]
+                ["kongu", "dmk", "admk", "tvk", "eps", "vijay", "stalin", "coimbatore", "tiruppur", "erode"]
+                if args.broad_search else ["kongu", "coimbatore", "tiruppur"]
             )
         keywords = list(set(kw_list))
 
@@ -317,8 +316,8 @@ async def run_one_cycle(args, config) -> List[SocialMediaRecord]:
     # ---- Step 2: cascade per platform ----
     if args.cascade or (args.apify and hasattr(cfg, "apify") and cfg.apify.enabled):
         cascade = CascadeScraper(cfg, account_mgr)
-        kws = keywords or (["palladam", "dmk", "admk", "tvk"] if not args.broad_search else
-                           ["palladam", "dmk", "admk", "tvk", "eps", "vijay", "stalin"])
+        kws = keywords or (["kongu", "dmk", "admk", "tvk"] if not args.broad_search else
+                           ["kongu", "dmk", "admk", "tvk", "eps", "vijay", "stalin", "coimbatore", "tiruppur", "erode"])
         for platform in platforms:
             try:
                 batch = await cascade.scrape(platform, kws, args.sessions_dir)
@@ -378,7 +377,7 @@ async def run_one_cycle(args, config) -> List[SocialMediaRecord]:
         all_records = apply_filters(
             all_records,
             require_party_mention=True,
-            require_palladam_related=not args.tn_wide,
+            require_kongu_related=not args.tn_wide,
             tn_wide_mode=args.tn_wide,
             store_all=args.store_all,
             strict_mode=args.strict
@@ -401,7 +400,7 @@ async def run_one_cycle(args, config) -> List[SocialMediaRecord]:
     # ---- Stats ----
     try:
         stats = generate_summary_stats(all_records)
-        logger.info(f"Summary — Total: {stats['total_records']}  Palladam-related: {stats['palladam_related_count']}")
+        logger.info(f"Summary — Total: {stats['total_records']}  Kongu-related: {stats['kongu_related_count']}")
     except Exception as e:
         logger.error(f"Stats error: {e}")
 
@@ -451,7 +450,7 @@ if __name__ == "__main__":
             return
 
         logger.info("=" * 70)
-        logger.info("Tamil Nadu & Palladam Politics Scraper - Starting")
+        logger.info("Kongu Region Politics Scraper - Starting")
         logger.info("=" * 70)
 
         try:

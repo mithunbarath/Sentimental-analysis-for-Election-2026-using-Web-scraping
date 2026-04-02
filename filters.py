@@ -64,27 +64,31 @@ class PartyClassifier:
 
 
 class RegionClassifier:
-    """Classifier for detecting Palladam and TN region relevance."""
+    """Classifier for detecting Kongu Belt and TN region relevance."""
 
     def __init__(
         self,
         region_keywords: Optional[List[str]] = None
     ):
         """Initialize the classifier with region keywords."""
-        # Core Palladam keywords
-        self.palladam_keywords = ["palladam", "பல்லடம்"]
-        
-        # Related regions (Tiruppur district)
-        self.related_keywords = [
-            "tiruppur", "tirupur", "\u0ba4\u0bbf\u0bb0\u0bc1\u0baa\u0bcd\u0baa\u0bc2\u0bb0\u0bcd", 
-            "kangeyam", "\u0b95\u0bbe\u0b99\u0bcd\u0b95\u0bc7\u0baf\u0bae\u0bcd",
-            "dharapuram", "\u0ba4\u0bbe\u0bb0\u0bbe\u0baa\u0bc1\u0bb0\u0bae\u0bcd",
-            "avanashi", "\u0b85\u0bb5\u0ba3\u0bbe\u0b9a\u0bbf"
+        # Core Kongu Region keywords
+        self.kongu_keywords = [
+            "kongu", "கொங்கு",
+            "coimbatore", "கோயம்புத்தூர்", "kovai", "கோவை",
+            "tiruppur", "tirupur", "திருப்பூர்", "palladam", "பல்லடம்",
+            "erode", "ஈரோடு",
+            "salem", "சேலம்",
+            "namakkal", "நாமக்கல்",
+            "karur", "கரூர்",
+            "nilgiris", "நீலகிரி", "ooty", "ஊட்டி",
+            "dharmapuri", "தருமபுரி",
+            "krishnagiri", "கிருஷ்ணகிரி",
+            "gobi", "கோபிசெட்டிபாளையம்", "pollachi", "பொள்ளாச்சி"
         ]
         
-        self.region_keywords = region_keywords or (self.palladam_keywords + self.related_keywords)
+        self.region_keywords = region_keywords or self.kongu_keywords
         self.region_pattern = self._compile_pattern(self.region_keywords)
-        self.palladam_pattern = self._compile_pattern(self.palladam_keywords)
+        self.kongu_pattern = self._compile_pattern(self.kongu_keywords)
 
     def _compile_pattern(self, keywords: List[str]) -> re.Pattern:
         """Compile a regex pattern from region keywords."""
@@ -92,22 +96,18 @@ class RegionClassifier:
         pattern = r"(?i)(?:\b|)(?:" + "|".join(escaped_keywords) + r")(?:\b|$)"
         return re.compile(pattern, re.UNICODE)
 
-    def is_palladam_related(
+    def is_kongu_related(
         self,
         text: Optional[str] = None,
         source: Optional[str] = None,
         author: Optional[str] = None
     ) -> bool:
-        """Determine if content is Palladam-related (directly or indirectly)."""
+        """Determine if content belongs to the Kongu region."""
         if not text:
             return False
             
-        # Direct match for Palladam
-        if self.palladam_pattern.search(text):
-            return True
-            
-        # Indirect match (Tiruppur district)
-        if self.region_pattern.search(text):
+        # Match for Kongu Region
+        if self.kongu_pattern.search(text):
             return True
 
         if source and self.region_pattern.search(source):
@@ -121,7 +121,7 @@ class RegionClassifier:
     def get_relevance_score(self, text: str) -> int:
         """Calculate a relevance score for sorting purposes."""
         score = 0
-        if self.palladam_pattern.search(text):
+        if self.kongu_pattern.search(text):
             score += 10
         elif self.region_pattern.search(text):
             score += 5
@@ -136,8 +136,8 @@ def tag_regions(records: List[SocialMediaRecord]) -> List[SocialMediaRecord]:
         for r in records:
             text_to_check = " ".join(filter(None, [r.title, r.text, r.author, r.source]))
             r.region = classifier.classify_region(text_to_check)
-            if r.region in ["tiruppur", "coimbatore"]:
-                r.is_palladam_related = True
+            if r.region in ["tiruppur", "coimbatore", "erode", "salem", "namakkal", "nilgiris", "dharmapuri", "krishnagiri"]:
+                r.is_kongu_related = True
         logger.info(f"Tagged regions for {len(records)} records.")
     except Exception as e:
         logger.error(f"Region tagging failed: {e}")
@@ -147,7 +147,7 @@ def tag_regions(records: List[SocialMediaRecord]) -> List[SocialMediaRecord]:
 def apply_filters(
     records: List[SocialMediaRecord],
     require_party_mention: bool = True,
-    require_palladam_related: bool = True,
+    require_kongu_related: bool = True,
     tn_wide_mode: bool = False,
     store_all: bool = False,
     strict_mode: bool = False
@@ -168,11 +168,11 @@ def apply_filters(
             # If search was keyword-based, it's likely relevant even if the snippet is short
             
         # Region check
-        if require_palladam_related and not tn_wide_mode and not record.is_palladam_related:
+        if require_kongu_related and not tn_wide_mode and not record.is_kongu_related:
             if strict_mode:
                 continue
             # If not strict, we might still keep it if it's high engagement or from a tracked user
-            # But for now, let's at least allow Tiruppur matches
+            # But for now, let's at least allow Kongu matches
 
         # TN-wide region check (if in TN mode, drop non-TN records if strict)
         if tn_wide_mode and record.region == "unknown":
@@ -183,7 +183,7 @@ def apply_filters(
 
     logger.info(
         f"Filtered {len(records)} records down to {len(filtered)} "
-        f"(party: {require_party_mention}, palladam: {require_palladam_related}, "
+        f"(party: {require_party_mention}, kongu: {require_kongu_related}, "
         f"tn_wide: {tn_wide_mode}, strict: {strict_mode})"
     )
 

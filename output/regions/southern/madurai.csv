@@ -1,0 +1,2 @@
+platform,type,id,parent_id,url,author,title,text,like_count,reaction_count,view_count,retweet_count,reply_count,comment_count,source,timestamp,parties_mentioned,is_kongu_related,nlp_sentiment,nlp_sentiment_score,nlp_trend_score,region
+facebook,post,9b4bd9d39dcb043f,,https://www.facebook.com/search/posts?q=coimbatore%20dmk%20OR%20coimbatore%20admk%20OR%20coimbatore%20tvk,,,Vijay could have chosen a fan-stronghold like Madurai or a safe rural seat.,,,,,,,scrapy_facebook_search,2026-03-30T21:58:42.022932,"dmk,admk,tvk",False,neutral,0.3931,0.4651,madurai

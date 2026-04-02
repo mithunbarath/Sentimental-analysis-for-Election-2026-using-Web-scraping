@@ -83,7 +83,7 @@ class FacebookScraper(AsyncBaseScraper):
                         timestamp=datetime.now(),
                         source="scrapling_facebook",
                         parties_mentioned=self.party_classifier.classify_parties(text),
-                        is_palladam_related=self.region_classifier.is_palladam_related(text=text)
+                        is_kongu_related=self.region_classifier.is_kongu_related(text=text)
                     )
                     records.append(record)
                 except Exception as e:

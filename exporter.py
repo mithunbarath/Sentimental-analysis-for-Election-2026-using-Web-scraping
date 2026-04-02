@@ -172,7 +172,7 @@ def load_from_csv(csv_path: str) -> List[SocialMediaRecord]:
                     source=row.get("source") or None,
                     timestamp=row.get("timestamp") or None,
                     parties_mentioned=row.get("parties_mentioned", "").split(",") if row.get("parties_mentioned") else [],
-                    is_palladam_related=row.get("is_palladam_related", "").lower() == "true"
+                    is_kongu_related=row.get("is_kongu_related", "").lower() == "true"
                 )
                 records.append(record)
 
@@ -215,7 +215,7 @@ def generate_summary_stats(records: List[SocialMediaRecord]) -> Dict[str, Any]:
         "by_type": {},
         "by_party": {},
         "by_region": {},
-        "palladam_related_count": 0,
+        "kongu_related_count": 0,
         "records_with_text": 0,
         "records_with_timestamp": 0
     }
@@ -230,8 +230,8 @@ def generate_summary_stats(records: List[SocialMediaRecord]) -> Dict[str, Any]:
         region = record.region or "unknown"
         stats["by_region"][region] = stats["by_region"].get(region, 0) + 1
 
-        if record.is_palladam_related:
-            stats["palladam_related_count"] += 1
+        if record.is_kongu_related:
+            stats["kongu_related_count"] += 1
 
         if record.text:
             stats["records_with_text"] += 1

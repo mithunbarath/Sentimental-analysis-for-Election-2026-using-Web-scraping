@@ -101,7 +101,7 @@ class TwitterSpider(scrapy.Spider):
                     source="scrapy_twitter_auth",
                     timestamp=datetime.utcnow(),
                     parties_mentioned=parties,
-                    is_palladam_related=is_palladam,
+                    is_kongu_related=is_palladam,
                 )
                 count += 1
                 

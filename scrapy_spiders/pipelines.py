@@ -51,7 +51,7 @@ class SocialRecordPipeline:
                 source=item.get("source", "scrapy"),
                 timestamp=item.get("timestamp"),
                 parties_mentioned=item.get("parties_mentioned", []),
-                is_palladam_related=bool(item.get("is_palladam_related", False)),
+                is_kongu_related=bool(item.get("is_kongu_related", False)),
                 raw_data=item.get("raw_data"),
             )
             spider.results.append(record)

@@ -77,7 +77,7 @@ class InstagramScraper(AsyncBaseScraper):
                         timestamp=datetime.now(),
                         source="scrapling_instagram",
                         parties_mentioned=self.party_classifier.classify_parties(keyword),
-                        is_palladam_related=self.region_classifier.is_palladam_related(text=keyword)
+                        is_kongu_related=self.region_classifier.is_kongu_related(text=keyword)
                     )
                     records.append(record)
                 except Exception as e:

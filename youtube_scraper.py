@@ -57,7 +57,7 @@ class YouTubeScraper(AsyncBaseScraper):
                         timestamp=datetime.now(),
                         source="scrapling_youtube",
                         parties_mentioned=self.party_classifier.classify_parties(title),
-                        is_palladam_related=self.region_classifier.is_palladam_related(text=title)
+                        is_kongu_related=self.region_classifier.is_kongu_related(text=title)
                     )
                     records.append(record)
                 except Exception as e:

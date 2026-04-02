@@ -31,8 +31,8 @@ instagram:
   max_comments_per_post: 20
 
   # Rate limiting (seconds between requests)
-  min_delay: 1.0
-  max_delay: 3.0
+  min_delay: 0.5
+  max_delay: 1.0
 
 facebook:
   # Public page URLs to scrape
@@ -46,8 +46,8 @@ facebook:
   max_comments_per_post: 20
 
   # Rate limiting
-  min_delay: 2.0
-  max_delay: 5.0
+  min_delay: 0.5
+  max_delay: 1.0
 
 youtube:
   # YouTube Data API key (optional - leave empty to use HTML scraping)
@@ -65,8 +65,8 @@ youtube:
   max_comments_per_video: 50
 
   # Rate limiting
-  min_delay: 1.0
-  max_delay: 3.0
+  min_delay: 0.5
+  max_delay: 1.0
 
 twitter:
   # API credentials
@@ -75,14 +75,17 @@ twitter:
 
   # Search queries (supports Twitter search operators)
   search_queries:
-    - "palladam"
+    - "kongu"
     - "dmk stalin"
     - "admk eps"
     - "tvk vijay"
-    - "palladam dmk OR palladam டிஎம்கே"
-    - "palladam admk OR palladam aiadmk OR palladam அதிமுக"
-    - "palladam tvk OR palladam டி.வி.கே"
+    - "kongu dmk OR kongu டிஎம்கே"
+    - "kongu admk OR kongu aiadmk OR kongu அதிமுக"
+    - "kongu tvk OR kongu டி.வி.கே"
+    - "coimbatore dmk OR coimbatore admk OR coimbatore tvk"
     - "tiruppur dmk OR tiruppur admk"
+    - "erode admk OR erode dmk"
+    - "salem aiadmk OR salem dmk"
     - "tamil nadu politics"
 
   # Limits
@@ -108,19 +111,25 @@ filters:
     - "tvk"
     - "டி.வி.கே"
 
-  # Region keywords for Palladam (English + Tamil)
+  # Region keywords for Kongu Belt (English + Tamil)
   region_keywords:
-    - "palladam"
-    - "பல்லடம்"
+    - "kongu"
+    - "கொங்கு"
+    - "coimbatore"
+    - "கோயம்புத்தூர்"
     - "tiruppur"
     - "திருப்பூர்"
+    - "erode"
+    - "ஈரோடு"
+    - "salem"
+    - "சேலம்"
 
 # Export settings
 
 export:
   output_dir: "output"
-  csv_filename: "palladam_politics_data.csv"
-  jsonl_filename: "palladam_politics_data.jsonl"
+  csv_filename: "kongu_politics_data.csv"
+  jsonl_filename: "kongu_politics_data.jsonl"
   per_region_csv: true
 
 # Deduplication settings
@@ -201,7 +210,7 @@ accounts:
 # Activated by --infinite flag in main.py.
 
 infinite_mode:
-  delay_minutes: 30             # wait between runs (0 = run as fast as possible)
+  delay_minutes: 5              # wait between runs (0 = run as fast as possible)
   max_runs: 0                   # 0 = run forever; N = stop after N runs
 
 # ── MongoDB Storage ────────────────────────────────────────────────────────────
@@ -223,11 +232,11 @@ mongodb:
 # Model is downloaded on first use (~400 MB).
 #
 # model options:
-#   nlptown/bert-base-multilingual-uncased-sentiment  (default, Tamil-compatible)
-#   ai4bharat/indic-bert                               (better for Indian languages)
+#   cardiffnlp/twitter-xlm-roberta-base-sentiment (best for cross-lingual Tamil/Eng)
+#   nlptown/bert-base-multilingual-uncased-sentiment
 
 nlp:
-  enabled: false                # set to true to enable NLP enrichment
-  model_name: "nlptown/bert-base-multilingual-uncased-sentiment"
+  enabled: true                 # set to true to enable NLP enrichment
+  model_name: "cardiffnlp/twitter-xlm-roberta-base-sentiment"
   batch_size: 16                # records per inference batch
   trend_window_size: 100        # rolling window size for trend scoring

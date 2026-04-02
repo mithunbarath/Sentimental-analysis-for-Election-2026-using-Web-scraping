@@ -80,7 +80,7 @@ def _scrape_one(app, url: str, firecrawl_config) -> Optional[SocialMediaRecord]:
             timestamp=datetime.utcnow(),
             source=f"firecrawl_{platform}",
             parties_mentioned=[],
-            is_palladam_related="palladam" in markdown.lower()
+            is_kongu_related="palladam" in markdown.lower()
         )
         return record
 

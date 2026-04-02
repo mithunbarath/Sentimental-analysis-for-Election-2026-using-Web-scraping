@@ -43,7 +43,7 @@ class SocialMediaRecord:
     source: Optional[str] = None
     timestamp: Optional[datetime] = None
     parties_mentioned: List[str] = field(default_factory=list)
-    is_palladam_related: bool = False
+    is_kongu_related: bool = False
     raw_data: Optional[Dict[str, Any]] = field(default=None)
     # NLP enrichment fields (populated by nlp_pipeline.py)
     nlp_sentiment: Optional[str] = None        # e.g. "positive", "neutral", "negative"
@@ -85,7 +85,7 @@ class SocialMediaRecord:
             "source": self.source or "",
             "timestamp": self.timestamp.isoformat() if self.timestamp else "",
             "parties_mentioned": ",".join(self.parties_mentioned) if self.parties_mentioned else "",
-            "is_palladam_related": str(self.is_palladam_related),
+            "is_kongu_related": str(self.is_kongu_related),
             "nlp_sentiment": self.nlp_sentiment or "",
             "nlp_sentiment_score": str(self.nlp_sentiment_score) if self.nlp_sentiment_score is not None else "",
             "nlp_trend_score": str(self.nlp_trend_score) if self.nlp_trend_score is not None else "",
@@ -99,7 +99,7 @@ class SocialMediaRecord:
             "platform", "type", "id", "parent_id", "url", "author", "title", "text",
             "like_count", "reaction_count", "view_count", "retweet_count",
             "reply_count", "comment_count", "source", "timestamp",
-            "parties_mentioned", "is_palladam_related",
+            "parties_mentioned", "is_kongu_related",
             "nlp_sentiment", "nlp_sentiment_score", "nlp_trend_score",
             "region"
         ]

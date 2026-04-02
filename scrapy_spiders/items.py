@@ -23,5 +23,5 @@ class SocialPostItem(scrapy.Item):
     source = scrapy.Field()
     timestamp = scrapy.Field()
     parties_mentioned = scrapy.Field()
-    is_palladam_related = scrapy.Field()
+    is_kongu_related = scrapy.Field()
     raw_data = scrapy.Field()

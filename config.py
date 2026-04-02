@@ -125,7 +125,8 @@ class FilterConfig:
     admk_keywords: List[str] = field(default_factory=lambda: ["admk", "aiadmk", "அதிமுக"])
     tvk_keywords: List[str] = field(default_factory=lambda: ["tvk", "டி.வி.கே"])
     region_keywords: List[str] = field(default_factory=lambda: [
-        "palladam", "பல்லடம்", "tiruppur", "திருப்பூர்"
+        "kongu", "கொங்கு", "coimbatore", "கோயம்புத்தூர்", "tiruppur", "திருப்பூர்",
+        "erode", "ஈரோடு", "salem", "சேலம்", "namakkal", "நாமக்கல்"
     ])
 
     @property
@@ -143,8 +144,8 @@ class ExportConfig:
     """Data export configuration."""
 
     output_dir: str = "output"
-    csv_filename: str = "palladam_politics_data.csv"
-    jsonl_filename: str = "palladam_politics_data.jsonl"
+    csv_filename: str = "kongu_politics_data.csv"
+    jsonl_filename: str = "kongu_politics_data.jsonl"
     per_region_csv: bool = True
 
     @property
@@ -241,7 +242,7 @@ class MongoDBConfig:
     """MongoDB storage configuration."""
     enabled: bool = False
     uri: str = field(default_factory=lambda: os.getenv("MONGODB_URI", "mongodb://localhost:27017"))
-    db_name: str = "palladam_scraper"
+    db_name: str = "kongu_scraper"
     collection: str = "social_records"
 
     @property
@@ -266,8 +267,8 @@ class FirebaseConfig:
 class NLPConfig:
     """NLP sentiment + trend pipeline configuration."""
     enabled: bool = False
-    # Use multilingual model by default (works for Tamil); override to 'ai4bharat/indic-bert'
-    model_name: str = "nlptown/bert-base-multilingual-uncased-sentiment"
+    # Use cardiffnlp model for cross-lingual (Tamil/English) sentiment analysis 
+    model_name: str = "cardiffnlp/twitter-xlm-roberta-base-sentiment"
     batch_size: int = 16
     trend_window_size: int = 100  # Records used for rolling frequency trend
 

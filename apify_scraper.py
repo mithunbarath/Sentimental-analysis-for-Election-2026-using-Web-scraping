@@ -65,7 +65,7 @@ def _norm_instagram(item: dict, keyword: str) -> List[SocialMediaRecord]:
         timestamp=ts,
         source=f"apify_instagram_{keyword}",
         parties_mentioned=[],
-        is_palladam_related="palladam" in (item.get("caption") or "").lower()
+        is_kongu_related="palladam" in (item.get("caption") or "").lower()
     )
     records.append(post)
 
@@ -88,7 +88,7 @@ def _norm_instagram(item: dict, keyword: str) -> List[SocialMediaRecord]:
             timestamp=c_ts,
             source=f"apify_instagram_{keyword}",
             parties_mentioned=[],
-            is_palladam_related="palladam" in c.get("text", "").lower()
+            is_kongu_related="palladam" in c.get("text", "").lower()
         )
         records.append(comment)
 
@@ -116,7 +116,7 @@ def _norm_facebook(item: dict, keyword: str) -> List[SocialMediaRecord]:
         timestamp=ts,
         source=f"apify_facebook_{keyword}",
         parties_mentioned=[],
-        is_palladam_related="palladam" in (item.get("text") or "").lower()
+        is_kongu_related="palladam" in (item.get("text") or "").lower()
     )
     records.append(post)
 
@@ -138,7 +138,7 @@ def _norm_facebook(item: dict, keyword: str) -> List[SocialMediaRecord]:
             timestamp=c_ts,
             source=f"apify_facebook_{keyword}",
             parties_mentioned=[],
-            is_palladam_related="palladam" in c.get("text", "").lower()
+            is_kongu_related="palladam" in c.get("text", "").lower()
         )
         records.append(comment)
 
@@ -167,7 +167,7 @@ def _norm_twitter(item: dict, keyword: str) -> List[SocialMediaRecord]:
         timestamp=ts,
         source=f"apify_twitter_{keyword}",
         parties_mentioned=[],
-        is_palladam_related="palladam" in (item.get("text") or "").lower()
+        is_kongu_related="palladam" in (item.get("text") or "").lower()
     )
     records.append(tweet)
 
@@ -189,7 +189,7 @@ def _norm_twitter(item: dict, keyword: str) -> List[SocialMediaRecord]:
             timestamp=r_ts,
             source=f"apify_twitter_{keyword}",
             parties_mentioned=[],
-            is_palladam_related="palladam" in r.get("text", "").lower()
+            is_kongu_related="palladam" in r.get("text", "").lower()
         )
         records.append(reply)
 
@@ -218,7 +218,7 @@ def _norm_youtube(item: dict, keyword: str) -> List[SocialMediaRecord]:
         timestamp=ts,
         source=f"apify_youtube_{keyword}",
         parties_mentioned=[],
-        is_palladam_related="palladam" in (item.get("title") or "").lower()
+        is_kongu_related="palladam" in (item.get("title") or "").lower()
     )
     records.append(video)
 
@@ -240,7 +240,7 @@ def _norm_youtube(item: dict, keyword: str) -> List[SocialMediaRecord]:
             timestamp=c_ts,
             source=f"apify_youtube_{keyword}",
             parties_mentioned=[],
-            is_palladam_related="palladam" in c.get("text", "").lower()
+            is_kongu_related="palladam" in c.get("text", "").lower()
         )
         records.append(comment)
 

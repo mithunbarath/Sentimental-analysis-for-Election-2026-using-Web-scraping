@@ -357,3 +357,83 @@ h1, h2, h3 {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.2);
 }
+
+/* CSS-based Charts */
+.chart-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-bar-container {
+  display: flex;
+  height: 12px;
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--bg-glass);
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.chart-bar {
+  height: 100%;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.chart-legend div {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.chart-legend span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.chart-legend strong {
+  color: var(--text-primary);
+  font-family: 'Outfit', sans-serif;
+  margin-left: 0.2rem;
+}
+
+/* Sentiment tags */
+.tag-sentiment {
+  border: 1px solid var(--border-glass);
+  background: var(--bg-glass);
+}
+.tag-sentiment.positive { background: rgba(16, 185, 129, 0.15); color: #6ee7b7; border-color: rgba(16, 185, 129, 0.3); }
+.tag-sentiment.negative { background: rgba(239, 68, 68, 0.15); color: #fca5a5; border-color: rgba(239, 68, 68, 0.3); }
+.tag-sentiment.neutral { background: rgba(148, 163, 184, 0.15); color: #cbd5e1; border-color: rgba(148, 163, 184, 0.3); }
+
+/* Sparkline fake */
+.sparkline {
+  margin-top: 1rem;
+  height: 20px;
+  background: linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1), transparent);
+  border-bottom: 2px solid var(--brand-electric);
+  position: relative;
+  overflow: hidden;
+}
+.sparkline::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  animation: sweep 3s infinite linear;
+}
+@keyframes sweep {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
