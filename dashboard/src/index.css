@@ -437,3 +437,146 @@ h1, h2, h3 {
   0% { left: -100%; }
   100% { left: 100%; }
 }
+
+/* Dashboard Side Layout */
+.dashboard-content {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.main-feed {
+  flex: 1;
+}
+
+.side-infographics {
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (max-width: 1080px) {
+  .dashboard-content {
+    flex-direction: column-reverse; /* Put charts on top on mobile */
+  }
+  .side-infographics {
+    width: 100%;
+  }
+}
+
+.interactive-chart {
+  position: relative;
+}
+
+.chart-instruction {
+  font-size: 0.85rem;
+  color: var(--brand-electric);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  text-align: center;
+  background: rgba(14, 165, 233, 0.1);
+  padding: 0.2rem;
+  border-radius: 4px;
+}
+
+.feed-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.clear-filter-btn {
+  background: rgba(239, 68, 68, 0.1);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.clear-filter-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Search and Filters */
+.feed-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: var(--bg-glass);
+  min-width: 250px;
+}
+
+.search-icon {
+  margin-right: 0.5rem;
+  opacity: 0.5;
+}
+
+.keyword-input {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.9rem;
+  outline: none;
+  width: 100%;
+}
+
+.keyword-input::placeholder {
+  color: var(--text-secondary);
+}
+
+.clear-text-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0 0.2rem;
+}
+
+.clear-text-btn:hover {
+  color: var(--text-primary);
+}
+
+.download-csv-btn {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--brand-emerald);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.download-csv-btn:hover:not(:disabled) {
+  background: rgba(16, 185, 129, 0.2);
+  transform: translateY(-1px);
+}
+
+.download-csv-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: var(--bg-glass);
+  color: var(--text-secondary);
+  border-color: var(--border-glass);
+}

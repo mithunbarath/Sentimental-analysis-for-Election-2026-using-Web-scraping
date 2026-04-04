@@ -1,3 +1,15 @@
-2026/03/31-03:26:40.051 28f8 Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\Local Storage\leveldb/MANIFEST-000001
-2026/03/31-03:26:40.060 28f8 Recovering log #16
-2026/03/31-03:26:40.063 28f8 Reusing old log C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\Local Storage\leveldb/000016.log 
+2026/04/04-02:56:47.101 9004 Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\Local Storage\leveldb/MANIFEST-000001
+2026/04/04-02:56:47.156 9004 Recovering log #22
+2026/04/04-02:56:47.169 9004 Reusing old log C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\Local Storage\leveldb/000022.log 
+2026/04/04-05:04:34.951 476c Level-0 table #26: started
+2026/04/04-05:04:36.686 476c Level-0 table #26: 21194 bytes OK
+2026/04/04-05:04:37.190 476c Delete type=0 #22
+2026/04/04-05:04:37.197 476c Compacting 4@0 + 1@1 files
+2026/04/04-05:04:37.271 476c Generated table #27@0: 63 keys, 15103 bytes
+2026/04/04-05:04:37.271 476c Compacted 4@0 + 1@1 files => 15103 bytes
+2026/04/04-05:04:37.275 476c compacted to: files[ 0 1 0 0 0 0 0 ]
+2026/04/04-05:04:37.279 476c Delete type=2 #14
+2026/04/04-05:04:37.279 476c Delete type=2 #17
+2026/04/04-05:04:37.279 476c Delete type=2 #19
+2026/04/04-05:04:37.279 476c Delete type=2 #23
+2026/04/04-05:04:37.280 476c Delete type=2 #26

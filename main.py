@@ -66,6 +66,7 @@ def parse_arguments():
     parser.add_argument("--cascade", action="store_true", help="Use cascading fallback scraper (Apify→Firecrawl→BrightData→Playwright)")
     parser.add_argument("--scrapy", action="store_true", help="Enable Scrapy spider layer (supplemental deep crawl)")
     parser.add_argument("--tn-wide", action="store_true", help="Enable TN-wide scraping (disable Kongu-only filter)")
+    parser.add_argument("--district", type=str, help="Filter search to a specific district (e.g. Coimbatore)")
     parser.add_argument("--store-all", action="store_true", help="Store all records, ignoring region filters")
     return parser.parse_args()
 
@@ -135,17 +136,24 @@ async def main_async():
     # Keywords to search
     keywords = args.keywords or []
     if not keywords:
-        # Collect broad or specific keywords based on settings
-        if "instagram" in config.enable_which_platforms:
-            keywords.extend([url.split('/')[-2].replace('tags/', '') for url in config.instagram.hashtag_urls if '/explore/' in url])
-        if "twitter" in config.enable_which_platforms:
-            keywords.extend(config.twitter.search_queries)
-            
-        if not args.broad_search:
-            # Filter down to Kongu specific if not in broad search mode
-            keywords = [k for k in keywords if "kongu" in k.lower() or "கொங்கு" in k or "coimbatore" in k.lower() or "tirup" in k.lower() or "salem" in k.lower() or "erode" in k.lower()]
-            
-            keywords = ["kongu", "dmk", "admk", "tvk", "coimbatore", "tiruppur"] if args.broad_search else ["kongu", "coimbatore", "tiruppur", "erode", "salem"]
+        if args.district:
+            d = args.district.lower()
+            keywords = [d, f"{d} politics", f"dmk {d}", f"admk {d}", f"tvk {d}"]
+        else:
+            # Collect broad or specific keywords based on settings
+            if "instagram" in config.enable_which_platforms:
+                keywords.extend([url.split('/')[-2].replace('tags/', '') for url in config.instagram.hashtag_urls if '/explore/' in url])
+            if "twitter" in config.enable_which_platforms:
+                keywords.extend(config.twitter.search_queries)
+                
+            if not args.broad_search:
+                # Filter down to Kongu specific if not in broad search mode
+                keywords = [k for k in keywords if "kongu" in k.lower() or "கொங்கு" in k or "coimbatore" in k.lower() or "tirup" in k.lower() or "salem" in k.lower() or "erode" in k.lower()]
+                if not keywords:
+                    keywords = ["kongu", "coimbatore", "tiruppur", "erode", "salem"]
+            else:
+                if not keywords:
+                    keywords = ["kongu", "dmk", "admk", "tvk", "coimbatore", "tiruppur"]
     
     keywords = list(set(keywords))
     logger.info(f"Target keywords ({'Broad' if args.broad_search else 'Specific'}): {', '.join(keywords)}")
@@ -283,22 +291,26 @@ async def run_one_cycle(args, config) -> List[SocialMediaRecord]:
 
     # Build keywords the same way main_async does
     if not keywords:
-        kw_list = []
-        if "instagram" in platforms:
-            kw_list.extend([
-                url.split('/')[-2].replace('tags/', '')
-                for url in cfg.instagram.hashtag_urls if '/explore/' in url
-            ])
-        if "twitter" in platforms:
-            kw_list.extend(cfg.twitter.search_queries)
-        if not args.broad_search:
-            kw_list = [k for k in kw_list if "kongu" in k.lower() or "coimbatore" in k.lower() or "tirup" in k.lower() or "erode" in k.lower()]
-        if not kw_list:
-            kw_list = (
-                ["kongu", "dmk", "admk", "tvk", "eps", "vijay", "stalin", "coimbatore", "tiruppur", "erode"]
-                if args.broad_search else ["kongu", "coimbatore", "tiruppur"]
-            )
-        keywords = list(set(kw_list))
+        if getattr(args, "district", None):
+            d = args.district.lower()
+            keywords = [d, f"{d} politics", f"dmk {d}", f"admk {d}", f"tvk {d}"]
+        else:
+            kw_list = []
+            if "instagram" in platforms:
+                kw_list.extend([
+                    url.split('/')[-2].replace('tags/', '')
+                    for url in cfg.instagram.hashtag_urls if '/explore/' in url
+                ])
+            if "twitter" in platforms:
+                kw_list.extend(cfg.twitter.search_queries)
+            if not args.broad_search:
+                kw_list = [k for k in kw_list if "kongu" in k.lower() or "coimbatore" in k.lower() or "tirup" in k.lower() or "erode" in k.lower()]
+            if not kw_list:
+                kw_list = (
+                    ["kongu", "dmk", "admk", "tvk", "eps", "vijay", "stalin", "coimbatore", "tiruppur", "erode"]
+                    if args.broad_search else ["kongu", "coimbatore", "tiruppur"]
+                )
+            keywords = list(set(kw_list))
 
     sessions_base = os.path.join(os.getcwd(), args.sessions_dir)
 
@@ -316,8 +328,12 @@ async def run_one_cycle(args, config) -> List[SocialMediaRecord]:
     # ---- Step 2: cascade per platform ----
     if args.cascade or (args.apify and hasattr(cfg, "apify") and cfg.apify.enabled):
         cascade = CascadeScraper(cfg, account_mgr)
-        kws = keywords or (["kongu", "dmk", "admk", "tvk"] if not args.broad_search else
-                           ["kongu", "dmk", "admk", "tvk", "eps", "vijay", "stalin", "coimbatore", "tiruppur", "erode"])
+        if getattr(args, "district", None):
+            d = args.district.lower()
+            kws = keywords or [d, f"{d} politics", f"dmk {d}", f"admk {d}", f"tvk {d}"]
+        else:
+            kws = keywords or (["kongu", "dmk", "admk", "tvk"] if not args.broad_search else
+                               ["kongu", "dmk", "admk", "tvk", "eps", "vijay", "stalin", "coimbatore", "tiruppur", "erode"])
         for platform in platforms:
             try:
                 batch = await cascade.scrape(platform, kws, args.sessions_dir)

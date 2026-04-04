@@ -1,6 +1,3 @@
-2026/03/31-03:18:09.415 bd1c Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\youtube\Default\Local Storage\leveldb/MANIFEST-000001
-2026/03/31-03:18:09.426 bd1c Recovering log #3
-2026/03/31-03:18:09.430 bd1c Reusing old log C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\youtube\Default\Local Storage\leveldb/000003.log 
-2026/03/31-03:19:09.442 a784 Level-0 table #5: started
-2026/03/31-03:19:09.449 a784 Level-0 table #5: 8682 bytes OK
-2026/03/31-03:19:09.453 a784 Delete type=0 #3
+2026/04/04-02:56:59.648 fc4 Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\youtube\Default\Local Storage\leveldb/MANIFEST-000001
+2026/04/04-02:56:59.803 fc4 Recovering log #4
+2026/04/04-02:56:59.832 fc4 Reusing old log C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\youtube\Default\Local Storage\leveldb/000004.log 

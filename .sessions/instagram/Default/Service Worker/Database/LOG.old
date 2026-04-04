@@ -1,3 +1,5 @@
-2026/03/31-03:26:39.977 a564 Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\Service Worker\Database/MANIFEST-000001
-2026/03/31-03:26:39.978 a564 Recovering log #3
-2026/03/31-03:26:39.981 a564 Reusing old log C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\Service Worker\Database/000003.log 
+2026/04/04-02:56:46.885 bec4 Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\Service Worker\Database/MANIFEST-000001
+2026/04/04-02:56:46.888 bec4 Recovering log #3
+2026/04/04-02:56:46.906 bec4 Level-0 table #3: started
+2026/04/04-02:56:46.919 bec4 Level-0 table #3: 93000 bytes OK
+2026/04/04-02:56:46.924 bec4 Delete type=0 #3

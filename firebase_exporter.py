@@ -39,7 +39,7 @@ def _get_firestore_client(cred_path: str):
 
 def export_to_firestore(records: List[SocialMediaRecord], firebase_config) -> Optional[int]:
     """
-    Pushes scraped records to Firebase Firestore.
+    Pushes scraped records to Firebase Firestore, separating posts and comments.
     """
     if not firebase_config.enabled or not firebase_config.credentials_path:
         return None
@@ -49,34 +49,47 @@ def export_to_firestore(records: List[SocialMediaRecord], firebase_config) -> Op
         return None
 
     try:
-        collection_ref = db.collection(firebase_config.collection_name)
-        
-        # Firestore batch operations can process up to 500 documents at a time
-        batch = db.batch()
-        count = 0
-        total_written = 0
-        
-        for record in records:
-            # We use the record.id as the document ID for absolute uniqueness to deduplicate 
-            # posts natively at the database level!
-            doc_ref = collection_ref.document(record.id)
-            
-            # Use set() with merge=True to update interactions/likes continuously 
-            # without erasing historical sentiment tags
-            batch.set(doc_ref, record.to_dict(), merge=True)
-            count += 1
-            
-            if count == 500:
-                batch.commit()
-                total_written += count
-                batch = db.batch()
-                count = 0
-                
-        if count > 0:
-            batch.commit()
-            total_written += count
+        posts = [r for r in records if r.type == 'post']
+        comments = [r for r in records if r.type == 'comment']
 
-        logger.info(f"Firebase Export Complete: {total_written} records synced to Firestore '{firebase_config.collection_name}' collection.")
+        total_written = 0
+
+        def _batch_upload(item_list, target_collection: str):
+            if not item_list:
+                return 0
+            
+            collection_ref = db.collection(target_collection)
+            batch = db.batch()
+            count = 0
+            local_total = 0
+
+            for record in item_list:
+                doc_ref = collection_ref.document(record.id)
+                batch.set(doc_ref, record.to_dict(), merge=True)
+                count += 1
+                
+                if count == 500:
+                    batch.commit()
+                    local_total += count
+                    batch = db.batch()
+                    count = 0
+                    
+            if count > 0:
+                batch.commit()
+                local_total += count
+            
+            logger.info(f"Firebase Sync: {local_total} records pushed to '{target_collection}'")
+            return local_total
+
+        # Upload Posts
+        if posts:
+            total_written += _batch_upload(posts, firebase_config.collection_name)
+            
+        # Upload Comments
+        if comments:
+            comments_collection = f"{firebase_config.collection_name}_comments"
+            total_written += _batch_upload(comments, comments_collection)
+
         return total_written
 
     except Exception as e:

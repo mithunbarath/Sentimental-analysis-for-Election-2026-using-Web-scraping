@@ -49,7 +49,7 @@ class SocialMediaRecord:
     nlp_sentiment: Optional[str] = None        # e.g. "positive", "neutral", "negative"
     nlp_sentiment_score: Optional[float] = None # 0.0–1.0 confidence
     nlp_trend_score: Optional[float] = None    # relative frequency vs rolling window
-    region: Optional[str] = None  # Added for TN regional classification
+    district: Optional[str] = None  # Added for District classification
 
     def to_dict(self) -> Dict[str, Any]:
         """Convert the record to a dictionary."""
@@ -89,7 +89,7 @@ class SocialMediaRecord:
             "nlp_sentiment": self.nlp_sentiment or "",
             "nlp_sentiment_score": str(self.nlp_sentiment_score) if self.nlp_sentiment_score is not None else "",
             "nlp_trend_score": str(self.nlp_trend_score) if self.nlp_trend_score is not None else "",
-            "region": self.region or ""
+            "district": self.district or ""
         }
 
     @classmethod
@@ -101,7 +101,7 @@ class SocialMediaRecord:
             "reply_count", "comment_count", "source", "timestamp",
             "parties_mentioned", "is_kongu_related",
             "nlp_sentiment", "nlp_sentiment_score", "nlp_trend_score",
-            "region"
+            "district"
         ]
 
 

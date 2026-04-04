@@ -95,18 +95,35 @@ def export_all(
     jsonl_path: str,
     json_path: Optional[str] = None
 ) -> Dict[str, int]:
-    """Export records to multiple formats."""
+    """Export records to multiple formats, separating posts and comments."""
     results = {}
 
-    csv_count = export_to_csv(records, csv_path)
-    results["csv"] = csv_count
+    posts = [r for r in records if r.type == 'post']
+    comments = [r for r in records if r.type == 'comment']
 
-    jsonl_count = export_to_jsonl(records, jsonl_path)
-    results["jsonl"] = jsonl_count
+    def inject_suffix(path: str, suffix: str = "_comments") -> str:
+        parts = path.rsplit(".", 1)
+        if len(parts) == 2:
+            return f"{parts[0]}{suffix}.{parts[1]}"
+        return f"{path}{suffix}"
 
-    if json_path:
-        json_count = export_to_json(records, json_path)
-        results["json"] = json_count
+    # Export Posts
+    if posts:
+        results["posts_csv"] = export_to_csv(posts, csv_path)
+        results["posts_jsonl"] = export_to_jsonl(posts, jsonl_path)
+        if json_path:
+            results["posts_json"] = export_to_json(posts, json_path)
+
+    # Export Comments
+    if comments:
+        comments_csv = inject_suffix(csv_path)
+        comments_jsonl = inject_suffix(jsonl_path)
+        
+        results["comments_csv"] = export_to_csv(comments, comments_csv)
+        results["comments_jsonl"] = export_to_jsonl(comments, comments_jsonl)
+        if json_path:
+            comments_json = inject_suffix(json_path)
+            results["comments_json"] = export_to_json(comments, comments_json)
 
     return results
 

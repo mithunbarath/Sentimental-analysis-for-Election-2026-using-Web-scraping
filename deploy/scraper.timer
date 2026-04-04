@@ -3,9 +3,9 @@ Description=Run Palladam Scraper every 6 hours
 Requires=scraper.service
 
 [Timer]
-# Run 5 minutes after boot, then every 6 hours
+# Run 5 minutes after boot, then every 10 minutes
 OnBootSec=5min
-OnUnitActiveSec=6h
+OnUnitActiveSec=10m
 Persistent=true
 
 [Install]

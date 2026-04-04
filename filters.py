@@ -135,8 +135,8 @@ def tag_regions(records: List[SocialMediaRecord]) -> List[SocialMediaRecord]:
         classifier = TamilNaduRegionClassifier()
         for r in records:
             text_to_check = " ".join(filter(None, [r.title, r.text, r.author, r.source]))
-            r.region = classifier.classify_region(text_to_check)
-            if r.region in ["tiruppur", "coimbatore", "erode", "salem", "namakkal", "nilgiris", "dharmapuri", "krishnagiri"]:
+            r.district = classifier.classify_region(text_to_check)
+            if r.district in ["tiruppur", "coimbatore", "erode", "salem", "namakkal", "nilgiris", "dharmapuri", "krishnagiri"]:
                 r.is_kongu_related = True
         logger.info(f"Tagged regions for {len(records)} records.")
     except Exception as e:
@@ -175,7 +175,7 @@ def apply_filters(
             # But for now, let's at least allow Kongu matches
 
         # TN-wide region check (if in TN mode, drop non-TN records if strict)
-        if tn_wide_mode and record.region == "unknown":
+        if tn_wide_mode and record.district == "unknown":
             if strict_mode:
                 continue
 
