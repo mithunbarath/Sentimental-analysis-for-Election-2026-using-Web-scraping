@@ -21,9 +21,12 @@ class PartyClassifier:
         tvk_keywords: Optional[List[str]] = None
     ):
         """Initialize the classifier with party keywords."""
-        self.dmk_keywords = dmk_keywords or ["dmk", "டிஎம்கே", "stalin", "ஸ்டாலின்", "udhay", "உதயநிதி"]
-        self.admk_keywords = admk_keywords or ["admk", "aiadmk", "அதிமுக", "eps", "இபிஎஸ்", "ops", "ஓபிஎஸ்"]
-        self.tvk_keywords = tvk_keywords or ["tvk", "டி.வி.கே", "vijay", "விஜய்", "thalapathy"]
+        from config import KeywordConfig
+        kc = KeywordConfig.load()
+        
+        self.dmk_keywords = dmk_keywords or kc.parties.get("dmk") or ["dmk", "டிஎம்கே", "stalin", "ஸ்டாலின்", "udhay", "உதயநிதி"]
+        self.admk_keywords = admk_keywords or kc.parties.get("admk") or ["admk", "aiadmk", "அதிமுக", "eps", "இபிஎஸ்", "ops", "ஓபிஎஸ்"]
+        self.tvk_keywords = tvk_keywords or kc.parties.get("tvk") or ["tvk", "டி.வி.கே", "vijay", "விஜய்", "thalapathy"]
 
         self.dmk_pattern = self._compile_pattern(self.dmk_keywords)
         self.admk_pattern = self._compile_pattern(self.admk_keywords)
@@ -71,8 +74,11 @@ class RegionClassifier:
         region_keywords: Optional[List[str]] = None
     ):
         """Initialize the classifier with region keywords."""
+        from config import KeywordConfig
+        kc = KeywordConfig.load()
+
         # Core Kongu Region keywords
-        self.kongu_keywords = [
+        self.kongu_keywords = kc.regions.get("kongu") or [
             "kongu", "கொங்கு",
             "coimbatore", "கோயம்புத்தூர்", "kovai", "கோவை",
             "tiruppur", "tirupur", "திருப்பூர்", "palladam", "பல்லடம்",
@@ -187,4 +193,34 @@ def apply_filters(
         f"tn_wide: {tn_wide_mode}, strict: {strict_mode})"
     )
 
+    return filtered
+
+
+def filter_by_timestamp(
+    records: List[SocialMediaRecord],
+    max_age_hours: int
+) -> List[SocialMediaRecord]:
+    """Filter out records older than the specified maximum age in hours."""
+    if max_age_hours <= 0:
+        return records
+        
+    from datetime import datetime, timedelta, timezone
+    
+    filtered = []
+    now = datetime.now(timezone.utc)
+    cutoff_time = now - timedelta(hours=max_age_hours)
+    
+    for r in records:
+        if not r.timestamp:
+            filtered.append(r)
+            continue
+            
+        r_time = r.timestamp
+        if r_time.tzinfo is None:
+            r_time = r_time.replace(tzinfo=timezone.utc)
+            
+        if r_time >= cutoff_time:
+            filtered.append(r)
+            
+    logger.info(f"Temporal filter ({max_age_hours}h max age): {len(records)} -> {len(filtered)} records returned")
     return filtered

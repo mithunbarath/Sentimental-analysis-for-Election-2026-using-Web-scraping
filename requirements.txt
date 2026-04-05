@@ -39,6 +39,10 @@ scrapy-playwright>=0.0.34
 motor>=3.4.0
 pymongo>=4.7.0
 
+# Redis & Simhash for Deduplication
+redis>=5.0.0
+simhash>=2.1.0
+
 # NLP / Sentiment (Tamil-aware)
 transformers>=4.40.0
 sentencepiece>=0.2.0

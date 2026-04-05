@@ -134,8 +134,8 @@ def export_by_region(records: List[SocialMediaRecord], output_dir: str) -> Dict[
     
     by_region = defaultdict(list)
     for r in records:
-        region = r.region or "unknown"
-        by_region[region].append(r)
+        district = r.district or "unknown"
+        by_region[district].append(r)
         
     results = {}
     base_dir = Path(output_dir) / "regions"
@@ -146,20 +146,20 @@ def export_by_region(records: List[SocialMediaRecord], output_dir: str) -> Dict[
     except ImportError:
         classifier = None
         
-    for region, reg_records in by_region.items():
+    for district, reg_records in by_region.items():
         if classifier:
-            zone = classifier.get_zone(region)
+            zone = classifier.get_zone(district)
             region_dir = base_dir / zone
         else:
             region_dir = base_dir
             
         region_dir.mkdir(parents=True, exist_ok=True)
-        csv_path = region_dir / f"{region}.csv"
+        csv_path = region_dir / f"{district}.csv"
         
         count = export_to_csv(reg_records, str(csv_path))
-        results[region] = count
+        results[district] = count
         
-    logger.info(f"Exported by region: {sum(results.values())} records across {len(results)} regions.")
+    logger.info(f"Exported by district: {sum(results.values())} records across {len(results)} districts.")
     return results
 
 
@@ -231,7 +231,7 @@ def generate_summary_stats(records: List[SocialMediaRecord]) -> Dict[str, Any]:
         "by_platform": {},
         "by_type": {},
         "by_party": {},
-        "by_region": {},
+        "by_district": {},
         "kongu_related_count": 0,
         "records_with_text": 0,
         "records_with_timestamp": 0
@@ -244,8 +244,8 @@ def generate_summary_stats(records: List[SocialMediaRecord]) -> Dict[str, Any]:
         for party in record.parties_mentioned:
             stats["by_party"][party] = stats["by_party"].get(party, 0) + 1
 
-        region = record.region or "unknown"
-        stats["by_region"][region] = stats["by_region"].get(region, 0) + 1
+        district = record.district or "unknown"
+        stats["by_district"][district] = stats["by_district"].get(district, 0) + 1
 
         if record.is_kongu_related:
             stats["kongu_related_count"] += 1

@@ -138,9 +138,19 @@ deduplication:
   enable: true
   enable_cross_platform: true
   enable_hash_dedup: false
+  use_redis: true
+  redis_host: "localhost"
+  redis_port: 6379
+  redis_db: 0
+  use_fuzzy_matching: true
+  fuzzy_tolerance: 3
   storage_path: ".dedup_cache.json"
   hash_threshold: 3
   clear_cache_on_start: false
+
+# Temporal Filters
+temporal_filter:
+  max_age_hours: 24   # Reject posts older than this (0 = disable)
 
 # General settings
 

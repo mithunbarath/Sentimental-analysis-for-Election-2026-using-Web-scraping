@@ -68,6 +68,7 @@ def parse_arguments():
     parser.add_argument("--tn-wide", action="store_true", help="Enable TN-wide scraping (disable Kongu-only filter)")
     parser.add_argument("--district", type=str, help="Filter search to a specific district (e.g. Coimbatore)")
     parser.add_argument("--store-all", action="store_true", help="Store all records, ignoring region filters")
+    parser.add_argument("--limit", type=int, default=None, help="Stop scraping after collecting this many non-duplicated records")
     return parser.parse_args()
 
 async def run_login_mode(platform: str, sessions_dir: str):
@@ -150,10 +151,10 @@ async def main_async():
                 # Filter down to Kongu specific if not in broad search mode
                 keywords = [k for k in keywords if "kongu" in k.lower() or "கொங்கு" in k or "coimbatore" in k.lower() or "tirup" in k.lower() or "salem" in k.lower() or "erode" in k.lower()]
                 if not keywords:
-                    keywords = ["kongu", "coimbatore", "tiruppur", "erode", "salem"]
+                    keywords = config.keywords.kongu_specific_queries or ["kongu", "coimbatore", "tiruppur", "erode", "salem"]
             else:
                 if not keywords:
-                    keywords = ["kongu", "dmk", "admk", "tvk", "coimbatore", "tiruppur"]
+                    keywords = config.keywords.broad_tn_queries or ["kongu", "dmk", "admk", "tvk", "coimbatore", "tiruppur"]
     
     keywords = list(set(keywords))
     logger.info(f"Target keywords ({'Broad' if args.broad_search else 'Specific'}): {', '.join(keywords)}")
@@ -252,7 +253,7 @@ async def main_async():
     return all_records
 
 
-async def run_one_cycle(args, config) -> List[SocialMediaRecord]:
+async def run_one_cycle(args, config, dedup_manager=None) -> List[SocialMediaRecord]:
     """
     Run a single full scrape cycle:
      1. Playwright / existing scrapers (parallel crawler)
@@ -264,6 +265,22 @@ async def run_one_cycle(args, config) -> List[SocialMediaRecord]:
     import time
     from scraper_cascade import CascadeScraper
     from account_manager import AccountManager
+    from deduplication import DeduplicationManager
+
+    # Fallback to local dedup if not provided
+    if dedup_manager is None:
+        cfg_d = getattr(config, "deduplication", None)
+        dedup_manager = DeduplicationManager(
+            storage_path=".deduplication_state.json",
+            use_id_deduplication=getattr(cfg_d, "enable", True), 
+            use_hash_deduplication=getattr(cfg_d, "enable_hash_dedup", False),
+            use_redis=getattr(cfg_d, "use_redis", False),
+            redis_host=getattr(cfg_d, "redis_host", "localhost"),
+            redis_port=getattr(cfg_d, "redis_port", 6379),
+            redis_db=getattr(cfg_d, "redis_db", 0),
+            use_fuzzy_matching=getattr(cfg_d, "use_fuzzy_matching", False),
+            fuzzy_tolerance=getattr(cfg_d, "fuzzy_tolerance", 3)
+        )
 
     # ---- resolve config ----
     cfg = config
@@ -307,9 +324,14 @@ async def run_one_cycle(args, config) -> List[SocialMediaRecord]:
                 kw_list = [k for k in kw_list if "kongu" in k.lower() or "coimbatore" in k.lower() or "tirup" in k.lower() or "erode" in k.lower()]
             if not kw_list:
                 kw_list = (
-                    ["kongu", "dmk", "admk", "tvk", "eps", "vijay", "stalin", "coimbatore", "tiruppur", "erode"]
-                    if args.broad_search else ["kongu", "coimbatore", "tiruppur"]
+                    cfg.keywords.broad_tn_queries
+                    if args.broad_search else cfg.keywords.kongu_specific_queries
                 )
+                if not kw_list:  # Ultimate fallback if yaml is empty
+                    kw_list = (
+                        ["kongu", "dmk", "admk", "tvk", "eps", "vijay", "stalin", "coimbatore", "tiruppur", "erode"]
+                        if args.broad_search else ["kongu", "coimbatore", "tiruppur"]
+                    )
             keywords = list(set(kw_list))
 
     sessions_base = os.path.join(os.getcwd(), args.sessions_dir)
@@ -332,8 +354,13 @@ async def run_one_cycle(args, config) -> List[SocialMediaRecord]:
             d = args.district.lower()
             kws = keywords or [d, f"{d} politics", f"dmk {d}", f"admk {d}", f"tvk {d}"]
         else:
-            kws = keywords or (["kongu", "dmk", "admk", "tvk"] if not args.broad_search else
-                               ["kongu", "dmk", "admk", "tvk", "eps", "vijay", "stalin", "coimbatore", "tiruppur", "erode"])
+            if not keywords:
+                kws = cfg.keywords.kongu_specific_queries if not args.broad_search else cfg.keywords.broad_tn_queries
+                if not kws:
+                    kws = (["kongu", "dmk", "admk", "tvk"] if not args.broad_search else
+                           ["kongu", "dmk", "admk", "tvk", "eps", "vijay", "stalin", "coimbatore", "tiruppur", "erode"])
+            else:
+                kws = keywords
         for platform in platforms:
             try:
                 batch = await cascade.scrape(platform, kws, args.sessions_dir)
@@ -400,6 +427,31 @@ async def run_one_cycle(args, config) -> List[SocialMediaRecord]:
         )
         logger.info(f"Records after filtering: {len(all_records)}")
 
+    # ---- Temporal Filter ----
+    if hasattr(cfg, "temporal_filter") and getattr(cfg.temporal_filter, "max_age_hours", 0) > 0:
+        from filters import filter_by_timestamp
+        logger.info(f"Applying temporal bounding (max_age_hours={cfg.temporal_filter.max_age_hours})...")
+        all_records = filter_by_timestamp(all_records, cfg.temporal_filter.max_age_hours)
+
+    # ---- Deduplicate ----
+    logger.info("Deduplicating records...")
+    filtered_and_deduped = []
+    for r in all_records:
+        if not dedup_manager.is_duplicate(r):
+            dedup_manager.add_record(r)
+            filtered_and_deduped.append(r)
+    
+    all_records = filtered_and_deduped
+    logger.info(f"Records after deduplication (this cycle): {len(all_records)}. Global unique total: {dedup_manager.stats.unique_records}")
+
+    if args.limit and dedup_manager.stats.unique_records >= args.limit:
+        logger.info(f"Target limit of {args.limit} unique records reached! Truncating to limit.")
+        # We might have exceeded the limit in this batch, so truncate the current batch
+        # exactly to hit the limit.
+        excess = dedup_manager.stats.unique_records - args.limit
+        if excess > 0 and excess < len(all_records):
+            all_records = all_records[:-excess]
+
     all_records.sort(key=lambda x: (x.platform, x.timestamp or ""), reverse=True)
 
     # ---- Export CSV/JSONL ----
@@ -452,6 +504,10 @@ async def run_one_cycle(args, config) -> List[SocialMediaRecord]:
     except Exception as e:
         logger.error(f"Firebase export error: {e}")
 
+    # ---- Save State ----
+    if dedup_manager:
+        dedup_manager.save()
+
     return all_records
 
 if __name__ == "__main__":
@@ -492,13 +548,27 @@ if __name__ == "__main__":
         max_runs = getattr(inf_cfg, "max_runs", 0) if inf_cfg else 0
 
         run_count = 0
+        from deduplication import DeduplicationManager
+        cfg_d = getattr(config, "deduplication", None)
+        global_dedup_manager = DeduplicationManager(
+            storage_path=".deduplication_state.json",
+            use_id_deduplication=getattr(cfg_d, "enable", True), 
+            use_hash_deduplication=getattr(cfg_d, "enable_hash_dedup", False),
+            use_redis=getattr(cfg_d, "use_redis", False),
+            redis_host=getattr(cfg_d, "redis_host", "localhost"),
+            redis_port=getattr(cfg_d, "redis_port", 6379),
+            redis_db=getattr(cfg_d, "redis_db", 0),
+            use_fuzzy_matching=getattr(cfg_d, "use_fuzzy_matching", False),
+            fuzzy_tolerance=getattr(cfg_d, "fuzzy_tolerance", 3)
+        )
+
         while True:
             run_count += 1
             cycle_label = f"Run #{run_count}" if args.infinite else "Single run"
             logger.info(f"\n{'='*70}\n{cycle_label} starting at {time.strftime('%Y-%m-%d %H:%M:%S')}\n{'='*70}")
 
             try:
-                await run_one_cycle(args, config)
+                await run_one_cycle(args, config, dedup_manager=global_dedup_manager)
             except KeyboardInterrupt:
                 raise
             except Exception as e:
@@ -509,11 +579,16 @@ if __name__ == "__main__":
             if max_runs and run_count >= max_runs:
                 logger.info(f"Reached max_runs={max_runs}. Stopping.")
                 break
+            
+            if args.limit and global_dedup_manager.stats.unique_records >= args.limit:
+                logger.info(f"Target limit of {args.limit} unique records reached explicitly. Stopping continuous loop.")
+                break
 
+            global_dedup_manager.save()
             logger.info(f"Next run in {delay_minutes} minutes. Press Ctrl+C to stop.")
             await asyncio.sleep(delay_minutes * 60)
 
-        logger.info("All scraping runs completed.")
+        logger.info(f"All scraping runs completed. Total unique extracted: {global_dedup_manager.stats.unique_records}")
 
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)

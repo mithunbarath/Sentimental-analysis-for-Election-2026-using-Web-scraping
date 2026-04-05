@@ -9,8 +9,21 @@ from pathlib import Path
 from typing import Set, Dict, Optional, List
 from datetime import datetime
 from dataclasses import dataclass, field
+import re
 
 from models import SocialMediaRecord
+
+try:
+    import redis
+    REDIS_AVAILABLE = True
+except ImportError:
+    REDIS_AVAILABLE = False
+
+try:
+    from simhash import Simhash, SimhashIndex
+    SIMHASH_AVAILABLE = True
+except ImportError:
+    SIMHASH_AVAILABLE = False
 
 logger = logging.getLogger(__name__)
 
@@ -62,7 +75,13 @@ class DeduplicationManager:
         use_id_deduplication: bool = True,
         use_url_deduplication: bool = True,
         use_hash_deduplication: bool = False,
-        hash_threshold: int = 3
+        hash_threshold: int = 3,
+        use_redis: bool = False,
+        redis_host: str = "localhost",
+        redis_port: int = 6379,
+        redis_db: int = 0,
+        use_fuzzy_matching: bool = False,
+        fuzzy_tolerance: int = 3
     ):
         """Initialize the deduplication manager."""
         self.storage_path = Path(storage_path) if storage_path else None
@@ -71,6 +90,7 @@ class DeduplicationManager:
         self.use_hash_deduplication = use_hash_deduplication
         self.hash_threshold = hash_threshold
 
+        # Local memory fallback data structures
         self.seen_ids: Set[str] = set()
         self.seen_urls: Set[str] = set()
         self.seen_hashes: Set[str] = set()
@@ -78,8 +98,43 @@ class DeduplicationManager:
 
         self.stats = DeduplicationStats()
 
+        # Redis Setup
+        self.use_redis = use_redis and REDIS_AVAILABLE
+        self.redis_client = None
+        if self.use_redis:
+            try:
+                self.redis_client = redis.Redis(host=redis_host, port=redis_port, db=redis_db, decode_responses=True)
+                self.redis_client.ping()
+                logger.info("Connected to Redis for ultra-fast deduplication.")
+            except Exception as e:
+                logger.warning(f"Failed to connect to Redis, reverting to local memory: {e}")
+                self.redis_client = None
+                self.use_redis = False
+
+        # Fuzzy Match Setup
+        self.use_fuzzy_matching = use_fuzzy_matching and SIMHASH_AVAILABLE
+        self.fuzzy_tolerance = fuzzy_tolerance
+        self.simhash_index = None
+        if self.use_fuzzy_matching:
+            self.simhash_index = SimhashIndex([], k=self.fuzzy_tolerance)
+            logger.info(f"Fuzzy matching enabled with K-tolerance: {self.fuzzy_tolerance}")
+
         if self.storage_path:
             self.load()
+
+    def _check_exists(self, set_name: str, value: str) -> bool:
+        """Check if a value exists in the requested set (via Redis or local)."""
+        if self.use_redis and self.redis_client:
+            return self.redis_client.sismember(set_name, value) == 1
+        else:
+            return value in getattr(self, set_name)
+
+    def _add_to_set(self, set_name: str, value: str):
+        """Add a value to the requested set (via Redis or local)."""
+        if self.use_redis and self.redis_client:
+            self.redis_client.sadd(set_name, value)
+        else:
+            getattr(self, set_name).add(value)
 
     def is_duplicate(
         self,
@@ -90,7 +145,7 @@ class DeduplicationManager:
         self.stats.add_record(record)
 
         if self.use_id_deduplication and record.id:
-            if record.id in self.seen_ids:
+            if self._check_exists("seen_ids", record.id):
                 logger.debug(f"Duplicate found by ID: {record.id}")
                 self.stats.add_duplicate(record)
                 return True
@@ -100,7 +155,7 @@ class DeduplicationManager:
 
         if self.use_url_deduplication and record.url:
             normalized_url = self._normalize_url(record.url)
-            if normalized_url in self.seen_urls:
+            if self._check_exists("seen_urls", normalized_url):
                 logger.debug(f"Duplicate found by URL: {normalized_url}")
                 self.stats.add_duplicate(record)
                 return True
@@ -111,13 +166,22 @@ class DeduplicationManager:
         if self.use_hash_deduplication and record.text:
             if len(record.text.strip()) >= self.hash_threshold:
                 content_hash = self._generate_content_hash(record)
-                if content_hash in self.seen_hashes:
+                if self._check_exists("seen_hashes", content_hash):
                     logger.debug(f"Duplicate found by hash: {content_hash[:16]}...")
                     self.stats.add_duplicate(record)
                     return True
 
+        if self.use_fuzzy_matching and record.text:
+            if len(record.text.strip()) >= self.hash_threshold:
+                s_hash = Simhash(self._get_features(record.text))
+                dups = self.simhash_index.get_near_dups(s_hash)
+                if dups:
+                    logger.debug(f"Duplicate found by fuzzy matching: near {dups[0]}")
+                    self.stats.add_duplicate(record)
+                    return True
+
         composite_key = self._generate_composite_key(record)
-        if composite_key in self.seen_composite_keys:
+        if self._check_exists("seen_composite_keys", composite_key):
             logger.debug(f"Duplicate found by composite key: {composite_key}")
             self.stats.add_duplicate(record)
             return True
@@ -134,41 +198,61 @@ class DeduplicationManager:
         """Check remaining deduplication methods."""
         if not skip_url and self.use_url_deduplication and record.url:
             normalized_url = self._normalize_url(record.url)
-            if normalized_url in self.seen_urls:
+            if self._check_exists("seen_urls", normalized_url):
                 self.stats.add_duplicate(record)
                 return True
 
         if self.use_hash_deduplication and record.text:
             if len(record.text.strip()) >= self.hash_threshold:
                 content_hash = self._generate_content_hash(record)
-                if content_hash in self.seen_hashes:
+                if self._check_exists("seen_hashes", content_hash):
+                    self.stats.add_duplicate(record)
+                    return True
+
+        if self.use_fuzzy_matching and record.text:
+            if len(record.text.strip()) >= self.hash_threshold:
+                s_hash = Simhash(self._get_features(record.text))
+                if self.simhash_index.get_near_dups(s_hash):
                     self.stats.add_duplicate(record)
                     return True
 
         composite_key = self._generate_composite_key(record)
-        if composite_key in self.seen_composite_keys:
+        if self._check_exists("seen_composite_keys", composite_key):
             self.stats.add_duplicate(record)
             return True
 
         self.stats.add_unique(record)
         return False
 
+    def _get_features(self, s: str) -> List[str]:
+        """Convert a string to a list of token features for Simhash."""
+        width = 3
+        s = s.lower()
+        s = re.sub(r'[^\w]+', '', s)
+        return [s[i:i + width] for i in range(max(len(s) - width + 1, 1))]
+        
     def add_record(self, record: SocialMediaRecord):
         """Add a record to the deduplication database."""
         if self.use_id_deduplication and record.id:
-            self.seen_ids.add(record.id)
+            self._add_to_set("seen_ids", record.id)
 
         if self.use_url_deduplication and record.url:
             normalized_url = self._normalize_url(record.url)
-            self.seen_urls.add(normalized_url)
+            self._add_to_set("seen_urls", normalized_url)
 
         if self.use_hash_deduplication and record.text:
             if len(record.text.strip()) >= self.hash_threshold:
                 content_hash = self._generate_content_hash(record)
-                self.seen_hashes.add(content_hash)
+                self._add_to_set("seen_hashes", content_hash)
+
+        if self.use_fuzzy_matching and record.text:
+            if len(record.text.strip()) >= self.hash_threshold:
+                s_hash = Simhash(self._get_features(record.text))
+                unique_identifier = record.id or self._generate_content_hash(record)
+                self.simhash_index.add(unique_identifier, s_hash)
 
         composite_key = self._generate_composite_key(record)
-        self.seen_composite_keys.add(composite_key)
+        self._add_to_set("seen_composite_keys", composite_key)
 
     def deduplicate_records(
         self,

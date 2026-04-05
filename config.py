@@ -166,9 +166,22 @@ class DeduplicationConfig:
     enable: bool = True
     enable_cross_platform: bool = True
     enable_hash_dedup: bool = False
+    use_redis: bool = False
+    redis_host: str = "localhost"
+    redis_port: int = 6379
+    redis_db: int = 0
+    use_fuzzy_matching: bool = False
+    fuzzy_tolerance: int = 3
     storage_path: str = ".dedup_cache.json"
     hash_threshold: int = 3
     clear_cache_on_start: bool = False
+
+
+@dataclass
+class TemporalFilterConfig:
+    """Temporal filter settings."""
+
+    max_age_hours: int = 0  # 0 means disabled
 
 
 @dataclass
@@ -274,6 +287,31 @@ class NLPConfig:
 
 
 @dataclass
+class KeywordConfig:
+    """Dynamic keyword configuration stored in keywords.yaml"""
+    kongu_specific_queries: List[str] = field(default_factory=list)
+    broad_tn_queries: List[str] = field(default_factory=list)
+    parties: Dict[str, List[str]] = field(default_factory=dict)
+    regions: Dict[str, List[str]] = field(default_factory=dict)
+
+    @classmethod
+    def load(cls, yaml_path: str = "keywords.yaml") -> "KeywordConfig":
+        if not Path(yaml_path).exists():
+            return cls()
+        with open(yaml_path, "r", encoding="utf-8") as f:
+            data = yaml.safe_load(f) or {}
+
+        search_queries = data.get("search_queries", {})
+        classifiers = data.get("classifiers", {})
+        
+        return cls(
+            kongu_specific_queries=search_queries.get("kongu_specific", []),
+            broad_tn_queries=search_queries.get("broad_tn", []),
+            parties=classifiers.get("parties", {}),
+            regions=classifiers.get("regions", {})
+        )
+
+@dataclass
 class Config:
     """Main configuration class containing all settings."""
 
@@ -286,6 +324,7 @@ class Config:
     export: ExportConfig = field(default_factory=ExportConfig)
     bright_data: BrightDataConfig = field(default_factory=BrightDataConfig)
     deduplication: DeduplicationConfig = field(default_factory=DeduplicationConfig)
+    temporal_filter: TemporalFilterConfig = field(default_factory=TemporalFilterConfig)
     google_sheets: GoogleSheetsConfig = field(default_factory=GoogleSheetsConfig)
     apify: ApifyConfig = field(default_factory=ApifyConfig)
     firecrawl: FirecrawlConfig = field(default_factory=FirecrawlConfig)
@@ -294,6 +333,7 @@ class Config:
     mongodb: MongoDBConfig = field(default_factory=MongoDBConfig)
     firebase: FirebaseConfig = field(default_factory=FirebaseConfig)
     nlp: NLPConfig = field(default_factory=NLPConfig)
+    keywords: KeywordConfig = field(default_factory=KeywordConfig)
 
     log_level: str = "INFO"
     enable_which_platforms: List[str] = field(default_factory=lambda: [
@@ -326,6 +366,8 @@ class Config:
             config.export = ExportConfig(**data["export"])
         if "deduplication" in data:
             config.deduplication = DeduplicationConfig(**data["deduplication"])
+        if "temporal_filter" in data:
+            config.temporal_filter = TemporalFilterConfig(**data["temporal_filter"])
         if "google_sheets" in data:
             config.google_sheets = GoogleSheetsConfig(**data["google_sheets"])
         if "apify" in data:
@@ -392,6 +434,13 @@ class Config:
 
 def load_config(config_path: Optional[str] = None) -> Config:
     """Load configuration from file or create default config."""
+    config = Config()
     if config_path and Path(config_path).exists():
-        return Config.from_yaml(config_path)
-    return Config()
+        config = Config.from_yaml(config_path)
+    
+    # Also load external keywords if available
+    keywords_path = Path("keywords.yaml")
+    if keywords_path.exists():
+        config.keywords = KeywordConfig.load(str(keywords_path))
+        
+    return config

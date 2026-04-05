@@ -1,0 +1,75 @@
+# Default target search queries for continuous scraping
+search_queries:
+  kongu_specific:
+    - "kongu"
+    - "coimbatore"
+    - "tiruppur"
+    - "erode"
+    - "salem"
+    - "namakkal"
+  broad_tn:
+    - "dmk"
+    - "admk"
+    - "tvk"
+    - "stalin"
+    - "eps"
+    - "vijay"
+
+# Classifiers for Region and Party tagging
+classifiers:
+  parties:
+    dmk:
+      - "dmk"
+      - "டிஎம்கே"
+      - "stalin"
+      - "ஸ்டாலின்"
+      - "udhay"
+      - "உதயநிதி"
+    admk:
+      - "admk"
+      - "aiadmk"
+      - "அதிமுக"
+      - "eps"
+      - "இபிஎஸ்"
+      - "ops"
+      - "ஓபிஎஸ்"
+    tvk:
+      - "tvk"
+      - "டி.வி.கே"
+      - "vijay"
+      - "விஜய்"
+      - "thalapathy"
+      
+  regions:
+    kongu:
+      - "kongu"
+      - "கொங்கு"
+      - "coimbatore"
+      - "கோயம்புத்தூர்"
+      - "kovai"
+      - "கோவை"
+      - "tiruppur"
+      - "tirupur"
+      - "திருப்பூர்"
+      - "palladam"
+      - "பல்லடம்"
+      - "erode"
+      - "ஈரோடு"
+      - "salem"
+      - "சேலம்"
+      - "namakkal"
+      - "நாமக்கல்"
+      - "karur"
+      - "கரூர்"
+      - "nilgiris"
+      - "நீலகிரி"
+      - "ooty"
+      - "ஊட்டி"
+      - "dharmapuri"
+      - "தருமபுரி"
+      - "krishnagiri"
+      - "கிருஷ்ணகிரி"
+      - "gobi"
+      - "கோபிசெட்டிபாளையம்"
+      - "pollachi"
+      - "பொள்ளாச்சி"
