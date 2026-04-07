@@ -69,6 +69,8 @@ def parse_arguments():
     parser.add_argument("--district", type=str, help="Filter search to a specific district (e.g. Coimbatore)")
     parser.add_argument("--store-all", action="store_true", help="Store all records, ignoring region filters")
     parser.add_argument("--limit", type=int, default=None, help="Stop scraping after collecting this many non-duplicated records")
+    parser.add_argument("--profile", type=str, help="Target a specific Instagram profile URL natively")
+    parser.add_argument("--profile-limit", type=int, default=20, help="Number of posts to extract from targeted profile")
     return parser.parse_args()
 
 async def run_login_mode(platform: str, sessions_dir: str):
@@ -539,6 +541,43 @@ if __name__ == "__main__":
             )
         if args.output_dir:
             config.export.output_dir = args.output_dir
+
+        if args.profile:
+            logger.info("=" * 70)
+            logger.info(f"TARGET PROFILE MODE: Scraping {args.profile}")
+            logger.info("=" * 70)
+            
+            session_path = os.path.join(os.getcwd(), args.sessions_dir, "instagram")
+            if not os.path.exists(session_path):
+                logger.warning("Targeted profile scraping likely requires an active Instagram session.")
+                logger.warning("Run 'python main.py --login instagram' if this fails.")
+                
+            scraper = InstagramScraper(headless=True, session_dir=session_path)
+            await scraper.start()
+            records = await scraper.scrape_profile(args.profile, post_limit=args.profile_limit)
+            await scraper.stop()
+            
+            if records:
+                logger.info(f"Targeted Extraction Complete: Found {len(records)} records (posts + comments)")
+                # Force NLP Enrichment
+                from nlp_pipeline import NLPPipeline
+                config.nlp.enabled = True 
+                pipe = NLPPipeline(config.nlp)
+                records = pipe.enrich_records(records)
+                
+                # Export explicitly using the profile name
+                profile_name = args.profile.rstrip("/").split("/")[-1]
+                if not profile_name:
+                    profile_name = "target_profile"
+                csv_path = f"{profile_name}.csv"
+                jsonl_path = f"{profile_name}.jsonl"
+                export_all(records, csv_path, jsonl_path)
+                logger.info(f"Successfully exported profile intelligence to {csv_path}!")
+            else:
+                logger.info("No records found or login triggered.")
+            
+            return # Exit after targeted run
+
 
         # Determine delay for infinite mode
         inf_cfg = getattr(config, "infinite_mode", None)
