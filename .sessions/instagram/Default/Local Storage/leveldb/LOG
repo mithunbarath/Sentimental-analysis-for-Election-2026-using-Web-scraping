@@ -1,3 +1,5 @@
-2026/04/07-14:00:49.020 e41c Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\Local Storage\leveldb/MANIFEST-000001
-2026/04/07-14:00:49.047 e41c Recovering log #81
-2026/04/07-14:00:49.053 e41c Reusing old log C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\Local Storage\leveldb/000081.log 
+2026/04/08-02:03:00.337 f6f0 Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\Local Storage\leveldb/MANIFEST-000001
+2026/04/08-02:03:00.357 f6f0 Recovering log #81
+2026/04/08-02:03:00.358 f6f0 Level-0 table #83: started
+2026/04/08-02:03:00.370 f6f0 Level-0 table #83: 18577 bytes OK
+2026/04/08-02:03:00.378 f6f0 Delete type=0 #81

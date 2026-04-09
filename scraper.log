@@ -6491,3 +6491,34 @@ KeyboardInterrupt
 2026-04-07 14:10:00,996 - exporter - INFO - Exported 207 records to CSV: aiadmkitwing_sulur_comments.csv
 2026-04-07 14:10:01,017 - exporter - INFO - Exported 207 records to JSONL: aiadmkitwing_sulur_comments.jsonl
 2026-04-07 14:10:01,018 - __main__ - INFO - Successfully exported profile intelligence to aiadmkitwing_sulur.csv!
+2026-04-08 02:02:41,199 - __main__ - INFO - ======================================================================
+2026-04-08 02:02:41,200 - __main__ - INFO - Kongu Region Politics Scraper - Starting
+2026-04-08 02:02:41,201 - __main__ - INFO - ======================================================================
+2026-04-08 02:02:41,240 - __main__ - INFO - ======================================================================
+2026-04-08 02:02:41,241 - __main__ - INFO - TARGET PROFILE MODE: Scraping https://www.instagram.com/kirthika_shivkumar/
+2026-04-08 02:02:41,242 - __main__ - INFO - ======================================================================
+2026-04-08 02:03:00,923 - instagram_scraper - INFO - Navigating to Profile: https://www.instagram.com/kirthika_shivkumar/
+2026-04-08 02:03:05,561 - instagram_scraper - INFO - Found 12 post links on profile https://www.instagram.com/kirthika_shivkumar/
+2026-04-08 02:03:05,562 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/kirthika_shivkumar/reel/DWqdt-lkxaI/
+2026-04-08 02:03:09,571 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/kirthika_shivkumar/reel/DW1lfs-E-Av/
+2026-04-08 02:03:13,597 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/kirthika_4_modakurichi/p/DW1YdRfCc9m/
+2026-04-08 02:03:17,642 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/kirthika_4_modakurichi/p/DW1X4RMCRtf/
+2026-04-08 02:03:21,180 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/kirthika_4_modakurichi/p/DW1McAWCT4D/
+2026-04-08 02:03:24,681 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/kirthika_shivkumar/reel/DW1EQ6tk4IH/
+2026-04-08 02:03:28,860 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/kirthika_shivkumar/reel/DW09tt5E7_F/
+2026-04-08 02:03:32,740 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/kirthika_shivkumar/reel/DW0lKsjE4Aq/
+2026-04-08 02:03:36,774 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/kirthika_shivkumar/reel/DW0YjY_ExVh/
+2026-04-08 02:03:40,441 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/kirthika_shivkumar/p/DWz3eQjE4To/
+2026-04-08 02:03:44,312 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/kirthika_shivkumar/p/DWzEC9qk3Dh/
+2026-04-08 02:03:48,149 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/kirthika_shivkumar/p/DWzA3dqE5A2/
+2026-04-08 02:03:52,799 - __main__ - INFO - Targeted Extraction Complete: Found 399 records (posts + comments)
+2026-04-08 02:07:47,617 - nlp_pipeline - INFO - Loading NLP model: cardiffnlp/twitter-xlm-roberta-base-sentiment …
+2026-04-08 02:07:54,417 - tensorflow - WARNING - From C:\Users\navee\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-04-08 02:08:08,069 - nlp_pipeline - INFO - NLP model loaded successfully.
+2026-04-08 02:08:13,308 - nlp_pipeline - INFO - NLP enrichment complete: 399 records processed. Sentiments — positive: 69, neutral: 305, negative: 25
+2026-04-08 02:08:13,312 - exporter - INFO - Exported 12 records to CSV: kirthika_shivkumar.csv
+2026-04-08 02:08:13,315 - exporter - INFO - Exported 12 records to JSONL: kirthika_shivkumar.jsonl
+2026-04-08 02:08:13,323 - exporter - INFO - Exported 387 records to CSV: kirthika_shivkumar_comments.csv
+2026-04-08 02:08:13,352 - exporter - INFO - Exported 387 records to JSONL: kirthika_shivkumar_comments.jsonl
+2026-04-08 02:08:13,352 - __main__ - INFO - Successfully exported profile intelligence to kirthika_shivkumar.csv!
