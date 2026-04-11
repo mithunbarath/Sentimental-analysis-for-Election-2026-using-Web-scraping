@@ -67,3 +67,67 @@ class YouTubeScraper(AsyncBaseScraper):
             logger.error(f"YouTube search failed for {keyword}: {e}")
             
         return records
+
+    async def scrape_profile(self, profile_url: str, post_limit: int = 20) -> List[SocialMediaRecord]:
+        """Navigate to a YouTube profile and collect videos."""
+        logger.info(f"Navigating to YouTube Profile videos: {profile_url}")
+        records = []
+        
+        try:
+            if not profile_url.endswith("/videos") and "@" in profile_url:
+                profile_url = profile_url.rstrip("/") + "/videos"
+                
+            response = await self.fetch(profile_url)
+            await self.human_delay(2, 4)
+            page = await self.get_page()
+            
+            await page.wait_for_selector('ytd-rich-grid-row', timeout=10000)
+            await self.scroll_to_bottom(page, max_scrolls=(post_limit // 5) + 1, delay=2.0)
+            
+            content = await page.content()
+            from scrapling import Selector
+            response = Selector(content, url=page.url)
+            
+            video_elements = response.css('ytd-rich-item-renderer')
+            if not video_elements:
+                video_elements = response.css('ytd-grid-video-renderer')
+                
+            logger.info(f"Found {len(video_elements)} videos on profile {profile_url}")
+            
+            author_name = profile_url.rstrip("/").replace("/videos", "").split("/")[-1]
+            if author_name.startswith("@"):
+                author_name = author_name[1:]
+            
+            for video in video_elements[:post_limit]:
+                try:
+                    title = video.css('#video-title::attr(title)').get() or video.css('#video-title::text').get()
+                    if not title:
+                        continue
+                        
+                    link = video.css('#video-title::attr(href)').get()
+                    full_link = f"https://www.youtube.com{link}" if link else ""
+                    
+                    if not "/watch" in link:
+                        continue
+                        
+                    video_id = link.split('=')[-1] if link and '=' in link else f"yt_{hash(title)}"
+                    
+                    record = SocialMediaRecord(
+                        platform="youtube",
+                        type="video",
+                        id=video_id,
+                        url=full_link,
+                        title=title,
+                        author=author_name,
+                        text=f"Title: {title}",
+                        timestamp=datetime.now(),
+                        source="scrapling_youtube_profile"
+                    )
+                    records.append(record)
+                except Exception as e:
+                    pass
+                    
+        except Exception as e:
+            logger.error(f"YouTube profile extraction failed for {profile_url}: {e}")
+            
+        return records

@@ -70,6 +70,9 @@ def parse_arguments():
     parser.add_argument("--store-all", action="store_true", help="Store all records, ignoring region filters")
     parser.add_argument("--limit", type=int, default=None, help="Stop scraping after collecting this many non-duplicated records")
     parser.add_argument("--profile", type=str, help="Target a specific Instagram profile URL natively")
+    parser.add_argument("--politician", type=str, help="Name of the politician to associate with the profiles")
+    parser.add_argument("--profiles", type=str, nargs="+", help="List of profile URLs (Instagram, Twitter, YouTube)")
+    parser.add_argument("--target-profiles", action="store_true", help="Scrape explicit target profiles defined in config.yaml")
     parser.add_argument("--profile-limit", type=int, default=20, help="Number of posts to extract from targeted profile")
     return parser.parse_args()
 
@@ -571,12 +574,134 @@ if __name__ == "__main__":
                     profile_name = "target_profile"
                 csv_path = f"{profile_name}.csv"
                 jsonl_path = f"{profile_name}.jsonl"
+                from exporter import export_all
                 export_all(records, csv_path, jsonl_path)
                 logger.info(f"Successfully exported profile intelligence to {csv_path}!")
             else:
                 logger.info("No records found or login triggered.")
             
             return # Exit after targeted run
+
+
+        if args.target_profiles:
+            logger.info("=" * 70)
+            logger.info("TARGET PROFILES MODE (YAML)")
+            logger.info("=" * 70)
+            
+            if not config.target_profiles:
+                logger.error("No target_profiles defined in config.yaml")
+                return
+                
+            from exporter import export_all
+                
+            for target in config.target_profiles:
+                logger.info(f"--- Processing Politician: {target.name} ---")
+                target_records = []
+                
+                # Twitter
+                if target.twitter:
+                    tw_session = os.path.join(os.getcwd(), args.sessions_dir, "twitter")
+                    scraper = TwitterScraper(headless=True, session_dir=tw_session)
+                    await scraper.start()
+                    records = await scraper.scrape_profile(target.twitter, post_limit=args.profile_limit)
+                    await scraper.stop()
+                    target_records.extend(records)
+                
+                # YouTube
+                if target.youtube:
+                    yt_session = os.path.join(os.getcwd(), args.sessions_dir, "youtube")
+                    scraper = YouTubeScraper(headless=True, session_dir=yt_session)
+                    await scraper.start()
+                    records = await scraper.scrape_profile(target.youtube, post_limit=args.profile_limit)
+                    await scraper.stop()
+                    target_records.extend(records)
+                    
+                # Instagram
+                if target.instagram:
+                    ig_session = os.path.join(os.getcwd(), args.sessions_dir, "instagram")
+                    scraper = InstagramScraper(headless=True, session_dir=ig_session)
+                    await scraper.start()
+                    records = await scraper.scrape_profile(target.instagram, post_limit=args.profile_limit)
+                    await scraper.stop()
+                    target_records.extend(records)
+                    
+                if target_records:
+                    logger.info(f"Extracted {len(target_records)} total records across platforms for {target.name}")
+                    
+                    if getattr(config.nlp, "enabled", True):
+                        from nlp_pipeline import NLPPipeline
+                        pipe = NLPPipeline(config.nlp)
+                        target_records = pipe.enrich_records(target_records)
+                        
+                    csv_path = f"{target.name}_data.csv"
+                    jsonl_path = f"{target.name}_data.jsonl"
+                    out_dir = getattr(config.export, "output_dir", "output")
+                    Path(out_dir).mkdir(parents=True, exist_ok=True)
+                    export_all(target_records, str(Path(out_dir) / csv_path), str(Path(out_dir) / jsonl_path))
+                    logger.info(f"Saved {target.name} intelligence to {csv_path}")
+                else:
+                    logger.info(f"No records found for {target.name}")
+            return
+
+
+        if args.politician and args.profiles:
+            logger.info("=" * 70)
+            logger.info(f"TARGET PROFILES MODE (CLI) for Politician: {args.politician}")
+            logger.info("=" * 70)
+            
+            from exporter import export_all
+            target_records = []
+            
+            for profile_url in args.profiles:
+                logger.info(f"Processing URL: {profile_url}")
+                
+                if "twitter.com" in profile_url or "x.com" in profile_url:
+                    tw_session = os.path.join(os.getcwd(), args.sessions_dir, "twitter")
+                    scraper = TwitterScraper(headless=True, session_dir=tw_session)
+                    await scraper.start()
+                    records = await scraper.scrape_profile(profile_url, post_limit=args.profile_limit)
+                    await scraper.stop()
+                    target_records.extend(records)
+                
+                elif "youtube.com" in profile_url or "youtu.be" in profile_url:
+                    yt_session = os.path.join(os.getcwd(), args.sessions_dir, "youtube")
+                    scraper = YouTubeScraper(headless=True, session_dir=yt_session)
+                    await scraper.start()
+                    records = await scraper.scrape_profile(profile_url, post_limit=args.profile_limit)
+                    await scraper.stop()
+                    target_records.extend(records)
+                    
+                elif "instagram.com" in profile_url:
+                    ig_session = os.path.join(os.getcwd(), args.sessions_dir, "instagram")
+                    scraper = InstagramScraper(headless=True, session_dir=ig_session)
+                    await scraper.start()
+                    records = await scraper.scrape_profile(profile_url, post_limit=args.profile_limit)
+                    await scraper.stop()
+                    target_records.extend(records)
+                    
+                else:
+                    logger.warning(f"Unsupported or unrecognized platform for URL: {profile_url}")
+                    
+            if target_records:
+                logger.info(f"Extracted {len(target_records)} total records for {args.politician}")
+                
+                if getattr(config.nlp, "enabled", True):
+                    from nlp_pipeline import NLPPipeline
+                    pipe = NLPPipeline(config.nlp)
+                    target_records = pipe.enrich_records(target_records)
+                    
+                safe_name = args.politician.replace(" ", "_")
+                csv_path = f"{safe_name}_data.csv"
+                jsonl_path = f"{safe_name}_data.jsonl"
+                out_dir = getattr(config.export, "output_dir", "output")
+                Path(out_dir).mkdir(parents=True, exist_ok=True)
+                export_all(target_records, str(Path(out_dir) / csv_path), str(Path(out_dir) / jsonl_path))
+                logger.info(f"Saved {args.politician} intelligence to {csv_path} and {jsonl_path}")
+            else:
+                logger.info(f"No records found for {args.politician}")
+                
+            return
+
 
 
         # Determine delay for infinite mode

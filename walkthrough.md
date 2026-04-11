@@ -45,3 +45,28 @@ python main.py --platforms all --keywords "dmk" "admk" --verbose
 The results are consolidated in:
 - [output/palladam_politics_data.csv](file:///c:/Users/navee/Downloads/claude-brightdata-scraper/output/palladam_politics_data.csv)
 - [output/palladam_politics_data.jsonl](file:///c:/Users/navee/Downloads/claude-brightdata-scraper/output/palladam_politics_data.jsonl)
+
+---
+
+# Multi-Platform Targeted Profiling
+
+We have seamlessly upgraded the architecture to support direct profile intelligence gathering. Instead of exclusively parsing organic searches or just Instagram profiles, the scraper can now be explicitly targeted at specific public figures bridging multiple platforms dynamically through the CLI logic.
+
+### Structural Updates
+- **`twitter_scraper.py`**: Added `scrape_profile()` logic to gracefully traverse user tweet grids, bypassing heavy keyword search API bottlenecks.
+- **`youtube_scraper.py`**: Added `scrape_profile()` traversing user video sections parsing uploads correctly.
+- **`main.py`**: Introduced explicit execution flags (`--politician` & `--profiles`) binding cross-platform links automatically and grouping the data export into cleanly segmented datasets.
+
+> [!TIP]
+> When defining the URLs, be sure to provide complete links (e.g. `https://www.youtube.com/@mkstalin`).
+
+### Example Execution
+To start an extraction passing multi-platform intelligence endpoints for a politician named "MK_Stalin":
+
+```powershell
+python main.py --politician "MK_Stalin" --profiles "https://www.instagram.com/mkstalin" "https://twitter.com/mkstalin" "https://www.youtube.com/@mkstalin"
+```
+
+The parsed intelligence will automatically traverse NLP enrichment and be deposited dynamically in:
+- `output/MK_Stalin_data.csv`
+- `output/MK_Stalin_data.jsonl`

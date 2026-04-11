@@ -140,15 +140,19 @@ class AsyncBaseScraper:
             return pages[0]
         return await self.session.context.new_page()
 
-    async def scroll_to_bottom(self, page_action_context, max_scrolls: int = 10, delay: float = 1.5):
-        """
-        Scroll to the bottom. 
-        Note: Scrapling handles most scrolling via its internal engines, 
-        but we can provide a page_action if needed.
-        """
-        # Scrapling's AsyncStealthySession.fetch returns a Response which has a Selector.
-        # For actual scrolling, we usually use page_action in fetch().
-        pass
+    async def scroll_to_bottom(self, page, max_scrolls: int = 10, delay: float = 1.5):
+        """Scroll to the bottom of the page natively using the underlying Playwright API."""
+        try:
+            previous_height = await page.evaluate("document.documentElement.scrollHeight")
+            for _ in range(max_scrolls):
+                await page.evaluate("window.scrollTo(0, document.documentElement.scrollHeight)")
+                await asyncio.sleep(delay)
+                new_height = await page.evaluate("document.documentElement.scrollHeight")
+                if new_height == previous_height:
+                    break
+                previous_height = new_height
+        except Exception as e:
+            logger.warning(f"Error while scrolling: {e}")
 
     async def human_delay(self, min_sec: float = 1.0, max_sec: float = 3.0):
         """Simulate human-like delay."""

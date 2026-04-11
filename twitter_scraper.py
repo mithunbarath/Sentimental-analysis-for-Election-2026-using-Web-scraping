@@ -88,3 +88,65 @@ class TwitterScraper(AsyncBaseScraper):
             await self.save_debug_screenshot(f"twitter_error_{keyword}")
             
         return records
+
+    async def scrape_profile(self, profile_url: str, post_limit: int = 20) -> List[SocialMediaRecord]:
+        """Navigate to a Twitter profile and collect tweets."""
+        logger.info(f"Navigating to Twitter Profile: {profile_url}")
+        records = []
+        
+        try:
+            response = await self.fetch(profile_url)
+            page = await self.get_page()
+            
+            if "login" in str(page.url).lower() and not self.session_dir:
+                logger.warning(f"Profile {profile_url} redirected to login. Consider establishing a session.")
+                # We can still try sometimes Twitter lets you see the first few tweets
+                
+            try:
+                await page.wait_for_selector('[data-testid="tweet"]', timeout=5000)
+            except Exception:
+                pass # Might not exist if blocked
+                
+            await self.scroll_to_bottom(page, max_scrolls=(post_limit // 5) + 1, delay=2.0)
+            
+            content = await page.content()
+            from scrapling import Selector
+            response = Selector(content, url=page.url)
+            
+            tweet_elements = response.css('[data-testid="tweet"]')
+            logger.info(f"Found {len(tweet_elements)} tweets on profile {profile_url}")
+            
+            author_name = profile_url.rstrip("/").split("/")[-1]
+            
+            for tweet in tweet_elements[:post_limit]:
+                try:
+                    text_nodes = tweet.css('[data-testid="tweetText"]')
+                    text = text_nodes[0].text if text_nodes else None
+                    if not text:
+                        text = tweet.css('[data-testid="tweetText"]::text').get()
+                    
+                    if not text:
+                        continue
+                        
+                    time_link = tweet.css('time').parent().css('a::attr(href)').get()
+                    tweet_url = f"https://twitter.com{time_link}" if time_link else ""
+                    
+                    tweet_id = tweet_url.split('/')[-1] if tweet_url and '/' in tweet_url else f"tw_{hash(text)}"
+                    
+                    record = SocialMediaRecord(
+                        platform="twitter",
+                        type="post",
+                        id=tweet_id,
+                        url=tweet_url,
+                        text=text,
+                        author=author_name,
+                        timestamp=datetime.now(),
+                        source="scrapling_twitter_profile"
+                    )
+                    records.append(record)
+                except Exception as e:
+                    pass
+        except Exception as e:
+            logger.error(f"Twitter profile extraction failed for {profile_url}: {e}")
+            
+        return records

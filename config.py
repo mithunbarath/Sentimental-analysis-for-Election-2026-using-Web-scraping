@@ -312,6 +312,14 @@ class KeywordConfig:
         )
 
 @dataclass
+class TargetProfileConfig:
+    """Target profiles for cross-platform extraction per politician."""
+    name: str = ""
+    instagram: str = ""
+    twitter: str = ""
+    youtube: str = ""
+
+@dataclass
 class Config:
     """Main configuration class containing all settings."""
 
@@ -334,7 +342,7 @@ class Config:
     firebase: FirebaseConfig = field(default_factory=FirebaseConfig)
     nlp: NLPConfig = field(default_factory=NLPConfig)
     keywords: KeywordConfig = field(default_factory=KeywordConfig)
-
+    target_profiles: List[TargetProfileConfig] = field(default_factory=list)
     log_level: str = "INFO"
     enable_which_platforms: List[str] = field(default_factory=lambda: [
         "instagram", "facebook", "youtube", "twitter"
@@ -395,6 +403,8 @@ class Config:
             config.firebase = FirebaseConfig(**data["firebase"])
         if "nlp" in data:
             config.nlp = NLPConfig(**data["nlp"])
+        if "target_profiles" in data:
+            config.target_profiles = [TargetProfileConfig(**tp) for tp in data["target_profiles"]]
         if "general" in data:
             config.log_level = data["general"].get("log_level", "INFO")
             config.enable_which_platforms = data["general"].get("enable_which_platforms", config.enable_which_platforms)

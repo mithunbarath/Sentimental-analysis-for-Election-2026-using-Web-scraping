@@ -6522,3 +6522,149 @@ KeyboardInterrupt
 2026-04-08 02:08:13,323 - exporter - INFO - Exported 387 records to CSV: kirthika_shivkumar_comments.csv
 2026-04-08 02:08:13,352 - exporter - INFO - Exported 387 records to JSONL: kirthika_shivkumar_comments.jsonl
 2026-04-08 02:08:13,352 - __main__ - INFO - Successfully exported profile intelligence to kirthika_shivkumar.csv!
+2026-04-11 22:29:40,394 - __main__ - INFO - ======================================================================
+2026-04-11 22:29:40,394 - __main__ - INFO - Kongu Region Politics Scraper - Starting
+2026-04-11 22:29:40,396 - __main__ - INFO - ======================================================================
+2026-04-11 22:29:40,412 - __main__ - INFO - ======================================================================
+2026-04-11 22:29:40,413 - __main__ - INFO - TARGET PROFILES MODE (CLI) for Politician: MK Stalin
+2026-04-11 22:29:40,413 - __main__ - INFO - ======================================================================
+2026-04-11 22:29:40,413 - __main__ - INFO - Processing URL: https://www.instagram.com/mkstalin
+2026-04-11 22:29:42,400 - __main__ - INFO - Interrupted by user. Exiting cleanly.
+2026-04-11 22:32:15,885 - __main__ - INFO - ======================================================================
+2026-04-11 22:32:15,885 - __main__ - INFO - Kongu Region Politics Scraper - Starting
+2026-04-11 22:32:15,886 - __main__ - INFO - ======================================================================
+2026-04-11 22:32:15,898 - __main__ - INFO - ======================================================================
+2026-04-11 22:32:15,898 - __main__ - INFO - TARGET PROFILES MODE (CLI) for Politician: Vanathi
+2026-04-11 22:32:15,899 - __main__ - INFO - ======================================================================
+2026-04-11 22:32:15,899 - __main__ - INFO - Processing URL: https://www.instagram.com/vanathibjp
+2026-04-11 22:32:24,946 - instagram_scraper - INFO - Navigating to Profile: https://www.instagram.com/vanathibjp
+2026-04-11 22:32:35,123 - instagram_scraper - INFO - Found 0 post links on profile https://www.instagram.com/vanathibjp
+2026-04-11 22:32:35,623 - __main__ - INFO - Processing URL: https://twitter.com/VanathiBJP
+2026-04-11 22:32:37,298 - twitter_scraper - INFO - Navigating to Twitter Profile: https://twitter.com/VanathiBJP
+2026-04-11 22:32:49,464 - twitter_scraper - INFO - Found 0 tweets on profile https://twitter.com/VanathiBJP
+2026-04-11 22:32:49,927 - __main__ - INFO - Processing URL: https://www.youtube.com/@SrinivasanVanathibjp
+2026-04-11 22:32:51,414 - youtube_scraper - INFO - Navigating to YouTube Profile videos: https://www.youtube.com/@SrinivasanVanathibjp
+2026-04-11 22:33:06,175 - youtube_scraper - INFO - Found 28 videos on profile https://www.youtube.com/@SrinivasanVanathibjp/videos
+2026-04-11 22:33:06,616 - __main__ - INFO - No records found for Vanathi
+2026-04-11 22:54:17,144 - __main__ - INFO - ======================================================================
+2026-04-11 22:54:17,144 - __main__ - INFO - Kongu Region Politics Scraper - Starting
+2026-04-11 22:54:17,144 - __main__ - INFO - ======================================================================
+2026-04-11 22:54:17,154 - __main__ - INFO - ======================================================================
+2026-04-11 22:54:17,155 - __main__ - INFO - TARGET PROFILE MODE: Scraping https://www.instagram.com/vanathibjp
+2026-04-11 22:54:17,155 - __main__ - INFO - ======================================================================
+2026-04-11 22:54:18,642 - instagram_scraper - INFO - Navigating to Profile: https://www.instagram.com/vanathibjp
+2026-04-11 22:54:26,389 - __main__ - INFO - Interrupted by user. Exiting cleanly.
+2026-04-11 22:54:26,443 - base_scraper - WARNING - Error while scrolling: Page.evaluate: Target page, context or browser has been closed
+2026-04-11 22:54:26,444 - instagram_scraper - ERROR - Profile extraction failed for https://www.instagram.com/vanathibjp: Page.content: Target page, context or browser has been closed
+2026-04-11 22:54:26,454 - base_scraper - WARNING - Failed to save debug info: BrowserContext.new_page: Protocol error (Target.createTarget): Failed to open a new tab
+2026-04-11 22:54:26,785 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=Exception('Connection closed while reading from the driver')>
+Exception: Connection closed while reading from the driver
+2026-04-11 22:55:02,313 - __main__ - INFO - ======================================================================
+2026-04-11 22:55:02,313 - __main__ - INFO - Kongu Region Politics Scraper - Starting
+2026-04-11 22:55:02,313 - __main__ - INFO - ======================================================================
+2026-04-11 22:55:02,332 - __main__ - INFO - ======================================================================
+2026-04-11 22:55:02,334 - __main__ - INFO - TARGET PROFILE MODE: Scraping https://www.instagram.com/dsenthamilselvan
+2026-04-11 22:55:02,334 - __main__ - INFO - ======================================================================
+2026-04-11 22:55:05,422 - instagram_scraper - INFO - Navigating to Profile: https://www.instagram.com/dsenthamilselvan
+2026-04-11 22:55:25,301 - instagram_scraper - INFO - Found 12 post links on profile https://www.instagram.com/dsenthamilselvan
+2026-04-11 22:55:25,307 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DW_lNjEgYFk/
+2026-04-11 22:55:37,191 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DW-7dpzgXh2/
+2026-04-11 22:55:44,829 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DW-QCgfAZrn/
+2026-04-11 22:55:53,380 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/reel/DW8ZqnUkzEw/
+2026-04-11 22:55:58,944 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DW8E2VhgcyB/
+2026-04-11 22:56:06,572 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/reel/DW5utB2k5qe/
+2026-04-11 22:56:16,897 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/reel/DW5t_9Kilf-/
+2026-04-11 22:56:23,872 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DW4Q4Jhga25/
+2026-04-11 22:56:32,628 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/reel/DW3kyaZk7Tl/
+2026-04-11 22:56:40,533 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DW3VlEJAXcw/
+2026-04-11 22:56:49,608 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DW3VbEsgRJc/
+2026-04-11 22:56:56,246 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/reel/DW3TyFuk-ko/
+2026-04-11 22:57:08,832 - __main__ - INFO - Targeted Extraction Complete: Found 244 records (posts + comments)
+2026-04-11 22:59:39,532 - nlp_pipeline - INFO - Loading NLP model: cardiffnlp/twitter-xlm-roberta-base-sentiment …
+2026-04-11 22:59:45,711 - tensorflow - WARNING - From C:\Users\navee\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-04-11 23:00:00,575 - nlp_pipeline - INFO - NLP model loaded successfully.
+2026-04-11 23:00:05,479 - nlp_pipeline - INFO - NLP enrichment complete: 244 records processed. Sentiments — positive: 8, neutral: 221, negative: 15
+2026-04-11 23:02:59,575 - __main__ - INFO - ======================================================================
+2026-04-11 23:02:59,575 - __main__ - INFO - Kongu Region Politics Scraper - Starting
+2026-04-11 23:02:59,575 - __main__ - INFO - ======================================================================
+2026-04-11 23:02:59,587 - __main__ - INFO - ======================================================================
+2026-04-11 23:02:59,587 - __main__ - INFO - TARGET PROFILE MODE: Scraping https://www.instagram.com/dsenthamilselvan
+2026-04-11 23:02:59,588 - __main__ - INFO - ======================================================================
+2026-04-11 23:03:01,326 - instagram_scraper - INFO - Navigating to Profile: https://www.instagram.com/dsenthamilselvan
+2026-04-11 23:03:52,443 - instagram_scraper - INFO - Found 63 post links on profile https://www.instagram.com/dsenthamilselvan
+2026-04-11 23:03:52,443 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTo9WCxgTfo/
+2026-04-11 23:03:57,185 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DThgv6IAROn/
+2026-04-11 23:04:01,360 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DThAPaoCO5K/
+2026-04-11 23:04:05,599 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTc0zUogUtb/
+2026-04-11 23:04:10,668 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTa5jEtgZoP/
+2026-04-11 23:04:14,624 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTZkEy8gf3s/
+2026-04-11 23:04:19,068 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTZYpfMAVOz/
+2026-04-11 23:04:23,377 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTXZvObgRoa/
+2026-04-11 23:04:27,437 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTXZLMzgU77/
+2026-04-11 23:04:31,460 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTXYCvYgY72/
+2026-04-11 23:04:34,953 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTXGjpKgUDC/
+2026-04-11 23:04:38,496 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTUj0NRgWQY/
+2026-04-11 23:04:42,734 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTUiNDKAejF/
+2026-04-11 23:04:46,183 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTSDy4_Aa6o/
+2026-04-11 23:04:50,212 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTQhEkYgYX2/
+2026-04-11 23:04:54,476 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTPg501AcDL/
+2026-04-11 23:04:58,309 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTPVmM2AXhK/
+2026-04-11 23:05:02,810 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTN7QKiARty/
+2026-04-11 23:05:08,365 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTNLJ5bAU5p/
+2026-04-11 23:05:12,836 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTH2stfAf2C/
+2026-04-11 23:05:17,098 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTH2h-MgaQi/
+2026-04-11 23:05:21,228 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTHsgnYAViz/
+2026-04-11 23:05:26,439 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTHq6yjgfzf/
+2026-04-11 23:05:31,410 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTHoBF-AR0b/
+2026-04-11 23:05:35,722 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTHZkcAgQB6/
+2026-04-11 23:05:39,739 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTGJD5JAZu8/
+2026-04-11 23:05:43,286 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTFl0i2AVCo/
+2026-04-11 23:05:47,041 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTFIpttgdlP/
+2026-04-11 23:05:50,691 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTDqEh5gTUa/
+2026-04-11 23:05:54,787 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTDo0xdAaKE/
+2026-04-11 23:05:58,847 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTCd1K2gQn2/
+2026-04-11 23:06:02,616 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTCQ2yvAYyo/
+2026-04-11 23:06:06,700 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTCQ2NQgcWT/
+2026-04-11 23:06:10,345 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTA8PThgXaB/
+2026-04-11 23:06:14,186 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTAtoPHgTcN/
+2026-04-11 23:06:18,439 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DTAF079AZhV/
+2026-04-11 23:06:22,665 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DS_xPaRgYCK/
+2026-04-11 23:06:26,390 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DS9IsltgTh3/
+2026-04-11 23:06:30,203 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DS7t6aWAZ_B/
+2026-04-11 23:06:34,281 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DS2txFMAWdD/
+2026-04-11 23:06:37,947 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DS11buSgZ3g/
+2026-04-11 23:06:41,557 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DS1j6T6gQCz/
+2026-04-11 23:06:45,296 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DS0NagJgREA/
+2026-04-11 23:06:49,308 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DSxV7T7gXHq/
+2026-04-11 23:06:52,887 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DSwsLHqAX3S/
+2026-04-11 23:06:56,925 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DSv_TkZgWS2/
+2026-04-11 23:07:01,137 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DSpzaRMgbt_/
+2026-04-11 23:07:04,985 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DSopBfTgdRy/
+2026-04-11 23:07:09,347 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DSoSLXSgQ90/
+2026-04-11 23:07:12,924 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DSl90Y5gYBE/
+2026-04-11 23:07:16,467 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DSkqLGRgUKQ/
+2026-04-11 23:07:20,074 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DSkqGSZAVM0/
+2026-04-11 23:07:23,956 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DSj2SNFAdZW/
+2026-04-11 23:07:27,771 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DSjdXKpAZKR/
+2026-04-11 23:07:31,541 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DSiHD97gVfi/
+2026-04-11 23:07:35,820 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DShxR49DVq5/
+2026-04-11 23:07:39,965 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DShj-qhASXH/
+2026-04-11 23:07:44,211 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DShK_65gd9U/
+2026-04-11 23:07:48,390 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DSeBp4RgQfz/
+2026-04-11 23:07:53,367 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DSdNR4Vlk3U/
+2026-04-11 23:07:57,516 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DSdIotjgZIK/
+2026-04-11 23:08:01,386 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DSc_rw_AVZt/
+2026-04-11 23:08:05,213 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/dsenthamilselvan/p/DScQ9KOgTf7/
+2026-04-11 23:08:09,583 - __main__ - INFO - Targeted Extraction Complete: Found 1208 records (posts + comments)
+2026-04-11 23:08:24,690 - nlp_pipeline - INFO - Loading NLP model: cardiffnlp/twitter-xlm-roberta-base-sentiment …
+2026-04-11 23:08:28,251 - tensorflow - WARNING - From C:\Users\navee\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-04-11 23:08:34,930 - nlp_pipeline - INFO - NLP model loaded successfully.
+2026-04-11 23:08:47,560 - nlp_pipeline - INFO - NLP enrichment complete: 1208 records processed. Sentiments — positive: 30, neutral: 1113, negative: 65
+2026-04-11 23:08:47,564 - exporter - INFO - Exported 63 records to CSV: dsenthamilselvan.csv
+2026-04-11 23:08:47,569 - exporter - INFO - Exported 63 records to JSONL: dsenthamilselvan.jsonl
+2026-04-11 23:08:47,583 - exporter - INFO - Exported 1145 records to CSV: dsenthamilselvan_comments.csv
+2026-04-11 23:08:47,628 - exporter - INFO - Exported 1145 records to JSONL: dsenthamilselvan_comments.jsonl
+2026-04-11 23:08:47,628 - __main__ - INFO - Successfully exported profile intelligence to dsenthamilselvan.csv!

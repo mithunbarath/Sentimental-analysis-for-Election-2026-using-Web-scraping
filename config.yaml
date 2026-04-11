@@ -250,3 +250,16 @@ nlp:
   model_name: "cardiffnlp/twitter-xlm-roberta-base-sentiment"
   batch_size: 16                # records per inference batch
   trend_window_size: 100        # rolling window size for trend scoring
+
+# ── Target Profiles ────────────────────────────────────────────────────────────
+# Specify multi-platform URLs for targeted scraping of specific politicians.
+
+target_profiles:
+  - name: "Annamalai"
+    instagram: "https://www.instagram.com/annamalai_k"
+    twitter: "https://twitter.com/annamalai_k"
+    youtube: "https://www.youtube.com/@AnnamalaiK"
+  - name: "MK_Stalin"
+    instagram: "https://www.instagram.com/mkstalin"
+    twitter: "https://twitter.com/mkstalin"
+    youtube: "https://www.youtube.com/@mkstalin"

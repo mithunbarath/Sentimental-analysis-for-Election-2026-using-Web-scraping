@@ -102,6 +102,11 @@ class InstagramScraper(AsyncBaseScraper):
                 logger.warning(f"Profile {profile_url} redirected to login. You MUST establish a session.")
                 return []
                 
+            try:
+                await page.wait_for_load_state("networkidle", timeout=5000)
+            except Exception:
+                pass
+                
             # Scroll the grid ensuring enough posts render
             await self.scroll_to_bottom(page, max_scrolls=(post_limit // 6) + 2, delay=2.0)
             content = await page.content()
