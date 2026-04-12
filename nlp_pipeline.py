@@ -26,6 +26,10 @@ import logging
 import re
 from collections import Counter
 from typing import List, Optional
+try:
+    import emoji
+except ImportError:
+    emoji = None
 
 from models import SocialMediaRecord
 
@@ -70,6 +74,55 @@ def _keyword_score(text: str) -> float:
     text_lower = text.lower()
     hits = sum(1 for kw in _TREND_KEYWORDS if kw.lower() in text_lower)
     return min(hits / max(len(_TREND_KEYWORDS), 1), 1.0)
+
+
+def _clean_for_sentiment(text: str) -> str:
+    """
+    Temporary preprocessing of comment strings specifically for the ML model,
+    leaving the original text unchanged in the database/csv.
+    Applies user-defined rules: emoji mapping, Tanglish dictionaries, and noise filtering.
+    """
+    if not text:
+        return ""
+    
+    # Clean URLs, Mentions, Hashtags
+    text = re.sub(r'http\S+|www.\S+|@\w+|#\w+', '', text)
+    
+    # 1. Map explicit emojis to words so ML picks up positive/negative weights
+    text = text.replace('😂', ' laugh ').replace('😡', ' angry ').replace('🔥', ' fire ').replace('❤️', ' love ')
+    text = text.replace('👍', ' good ').replace('👎', ' bad ').replace('😭', ' cry ').replace('🙏', ' respect ')
+    
+    # Demojize remaining as text
+    if emoji:
+        text = emoji.demojize(text, delimiters=(" ", " "))
+
+    # 2. Trim repeated characters (e.g. goooooood -> good, semmaaaaa -> semma)
+    text = re.sub(r'(.)\1{2,}', r'\1', text)
+    
+    text_lower = text.lower()
+    
+    # 3. Handle Tanglish explicit mappings
+    tanglish_map = {
+        "semma": "very good",
+        "mokai": "bad joke",
+        "mokka": "bad joke",
+        "vera level": "excellent",
+        "veralevel": "excellent",
+        "mass ah iruku": "very impressive",
+        "super": "good",
+        "waste": "bad",
+    }
+    for k, v in tanglish_map.items():
+        text_lower = text_lower.replace(k, v)
+        
+    text_lower = text_lower.strip()
+    
+    # Noise filter
+    if len(text_lower) <= 2 and text_lower not in ['ok', 'no']:
+        return "noise"
+        
+    return text_lower
+
 
 
 class NLPPipeline:
@@ -121,8 +174,10 @@ class NLPPipeline:
             if rec.text:
                 parts.append(rec.text)
             combined = " ".join(parts).strip()
+            # Apply temporary preprocessing for the ML model so it grades the "cleaned" meaning
+            cleaned = _clean_for_sentiment(combined)
             # Truncate to 512 chars (model max tokens ~512 sub-words)
-            texts.append(combined[:512] if combined else "")
+            texts.append(cleaned[:512] if cleaned else "")
         return texts
 
     def _compute_trend_scores(

@@ -17,7 +17,7 @@ playwright>=1.42.0
 playwright-stealth>=1.0.6
 crawl4ai>=0.2.0
 aiohttp>=3.9.0
-scrapling>=0.2.9
+scrapling>=0.4.2
 curl_cffi>=0.7.0
 w3lib>=2.1.0
 
@@ -47,5 +47,6 @@ simhash>=2.1.0
 transformers>=4.40.0
 sentencepiece>=0.2.0
 torch>=2.2.0
+emoji>=2.11.0
 # CPU-only torch is sufficient; GPU optional
 # If you have CUDA: pip install torch --index-url https://download.pytorch.org/whl/cu121

@@ -147,13 +147,40 @@ class InstagramScraper(AsyncBaseScraper):
                     desc = post_selector.css('meta[property="og:description"]::attr(content)').get() or ""
                     
                     # Look for span lists carrying conversational strings (comments)
-                    comments = post_selector.css('ul li > div > div > div > span::text').getall()
-                    if not comments:
-                        comments = post_selector.css('span[dir="auto"]::text').getall()
+                    comments_raw = post_selector.css('ul li > div > div > div > span::text').getall()
+                    if not comments_raw:
+                        # Fallback, but only grab spans that aren't obviously usernames/dates
+                        comments_raw = post_selector.css('span[dir="auto"]::text').getall()
                     
+                    comments = []
+                    for c in comments_raw:
+                        c_clean = c.strip()
+                        # Filter out common UI strings and apparent usernames (no spaces, _ or . present)
+                        if len(c_clean) < 2 or c_clean == "Verified": continue
+                        if len(c_clean.split()) == 1 and ('_' in c_clean or '.' in c_clean): continue
+                        comments.append(c_clean)
+                        
                     # Clean up descriptions
                     caption_text = desc.split(":", 1)[1].strip() if ":" in desc else desc
                     author_name = profile_url.rstrip("/").split("/")[-1]
+                    
+                    import re
+                    like_count = comment_count = view_count = None
+                    try:
+                        stats_part = desc.split("-")[0].lower()
+                        def parse_metric(pattern, text):
+                            m = re.search(pattern, text)
+                            if m:
+                                v = m.group(1).replace(',', '')
+                                if 'k' in v: return int(float(v.replace('k', '')) * 1000)
+                                if 'm' in v: return int(float(v.replace('m', '')) * 1000000)
+                                return int(v)
+                            return None
+                        like_count = parse_metric(r'([\d,km.]+)\s*likes?', stats_part)
+                        comment_count = parse_metric(r'([\d,km.]+)\s*comments?', stats_part)
+                        view_count = parse_metric(r'([\d,km.]+)\s*views?', stats_part)
+                    except Exception:
+                        pass
                     
                     post_record = SocialMediaRecord(
                         platform="instagram",
@@ -162,6 +189,9 @@ class InstagramScraper(AsyncBaseScraper):
                         url=full_link,
                         text=caption_text,
                         author=author_name,
+                        like_count=like_count,
+                        comment_count=comment_count,
+                        view_count=view_count,
                         timestamp=datetime.now(),
                         source="scrapling_instagram_profile"
                     )

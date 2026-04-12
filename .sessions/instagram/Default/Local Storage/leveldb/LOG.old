@@ -1,22 +1,19 @@
-2026/04/12-19:31:47.217 115a4 Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\Local Storage\leveldb/MANIFEST-000001
-2026/04/12-19:31:47.228 115a4 Recovering log #94
-2026/04/12-19:31:47.229 115a4 Level-0 table #97: started
-2026/04/12-19:31:47.240 115a4 Level-0 table #97: 29247 bytes OK
-2026/04/12-19:31:47.242 115a4 Recovering log #96
-2026/04/12-19:31:47.254 115a4 Reusing old log C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\Local Storage\leveldb/000096.log 
-2026/04/12-19:31:47.257 115a4 Delete type=0 #94
-2026/04/12-19:31:47.259 12254 Compacting 4@0 + 1@1 files
-2026/04/12-19:31:47.276 12254 Generated table #98@0: 108 keys, 32292 bytes
-2026/04/12-19:31:47.276 12254 Compacted 4@0 + 1@1 files => 32292 bytes
-2026/04/12-19:31:47.278 12254 compacted to: files[ 0 1 0 0 0 0 0 ]
-2026/04/12-19:31:47.279 12254 Delete type=2 #89
-2026/04/12-19:31:47.279 12254 Delete type=2 #91
-2026/04/12-19:31:47.279 12254 Delete type=2 #93
-2026/04/12-19:31:47.279 12254 Delete type=2 #95
-2026/04/12-19:31:47.279 12254 Delete type=2 #97
-2026/04/12-19:34:48.060 12254 Level-0 table #100: started
-2026/04/12-19:34:48.075 12254 Level-0 table #100: 24905 bytes OK
-2026/04/12-19:34:48.079 12254 Delete type=0 #96
-2026/04/12-19:36:48.063 12254 Level-0 table #102: started
-2026/04/12-19:36:48.091 12254 Level-0 table #102: 24009 bytes OK
-2026/04/12-19:36:48.097 12254 Delete type=0 #99
+2026/04/13-02:37:39.792 350c Reusing MANIFEST C:\Users\navee\Downloads\claude-brightdata-scraper\.sessions\instagram\Default\Local Storage\leveldb/MANIFEST-000001
+2026/04/13-02:37:39.798 350c Recovering log #146
+2026/04/13-02:37:39.799 350c Level-0 table #149: started
+2026/04/13-02:37:39.806 350c Level-0 table #149: 24110 bytes OK
+2026/04/13-02:37:39.810 350c Delete type=0 #146
+2026/04/13-02:37:39.811 3740 Compacting 4@0 + 1@1 files
+2026/04/13-02:37:39.822 3740 Generated table #151@0: 112 keys, 29673 bytes
+2026/04/13-02:37:39.822 3740 Compacted 4@0 + 1@1 files => 29673 bytes
+2026/04/13-02:37:39.823 3740 compacted to: files[ 0 1 0 0 0 0 0 ]
+2026/04/13-02:37:39.824 3740 Delete type=2 #140
+2026/04/13-02:37:39.824 3740 Delete type=2 #142
+2026/04/13-02:37:39.824 3740 Delete type=2 #144
+2026/04/13-02:37:39.824 3740 Delete type=2 #147
+2026/04/13-02:37:39.824 3740 Delete type=2 #149
+2026/04/13-02:39:40.859 350c Level-0 table #153: started
+2026/04/13-02:39:40.875 350c Level-0 table #153: 24549 bytes OK
+2026/04/13-02:39:40.878 350c Delete type=0 #150
+2026/04/13-02:42:25.327 9b3c Level-0 table #155: started
+2026/04/13-02:42:25.346 9b3c Level-0 table #155: 27348 bytes OK
