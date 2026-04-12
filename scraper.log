@@ -6668,3 +6668,229 @@ Exception: Connection closed while reading from the driver
 2026-04-11 23:08:47,583 - exporter - INFO - Exported 1145 records to CSV: dsenthamilselvan_comments.csv
 2026-04-11 23:08:47,628 - exporter - INFO - Exported 1145 records to JSONL: dsenthamilselvan_comments.jsonl
 2026-04-11 23:08:47,628 - __main__ - INFO - Successfully exported profile intelligence to dsenthamilselvan.csv!
+2026-04-12 18:05:16,795 - __main__ - INFO - ======================================================================
+2026-04-12 18:05:16,795 - __main__ - INFO - Kongu Region Politics Scraper - Starting
+2026-04-12 18:05:16,795 - __main__ - INFO - ======================================================================
+2026-04-12 18:05:16,815 - __main__ - INFO - ======================================================================
+2026-04-12 18:05:16,815 - __main__ - INFO - TARGET PROFILE MODE: Scraping https://www.instagram.com/jayaramakrishnan.r
+2026-04-12 18:05:16,815 - __main__ - INFO - ======================================================================
+2026-04-12 18:05:31,729 - instagram_scraper - INFO - Navigating to Profile: https://www.instagram.com/jayaramakrishnan.r
+2026-04-12 18:06:02,736 - instagram_scraper - INFO - Found 51 post links on profile https://www.instagram.com/jayaramakrishnan.r
+2026-04-12 18:06:02,736 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/p/DW6CxUtk7KN/
+2026-04-12 18:06:06,695 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/p/DW6BKT4E428/
+2026-04-12 18:06:10,361 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/reel/DW590ftoUOM/
+2026-04-12 18:06:14,455 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/p/DW5xkqgDpMp/
+2026-04-12 18:06:18,056 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/p/DW5wJEOjmyk/
+2026-04-12 18:06:21,794 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/reel/DW5ugAyoAg9/
+2026-04-12 18:06:25,568 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/p/DW5slOvk6pw/
+2026-04-12 18:06:29,459 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan_ex_mla/p/DW5b7WgE5Hl/
+2026-04-12 18:06:33,312 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan_ex_mla/p/DW5R0x5k7sB/
+2026-04-12 18:06:38,174 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/reel/DW4EigfossQ/
+2026-04-12 18:06:42,268 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan_ex_mla/p/DW39u12k_4C/
+2026-04-12 18:06:45,979 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/reel/DW38ANzoE4M/
+2026-04-12 18:06:50,522 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/reel/DW3dWexIFho/
+2026-04-12 18:06:54,401 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/reel/DW3acCAoZVu/
+2026-04-12 18:06:58,319 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/reel/DW3R4SGO3e7/
+2026-04-12 18:07:02,317 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/p/DW29G8rk8_G/
+2026-04-12 18:07:06,075 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/reel/DW2wxXNzH1T/
+2026-04-12 18:07:09,712 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/reel/DW1bjZ9oNqv/
+2026-04-12 18:07:13,656 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan_ex_mla/p/DW1Zwl1E2Dj/
+2026-04-12 18:07:17,572 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan_ex_mla/reel/DW1NBaDE5Uf/
+2026-04-12 18:07:21,450 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/reel/DW1D3aaIKXN/
+2026-04-12 18:07:25,447 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan_ex_mla/reel/DW0l5Zck7VZ/
+2026-04-12 18:07:29,344 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/p/DW0i7cPk99m/
+2026-04-12 18:07:33,192 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/reel/DW0ZkwDISio/
+2026-04-12 18:07:37,342 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/reel/DWzX0-KCLe4/
+2026-04-12 18:07:41,393 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/p/DWzMD80E8Q4/
+2026-04-12 18:07:45,341 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/reel/DWzDisYExjU/
+2026-04-12 18:07:49,058 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/reel/DWzC-PPE0_3/
+2026-04-12 18:07:52,795 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/p/DWytWP5k97Y/
+2026-04-12 18:07:56,764 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/reel/DWyr_HjCBCp/
+2026-04-12 18:08:00,825 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/reel/DWyozIJiGui/
+2026-04-12 18:08:04,787 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/reel/DWyc3rMCEkT/
+2026-04-12 18:08:08,841 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/p/DWyaNzfk1-r/
+2026-04-12 18:08:12,427 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/reel/DWyTLttCErL/
+2026-04-12 18:08:16,615 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/p/DWyL2mWk2Lj/
+2026-04-12 18:08:20,509 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/p/DWyBsW9k01N/
+2026-04-12 18:08:24,152 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/p/DWx3ghhk1PZ/
+2026-04-12 18:08:28,243 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/reel/DWx1xd-iKkS/
+2026-04-12 18:08:32,072 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/p/DWxrg7vk8H9/
+2026-04-12 18:08:35,994 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/reel/DWxm0MaiMES/
+2026-04-12 18:08:39,975 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/reel/DWxdLPzCCU9/
+2026-04-12 18:08:43,997 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan_ex_mla/p/DWwSXC9k4vS/
+2026-04-12 18:08:47,810 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/reel/DWwIOlGiEMe/
+2026-04-12 18:08:51,535 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan_ex_mla/p/DWvs8cXk0sE/
+2026-04-12 18:08:55,400 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/p/DWvgzSWE3pH/
+2026-04-12 18:08:59,015 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/reel/DWvRLzHCN-o/
+2026-04-12 18:09:04,255 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/p/DWvKdXEEzYy/
+2026-04-12 18:09:07,939 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan_ex_mla/p/DWvFRhqk3dF/
+2026-04-12 18:09:11,532 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/reel/DWu9jz-iO2k/
+2026-04-12 18:09:15,216 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/reel/DWuy7QDiMvY/
+2026-04-12 18:09:19,274 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/jayaramakrishnan.r/reel/DWt3orJE_F4/
+2026-04-12 18:09:23,943 - __main__ - INFO - Targeted Extraction Complete: Found 1101 records (posts + comments)
+2026-04-12 18:11:15,630 - nlp_pipeline - INFO - Loading NLP model: cardiffnlp/twitter-xlm-roberta-base-sentiment …
+2026-04-12 18:11:21,175 - tensorflow - WARNING - From C:\Users\navee\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-04-12 18:11:33,314 - nlp_pipeline - INFO - NLP model loaded successfully.
+2026-04-12 18:11:47,431 - nlp_pipeline - INFO - NLP enrichment complete: 1101 records processed. Sentiments — positive: 67, neutral: 973, negative: 61
+2026-04-12 18:11:47,436 - exporter - INFO - Exported 51 records to CSV: jayaramakrishnan.r.csv
+2026-04-12 18:11:47,443 - exporter - INFO - Exported 51 records to JSONL: jayaramakrishnan.r.jsonl
+2026-04-12 18:11:47,458 - exporter - INFO - Exported 1050 records to CSV: jayaramakrishnan.r_comments.csv
+2026-04-12 18:11:47,569 - exporter - INFO - Exported 1050 records to JSONL: jayaramakrishnan.r_comments.jsonl
+2026-04-12 18:11:47,569 - __main__ - INFO - Successfully exported profile intelligence to jayaramakrishnan.r.csv!
+2026-04-12 19:24:15,418 - __main__ - INFO - ======================================================================
+2026-04-12 19:24:15,418 - __main__ - INFO - Kongu Region Politics Scraper - Starting
+2026-04-12 19:24:15,418 - __main__ - INFO - ======================================================================
+2026-04-12 19:24:15,449 - __main__ - INFO - ======================================================================
+2026-04-12 19:24:15,449 - __main__ - INFO - TARGET PROFILE MODE: Scraping https://www.instagram.com/udumalpet_town_dmk_
+2026-04-12 19:24:15,450 - __main__ - INFO - ======================================================================
+2026-04-12 19:24:25,055 - instagram_scraper - INFO - Navigating to Profile: https://www.instagram.com/udumalpet_town_dmk_
+2026-04-12 19:24:42,212 - instagram_scraper - INFO - Found 42 post links on profile https://www.instagram.com/udumalpet_town_dmk_
+2026-04-12 19:24:42,212 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/reel/DXB4RgMj-Uv/
+2026-04-12 19:24:45,757 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/reel/DW-2qseDys2/
+2026-04-12 19:24:49,357 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/reel/DW4kxKoEwjg/
+2026-04-12 19:24:53,049 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DW006vOjzOd/
+2026-04-12 19:24:56,931 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DWrb5Jjj7U7/
+2026-04-12 19:25:00,559 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DWra7bJDz62/
+2026-04-12 19:25:04,617 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DWqOXVVD--T/
+2026-04-12 19:25:08,282 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DWnNP7HD_tQ/
+2026-04-12 19:25:12,151 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/reel/DWiIXGfDyb8/
+2026-04-12 19:25:16,061 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/reel/DWiIGOdj6Ew/
+2026-04-12 19:25:19,636 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DWb6SEZD5v1/
+2026-04-12 19:25:23,250 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DWZSG7yj6Jd/
+2026-04-12 19:25:27,126 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DWGR7Lwj_cA/
+2026-04-12 19:25:31,147 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DWCFcz4D2Wo/
+2026-04-12 19:25:34,919 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DV_ewf3j3VX/
+2026-04-12 19:25:38,469 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/reel/DVeARcOj__W/
+2026-04-12 19:25:42,828 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DVd_1s8D5M2/
+2026-04-12 19:25:46,623 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DU__c81EpMU/
+2026-04-12 19:25:50,366 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DUr22eED-pr/
+2026-04-12 19:25:53,964 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DUr2ts4j_nC/
+2026-04-12 19:25:57,568 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DUdnNp5D4Ly/
+2026-04-12 19:26:01,626 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DUTg24ZEhMA/
+2026-04-12 19:26:05,246 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DUTgcH4ksCt/
+2026-04-12 19:26:09,068 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DT-ao8wD6R9/
+2026-04-12 19:26:12,996 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DT5-SCpEisL/
+2026-04-12 19:26:16,769 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DT0VOBgjyEQ/
+2026-04-12 19:26:20,575 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DTwbDN7D8lM/
+2026-04-12 19:26:24,631 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DTuz7FjjwCP/
+2026-04-12 19:26:28,701 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DTj71SwDx-7/
+2026-04-12 19:26:32,796 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DTj7pQlD9S2/
+2026-04-12 19:26:37,214 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DThTV4Sj46i/
+2026-04-12 19:26:40,912 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DTeOMp0D_08/
+2026-04-12 19:26:44,489 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DTUtuJgj2M4/
+2026-04-12 19:26:48,177 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DTPqH4lD38n/
+2026-04-12 19:26:51,955 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DTPosFWD8UX/
+2026-04-12 19:26:55,551 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DTPMK7ojwbl/
+2026-04-12 19:26:59,091 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/reel/DTHGXFnD3K5/
+2026-04-12 19:27:03,181 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DTFNNWij5ro/
+2026-04-12 19:27:06,675 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DTCxdoPj1nC/
+2026-04-12 19:27:10,493 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DS-b_2kj-xB/
+2026-04-12 19:27:14,311 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DS-ZGlFDxtg/
+2026-04-12 19:27:17,782 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalpet_town_dmk_/p/DS8v6Xxj6E3/
+2026-04-12 19:27:22,267 - __main__ - INFO - Targeted Extraction Complete: Found 759 records (posts + comments)
+2026-04-12 19:28:53,480 - nlp_pipeline - INFO - Loading NLP model: cardiffnlp/twitter-xlm-roberta-base-sentiment …
+2026-04-12 19:29:02,426 - tensorflow - WARNING - From C:\Users\navee\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-04-12 19:29:12,485 - nlp_pipeline - INFO - NLP model loaded successfully.
+2026-04-12 19:29:22,158 - nlp_pipeline - INFO - NLP enrichment complete: 759 records processed. Sentiments — positive: 4, neutral: 713, negative: 42
+2026-04-12 19:29:22,161 - exporter - INFO - Exported 42 records to CSV: udumalpet_town_dmk_.csv
+2026-04-12 19:29:22,166 - exporter - INFO - Exported 42 records to JSONL: udumalpet_town_dmk_.jsonl
+2026-04-12 19:29:22,175 - exporter - INFO - Exported 717 records to CSV: udumalpet_town_dmk__comments.csv
+2026-04-12 19:29:22,208 - exporter - INFO - Exported 717 records to JSONL: udumalpet_town_dmk__comments.jsonl
+2026-04-12 19:29:22,209 - __main__ - INFO - Successfully exported profile intelligence to udumalpet_town_dmk_.csv!
+2026-04-12 19:31:45,875 - __main__ - INFO - ======================================================================
+2026-04-12 19:31:45,875 - __main__ - INFO - Kongu Region Politics Scraper - Starting
+2026-04-12 19:31:45,875 - __main__ - INFO - ======================================================================
+2026-04-12 19:31:45,889 - __main__ - INFO - ======================================================================
+2026-04-12 19:31:45,890 - __main__ - INFO - TARGET PROFILE MODE: Scraping https://www.instagram.com/udumalai_tvk
+2026-04-12 19:31:45,890 - __main__ - INFO - ======================================================================
+2026-04-12 19:31:47,450 - instagram_scraper - INFO - Navigating to Profile: https://www.instagram.com/udumalai_tvk
+2026-04-12 19:32:32,311 - instagram_scraper - INFO - Found 67 post links on profile https://www.instagram.com/udumalai_tvk
+2026-04-12 19:32:32,312 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/Cu1TFSxRRJ-/
+2026-04-12 19:32:36,236 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/Cuup8i-SUYq/
+2026-04-12 19:32:40,315 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/Cupk7-jyOAu/
+2026-04-12 19:32:44,443 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/Cum6ANCyt1j/
+2026-04-12 19:32:48,455 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CueixWxxV2w/
+2026-04-12 19:32:52,193 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CtxJE3nygwG/
+2026-04-12 19:32:55,857 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/Ctr32sRyD9i/
+2026-04-12 19:32:59,436 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/Ctj5iW6yT-F/
+2026-04-12 19:33:03,531 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/Cr85RiHyfO-/
+2026-04-12 19:33:07,635 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/Cr8BbW3xihp/
+2026-04-12 19:33:11,275 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CrX1VOUJUO4/
+2026-04-12 19:33:15,315 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CrQQEdmRzlo/
+2026-04-12 19:33:18,989 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CpBN8rwSt3V/
+2026-04-12 19:33:22,774 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/Co0O5xAypEs/
+2026-04-12 19:33:26,609 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CnNNsZzyBap/
+2026-04-12 19:33:30,246 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CnKtn61hE98/
+2026-04-12 19:33:34,115 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/reel/Cm4rPa9tAlE/
+2026-04-12 19:33:38,545 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/Cm4qxD4SDox/
+2026-04-12 19:33:42,747 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CmtuOlfSQGj/
+2026-04-12 19:33:47,005 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CmpAvctSOtN/
+2026-04-12 19:33:50,807 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/reel/CmpAffgOffl/
+2026-04-12 19:33:55,098 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CmitzgwyCbE/
+2026-04-12 19:34:00,540 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CmXLGnDynBj/
+2026-04-12 19:34:04,481 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/Clozm0xyivF/
+2026-04-12 19:34:08,345 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CllK5DNSD3e/
+2026-04-12 19:34:12,302 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CkwIBQ_y5jZ/
+2026-04-12 19:34:16,527 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/Ckbtr5qhHWX/
+2026-04-12 19:34:20,767 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CkbtMLkh_a6/
+2026-04-12 19:34:24,649 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/Cj-H0YtyLTn/
+2026-04-12 19:34:28,627 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/Cja6jW5ve85/
+2026-04-12 19:34:32,806 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/Cja6ad_PzoE/
+2026-04-12 19:34:36,663 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CjTeTGsh2VF/
+2026-04-12 19:34:40,628 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CjTZgtOPQjJ/
+2026-04-12 19:34:44,223 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CjTZPafvR7n/
+2026-04-12 19:34:48,335 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CjD__0ChOpH/
+2026-04-12 19:34:52,592 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/Ci6ub3TPfn_/
+2026-04-12 19:34:56,842 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/Cg5AT6cBaej/
+2026-04-12 19:35:00,641 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/reel/CgZ19gmAFsq/
+2026-04-12 19:35:08,382 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CgJTyrHPr6_/
+2026-04-12 19:35:11,959 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CfGx9uRNFJx/
+2026-04-12 19:35:16,032 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/reel/CfGuse4szdI/
+2026-04-12 19:35:20,162 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/reel/CfGuYg9u0jO/
+2026-04-12 19:35:24,163 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CfE_fuAhzRK/
+2026-04-12 19:35:28,060 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CfE_WKkh8sT/
+2026-04-12 19:35:31,848 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CcGklfyBBS0/
+2026-04-12 19:35:36,463 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/reel/CaL1YvoPekg/
+2026-04-12 19:35:41,214 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/reel/CZkfZoMBY2E/
+2026-04-12 19:35:45,690 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/reel/CZkcToihaA-/
+2026-04-12 19:35:50,233 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CZkcFlXBB3U/
+2026-04-12 19:35:55,091 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CY5-l5Jvqqq/
+2026-04-12 19:35:59,759 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CYLWpxDv5wg/
+2026-04-12 19:36:03,948 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CWcfdymPpyv/
+2026-04-12 19:36:08,123 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CWcfI_1PXKv/
+2026-04-12 19:36:12,133 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/reel/CV01jNVBm6t/
+2026-04-12 19:36:16,039 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/reel/CV00gdMByTM/
+2026-04-12 19:36:19,923 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CV00XUgBhhi/
+2026-04-12 19:36:24,442 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CVQY0vrBwbF/
+2026-04-12 19:36:28,854 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CU-jACBhPjX/
+2026-04-12 19:36:32,977 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CUNLQyghbSy/
+2026-04-12 19:36:37,173 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CUHIsOBhLQ6/
+2026-04-12 19:36:41,534 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/reel/CUHFdFKhaQi/
+2026-04-12 19:36:45,844 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CTiMFGMhfdI/
+2026-04-12 19:36:50,198 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/reel/CTiJsDNBqz0/
+2026-04-12 19:36:54,318 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CTJs5UIhl6Z/
+2026-04-12 19:36:58,784 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CS3unqShaLb/
+2026-04-12 19:37:02,682 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CSlnN7jhggu/
+2026-04-12 19:37:06,472 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/udumalai_tvk/p/CSgbVowh7V5/
+2026-04-12 19:37:12,059 - __main__ - INFO - Targeted Extraction Complete: Found 1391 records (posts + comments)
+2026-04-12 19:37:37,130 - nlp_pipeline - INFO - Loading NLP model: cardiffnlp/twitter-xlm-roberta-base-sentiment …
+2026-04-12 19:37:42,049 - tensorflow - WARNING - From C:\Users\navee\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-04-12 19:37:52,831 - nlp_pipeline - INFO - NLP model loaded successfully.
+2026-04-12 19:49:40,764 - nlp_pipeline - INFO - NLP enrichment complete: 1391 records processed. Sentiments — positive: 99, neutral: 1211, negative: 81
+2026-04-12 19:49:40,809 - exporter - INFO - Exported 67 records to CSV: udumalai_tvk.csv
+2026-04-12 19:49:40,830 - exporter - INFO - Exported 67 records to JSONL: udumalai_tvk.jsonl
+2026-04-12 19:49:40,867 - exporter - INFO - Exported 1324 records to CSV: udumalai_tvk_comments.csv
+2026-04-12 19:49:40,975 - exporter - INFO - Exported 1324 records to JSONL: udumalai_tvk_comments.jsonl
+2026-04-12 19:49:40,976 - __main__ - INFO - Successfully exported profile intelligence to udumalai_tvk.csv!
+2026-04-12 19:54:08,320 - __main__ - INFO - ======================================================================
+2026-04-12 19:54:08,321 - __main__ - INFO - Kongu Region Politics Scraper - Starting
+2026-04-12 19:54:08,321 - __main__ - INFO - ======================================================================
+2026-04-12 19:54:08,342 - __main__ - INFO - ======================================================================
+2026-04-12 19:54:08,342 - __main__ - INFO - TARGET PROFILE MODE: Scraping https://www.instagram.com/madathukulam_tvk_official
+2026-04-12 19:54:08,343 - __main__ - INFO - ======================================================================
+2026-04-12 19:54:09,956 - instagram_scraper - INFO - Navigating to Profile: https://www.instagram.com/madathukulam_tvk_official
+2026-04-12 19:54:24,296 - instagram_scraper - INFO - Found 0 post links on profile https://www.instagram.com/madathukulam_tvk_official
+2026-04-12 19:54:24,706 - __main__ - INFO - No records found or login triggered.
