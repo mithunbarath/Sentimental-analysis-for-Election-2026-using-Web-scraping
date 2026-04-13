@@ -7576,3 +7576,227 @@ Exception: Connection closed while reading from the driver
 2026-04-13 03:10:57,020 - exporter - INFO - Exported 1211 records to CSV: manigoundertvk_kangeyam_comments.csv
 2026-04-13 03:10:57,117 - exporter - INFO - Exported 1211 records to JSONL: manigoundertvk_kangeyam_comments.jsonl
 2026-04-13 03:10:57,117 - __main__ - INFO - Successfully exported profile intelligence to manigoundertvk_kangeyam.csv!
+2026-04-14 01:21:14,054 - __main__ - INFO - ======================================================================
+2026-04-14 01:21:14,055 - __main__ - INFO - Kongu Region Politics Scraper - Starting
+2026-04-14 01:21:14,056 - __main__ - INFO - ======================================================================
+2026-04-14 01:21:14,075 - __main__ - INFO - ======================================================================
+2026-04-14 01:21:14,076 - __main__ - INFO - TARGET PROFILE MODE: Scraping https://www.instagram.com/admksuluryouthwing
+2026-04-14 01:21:14,076 - __main__ - INFO - ======================================================================
+2026-04-14 01:21:30,046 - instagram_scraper - INFO - Navigating to Profile: https://www.instagram.com/admksuluryouthwing
+2026-04-14 01:21:52,419 - instagram_scraper - INFO - Found 52 post links on profile https://www.instagram.com/admksuluryouthwing
+2026-04-14 01:21:52,419 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/spv__boys/p/DQwMAg3khi6/
+2026-04-14 01:21:58,570 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/spv__boys/reel/DQs-z94EoDK/
+2026-04-14 01:22:03,711 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/spv__boys/p/DP5aDp2ETY4/
+2026-04-14 01:22:07,626 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/spv__boys/reel/DPjLsQKkqgl/
+2026-04-14 01:22:12,626 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/DOfYNzZkRJJ/
+2026-04-14 01:22:17,363 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/aiadmk__4tn/reel/DOfLeMjkZwf/
+2026-04-14 01:22:23,587 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/DN0e-3Awjxg/
+2026-04-14 01:22:28,249 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/DIX4gY9Tk7G/
+2026-04-14 01:22:33,404 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/p/DHk3bTLRf49/
+2026-04-14 01:22:37,417 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/DFLIe5MibsV/
+2026-04-14 01:22:42,693 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/DEMenYYTQQz/
+2026-04-14 01:22:47,228 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/DEKsRiWzHF6/
+2026-04-14 01:22:52,455 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/DD4a38HTSgH/
+2026-04-14 01:22:57,356 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/ranjith_kumaran_senathipathy/reel/DDcKC24yNpd/
+2026-04-14 01:23:02,261 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/DDPUEb2zcVR/
+2026-04-14 01:23:07,482 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/DDL_4ySz8CC/
+2026-04-14 01:23:11,884 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/DChgrB1ower/
+2026-04-14 01:23:17,101 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/aiadmk_sulur_cbe/reel/C8cQXONyP1o/
+2026-04-14 01:23:21,409 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/C7tbjLhyrAs/
+2026-04-14 01:23:26,406 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/aiadmk_sulur_cbe/p/C62nq7LSQVC/
+2026-04-14 01:23:30,682 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/spv__boys/reel/C56PSdOPXHc/
+2026-04-14 01:23:36,210 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/C526JC2ShOi/
+2026-04-14 01:23:40,958 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/p/C5x0NhCSipO/
+2026-04-14 01:23:44,879 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/spv__boys/p/C5xoEh0PPj8/
+2026-04-14 01:23:49,226 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/C5xkf3ay_ZR/
+2026-04-14 01:23:54,746 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/spv__boys/reel/C5xi14pvSVP/
+2026-04-14 01:24:01,300 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/aiadmk_sulur_cbe/p/C5xgrk1ybrY/
+2026-04-14 01:24:05,312 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/C5vBByFyNlA/
+2026-04-14 01:24:09,546 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/aiadmk_sulur_cbe/reel/C5uXi0mySmu/
+2026-04-14 01:24:13,427 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/aiadmk_sulur_cbe/reel/C5qbNDCyJdL/
+2026-04-14 01:24:17,871 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/C5p5nr_yzNW/
+2026-04-14 01:24:22,989 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/C5i9HCeoY_5/
+2026-04-14 01:24:28,560 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/aiadmk_sulur_cbe/reel/C5FUl2kSnXZ/
+2026-04-14 01:24:33,908 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/C5BJcjDyyI1/
+2026-04-14 01:24:38,609 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/aiadmk_sulur_cbe/reel/C4-tyg2ySvq/
+2026-04-14 01:24:43,233 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/C4-gKpbylUT/
+2026-04-14 01:24:49,104 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/C475skKSbIU/
+2026-04-14 01:24:54,245 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/C47bwOdSQkc/
+2026-04-14 01:24:59,178 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/aiadmk_sulur_cbe/reel/C46u-ugyd22/
+2026-04-14 01:25:03,716 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/C45sELXy9Oh/
+2026-04-14 01:25:09,315 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/C42kq15SaKB/
+2026-04-14 01:25:14,772 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/C42cbhsSb2I/
+2026-04-14 01:25:19,682 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/C42HhxvSMKo/
+2026-04-14 01:25:24,789 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/C40YXXNymrn/
+2026-04-14 01:25:29,549 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/p/C4xRBahyS5d/
+2026-04-14 01:25:33,607 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/p/C4ubdFQymqA/
+2026-04-14 01:25:37,520 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/C4swzqlSd9r/
+2026-04-14 01:25:42,109 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/p/C37xwfKxgzw/
+2026-04-14 01:25:46,245 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/p/C37OwgCRKOZ/
+2026-04-14 01:25:50,491 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/C32jKG_CHbh/
+2026-04-14 01:25:56,537 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/C3z40HIxAXO/
+2026-04-14 01:26:02,074 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/admksuluryouthwing/reel/C3u3ss1Cji8/
+2026-04-14 01:26:07,032 - __main__ - INFO - Targeted Extraction Complete: Found 1024 records (posts + comments)
+2026-04-14 01:29:51,644 - nlp_pipeline - INFO - Loading NLP model: cardiffnlp/twitter-xlm-roberta-base-sentiment …
+2026-04-14 01:29:59,422 - tensorflow - WARNING - From C:\Users\navee\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-04-14 01:30:19,029 - nlp_pipeline - INFO - NLP model loaded successfully.
+2026-04-14 01:30:31,963 - nlp_pipeline - INFO - NLP enrichment complete: 1024 records processed. Sentiments — positive: 26, neutral: 904, negative: 94
+2026-04-14 01:30:31,967 - exporter - INFO - Exported 52 records to CSV: admksuluryouthwing.csv
+2026-04-14 01:30:31,974 - exporter - INFO - Exported 52 records to JSONL: admksuluryouthwing.jsonl
+2026-04-14 01:30:31,985 - exporter - INFO - Exported 972 records to CSV: admksuluryouthwing_comments.csv
+2026-04-14 01:30:32,030 - exporter - INFO - Exported 972 records to JSONL: admksuluryouthwing_comments.jsonl
+2026-04-14 01:30:32,031 - __main__ - INFO - Successfully exported profile intelligence to admksuluryouthwing.csv!
+2026-04-14 01:33:20,086 - __main__ - INFO - ======================================================================
+2026-04-14 01:33:20,086 - __main__ - INFO - Kongu Region Politics Scraper - Starting
+2026-04-14 01:33:20,087 - __main__ - INFO - ======================================================================
+2026-04-14 01:33:20,111 - __main__ - INFO - ======================================================================
+2026-04-14 01:33:20,112 - __main__ - INFO - TARGET PROFILE MODE: Scraping https://www.instagram.com/m.sugumar_nagai_offl
+2026-04-14 01:33:20,112 - __main__ - INFO - ======================================================================
+2026-04-14 01:33:34,563 - instagram_scraper - INFO - Navigating to Profile: https://www.instagram.com/m.sugumar_nagai_offl
+2026-04-14 01:33:55,463 - instagram_scraper - INFO - Found 51 post links on profile https://www.instagram.com/m.sugumar_nagai_offl
+2026-04-14 01:33:55,463 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DW0qUOPEbOp/
+2026-04-14 01:34:00,632 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DWySyHfkSY0/
+2026-04-14 01:34:05,868 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DWxoxo6EYmz/
+2026-04-14 01:34:10,959 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DWtuRl-kSeV/
+2026-04-14 01:34:15,323 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DWq7AK3EVQR/
+2026-04-14 01:34:20,196 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DWqUBG1ESZZ/
+2026-04-14 01:34:24,808 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DWo7285kpIc/
+2026-04-14 01:34:29,373 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/p/DWoaGXeEaqb/
+2026-04-14 01:34:39,935 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DWmMCxCElY1/
+2026-04-14 01:34:47,108 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DWlX950Efle/
+2026-04-14 01:34:53,088 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DWdnHxjkSha/
+2026-04-14 01:34:57,866 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DV_53mdE8h8/
+2026-04-14 01:35:02,221 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DVWrc_xEjzy/
+2026-04-14 01:35:06,609 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DVMRPQVEwt5/
+2026-04-14 01:35:11,263 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/tvkhq_nagapatti/reel/DVI64mUkdlX/
+2026-04-14 01:35:16,568 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DT_JyLrk_6f/
+2026-04-14 01:35:21,108 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DTgOQqwEyvW/
+2026-04-14 01:35:25,895 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DS2xo1ikgkt/
+2026-04-14 01:35:31,126 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DSzhWHaEWqp/
+2026-04-14 01:35:36,341 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/tvkhq_nagapatti/p/DSpzN02Ey5Q/
+2026-04-14 01:35:41,308 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DSnZmsXEid-/
+2026-04-14 01:35:46,055 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/p/DSmXmqdEWId/
+2026-04-14 01:35:50,667 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DSh9FDTEfbR/
+2026-04-14 01:35:55,676 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DSfmnRxkvgE/
+2026-04-14 01:36:00,854 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DSce26Wkf5k/
+2026-04-14 01:36:05,552 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DSZGUtMkTLm/
+2026-04-14 01:36:11,075 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/p/DSUHa1jkR8D/
+2026-04-14 01:36:15,590 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DSN45idk-RN/
+2026-04-14 01:36:21,661 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/p/DSNFdsTEbs5/
+2026-04-14 01:36:26,192 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DSDRs7OEiXg/
+2026-04-14 01:36:31,188 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DSA3kiQEumn/
+2026-04-14 01:36:36,015 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DR7mX0AEqJL/
+2026-04-14 01:36:41,454 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DR49cvVEofM/
+2026-04-14 01:36:47,724 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DR00V4rkYIA/
+2026-04-14 01:36:53,323 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DRuti1iEvA1/
+2026-04-14 01:36:59,051 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/p/DRtk815kZg2/
+2026-04-14 01:37:04,372 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DRsJbZokpGx/
+2026-04-14 01:37:09,126 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DRm0kyfEoAX/
+2026-04-14 01:37:13,910 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/p/DRl994uETYl/
+2026-04-14 01:37:19,878 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DRjVkFskVHn/
+2026-04-14 01:37:24,826 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/p/DRhIyfdkZgL/
+2026-04-14 01:37:30,425 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DRfUdCuCInt/
+2026-04-14 01:37:36,935 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DRdXaTikmmo/
+2026-04-14 01:37:41,218 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DRaHGysEgtM/
+2026-04-14 01:37:46,243 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/p/DRZul3Wkd9_/
+2026-04-14 01:37:50,478 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DRRoX5OkYym/
+2026-04-14 01:37:56,489 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DRNd7OFCBPF/
+2026-04-14 01:38:01,986 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/tvkhq_nagapatti/reel/DRJwO2ykcfJ/
+2026-04-14 01:38:06,951 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/p/DRJRCzAkUuB/
+2026-04-14 01:38:11,584 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/reel/DRIAmf4EhKB/
+2026-04-14 01:38:16,142 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/m.sugumar_nagai_offl/p/DRH7E9NkjC-/
+2026-04-14 01:38:21,650 - __main__ - INFO - Targeted Extraction Complete: Found 1481 records (posts + comments)
+2026-04-14 01:39:05,980 - nlp_pipeline - INFO - Loading NLP model: cardiffnlp/twitter-xlm-roberta-base-sentiment …
+2026-04-14 01:39:15,217 - tensorflow - WARNING - From C:\Users\navee\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-04-14 01:39:30,114 - nlp_pipeline - INFO - NLP model loaded successfully.
+2026-04-14 01:40:03,442 - nlp_pipeline - INFO - NLP enrichment complete: 1481 records processed. Sentiments — positive: 257, neutral: 1125, negative: 99
+2026-04-14 01:40:03,450 - exporter - INFO - Exported 51 records to CSV: m.sugumar_nagai_offl.csv
+2026-04-14 01:40:03,462 - exporter - INFO - Exported 51 records to JSONL: m.sugumar_nagai_offl.jsonl
+2026-04-14 01:40:03,502 - exporter - INFO - Exported 1430 records to CSV: m.sugumar_nagai_offl_comments.csv
+2026-04-14 01:40:03,706 - exporter - INFO - Exported 1430 records to JSONL: m.sugumar_nagai_offl_comments.jsonl
+2026-04-14 01:40:03,707 - __main__ - INFO - Successfully exported profile intelligence to m.sugumar_nagai_offl.csv!
+2026-04-14 01:50:07,000 - __main__ - INFO - ======================================================================
+2026-04-14 01:50:07,001 - __main__ - INFO - Kongu Region Politics Scraper - Starting
+2026-04-14 01:50:07,001 - __main__ - INFO - ======================================================================
+2026-04-14 01:50:07,013 - __main__ - INFO - ======================================================================
+2026-04-14 01:50:07,013 - __main__ - INFO - TARGET PROFILE MODE: Scraping https://www.instagram.com/thalapathi_murugesan_dmk
+2026-04-14 01:50:07,013 - __main__ - INFO - ======================================================================
+2026-04-14 01:50:08,214 - instagram_scraper - INFO - Navigating to Profile: https://www.instagram.com/thalapathi_murugesan_dmk
+2026-04-14 01:50:53,384 - instagram_scraper - INFO - Found 64 post links on profile https://www.instagram.com/thalapathi_murugesan_dmk
+2026-04-14 01:50:53,385 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUfVGdtkbpF/
+2026-04-14 01:50:58,652 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUfJq4cER_k/
+2026-04-14 01:51:03,119 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUfCjeECGna/
+2026-04-14 01:51:07,042 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUcvQUTkcYb/
+2026-04-14 01:51:10,906 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUcqmlLEcxY/
+2026-04-14 01:51:15,445 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUbD7I2knzK/
+2026-04-14 01:51:19,638 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUaMLAjka2b/
+2026-04-14 01:51:23,861 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUYdhCZkq1l/
+2026-04-14 01:51:32,119 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUYW-EqCI9P/
+2026-04-14 01:51:36,675 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUXwVWPEZnP/
+2026-04-14 01:51:40,417 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUXvlbekTe9/
+2026-04-14 01:51:45,048 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUXi0NWkX25/
+2026-04-14 01:51:49,715 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUXaNjUkXaj/
+2026-04-14 01:51:53,470 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUVRdZLEfT9/
+2026-04-14 01:51:58,376 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUU_QUGEUM8/
+2026-04-14 01:52:02,436 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUU2Fr8kZHs/
+2026-04-14 01:52:06,527 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUTG-RpEUUL/
+2026-04-14 01:52:11,202 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUTFMjWEaQO/
+2026-04-14 01:52:16,229 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUSkVezkQT8/
+2026-04-14 01:52:21,385 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUSGbD_kY7E/
+2026-04-14 01:52:25,898 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUQu8X6khPD/
+2026-04-14 01:52:29,984 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUQS2J-kWO-/
+2026-04-14 01:52:34,171 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUP8s_tEbEM/
+2026-04-14 01:52:38,429 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUPyWSHkREM/
+2026-04-14 01:52:42,492 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUPvSZhkYOS/
+2026-04-14 01:52:46,761 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUNoKfmETpm/
+2026-04-14 01:52:51,643 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUNRc-CEa1u/
+2026-04-14 01:52:55,649 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUNNEJXEVNq/
+2026-04-14 01:52:59,900 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUMyT8EETrI/
+2026-04-14 01:53:03,937 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DULCZf5kQew/
+2026-04-14 01:53:08,011 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUIpLMVCN9V/
+2026-04-14 01:53:12,642 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUINi2VESKz/
+2026-04-14 01:53:17,532 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUIBSfAkZwD/
+2026-04-14 01:53:21,493 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUHvb0vEaAg/
+2026-04-14 01:53:26,225 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUGU5EZkVNC/
+2026-04-14 01:53:31,444 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUD7Y_RkjEQ/
+2026-04-14 01:53:36,033 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUDpYxgka0A/
+2026-04-14 01:53:40,733 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUDDBMpEcFC/
+2026-04-14 01:53:44,358 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUC7WdXkVEa/
+2026-04-14 01:53:48,132 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUCo7wbEZzc/
+2026-04-14 01:53:52,544 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUBURi7End_/
+2026-04-14 01:53:56,869 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUBGylqkYPT/
+2026-04-14 01:54:00,770 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DUAh980kQmp/
+2026-04-14 01:54:04,731 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DT-gCkviKu0/
+2026-04-14 01:54:08,704 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DT-MFEyEdga/
+2026-04-14 01:54:12,499 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DT8NymEkvvX/
+2026-04-14 01:54:16,497 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DT7QkqVkXdg/
+2026-04-14 01:54:21,513 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DT7QbFHEZJ8/
+2026-04-14 01:54:25,617 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DT7G2LDEbk6/
+2026-04-14 01:54:30,219 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DT5jYOJkTrd/
+2026-04-14 01:54:34,503 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DT4gDBLEQk2/
+2026-04-14 01:54:39,693 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DT2Qn5hkWGj/
+2026-04-14 01:54:44,651 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DT2BvTXkdjR/
+2026-04-14 01:54:49,186 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DT0I5xWEVb5/
+2026-04-14 01:54:53,290 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DTzqIFiEdSE/
+2026-04-14 01:54:57,634 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DTzj8_mkVMO/
+2026-04-14 01:55:01,594 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DTwkxV2ERPF/
+2026-04-14 01:55:05,501 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DTvRNnmklcG/
+2026-04-14 01:55:09,738 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DTuVqvMERsU/
+2026-04-14 01:55:13,537 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DTpv8UTke5s/
+2026-04-14 01:55:18,698 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DTo377METxA/
+2026-04-14 01:55:23,354 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DTo3yYUEWgS/
+2026-04-14 01:55:27,137 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DTnhb1_CJJi/
+2026-04-14 01:55:30,922 - instagram_scraper - INFO - Deep Scraping Post: https://www.instagram.com/thalapathi_murugesan_dmk/p/DTmQBHTCPo3/
+2026-04-14 01:55:36,763 - __main__ - INFO - Targeted Extraction Complete: Found 1152 records (posts + comments)
+2026-04-14 01:56:13,771 - nlp_pipeline - INFO - Loading NLP model: cardiffnlp/twitter-xlm-roberta-base-sentiment …
+2026-04-14 01:56:21,278 - tensorflow - WARNING - From C:\Users\navee\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-04-14 01:56:30,790 - nlp_pipeline - INFO - NLP model loaded successfully.
+2026-04-14 01:56:53,381 - nlp_pipeline - INFO - NLP enrichment complete: 1152 records processed. Sentiments — positive: 0, neutral: 1088, negative: 64
+2026-04-14 01:56:53,393 - exporter - INFO - Exported 64 records to CSV: thalapathi_murugesan_dmk.csv
+2026-04-14 01:56:53,405 - exporter - INFO - Exported 64 records to JSONL: thalapathi_murugesan_dmk.jsonl
+2026-04-14 01:56:53,428 - exporter - INFO - Exported 1088 records to CSV: thalapathi_murugesan_dmk_comments.csv
+2026-04-14 01:56:53,536 - exporter - INFO - Exported 1088 records to JSONL: thalapathi_murugesan_dmk_comments.jsonl
+2026-04-14 01:56:53,536 - __main__ - INFO - Successfully exported profile intelligence to thalapathi_murugesan_dmk.csv!
