@@ -182,6 +182,8 @@ class TemporalFilterConfig:
     """Temporal filter settings."""
 
     max_age_hours: int = 0  # 0 means disabled
+    start_date: str = ""    # YYYY-MM-DD format
+    end_date: str = ""      # YYYY-MM-DD format
 
 
 @dataclass

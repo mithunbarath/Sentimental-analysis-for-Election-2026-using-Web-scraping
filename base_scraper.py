@@ -144,12 +144,18 @@ class AsyncBaseScraper:
         """Scroll to the bottom of the page natively using the underlying Playwright API."""
         try:
             previous_height = await page.evaluate("document.documentElement.scrollHeight")
+            retries = 0
             for _ in range(max_scrolls):
                 await page.evaluate("window.scrollTo(0, document.documentElement.scrollHeight)")
                 await asyncio.sleep(delay)
                 new_height = await page.evaluate("document.documentElement.scrollHeight")
                 if new_height == previous_height:
-                    break
+                    retries += 1
+                    if retries >= 3:
+                        break
+                    await asyncio.sleep(2.0)  # Wait extra time for slow network
+                else:
+                    retries = 0
                 previous_height = new_height
         except Exception as e:
             logger.warning(f"Error while scrolling: {e}")

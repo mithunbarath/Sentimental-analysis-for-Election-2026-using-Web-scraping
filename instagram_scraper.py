@@ -89,10 +89,18 @@ class InstagramScraper(AsyncBaseScraper):
             
         return records
 
-    async def scrape_profile(self, profile_url: str, post_limit: int = 20) -> List[SocialMediaRecord]:
+    async def scrape_profile(self, profile_url: str, post_limit: int = 20, start_date: str = None, end_date: str = None) -> List[SocialMediaRecord]:
         """Navigate to an Instagram profile, collect posts and comments natively."""
         logger.info(f"Navigating to Profile: {profile_url}")
         records = []
+        
+        start_dt = None
+        if start_date:
+            try:
+                from datetime import datetime
+                start_dt = datetime.strptime(start_date, "%Y-%m-%d")
+            except Exception:
+                pass
         
         try:
             response = await self.fetch(profile_url)
@@ -107,29 +115,48 @@ class InstagramScraper(AsyncBaseScraper):
             except Exception:
                 pass
                 
-            # Scroll the grid ensuring enough posts render
-            await self.scroll_to_bottom(page, max_scrolls=(post_limit // 6) + 2, delay=2.0)
-            content = await page.content()
-            from scrapling import Selector
-            response = Selector(content, url=page.url)
-            
-            # Extract all links and filter for actual posts/reels
-            all_links = response.css('a::attr(href)').getall()
-            
-            unique_links = []
-            for l in all_links:
-                # Skip the user's primary "Reels" or "Tagged" tab navigations
-                clean_l = l.strip('/')
-                if clean_l.endswith('reels') or clean_l == 'reels' or clean_l.endswith('tagged'):
-                    continue
+            # Scroll the grid ensuring enough posts render and extracting links dynamically
+            unique_links_dict = {}
+            try:
+                from scrapling import Selector
+                previous_height = await page.evaluate("document.documentElement.scrollHeight")
+                retries = 0
+                max_scrolls = (post_limit // 6) + 2
+                
+                for _ in range(max_scrolls):
+                    # Extract current links in DOM
+                    content = await page.content()
+                    sel = Selector(content, url=page.url)
+                    for l in sel.css('a::attr(href)').getall():
+                        clean_l = l.strip('/')
+                        if clean_l.endswith('reels') or clean_l == 'reels' or clean_l.endswith('tagged'):
+                            continue
+                        if '/p/' in l or '/reel/' in l:
+                            unique_links_dict[l] = True
+                            
+                    # Use keyboard to trigger infinite scroll intersection observers more reliably
+                    await page.keyboard.press("End")
+                    await asyncio.sleep(1.0)
+                    await page.keyboard.press("End")
+                    await asyncio.sleep(2.0)
                     
-                # Accept individual posts or reels
-                if ('/p/' in l or '/reel/' in l) and l not in unique_links:
-                    unique_links.append(l)
-                    
+                    new_height = await page.evaluate("document.documentElement.scrollHeight")
+                    if new_height == previous_height:
+                        retries += 1
+                        if retries >= 3:
+                            break
+                        await asyncio.sleep(2.0)
+                    else:
+                        retries = 0
+                    previous_height = new_height
+            except Exception as e:
+                logger.warning(f"Error while scrolling profile: {e}")
+                
+            unique_links = list(unique_links_dict.keys())
             logger.info(f"Found {len(unique_links)} post links on profile {profile_url}")
             unique_links = unique_links[:post_limit]
             
+            old_posts_seen = 0
             for link_suffix in unique_links:
                 try:
                     full_link = f"https://www.instagram.com{link_suffix}"
@@ -145,6 +172,40 @@ class InstagramScraper(AsyncBaseScraper):
                     # Extract robust metadata
                     caption = post_selector.css('meta[property="og:title"]::attr(content)').get() or ""
                     desc = post_selector.css('meta[property="og:description"]::attr(content)').get() or ""
+                    
+                    timestamp_str = post_selector.css('time::attr(datetime)').get()
+                    if not timestamp_str:
+                        timestamp_str = post_selector.css('meta[property="article:published_time"]::attr(content)').get()
+                    
+                    if not timestamp_str:
+                        import re
+                        m = re.search(r'datetime="([^"]+)"', post_content)
+                        if not m:
+                            m = re.search(r'"uploadDate":"([^"]+)"', post_content)
+                        if not m:
+                            m = re.search(r'"dateCreated":"([^"]+)"', post_content)
+                        
+                        if m:
+                            timestamp_str = m.group(1)
+                        else:
+                            # Try Unix timestamp often used in Instagram's internal JSON
+                            m_unix = re.search(r'"taken_at":(\d+)', post_content)
+                            if m_unix:
+                                from datetime import datetime, timezone
+                                timestamp_str = datetime.fromtimestamp(int(m_unix.group(1)), tz=timezone.utc).isoformat()
+                        
+                    from datetime import datetime
+                    post_timestamp = datetime.now()
+                    if timestamp_str:
+                        try:
+                            from datetime import timezone
+                            # Handle different ISO formats like 2024-04-09T12:00:00.000Z
+                            clean_ts = timestamp_str.replace("Z", "+00:00")
+                            post_timestamp = datetime.fromisoformat(clean_ts)
+                        except Exception as e:
+                            logger.warning(f"Failed to parse timestamp string {timestamp_str}: {e}")
+                    else:
+                        logger.warning(f"Could not extract timestamp for {full_link}, defaulting to now.")
                     
                     # Look for span lists carrying conversational strings (comments)
                     comments_raw = post_selector.css('ul li > div > div > div > span::text').getall()
@@ -192,7 +253,7 @@ class InstagramScraper(AsyncBaseScraper):
                         like_count=like_count,
                         comment_count=comment_count,
                         view_count=view_count,
-                        timestamp=datetime.now(),
+                        timestamp=post_timestamp,
                         source="scrapling_instagram_profile"
                     )
                     records.append(post_record)
@@ -208,11 +269,22 @@ class InstagramScraper(AsyncBaseScraper):
                             url=full_link,
                             text=c,
                             author="unknown",
-                            timestamp=datetime.now(),
+                            timestamp=post_timestamp,
                             source="scrapling_instagram_profile"
                         )
                         records.append(comment_rec)
                         
+                    if start_dt and post_timestamp:
+                        p_dt = post_timestamp.replace(tzinfo=None)
+                        if p_dt < start_dt:
+                            old_posts_seen += 1
+                            logger.info(f"Post date {p_dt.date()} is older than start_date. ({old_posts_seen}/3)")
+                            if old_posts_seen >= 3:
+                                logger.info("Reached historical limit. Stopping deep scrape.")
+                                break
+                        else:
+                            old_posts_seen = 0
+                            
                 except Exception as e:
                     logger.warning(f"Error scraping post {link_suffix}: {e}")
                     

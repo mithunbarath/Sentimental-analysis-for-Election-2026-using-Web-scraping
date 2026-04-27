@@ -74,6 +74,8 @@ def parse_arguments():
     parser.add_argument("--profiles", type=str, nargs="+", help="List of profile URLs (Instagram, Twitter, YouTube)")
     parser.add_argument("--target-profiles", action="store_true", help="Scrape explicit target profiles defined in config.yaml")
     parser.add_argument("--profile-limit", type=int, default=20, help="Number of posts to extract from targeted profile")
+    parser.add_argument("--start-date", type=str, help="Start date for filtering posts (YYYY-MM-DD)")
+    parser.add_argument("--end-date", type=str, help="End date for filtering posts (YYYY-MM-DD)")
     return parser.parse_args()
 
 async def run_login_mode(platform: str, sessions_dir: str):
@@ -135,6 +137,11 @@ async def main_async():
                 config.enable_which_platforms = args.platforms
         if args.output_dir:
             config.export.output_dir = args.output_dir
+            
+        if getattr(args, "start_date", None):
+            config.temporal_filter.start_date = args.start_date
+        if getattr(args, "end_date", None):
+            config.temporal_filter.end_date = args.end_date
     except Exception as e:
         logger.error(f"Error loading configuration: {e}")
         sys.exit(1)
@@ -437,6 +444,11 @@ async def run_one_cycle(args, config, dedup_manager=None) -> List[SocialMediaRec
         from filters import filter_by_timestamp
         logger.info(f"Applying temporal bounding (max_age_hours={cfg.temporal_filter.max_age_hours})...")
         all_records = filter_by_timestamp(all_records, cfg.temporal_filter.max_age_hours)
+        
+    if hasattr(cfg, "temporal_filter") and (getattr(cfg.temporal_filter, "start_date", None) or getattr(cfg.temporal_filter, "end_date", None)):
+        from filters import filter_by_date_range
+        logger.info(f"Applying date range filter ({cfg.temporal_filter.start_date} to {cfg.temporal_filter.end_date})...")
+        all_records = filter_by_date_range(all_records, cfg.temporal_filter.start_date, cfg.temporal_filter.end_date)
 
     # ---- Deduplicate ----
     logger.info("Deduplicating records...")
@@ -544,6 +556,11 @@ if __name__ == "__main__":
             )
         if args.output_dir:
             config.export.output_dir = args.output_dir
+            
+        if getattr(args, "start_date", None):
+            config.temporal_filter.start_date = args.start_date
+        if getattr(args, "end_date", None):
+            config.temporal_filter.end_date = args.end_date
 
         if args.profile:
             logger.info("=" * 70)
@@ -557,11 +574,26 @@ if __name__ == "__main__":
                 
             scraper = InstagramScraper(headless=True, session_dir=session_path)
             await scraper.start()
-            records = await scraper.scrape_profile(args.profile, post_limit=args.profile_limit)
+            limit = args.profile_limit
+            if config.temporal_filter.start_date and limit == 20:
+                limit = 1000  # Automatically boost limit to fetch historical posts; scraper will break early on old dates
+                
+            records = await scraper.scrape_profile(
+                args.profile, 
+                post_limit=limit,
+                start_date=config.temporal_filter.start_date,
+                end_date=config.temporal_filter.end_date
+            )
             await scraper.stop()
             
             if records:
                 logger.info(f"Targeted Extraction Complete: Found {len(records)} records (posts + comments)")
+                
+                # Apply temporal filter to prune bounds
+                if config.temporal_filter.start_date or config.temporal_filter.end_date:
+                    from filters import filter_by_date_range
+                    records = filter_by_date_range(records, config.temporal_filter.start_date, config.temporal_filter.end_date)
+                    
                 # Force NLP Enrichment
                 from nlp_pipeline import NLPPipeline
                 config.nlp.enabled = True 

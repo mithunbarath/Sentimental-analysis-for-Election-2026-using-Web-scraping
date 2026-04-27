@@ -224,3 +224,49 @@ def filter_by_timestamp(
             
     logger.info(f"Temporal filter ({max_age_hours}h max age): {len(records)} -> {len(filtered)} records returned")
     return filtered
+
+
+def filter_by_date_range(
+    records: List[SocialMediaRecord],
+    start_date_str: str,
+    end_date_str: str
+) -> List[SocialMediaRecord]:
+    """Filter out records outside the specified start_date and end_date range (YYYY-MM-DD)."""
+    if not start_date_str and not end_date_str:
+        return records
+        
+    from datetime import datetime, timezone
+    
+    start_dt = None
+    end_dt = None
+    
+    try:
+        if start_date_str:
+            start_dt = datetime.strptime(start_date_str, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+        if end_date_str:
+            # End of the day for the end_date
+            end_dt = datetime.strptime(end_date_str, "%Y-%m-%d").replace(hour=23, minute=59, second=59, tzinfo=timezone.utc)
+    except ValueError as e:
+        logger.error(f"Invalid date format for filter_by_date_range. Expected YYYY-MM-DD. Error: {e}")
+        return records
+
+    filtered = []
+    for r in records:
+        if not r.timestamp:
+            filtered.append(r)
+            continue
+            
+        r_time = r.timestamp
+        if r_time.tzinfo is None:
+            r_time = r_time.replace(tzinfo=timezone.utc)
+            
+        # Check bounds
+        if start_dt and r_time < start_dt:
+            continue
+        if end_dt and r_time > end_dt:
+            continue
+            
+        filtered.append(r)
+        
+    logger.info(f"Date range filter ({start_date_str} to {end_date_str}): {len(records)} -> {len(filtered)} records returned")
+    return filtered

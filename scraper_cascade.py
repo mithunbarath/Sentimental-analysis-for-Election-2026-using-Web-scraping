@@ -91,8 +91,12 @@ class CascadeScraper:
         apify_cfg = getattr(self._config, "apify", None)
         if not apify_cfg or not apify_cfg.enabled:
             return []
+            
+        start_date = getattr(self._config.temporal_filter, "start_date", None)
+        end_date = getattr(self._config.temporal_filter, "end_date", None)
+        
         from apify_scraper import scrape_with_apify
-        return scrape_with_apify(platform, keywords, apify_cfg)
+        return scrape_with_apify(platform, keywords, apify_cfg, start_date, end_date)
 
     def _try_firecrawl(self, platform: str, keywords: List[str]) -> List[SocialMediaRecord]:
         """Method 2: Firecrawl — build URLs from keywords + platform, then scrape."""

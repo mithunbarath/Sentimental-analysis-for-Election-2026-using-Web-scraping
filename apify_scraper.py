@@ -272,6 +272,8 @@ def scrape_with_apify(
     platform: str,
     keywords: List[str],
     apify_config,
+    start_date: Optional[str] = None,
+    end_date: Optional[str] = None
 ) -> List[SocialMediaRecord]:
     """
     Scrape posts + comments for ``platform`` using an Apify actor.
@@ -280,6 +282,8 @@ def scrape_with_apify(
         platform:      One of instagram | facebook | twitter | youtube
         keywords:      Search keywords / hashtags
         apify_config:  ApifyConfig dataclass instance
+        start_date:    Optional start date filter (YYYY-MM-DD)
+        end_date:      Optional end date filter (YYYY-MM-DD)
 
     Returns:
         List of SocialMediaRecord (posts + comments)
@@ -311,6 +315,8 @@ def scrape_with_apify(
                     "commentsPerPost": comments_per,
                     "scrapeComments": True,
                 }
+                if start_date:
+                    run_input["onlyPostsNewerThan"] = start_date
             elif platform == "facebook":
                 actor_id = apify_config.facebook_actor
                 run_input = {
@@ -321,8 +327,13 @@ def scrape_with_apify(
                 }
             elif platform == "twitter":
                 actor_id = apify_config.twitter_actor
+                search_term = keyword
+                if start_date:
+                    search_term += f" since:{start_date}"
+                if end_date:
+                    search_term += f" until:{end_date}"
                 run_input = {
-                    "searchTerms": [keyword],
+                    "searchTerms": [search_term],
                     "tweetLanguage": "ta,en",
                     "maxItems": max_items,
                     "scrapeReplies": True,
